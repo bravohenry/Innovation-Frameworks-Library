@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "apify": {
+      "url": "https://mcp.apify.com",
+      "description": "Apify MCP 服务器，提供 web 抓取和数据提取功能",
+      "tools": [
+        "actors",
+        "docs", 
+        "apify/rag-web-browser"
+      ]
+    }
+  },
+  "defaultTimeout": 30000,
+  "retryAttempts": 3,
+  "logLevel": "info"
+}

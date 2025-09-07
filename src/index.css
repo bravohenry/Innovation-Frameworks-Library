@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+body {
+  font-family: 'Inter', sans-serif;
+  @apply bg-background text-foreground;
+}
+
+.markdown-content h2 {
+  @apply text-xl font-semibold mt-6 mb-3;
+}
+
+.markdown-content h3 {
+  @apply text-lg font-medium mt-5 mb-2;
+}
+
+.markdown-content p {
+  @apply my-3;
+}
+
+.markdown-content ul {
+  @apply list-disc pl-6 my-3;
+}
+
+.markdown-content ol {
+  @apply list-decimal pl-6 my-3;
+}
+
+.markdown-content li {
+  @apply mb-1;
+}
+
+.markdown-content a {
+  @apply text-primary hover:underline;
+}
+
+.markdown-content blockquote {
+  @apply border-l-4 border-primary-200 pl-4 italic my-4;
+}
+
+.markdown-content code {
+  @apply bg-content2 px-1 py-0.5 rounded-sm text-sm;
+}
+
+.markdown-content pre {
+  @apply bg-content2 p-4 rounded-md overflow-x-auto my-4;
+}
+
+.markdown-content pre code {
+  @apply bg-transparent p-0;
+}
+
+.markdown-content table {
+  @apply w-full border-collapse my-4;
+}
+
+.markdown-content th, .markdown-content td {
+  @apply border border-content3 p-2;
+}
+
+.markdown-content th {
+  @apply bg-content2;
+}
+
+.active-chapter {
+  @apply bg-primary-100 text-primary-600 font-medium;
+}
+
+.framework-card {
+  @apply transition-all duration-200 hover:shadow-md hover:-translate-y-1;
+}
