@@ -21,6 +21,21 @@ export interface Framework {
   diagrams?: { title: string; url: string; description?: string }[];
 }
 
+// 章节元数据：目标与子标签
+export interface ChapterSubsection {
+  id: string; // 如 "1.1"
+  labelZh: string;
+  labelEn: string;
+}
+
+export interface ChapterMeta {
+  goalZh: string;
+  goalEn: string;
+  descZh?: string;
+  descEn?: string;
+  subsections?: ChapterSubsection[];
+}
+
 // Pre-parsed frameworks data to avoid using gray-matter in browser
 const frameworksData: Record<string, Framework> = {
   'porters-five-forces': {
@@ -703,6 +718,64 @@ const seededFrameworks: Framework[] = [
   { title: '过程书', englishTitle: 'Process Book', slug: 'process-book', chapter: '5', chapterTitle: '市场推广叙事与发布', chapterTitleEn: 'Launch & Storytelling', tags: [], summary: '', templateUrl: '/templates/process-book.pptx' },
 ];
 
+// 章节元数据（各章统一架构：目标 + 子标签）
+const chapterIdToMeta: Record<string, ChapterMeta> = {
+  '1': {
+    goalZh: '确立项目战略航向与团队游戏规则',
+    goalEn: 'Set strategic course and team rules',
+    descZh: '通过团队治理、外部环境与竞争结构洞察，以及机会空间定义，建立清晰的对齐机制与行动框架。',
+    descEn: 'Establish alignment via team governance, market/competition insights and opportunity definition.',
+    subsections: [
+      { id: '1.1', labelZh: '团队与使命', labelEn: 'Team & Mission' },
+      { id: '1.2', labelZh: '行业结构', labelEn: 'Industry Structure' },
+      { id: '1.3', labelZh: '机会空间', labelEn: 'Opportunity Space' },
+    ],
+  },
+  '2': {
+    goalZh: '建立深度用户同理心并明确价值假设',
+    goalEn: 'Build deep user empathy and define value hypotheses',
+    descZh: '通过研究体系化构建 360° 用户视图，并将洞察转化为清晰的问题表述。',
+    descEn: 'Construct a 360° user view via research and translate insights into well-formed problems.',
+    subsections: [
+      { id: '2.1', labelZh: '待办任务（JTBD）', labelEn: 'Jobs to be Done (JTBD)' },
+      { id: '2.2', labelZh: '研究与细分', labelEn: 'Research & Segmentation' },
+      { id: '2.3', labelZh: '连接研究与设计', labelEn: 'Link Research to Design' },
+      { id: '2.4', labelZh: '提出正确的问题', labelEn: 'Formulating HMW' },
+    ],
+  },
+  '3': {
+    goalZh: '设计商业模式与产品概念，实现问题-方案匹配',
+    goalEn: 'Design business model and product concept to reach problem-solution fit',
+    subsections: [
+      { id: '3.1', labelZh: '竞品分析与机会', labelEn: 'Competitive Analysis & Opportunities' },
+      { id: '3.2', labelZh: '价值主张', labelEn: 'Value Proposition' },
+      { id: '3.3', labelZh: '商业模式', labelEn: 'Business Model' },
+      { id: '3.4', labelZh: '战略突破', labelEn: 'Strategic Breakthroughs' },
+      { id: '3.5', labelZh: 'MVP 范围', labelEn: 'MVP Scope' },
+      { id: '3.6', labelZh: '为学习而原型', labelEn: 'Prototyping to Learn' },
+    ],
+  },
+  '4': {
+    goalZh: '快速验证并迭代优化方案',
+    goalEn: 'Validate quickly and iterate for optimization',
+    subsections: [
+      { id: '4.1', labelZh: '用户反馈与可用性', labelEn: 'User Feedback & Usability' },
+      { id: '4.2', labelZh: '迭代式设计', labelEn: 'Iterative Design' },
+      { id: '4.3', labelZh: '衡量成功标准', labelEn: 'Define Success Metrics' },
+    ],
+  },
+  '5': {
+    goalZh: '完成发布并构建清晰的叙事',
+    goalEn: 'Launch and craft compelling storytelling',
+    subsections: [
+      { id: '5.1', labelZh: '商业叙事', labelEn: 'Business Narrative' },
+      { id: '5.2', labelZh: '提炼精髓', labelEn: 'Executive Summary' },
+      { id: '5.3', labelZh: '记录征程', labelEn: 'Process Book' },
+    ],
+  },
+};
+
+
 // Function to get all frameworks（返回已清空内容的数据）
 export const getAllFrameworks = (): Framework[] => {
   // 返回已清洗后的最小化双语目录数据
@@ -729,6 +802,11 @@ export const getAllChapters = (): { id: string; title: string; titleEn?: string 
   return Array.from(map.entries())
     .map(([id, v]) => ({ id, title: v.title, titleEn: v.titleEn }))
     .sort((a, b) => parseInt(a.id) - parseInt(b.id));
+};
+
+// 获取章节元数据
+export const getChapterMeta = (chapterId: string): ChapterMeta | undefined => {
+  return chapterIdToMeta[chapterId];
 };
 
 // Function to get frameworks by chapter

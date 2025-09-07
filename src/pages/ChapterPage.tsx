@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { Button, Breadcrumbs, BreadcrumbItem, Chip } from '@heroui/react';
 import { useI18n } from '../contexts/I18nContext';
 import { Icon } from '@iconify/react';
-import { getFrameworksByChapter, getAllChapters } from '../data/frameworks';
+import { getFrameworksByChapter, getAllChapters, getChapterMeta } from '../data/frameworks';
 import FrameworkCard from '../components/ui/FrameworkCard';
 
 interface ParamTypes {
@@ -16,6 +16,7 @@ const ChapterPage: React.FC = () => {
   const frameworks = getFrameworksByChapter(chapterSlug);
   const chapters = getAllChapters();
   const currentChapter = chapters.find(c => c.id === chapterSlug);
+  const chapterMeta = currentChapter ? getChapterMeta(currentChapter.id) : undefined;
   
   
   // Navigation between chapters
@@ -49,18 +50,28 @@ const ChapterPage: React.FC = () => {
         <h1 className="text-3xl font-bold mb-2">
           {t('chapter_prefix', { n: currentChapter.id })}: {lang === 'en' ? (currentChapter.titleEn || currentChapter.title) : currentChapter.title}
         </h1>
-        {/* Chapter Goal moved here, borderless */}
-        {currentChapter.id === '1' && (
+        {/* Chapter Goal & Subsections (统一架构) */}
+        {chapterMeta && (
           <div className="mt-3">
             <div className="flex items-start gap-3">
               <div className="flex-1">
-                <h3 className="text-lg font-semibold mb-1">{t('chapter1_goal_title')}</h3>
-                <p className="text-default-600">{t('chapter1_goal_desc')}</p>
-                <div className="mt-2 flex flex-wrap gap-2">
-                  <Chip variant="flat">{t('chapter1_goal_1')}</Chip>
-                  <Chip variant="flat">{t('chapter1_goal_2')}</Chip>
-                  <Chip variant="flat">{t('chapter1_goal_3')}</Chip>
-                </div>
+                <h3 className="text-lg font-semibold mb-1">
+                  {lang === 'en' ? 'Goal' : '目标'}: {lang === 'en' ? chapterMeta.goalEn : chapterMeta.goalZh}
+                </h3>
+                {chapterMeta.descZh && (
+                  <p className="text-default-600">
+                    {lang === 'en' ? (chapterMeta.descEn || '') : chapterMeta.descZh}
+                  </p>
+                )}
+                {chapterMeta.subsections && (
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    {chapterMeta.subsections.map((s) => (
+                      <Chip key={s.id} variant="flat">
+                        {s.id} {lang === 'en' ? s.labelEn : s.labelZh}
+                      </Chip>
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
           </div>
