@@ -1,14 +1,84 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, Suspense } from 'react';
 import { useParams, Link, useHistory } from 'react-router-dom';
-import { Button, Card, CardBody, Chip, Divider, Breadcrumbs, BreadcrumbItem, Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, useDisclosure, Image, Tooltip } from '@heroui/react';
+import { Button, Card, CardBody, Chip, Divider, Breadcrumbs, BreadcrumbItem, Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, useDisclosure, Image, Tooltip, Spinner } from '@heroui/react';
 import { Icon } from '@iconify/react';
 import { getFrameworkBySlug, getChapterMeta } from '../data/frameworks';
 import { useI18n } from '../contexts/I18nContext';
 import DownloadButton from '../components/ui/DownloadButton';
 
+// Lazy load interactive components
+const NorthStarFrameworkDiagram = React.lazy(() => import('../components/interactive/NorthStarFrameworkDiagram'));
+const PortersFiveForcesDiagram = React.lazy(() => import('../components/interactive/PortersFiveForcesDiagram2'));
+const RaciChartDiagram = React.lazy(() => import('../components/interactive/RaciChartDiagram'));
+const FiveDysfunctionsDiagram = React.lazy(() => import('../components/interactive/FiveDysfunctionsDiagram'));
+const PestleAnalysisDiagram = React.lazy(() => import('../components/interactive/PestleAnalysisDiagram'));
+const SSwotAnalysisDiagram = React.lazy(() => import('../components/interactive/SSwotAnalysisDiagram'));
+const BusinessOpportunityDiagram = React.lazy(() => import('../components/interactive/BusinessOpportunityDiagram'));
+const GanttChartDiagram = React.lazy(() => import('../components/interactive/GanttChartDiagram'));
+
 interface ParamTypes {
   slug: string;
 }
+
+// Component to render interactive elements based on framework type
+const InteractiveComponent: React.FC<{ framework: any }> = ({ framework }) => {
+  const { interactive } = framework;
+  if (!interactive) return null;
+
+  switch (interactive.type) {
+    case 'tree':
+      if (framework.slug === 'north-star-framework') {
+        return <NorthStarFrameworkDiagram />;
+      }
+      break;
+    case 'radar':
+      if (framework.slug === 'porters-five-forces') {
+        return <PortersFiveForcesDiagram />;
+      }
+      break;
+    case 'table':
+      if (framework.slug === 'raci-chart') {
+        return <RaciChartDiagram />;
+      }
+      break;
+    case 'viz':
+      if (framework.slug === 'five-dysfunctions-team') {
+        return <FiveDysfunctionsDiagram />;
+      }
+      break;
+    case 'matrix':
+      if (framework.slug === 'pestle-analysis') {
+        return <PestleAnalysisDiagram />;
+      }
+      break;
+    case 'swot':
+      if (framework.slug === 'sswot-analysis') {
+        return <SSwotAnalysisDiagram />;
+      }
+      break;
+    case 'canvas':
+      if (framework.slug === 'business-opportunity-statement') {
+        return <BusinessOpportunityDiagram />;
+      }
+      break;
+    case 'gantt':
+      if (framework.slug === 'gantt-chart') {
+        return <GanttChartDiagram />;
+      }
+      break;
+    default:
+      // Generic interactive component placeholder for other types
+      return (
+        <div className="w-full aspect-video bg-content2 rounded-lg flex flex-col items-center justify-center p-6">
+          <Icon icon="mdi:chart-box" className="text-4xl text-primary mb-3" />
+          <h4 className="text-lg font-semibold mb-2">{interactive.title?.zh || interactive.title?.en || '交互图表'}</h4>
+          <p className="text-default-500 text-center">交互组件开发中...</p>
+        </div>
+      );
+  }
+  
+  return null;
+};
 
 const FrameworkDetail: React.FC = () => {
   const { slug } = useParams<ParamTypes>();
@@ -112,6 +182,15 @@ const FrameworkDetail: React.FC = () => {
           ) : (
             <p>{t('loading')}</p>
           )}
+
+          {/* 交互组件 */}
+          <Suspense fallback={
+            <div className="mt-8 w-full aspect-video bg-content2 rounded-lg flex items-center justify-center">
+              <Spinner size="lg" />
+            </div>
+          }>
+            <InteractiveComponent framework={framework} />
+          </Suspense>
 
           {/* 图示画廊 */}
           {framework.diagrams && framework.diagrams.length > 0 && (
