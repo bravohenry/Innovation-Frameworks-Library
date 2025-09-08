@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Card, CardBody, CardFooter, Chip } from '@heroui/react';
-import { Framework } from '../../data/frameworks';
+import { Framework, getChapterMeta } from '../../data/frameworks';
 import { useI18n } from '../../contexts/I18nContext';
 
 interface FrameworkCardProps {
@@ -10,6 +10,8 @@ interface FrameworkCardProps {
 
 const FrameworkCard: React.FC<FrameworkCardProps> = ({ framework }) => {
   const { lang } = useI18n();
+  const meta = getChapterMeta(framework.chapter);
+  const subsection = meta?.subsections?.find(s => s.id === framework.subsectionId);
   return (
     <Card 
       isPressable 
@@ -24,14 +26,11 @@ const FrameworkCard: React.FC<FrameworkCardProps> = ({ framework }) => {
             <Chip size="sm" variant="flat" color="default">
               {lang === 'zh' ? `第${framework.chapter}章` : `Chapter ${framework.chapter}`}
             </Chip>
-            {framework.subsectionId && (
+            {(framework.subsectionId || subsection) && (
               <Chip size="sm" variant="flat" color="default">
-                {framework.subsectionId}
+                {framework.subsectionId} {lang === 'en' ? (subsection?.labelEn || '') : (subsection?.labelZh || '')}
               </Chip>
             )}
-            <Chip size="sm" variant="flat" color="default">
-              {lang === 'zh' ? framework.englishTitle : framework.englishTitle}
-            </Chip>
           </div>
           <h3 className="text-lg font-semibold">{lang === 'zh' ? framework.title : framework.englishTitle}</h3>
           <p className="text-default-600 text-sm line-clamp-3">{lang === 'zh' ? framework.summary : (framework.summaryEn || framework.summary)}</p>
