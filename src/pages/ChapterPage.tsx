@@ -78,9 +78,18 @@ const ChapterPage: React.FC = () => {
         )}
       </div>
       
-      {/* Frameworks Grid */}
+      {/* Frameworks Grid（按小章节排序） */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {frameworks.map(framework => (
+        {frameworks
+          .sort((a, b) => {
+            const sa = a.subsectionId || '';
+            const sb = b.subsectionId || '';
+            if (sa && sb) return sa.localeCompare(sb, 'en');
+            if (sa) return -1;
+            if (sb) return 1;
+            return a.title.localeCompare(b.title, 'zh');
+          })
+          .map(framework => (
           <FrameworkCard key={framework.slug} framework={framework} />
         ))}
       </div>

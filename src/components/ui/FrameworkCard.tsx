@@ -21,9 +21,17 @@ const FrameworkCard: React.FC<FrameworkCardProps> = ({ framework }) => {
       <CardBody className="p-5">
         <div className="flex flex-col gap-2">
           <div className="flex items-center gap-2">
-            <span className="text-xs font-medium text-default-500">{lang === 'zh' ? `第${framework.chapter}章` : `Chapter ${framework.chapter}`}</span>
-            <span className="text-xs text-default-400">•</span>
-            <span className="text-xs text-default-500">{lang === 'zh' ? framework.englishTitle : framework.englishTitle}</span>
+            <Chip size="sm" variant="flat" color="default">
+              {lang === 'zh' ? `第${framework.chapter}章` : `Chapter ${framework.chapter}`}
+            </Chip>
+            {framework.subsectionId && (
+              <Chip size="sm" variant="flat" color="default">
+                {framework.subsectionId}
+              </Chip>
+            )}
+            <Chip size="sm" variant="flat" color="default">
+              {lang === 'zh' ? framework.englishTitle : framework.englishTitle}
+            </Chip>
           </div>
           <h3 className="text-lg font-semibold">{lang === 'zh' ? framework.title : framework.englishTitle}</h3>
           <p className="text-default-600 text-sm line-clamp-3">{lang === 'zh' ? framework.summary : (framework.summaryEn || framework.summary)}</p>
