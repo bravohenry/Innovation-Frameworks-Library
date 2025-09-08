@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useParams, Link, useHistory } from 'react-router-dom';
 import { Button, Card, CardBody, Chip, Divider, Breadcrumbs, BreadcrumbItem, Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, useDisclosure, Image, Tooltip } from '@heroui/react';
 import { Icon } from '@iconify/react';
-import { getFrameworkBySlug } from '../data/frameworks';
+import { getFrameworkBySlug, getChapterMeta } from '../data/frameworks';
 import { useI18n } from '../contexts/I18nContext';
 import DownloadButton from '../components/ui/DownloadButton';
 
@@ -15,6 +15,8 @@ const FrameworkDetail: React.FC = () => {
   const { t, lang } = useI18n();
   const history = useHistory();
   const framework = getFrameworkBySlug(slug);
+  const chapterMeta = framework ? getChapterMeta(framework.chapter) : undefined;
+  const subsection = framework && chapterMeta?.subsections?.find(s => s.id === framework.subsectionId);
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [activeDiagramIndex, setActiveDiagramIndex] = React.useState<number>(0);
   
@@ -55,8 +57,11 @@ const FrameworkDetail: React.FC = () => {
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-2">
               <Chip color="primary" variant="flat" size="sm">{t('chapter_prefix', { n: framework.chapter })}</Chip>
-              <span className="text-default-400">•</span>
-              <span className="text-default-600">{framework.englishTitle}</span>
+              {framework.subsectionId && (
+                <Chip variant="flat" size="sm">
+                  {framework.subsectionId} {lang === 'en' ? (subsection?.labelEn || '') : (subsection?.labelZh || '')}
+                </Chip>
+              )}
             </div>
             
             <h1 className="text-3xl font-bold">{lang === 'en' ? framework.englishTitle : framework.title}</h1>
