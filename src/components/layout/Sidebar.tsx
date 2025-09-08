@@ -41,10 +41,14 @@ const Sidebar: React.FC = () => {
               key={chapter.id} 
               aria-label={`${t('chapter_prefix', { n: chapter.id })}: ${chapter.title}`}
               title={
-                <div className="flex flex-col leading-tight">
+                <Link
+                  to={`/chapters/${chapter.id}`}
+                  onClick={(e) => e.stopPropagation()}
+                  className="flex flex-col leading-tight hover:opacity-90"
+                >
                   <span className="text-primary font-medium">{t('chapter_prefix', { n: chapter.id })}</span>
                   <span className="text-default-600 text-sm">{lang === 'en' ? (chapter.titleEn || chapter.title) : chapter.title}</span>
-                </div>
+                </Link>
               }
               
               className="py-1"
