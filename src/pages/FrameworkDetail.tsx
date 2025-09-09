@@ -53,7 +53,7 @@ const InteractiveComponent: React.FC<{ framework: any; lang: 'zh' | 'en' }> = ({
       }
       break;
     case 'matrix-generic':
-      return <GenericMatrixDiagram lang={lang} />;
+      return <GenericMatrixDiagram lang={lang} title={interactive.title} initialColumns={interactive.schema} />;
     case 'swot':
       if (framework.slug === 'sswot-analysis') {
         return <SSwotAnalysisDiagram lang={lang} />;

@@ -1996,7 +1996,12 @@ const seededFrameworks: Framework[] = [
 <h2>Pitfalls</h2>
 <ul><li>Solution masquerading as job</li><li>Missing context/constraints</li><li>One-off exercise</li></ul>`,
     diagrams: [{ title: '重要度×满意度矩阵', url: '/diagrams/jtbd-matrix.svg', description: '发现机会空隙' }],
-    interactive: { type: 'matrix-generic', title: { zh: 'JTBD 重要×满意度', en: 'JTBD Importance × Satisfaction' } }
+    interactive: { type: 'matrix-generic', title: { zh: 'JTBD 重要×满意度', en: 'JTBD Importance × Satisfaction' }, schema: [
+      { key: 'name', labelZh: '工作项', labelEn: 'Job', type: 'text' },
+      { key: 'importance', labelZh: '重要度(1-5)', labelEn: 'Importance(1-5)', type: 'number' },
+      { key: 'satisfaction', labelZh: '满意度(1-5)', labelEn: 'Satisfaction(1-5)', type: 'number' },
+      { key: 'notes', labelZh: '备注', labelEn: 'Notes', type: 'text' }
+    ] }
   },
   { title: '二手研究 vs. 一手研究', englishTitle: 'Secondary vs. Primary Research', slug: 'secondary-vs-primary-research', chapter: '2', subsectionId: '2.2', chapterTitle: '深度用户同理心与价值定义', chapterTitleEn: 'Empathy & Value Definition', tags: ['研究设计','数据来源','证据'], tagsEn: ['Research Design','Data Sources','Evidence'], summary: '明确二手与一手研究的适用边界与搭配方式，构建高性价比的证据体系。', summaryEn: 'Clarify when to use secondary vs primary research and how to combine them for cost‑effective evidence.', templateUrl: '/templates/secondary-vs-primary-research.pptx',
     htmlContent: `<h2>是什么 / 何时使用</h2>
@@ -2075,7 +2080,12 @@ const seededFrameworks: Framework[] = [
 <h2>Steps</h2><ol><li>Derive from empathy/research outputs</li><li>Use "How might we … so that …"</li><li>Score impact × feasibility × testability</li><li>Prioritize for prototyping</li></ol>
 <h2>Outputs</h2><ul><li>Scored HMW list</li><li>Top 3–5 for prototypes</li></ul>`,
     diagrams: [{ title: 'HMW 优先级矩阵', url: '/diagrams/hmw-matrix.svg', description: '影响×可行×验证' }],
-    interactive: { type: 'matrix-generic', title: { zh: 'HMW 优先级矩阵', en: 'HMW Prioritization' } }
+    interactive: { type: 'matrix-generic', title: { zh: 'HMW 优先级矩阵', en: 'HMW Prioritization' }, schema: [
+      { key: 'name', labelZh: 'HMW 命题', labelEn: 'HMW Prompt', type: 'text' },
+      { key: 'impact', labelZh: '影响(1-5)', labelEn: 'Impact(1-5)', type: 'number' },
+      { key: 'feasibility', labelZh: '可行(1-5)', labelEn: 'Feasibility(1-5)', type: 'number' },
+      { key: 'testability', labelZh: '验证(1-5)', labelEn: 'Testability(1-5)', type: 'number' }
+    ] }
   },
 
   // 第三章：设计商业模式与产品概念 (Design & Conception)

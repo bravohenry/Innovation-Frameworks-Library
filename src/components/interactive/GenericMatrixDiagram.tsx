@@ -4,7 +4,7 @@ import { Icon } from '@iconify/react';
 import BaseInteractiveLayout from './BaseInteractiveLayout';
 import { InteractiveComponentProps } from './types';
 
-interface MatrixColumn {
+export interface MatrixColumn {
   key: string;
   labelZh: string;
   labelEn: string;
@@ -28,8 +28,8 @@ const defaultColumns: MatrixColumn[] = [
 const GenericMatrixDiagram: React.FC<InteractiveComponentProps & {
   title?: { zh: string; en: string };
   initialColumns?: MatrixColumn[];
-}> = ({ lang = 'zh', onExport, showExportButtons = true, className = '' }) => {
-  const [columns] = useState<MatrixColumn[]>(defaultColumns);
+}> = ({ lang = 'zh', onExport, showExportButtons = true, className = '', initialColumns, title }) => {
+  const [columns] = useState<MatrixColumn[]>(initialColumns && initialColumns.length ? initialColumns : defaultColumns);
   const [rows, setRows] = useState<MatrixRow[]>([
     { id: 'r1', values: { name: lang === 'zh' ? '示例项' : 'Sample', importance: 4, satisfaction: 2, notes: '' } },
   ]);
@@ -89,8 +89,8 @@ const GenericMatrixDiagram: React.FC<InteractiveComponentProps & {
 
   return (
     <BaseInteractiveLayout
-      title={lang === 'zh' ? '矩阵表（可编辑）' : 'Editable Matrix'}
-      titleEn={lang === 'en' ? 'Editable Matrix' : '矩阵表（可编辑）'}
+      title={title ? (lang === 'en' ? title.en : title.zh) : (lang === 'zh' ? '矩阵表（可编辑）' : 'Editable Matrix')}
+      titleEn={title ? title.en : 'Editable Matrix'}
       lang={lang}
       onExport={handleExport}
       showExportButtons={showExportButtons}
