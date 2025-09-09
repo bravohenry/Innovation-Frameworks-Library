@@ -1891,20 +1891,190 @@ const seededFrameworks: Framework[] = [
   { title: 'RACI 责任分配矩阵', englishTitle: 'RACI Chart', slug: 'raci-chart', chapter: '1', subsectionId: '1.1', chapterTitle: '发现与战略基础', chapterTitleEn: 'Discovery & Strategy', tags: ['角色职责','项目治理','协同'], tagsEn: ['Roles & Responsibilities','Governance','Collaboration'], summary: '用 R/A/C/I 明确分工与决策权，降低协调成本。', summaryEn: 'Clarify roles and decision ownership with R/A/C/I to reduce coordination cost.', templateUrl: '/templates/raci-chart.pptx' },
   { title: '甘特图', englishTitle: 'Gantt Chart', slug: 'gantt-chart', chapter: '1', subsectionId: '1.1', chapterTitle: '发现与战略基础', chapterTitleEn: 'Discovery & Strategy', tags: ['进度管理','里程碑','关键路径'], tagsEn: ['Schedule','Milestones','Critical Path'], summary: '用时间轴呈现任务、依赖与里程碑，统一节奏与关键路径。', summaryEn: 'Timeline view of tasks, dependencies and milestones to align cadence and critical path.', templateUrl: '/templates/gantt-chart.pptx' },
   { title: 'PESTLE 分析', englishTitle: 'PESTLE Analysis', slug: 'pestle-analysis', chapter: '1', subsectionId: '1.2', chapterTitle: '发现与战略基础', chapterTitleEn: 'Discovery & Strategy', tags: ['宏观环境','外部分析','政策技术'], tagsEn: ['Macro Environment','External Analysis','Policy & Tech'], summary: '从政治、经济、社会、技术、法律与环境六维扫描外部环境，识别机会与风险。', summaryEn: 'Scan external environment across P,E,S,T,L,E to surface opportunities and risks.', templateUrl: '/templates/pestle-analysis.pptx' },
-  { title: '波特五力模型', englishTitle: "Porter's Five Forces", slug: 'porters-five-forces', chapter: '1', subsectionId: '1.2', chapterTitle: '发现与战略基础', chapterTitleEn: 'Discovery & Strategy', tags: ['行业结构','竞争强度','战略分析'], tagsEn: ['Industry Structure','Competitive Intensity','Strategy'], summary: '基于五力评估行业吸引力与竞争强度，发现结构性约束与机会。', summaryEn: 'Assess attractiveness and competitive intensity via five forces to find structural insights.', templateUrl: '/templates/porters-five-forces.pptx' },
+  { title: '波特五力模型', englishTitle: "Porter's Five Forces", slug: 'porters-five-forces', chapter: '1', subsectionId: '1.2', chapterTitle: '发现与战略基础', chapterTitleEn: 'Discovery & Strategy', tags: ['行业结构','竞争强度','战略分析'], tagsEn: ['Industry Structure','Competitive Intensity','Strategy'], summary: '基于五力评估行业吸引力与竞争强度，发现结构性约束与机会。', summaryEn: 'Assess attractiveness and competitive intensity via five forces to find structural insights.', templateUrl: '/templates/porters-five-forces.pptx',
+    htmlContent: `<h2>是什么 / 何时使用</h2>
+<p>波特五力模型通过 <strong>现有竞争者竞争</strong>、<strong>供应商议价能力</strong>、<strong>买方议价能力</strong>、<strong>替代品威胁</strong>、<strong>新进入者威胁</strong> 五个维度评估行业的吸引力与竞争强度。适用于行业进入、战略定位、投资评估与年度复盘。</p>
+<h2>前置输入</h2>
+<ul>
+<li>行业边界与细分定义、目标市场规模/增速</li>
+<li>近 3 年财报/研报、份额结构与集中度</li>
+<li>代表性企业的商业模式/渠道/成本结构</li>
+</ul>
+<h2>步骤</h2>
+<ol>
+<li><strong>定义边界</strong>：确认产品/服务与替代范围，避免把“结论当作边界”。</li>
+<li><strong>列出强度驱动因子</strong>：为每一力罗列 3–6 个驱动因子（如集中度、差异化、转换成本、进入壁垒等），并收集证据。</li>
+<li><strong>打分与证据链接</strong>：按 1–5 评分并附证据来源；多人独立评分后取一致性结果。</li>
+<li><strong>可视化与结论</strong>：绘制雷达图与结论卡片，明确“结构性约束/机会”。</li>
+<li><strong>落地到策略</strong>：将发现映射到 sSWOT，形成 SO/ST/WO/WT 初稿。</li>
+</ol>
+<h2>输出与判定（DoD）</h2>
+<ul>
+<li>五力评分表（含证据链接）与一页式结论</li>
+<li>与 sSWOT 的映射关系清单</li>
+<li>评分一致性 ≥ 70%，证据覆盖率 ≥ 80%</li>
+</ul>
+<h2>易错点</h2>
+<ul>
+<li>只罗列现象而缺少<strong>驱动因子与证据</strong></li>
+<li>忽视替代品/渠道/生态位的重要性</li>
+<li>把公司问题等同于行业问题</li>
+</ul>`,
+    htmlContentEn: `<h2>What / When</h2>
+<p>Porter's Five Forces assesses industry attractiveness via <strong>rivalry</strong>, <strong>supplier power</strong>, <strong>buyer power</strong>, <strong>threat of substitutes</strong>, and <strong>threat of new entrants</strong>. Use it for market entry, strategic positioning, investment review, and annual retrospectives.</p>
+<h2>Inputs</h2>
+<ul>
+<li>Industry boundary/segments, TAM/CAGR</li>
+<li>3-year reports/analyst notes, share structure and concentration</li>
+<li>Representative players’ business models, channels, cost structure</li>
+</ul>
+<h2>Steps</h2>
+<ol>
+<li><strong>Define boundary</strong> precisely to avoid circular conclusions.</li>
+<li><strong>List drivers</strong> for each force (3–6 per force) with evidence.</li>
+<li><strong>Score with evidence</strong> (1–5) by multiple raters and reconcile.</li>
+<li><strong>Visualize & conclude</strong> with a radar and concise implications.</li>
+<li><strong>Map to strategy</strong> by linking findings to sSWOT options.</li>
+</ol>
+<h2>Outputs & DoD</h2>
+<ul>
+<li>Force scoring table with evidence links + one-page conclusion</li>
+<li>Mapping to sSWOT strategies</li>
+<li>Rating agreement ≥ 70%, evidence coverage ≥ 80%</li>
+</ul>
+<h2>Pitfalls</h2>
+<ul>
+<li>Listing phenomena without <strong>drivers and evidence</strong></li>
+<li>Ignoring substitutes/channels/ecosystem</li>
+<li>Confusing company issues with industry structure</li>
+</ul>`,
+    diagrams: [
+      { title: '五力雷达图', url: '/diagrams/porters-five-forces.svg', description: '五力评分与强弱对比' }
+    ],
+    interactive: { type: 'radar', title: { zh: '五力评分', en: 'Five Forces' } }
+  },
   { title: 'SWOT 分析', englishTitle: 'SWOT Analysis', slug: 'swot-analysis', chapter: '1', subsectionId: '1.2', chapterTitle: '发现与战略基础', chapterTitleEn: 'Discovery & Strategy', tags: ['内外评估','战略分析','定位'], tagsEn: ['Internal & External Assessment','Strategy','Positioning'], summary: '评估优势、劣势、机会与威胁，形成战略选项。', summaryEn: 'Evaluate strengths, weaknesses, opportunities and threats to shape strategy.', templateUrl: '/templates/swot-analysis.pptx' },
   { title: 'sSWOT 分析', englishTitle: 'sSWOT Analysis', slug: 'sswot-analysis', chapter: '1', subsectionId: '1.2', chapterTitle: '发现与战略基础', chapterTitleEn: 'Discovery & Strategy', tags: ['情境化','策略组合','矩阵'], tagsEn: ['Contextual SWOT','Strategy Options','Matrix'], summary: '在 SWOT 基础上做情境化配对，推导 SO/ST/WO/WT 策略组。', summaryEn: 'Contextualize SWOT pairings to derive SO/ST/WO/WT strategies.', templateUrl: '/templates/sswot-analysis.pptx' },
   { title: '商业机会声明', englishTitle: 'Business Opportunity Statement', slug: 'business-opportunity-statement', chapter: '1', subsectionId: '1.3', chapterTitle: '发现与战略基础', chapterTitleEn: 'Discovery & Strategy', tags: ['机会定义','成功标准','价值主张'], tagsEn: ['Opportunity Definition','Success Criteria','Value Proposition'], summary: '以对象/痛点/价值/成功标准描述机会，形成统一对齐锚点。', summaryEn: 'Define audience, pains, value and success criteria to align on an opportunity.', templateUrl: '/templates/business-opportunity-statement.pptx' },
   { title: '谷歌“北极星”框架', englishTitle: 'The North Star Framework', slug: 'north-star-framework', chapter: '1', subsectionId: '1.3', chapterTitle: '发现与战略基础', chapterTitleEn: 'Discovery & Strategy', tags: ['北极星指标','增长模型','对齐'], tagsEn: ['North Star Metric','Growth Model','Alignment'], summary: '以 NSM 与驱动指标树对齐战略与执行，建立实验-学习闭环。', summaryEn: 'Use NSM and driver tree to align strategy and execution with an experiment loop.', templateUrl: '/templates/north-star-framework.pptx' },
 
   // 第二章：深度用户同理心与价值定义 (Empathy & Value Definition)
-  { title: '待办任务', englishTitle: 'Jobs to be Done (JTBD)', slug: 'jobs-to-be-done', chapter: '2', subsectionId: '2.1', chapterTitle: '深度用户同理心与价值定义', chapterTitleEn: 'Empathy & Value Definition', tags: [], summary: '', templateUrl: '/templates/jobs-to-be-done.pptx' },
-  { title: '二手研究 vs. 一手研究', englishTitle: 'Secondary vs. Primary Research', slug: 'secondary-vs-primary-research', chapter: '2', subsectionId: '2.2', chapterTitle: '深度用户同理心与价值定义', chapterTitleEn: 'Empathy & Value Definition', tags: [], summary: '', templateUrl: '/templates/secondary-vs-primary-research.pptx' },
-  { title: '定量研究 vs. 定性研究', englishTitle: 'Quantitative vs. Qualitative Research', slug: 'quantitative-vs-qualitative-research', chapter: '2', subsectionId: '2.2', chapterTitle: '深度用户同理心与价值定义', chapterTitleEn: 'Empathy & Value Definition', tags: [], summary: '', templateUrl: '/templates/quantitative-vs-qualitative-research.pptx' },
-  { title: '用户原型/心智模型', englishTitle: 'Archetypes/Mindsets', slug: 'archetypes-mindsets', chapter: '2', subsectionId: '2.2', chapterTitle: '深度用户同理心与价值定义', chapterTitleEn: 'Empathy & Value Definition', tags: [], summary: '', templateUrl: '/templates/archetypes-mindsets.pptx' },
-  { title: '同理心地图', englishTitle: 'Empathy Map', slug: 'empathy-map', chapter: '2', subsectionId: '2.3', chapterTitle: '深度用户同理心与价值定义', chapterTitleEn: 'Empathy & Value Definition', tags: [], summary: '', templateUrl: '/templates/empathy-map.pptx' },
-  { title: '用户画像', englishTitle: 'Customer Profile / Persona', slug: 'customer-persona', chapter: '2', subsectionId: '2.3', chapterTitle: '深度用户同理心与价值定义', chapterTitleEn: 'Empathy & Value Definition', tags: [], summary: '', templateUrl: '/templates/customer-persona.pptx' },
-  { title: '我们该如何…？', englishTitle: 'How Might We? (HMW)', slug: 'how-might-we', chapter: '2', subsectionId: '2.4', chapterTitle: '深度用户同理心与价值定义', chapterTitleEn: 'Empathy & Value Definition', tags: [], summary: '', templateUrl: '/templates/how-might-we.pptx' },
+  { title: '待办任务', englishTitle: 'Jobs to be Done (JTBD)', slug: 'jobs-to-be-done', chapter: '2', subsectionId: '2.1', chapterTitle: '深度用户同理心与价值定义', chapterTitleEn: 'Empathy & Value Definition', tags: ['需求本质','场景','触发'], tagsEn: ['Job-to-be-Done','Context','Trigger'], summary: '用“要完成的工作”视角理解需求本质，识别情境、触发与期望结果。', summaryEn: 'Understand needs via JTBD, identifying context, triggers, and desired outcomes.', templateUrl: '/templates/jobs-to-be-done.pptx',
+    htmlContent: `<h2>是什么 / 何时使用</h2>
+<p>JTBD 用“要完成的工作”替代“用户画像=需求”的假设，关注 <strong>情境-动机-期望结果</strong>。适用于早期发现机会、优化产品定位与功能优先级。</p>
+<h2>前置输入</h2>
+<ul><li>关键用户旅程/触点</li><li>近期投诉/需求单</li><li>代表性用户访谈样本</li></ul>
+<h2>步骤</h2>
+<ol>
+<li><strong>收集情境</strong>：记录何时何地、与谁、受什么限制。</li>
+<li><strong>拆分功能性/情感性工作</strong>：列“要达成/要避免”。</li>
+<li><strong>提炼期望结果</strong>：用“减少/增加/保持 + 可度量”表达。</li>
+<li><strong>评估重要度×满意度</strong>：找出机会空隙。</li>
+<li><strong>形成声明</strong>：<em>当…我想…以便…</em>。</li>
+<li><strong>落地</strong>：映射到价值主张与优先级。</li>
+</ol>
+<h2>输出与判定（DoD）</h2>
+<ul><li>JTBD 列表（含情境/结果与评分）</li><li>顶层声明 3–5 条</li><li>重要×不满矩阵与机会点</li></ul>
+<h2>易错点</h2>
+<ul><li>把解决方案写成工作</li><li>缺少情境与限制</li><li>只做一次、不复核</li></ul>`,
+    htmlContentEn: `<h2>What / When</h2>
+<p>JTBD frames needs by <strong>context–motivation–desired outcomes</strong>. Use for opportunity discovery, positioning and prioritization.</p>
+<h2>Inputs</h2>
+<ul><li>Key journey/touchpoints</li><li>Recent tickets/requests</li><li>Interview samples</li></ul>
+<h2>Steps</h2>
+<ol>
+<li><strong>Gather contexts</strong>: when/where/with whom/constraints.</li>
+<li><strong>Split functional/emotional jobs</strong>.</li>
+<li><strong>Outcome statements</strong>: decrease/increase/maintain + measurable.</li>
+<li><strong>Importance × satisfaction</strong> to find gaps.</li>
+<li><strong>Craft top statements</strong>: <em>When… I want… so that…</em></li>
+<li><strong>Map to value and priorities</strong>.</li>
+<ol>
+</ol>
+<h2>Outputs & DoD</h2>
+<ul><li>JTBD list with scores</li><li>3–5 top statements</li><li>Gap matrix and opportunities</li></ul>
+<h2>Pitfalls</h2>
+<ul><li>Solution masquerading as job</li><li>Missing context/constraints</li><li>One-off exercise</li></ul>`,
+    diagrams: [{ title: '重要度×满意度矩阵', url: '/diagrams/jtbd-matrix.svg', description: '发现机会空隙' }]
+  },
+  { title: '二手研究 vs. 一手研究', englishTitle: 'Secondary vs. Primary Research', slug: 'secondary-vs-primary-research', chapter: '2', subsectionId: '2.2', chapterTitle: '深度用户同理心与价值定义', chapterTitleEn: 'Empathy & Value Definition', tags: ['研究设计','数据来源','证据'], tagsEn: ['Research Design','Data Sources','Evidence'], summary: '明确二手与一手研究的适用边界与搭配方式，构建高性价比的证据体系。', summaryEn: 'Clarify when to use secondary vs primary research and how to combine them for cost‑effective evidence.', templateUrl: '/templates/secondary-vs-primary-research.pptx',
+    htmlContent: `<h2>是什么 / 何时使用</h2>
+<p>二手研究利用既有资料；一手研究通过调研/实验采集新数据。二者应按 <strong>问题→证据→方法</strong> 选择与组合。</p>
+<h2>前置输入</h2>
+<ul><li>核心决策问题（如市场规模/用户需求/可用性）</li><li>预算与时间</li></ul>
+<h2>步骤</h2>
+<ol>
+<li><strong>问题分解</strong>：明确待验证假设与证据标准。</li>
+<li><strong>二手先行</strong>：行业报告/数据库/竞品公开信息。</li>
+<li><strong>缺口清单</strong>：标注需要一手补齐的变量。</li>
+<li><strong>一手设计</strong>：定性访谈/可用性/问卷/对照试验。</li>
+<li><strong>整合与偏差校正</strong>：交叉验证，记录局限性。</li>
+</ol>
+<h2>输出与判定（DoD）</h2>
+<ul><li>研究设计表（问题→证据→方法→样本）</li><li>来源清单与可信度评级</li><li>关键结论与对决策影响</li></ul>
+<h2>易错点</h2>
+<ul><li>先选方法再找问题</li><li>忽视来源偏差与样本偏差</li><li>只报现象不回答决策问题</li></ul>`,
+    htmlContentEn: `<h2>What / When</h2>
+<p>Secondary uses existing sources; primary collects new data. Always choose by <strong>question → evidence → method</strong>.</p>
+<h2>Steps</h2>
+<ol><li>Decompose decision questions and hypotheses</li><li>Secondary first</li><li>Gap list</li><li>Primary design (qual/quant/experiments)</li><li>Synthesize and correct biases</li></ol>
+<h2>Outputs & DoD</h2>
+<ul><li>Research design table</li><li>Source inventory with credibility</li><li>Key implications</li></ul>
+<h2>Pitfalls</h2>
+<ul><li>Method‑first thinking</li><li>Ignoring source/sample bias</li><li>Describing facts without decisions</li></ul>`,
+    diagrams: [{ title: '研究设计表', url: '/diagrams/research-design.svg', description: '问题-证据-方法映射' }]
+  },
+  { title: '定量研究 vs. 定性研究', englishTitle: 'Quantitative vs. Qualitative Research', slug: 'quantitative-vs-qualitative-research', chapter: '2', subsectionId: '2.2', chapterTitle: '深度用户同理心与价值定义', chapterTitleEn: 'Empathy & Value Definition', tags: ['方法论','抽样','有效性'], tagsEn: ['Methodology','Sampling','Validity'], summary: '理解定量与定性的互补：规模与因果 vs. 深度与机制。选择取决于问题而非偏好。', summaryEn: 'Quant vs qual are complementary: scale/causality vs depth/mechanism; choose by question, not preference.', templateUrl: '/templates/quantitative-vs-qualitative-research.pptx',
+    htmlContent: `<h2>是什么 / 何时使用</h2>
+<p>定量回答“多少/是否显著”，定性回答“为什么/如何发生”。真实项目常为 <strong>定性探索 → 定量验证</strong>。</p>
+<h2>步骤</h2>
+<ol><li>定义变量与操作化</li><li>选择抽样与样本量</li><li>确定测量工具（量表/访谈提纲）</li><li>控制偏差与伦理</li><li>分析与三角验证</li></ol>
+<h2>输出与判定</h2>
+<ul><li>研究方案与样本说明</li><li>显著性/效应量或主题归纳</li><li>对产品与策略的含义</li></ul>`,
+    htmlContentEn: `<h2>What / When</h2><p>Quant answers how much/causal; qual answers why/how. Typical flow: <strong>qual explore → quant validate</strong>.</p>
+<h2>Steps</h2><ol><li>Operationalize variables</li><li>Sampling/size</li><li>Instruments</li><li>Bias/ethics control</li><li>Analysis & triangulation</li></ol>
+<h2>Outputs</h2><ul><li>Plan & sampling note</li><li>Significance/effect or thematic results</li><li>Implications</li></ul>`,
+    diagrams: [{ title: '研究流程', url: '/diagrams/quant-qual-flow.svg', description: '定性→定量组合' }]
+  },
+  { title: '用户原型/心智模型', englishTitle: 'Archetypes/Mindsets', slug: 'archetypes-mindsets', chapter: '2', subsectionId: '2.2', chapterTitle: '深度用户同理心与价值定义', chapterTitleEn: 'Empathy & Value Definition', tags: ['细分','心理模型','动机'], tagsEn: ['Segmentation','Mindsets','Motivation'], summary: '基于动机与心智而非人口统计进行细分，输出可行动的原型与暗含心理模型。', summaryEn: 'Segment by motivations/mindsets rather than demographics to create actionable archetypes.', templateUrl: '/templates/archetypes-mindsets.pptx',
+    htmlContent: `<h2>是什么 / 何时使用</h2>
+<p>原型比“平均用户”更能指导设计；心智模型帮助预测其行为边界。</p>
+<h2>步骤</h2>
+<ol><li>从定性材料中归纳动机与障碍</li><li>聚类形成 3–6 个原型</li><li>为每个原型定义 JTBD/触发/反对意见</li><li>绘制心智模型（目标→策略→规则）</li><li>映射到旅程与渠道</li></ol>
+<h2>输出与判定</h2>
+<ul><li>原型卡（故事/引语/行为线索）</li><li>心智模型图</li><li>与关键场景的匹配度</li></ul>`,
+    htmlContentEn: `<h2>What / When</h2><p>Archetypes guide design; mindsets reveal boundaries.</p>
+<h2>Steps</h2><ol><li>Induce motives and barriers from qual data</li><li>Cluster into 3–6 archetypes</li><li>Define JTBD/triggers/objections</li><li>Model mindset (goals→strategies→rules)</li><li>Map to journeys/channels</li></ol>
+<h2>Outputs</h2><ul><li>Archetype cards</li><li>Mindset diagram</li><li>Fit to key scenarios</li></ul>`,
+    diagrams: [{ title: '心智模型图', url: '/diagrams/mindset-model.svg', description: '目标-策略-规则' }]
+  },
+  { title: '同理心地图', englishTitle: 'Empathy Map', slug: 'empathy-map', chapter: '2', subsectionId: '2.3', chapterTitle: '深度用户同理心与价值定义', chapterTitleEn: 'Empathy & Value Definition', tags: ['共情','洞察','旅程'], tagsEn: ['Empathy','Insights','Journey'], summary: '用“说/想/做/感受”快速沉淀洞察，推动团队达成用户共识。', summaryEn: 'Capture insights with Say/Think/Do/Feel to align teams on user understanding.', templateUrl: '/templates/empathy-map.pptx',
+    htmlContent: `<h2>是什么 / 何时使用</h2><p>同理心地图帮助团队从证据出发共创洞察，适合访谈后梳理与工作坊协作。</p>
+<h2>步骤</h2><ol><li>收集证据与引语</li><li>四象限贴卡并归纳主题</li><li>提取痛点/渴望/阻碍</li><li>形成机会陈述与待验证假设</li></ol>
+<h2>输出与判定</h2><ul><li>同理心地图与主题簇</li><li>机会陈述 3–5 条</li><li>下一步验证清单</li></ul>`,
+    htmlContentEn: `<h2>What / When</h2><p>Align team with evidence-based empathy after research sessions.</p>
+<h2>Steps</h2><ol><li>Collect quotes/evidence</li><li>Cluster within Say/Think/Do/Feel</li><li>Extract pains/desires/barriers</li><li>Create opportunity statements</li></ol>
+<h2>Outputs</h2><ul><li>Empathy map & themes</li><li>3–5 opportunity statements</li><li>Validation list</li></ul>`,
+    diagrams: [{ title: '同理心地图模板', url: '/diagrams/empathy-map.svg', description: '说/想/做/感受' }]
+  },
+  { title: '用户画像', englishTitle: 'Customer Profile / Persona', slug: 'customer-persona', chapter: '2', subsectionId: '2.3', chapterTitle: '深度用户同理心与价值定义', chapterTitleEn: 'Empathy & Value Definition', tags: ['画像','细分','场景'], tagsEn: ['Persona','Segmentation','Scenario'], summary: '以场景与目标为核心构建画像，而非静态人口学清单。', summaryEn: 'Persona centered on scenarios and goals, not just demographics.', templateUrl: '/templates/customer-persona.pptx',
+    htmlContent: `<h2>是什么 / 何时使用</h2><p>画像用于对齐目标用户的场景/目标/行为特征与渠道偏好。</p>
+<h2>步骤</h2><ol><li>基于原型聚合典型特征</li><li>补充行为/渠道/设备/支付等数据</li><li>选择 1–2 个关键场景写“使用日记”</li><li>列关键任务与阻碍</li></ol>
+<h2>输出与判定</h2><ul><li>一页式画像卡</li><li>关键场景描述与证据</li><li>对定位与信息传达的影响</li></ul>`,
+    htmlContentEn: `<h2>What / When</h2><p>Persona aligns target scenarios/goals/behaviors and channel preferences.</p>
+<h2>Steps</h2><ol><li>Synthesize from archetypes</li><li>Add behavioral/channel/device/payment data</li><li>Write 1–2 scenario diaries</li><li>List key tasks and blockers</li></ol>
+<h2>Outputs</h2><ul><li>One‑pager persona card</li><li>Evidence‑backed scenarios</li><li>Messaging implications</li></ul>`,
+    diagrams: [{ title: '画像卡模板', url: '/diagrams/persona-card.svg', description: '一页式结构' }]
+  },
+  { title: '我们该如何…？', englishTitle: 'How Might We? (HMW)', slug: 'how-might-we', chapter: '2', subsectionId: '2.4', chapterTitle: '深度用户同理心与价值定义', chapterTitleEn: 'Empathy & Value Definition', tags: ['问题定义','创意','机会'], tagsEn: ['Problem Framing','Ideation','Opportunities'], summary: '把洞察转化为可激发创意的问题句式，确保范围可控且可验证。', summaryEn: 'Translate insights into creativity‑sparking, testable problem statements.', templateUrl: '/templates/how-might-we.pptx',
+    htmlContent: `<h2>是什么 / 何时使用</h2><p>HMW 用开放且有边界的句式把机会具体化，作为创意工作坊与原型设计的输入。</p>
+<h2>步骤</h2><ol><li>从同理心/研究输出提炼机会</li><li>使用“如何能…以便…”句式</li><li>评估影响×可行×验证难度</li><li>优先级排序并进入原型</li></ol>
+<h2>输出与判定</h2><ul><li>HMW 列表（含评分）</li><li>入选的 3–5 条进入原型实验</li></ul>`,
+    htmlContentEn: `<h2>What / When</h2><p>HMW frames opportunities into open yet bounded prompts for ideation and prototyping.</p>
+<h2>Steps</h2><ol><li>Derive from empathy/research outputs</li><li>Use "How might we … so that …"</li><li>Score impact × feasibility × testability</li><li>Prioritize for prototyping</li></ol>
+<h2>Outputs</h2><ul><li>Scored HMW list</li><li>Top 3–5 for prototypes</li></ul>`,
+    diagrams: [{ title: 'HMW 优先级矩阵', url: '/diagrams/hmw-matrix.svg', description: '影响×可行×验证' }]
+  },
 
   // 第三章：设计商业模式与产品概念 (Design & Conception)
   { title: '竞品分析矩阵', englishTitle: 'Competitive Analysis Matrix', slug: 'competitive-analysis-matrix', chapter: '3', subsectionId: '3.1', chapterTitle: '设计商业模式与产品概念', chapterTitleEn: 'Design & Conception', tags: [], summary: '', templateUrl: '/templates/competitive-analysis-matrix.pptx' },
