@@ -1890,7 +1890,7 @@ const seededFrameworks: Framework[] = [
   { title: '团队协作的五大障碍', englishTitle: 'The Five Dysfunctions of a Team', slug: 'five-dysfunctions-team', chapter: '1', subsectionId: '1.1', chapterTitle: '发现与战略基础', chapterTitleEn: 'Discovery & Strategy', tags: ['团队协作','组织效能','领导力'], tagsEn: ['Teamwork','Organizational Effectiveness','Leadership'], summary: '识别并化解信任缺失、冲突畏惧、责任规避、投入不足、结果忽视，打造高效团队。', summaryEn: 'Identify and resolve five dysfunctions to build a high-performing team.', templateUrl: '/templates/five-dysfunctions-team.pptx' },
   { title: 'RACI 责任分配矩阵', englishTitle: 'RACI Chart', slug: 'raci-chart', chapter: '1', subsectionId: '1.1', chapterTitle: '发现与战略基础', chapterTitleEn: 'Discovery & Strategy', tags: ['角色职责','项目治理','协同'], tagsEn: ['Roles & Responsibilities','Governance','Collaboration'], summary: '用 R/A/C/I 明确分工与决策权，降低协调成本。', summaryEn: 'Clarify roles and decision ownership with R/A/C/I to reduce coordination cost.', templateUrl: '/templates/raci-chart.pptx' },
   { title: '甘特图', englishTitle: 'Gantt Chart', slug: 'gantt-chart', chapter: '1', subsectionId: '1.1', chapterTitle: '发现与战略基础', chapterTitleEn: 'Discovery & Strategy', tags: ['进度管理','里程碑','关键路径'], tagsEn: ['Schedule','Milestones','Critical Path'], summary: '用时间轴呈现任务、依赖与里程碑，统一节奏与关键路径。', summaryEn: 'Timeline view of tasks, dependencies and milestones to align cadence and critical path.', templateUrl: '/templates/gantt-chart.pptx' },
-  { title: 'PESTLE 分析', englishTitle: 'PESTLE Analysis', slug: 'pestle-analysis', chapter: '1', subsectionId: '1.2', chapterTitle: '发现与战略基础', chapterTitleEn: 'Discovery & Strategy', tags: ['宏观环境','外部分析','政策技术'], tagsEn: ['Macro Environment','External Analysis','Policy & Tech'], summary: '从政治、经济、社会、技术、法律与环境六维扫描外部环境，识别机会与风险。', summaryEn: 'Scan external environment across P,E,S,T,L,E to surface opportunities and risks.', templateUrl: '/templates/pestle-analysis.pptx' },
+  { title: 'PESTLE 分析', englishTitle: 'PESTLE Analysis', slug: 'pestle-analysis', chapter: '1', subsectionId: '1.2', chapterTitle: '发现与战略基础', chapterTitleEn: 'Discovery & Strategy', tags: ['宏观环境','外部分析','政策技术'], tagsEn: ['Macro Environment','External Analysis','Policy & Tech'], summary: '从政治、经济、社会、技术、法律与环境六维扫描外部环境，识别机会与风险。', summaryEn: 'Scan external environment across P,E,S,T,L,E to surface opportunities and risks.', templateUrl: '/templates/pestle-analysis.pptx', interactive: { type: 'matrix', title: { zh: 'PESTLE 维度面板', en: 'PESTLE Dashboard' } } },
   { title: '波特五力模型', englishTitle: "Porter's Five Forces", slug: 'porters-five-forces', chapter: '1', subsectionId: '1.2', chapterTitle: '发现与战略基础', chapterTitleEn: 'Discovery & Strategy', tags: ['行业结构','竞争强度','战略分析'], tagsEn: ['Industry Structure','Competitive Intensity','Strategy'], summary: '基于五力评估行业吸引力与竞争强度，发现结构性约束与机会。', summaryEn: 'Assess attractiveness and competitive intensity via five forces to find structural insights.', templateUrl: '/templates/porters-five-forces.pptx',
     htmlContent: `<h2>是什么 / 何时使用</h2>
 <p>波特五力模型通过 <strong>现有竞争者竞争</strong>、<strong>供应商议价能力</strong>、<strong>买方议价能力</strong>、<strong>替代品威胁</strong>、<strong>新进入者威胁</strong> 五个维度评估行业的吸引力与竞争强度。适用于行业进入、战略定位、投资评估与年度复盘。</p>
@@ -2028,7 +2028,15 @@ const seededFrameworks: Framework[] = [
 <ul><li>Research design table</li><li>Source inventory with credibility</li><li>Key implications</li></ul>
 <h2>Pitfalls</h2>
 <ul><li>Method‑first thinking</li><li>Ignoring source/sample bias</li><li>Describing facts without decisions</li></ul>`,
-    diagrams: [{ title: '研究设计表', url: '/diagrams/research-design.svg', description: '问题-证据-方法映射' }]
+    diagrams: [{ title: '研究设计表', url: '/diagrams/research-design.svg', description: '问题-证据-方法映射' }],
+    interactive: { type: 'matrix-generic', title: { zh: '研究设计表', en: 'Research Design Table' }, schema: [
+      { key: 'question', labelZh: '问题', labelEn: 'Question', type: 'text' },
+      { key: 'evidence', labelZh: '证据', labelEn: 'Evidence', type: 'text' },
+      { key: 'method', labelZh: '方法', labelEn: 'Method', type: 'text' },
+      { key: 'sample', labelZh: '样本', labelEn: 'Sample', type: 'text' },
+      { key: 'cost', labelZh: '成本', labelEn: 'Cost', type: 'text' },
+      { key: 'time', labelZh: '时间', labelEn: 'Time', type: 'text' }
+    ] }
   },
   { title: '定量研究 vs. 定性研究', englishTitle: 'Quantitative vs. Qualitative Research', slug: 'quantitative-vs-qualitative-research', chapter: '2', subsectionId: '2.2', chapterTitle: '深度用户同理心与价值定义', chapterTitleEn: 'Empathy & Value Definition', tags: ['方法论','抽样','有效性'], tagsEn: ['Methodology','Sampling','Validity'], summary: '理解定量与定性的互补：规模与因果 vs. 深度与机制。选择取决于问题而非偏好。', summaryEn: 'Quant vs qual are complementary: scale/causality vs depth/mechanism; choose by question, not preference.', templateUrl: '/templates/quantitative-vs-qualitative-research.pptx',
     htmlContent: `<h2>是什么 / 何时使用</h2>
@@ -2040,7 +2048,14 @@ const seededFrameworks: Framework[] = [
     htmlContentEn: `<h2>What / When</h2><p>Quant answers how much/causal; qual answers why/how. Typical flow: <strong>qual explore → quant validate</strong>.</p>
 <h2>Steps</h2><ol><li>Operationalize variables</li><li>Sampling/size</li><li>Instruments</li><li>Bias/ethics control</li><li>Analysis & triangulation</li></ol>
 <h2>Outputs</h2><ul><li>Plan & sampling note</li><li>Significance/effect or thematic results</li><li>Implications</li></ul>`,
-    diagrams: [{ title: '研究流程', url: '/diagrams/quant-qual-flow.svg', description: '定性→定量组合' }]
+    diagrams: [{ title: '研究流程', url: '/diagrams/quant-qual-flow.svg', description: '定性→定量组合' }],
+    interactive: { type: 'matrix-generic', title: { zh: '方法对比表', en: 'Method Comparison' }, schema: [
+      { key: 'method', labelZh: '方法', labelEn: 'Method', type: 'text' },
+      { key: 'type', labelZh: '类型', labelEn: 'Type', type: 'select', optionsZh: ['定量','定性'], optionsEn: ['Quant','Qual'] },
+      { key: 'usecase', labelZh: '适用场景', labelEn: 'Use Case', type: 'text' },
+      { key: 'strength', labelZh: '优势', labelEn: 'Strength', type: 'text' },
+      { key: 'limit', labelZh: '局限', labelEn: 'Limit', type: 'text' }
+    ] }
   },
   { title: '用户原型/心智模型', englishTitle: 'Archetypes/Mindsets', slug: 'archetypes-mindsets', chapter: '2', subsectionId: '2.2', chapterTitle: '深度用户同理心与价值定义', chapterTitleEn: 'Empathy & Value Definition', tags: ['细分','心理模型','动机'], tagsEn: ['Segmentation','Mindsets','Motivation'], summary: '基于动机与心智而非人口统计进行细分，输出可行动的原型与暗含心理模型。', summaryEn: 'Segment by motivations/mindsets rather than demographics to create actionable archetypes.', templateUrl: '/templates/archetypes-mindsets.pptx',
     htmlContent: `<h2>是什么 / 何时使用</h2>
@@ -2052,7 +2067,14 @@ const seededFrameworks: Framework[] = [
     htmlContentEn: `<h2>What / When</h2><p>Archetypes guide design; mindsets reveal boundaries.</p>
 <h2>Steps</h2><ol><li>Induce motives and barriers from qual data</li><li>Cluster into 3–6 archetypes</li><li>Define JTBD/triggers/objections</li><li>Model mindset (goals→strategies→rules)</li><li>Map to journeys/channels</li></ol>
 <h2>Outputs</h2><ul><li>Archetype cards</li><li>Mindset diagram</li><li>Fit to key scenarios</li></ul>`,
-    diagrams: [{ title: '心智模型图', url: '/diagrams/mindset-model.svg', description: '目标-策略-规则' }]
+    diagrams: [{ title: '心智模型图', url: '/diagrams/mindset-model.svg', description: '目标-策略-规则' }],
+    interactive: { type: 'matrix-generic', title: { zh: '原型要素表', en: 'Archetype Elements' }, schema: [
+      { key: 'archetype', labelZh: '原型', labelEn: 'Archetype', type: 'text' },
+      { key: 'motives', labelZh: '动机', labelEn: 'Motives', type: 'text' },
+      { key: 'barriers', labelZh: '障碍', labelEn: 'Barriers', type: 'text' },
+      { key: 'jtbd', labelZh: 'JTBD', labelEn: 'JTBD', type: 'text' },
+      { key: 'channels', labelZh: '渠道', labelEn: 'Channels', type: 'text' }
+    ] }
   },
   { title: '同理心地图', englishTitle: 'Empathy Map', slug: 'empathy-map', chapter: '2', subsectionId: '2.3', chapterTitle: '深度用户同理心与价值定义', chapterTitleEn: 'Empathy & Value Definition', tags: ['共情','洞察','旅程'], tagsEn: ['Empathy','Insights','Journey'], summary: '用“说/想/做/感受”快速沉淀洞察，推动团队达成用户共识。', summaryEn: 'Capture insights with Say/Think/Do/Feel to align teams on user understanding.', templateUrl: '/templates/empathy-map.pptx',
     htmlContent: `<h2>是什么 / 何时使用</h2><p>同理心地图帮助团队从证据出发共创洞察，适合访谈后梳理与工作坊协作。</p>
@@ -2061,7 +2083,12 @@ const seededFrameworks: Framework[] = [
     htmlContentEn: `<h2>What / When</h2><p>Align team with evidence-based empathy after research sessions.</p>
 <h2>Steps</h2><ol><li>Collect quotes/evidence</li><li>Cluster within Say/Think/Do/Feel</li><li>Extract pains/desires/barriers</li><li>Create opportunity statements</li></ol>
 <h2>Outputs</h2><ul><li>Empathy map & themes</li><li>3–5 opportunity statements</li><li>Validation list</li></ul>`,
-    diagrams: [{ title: '同理心地图模板', url: '/diagrams/empathy-map.svg', description: '说/想/做/感受' }]
+    diagrams: [{ title: '同理心地图模板', url: '/diagrams/empathy-map.svg', description: '说/想/做/感受' }],
+    interactive: { type: 'matrix-generic', title: { zh: '同理心记录表', en: 'Empathy Capture' }, schema: [
+      { key: 'evidence', labelZh: '证据/引语', labelEn: 'Evidence/Quote', type: 'text' },
+      { key: 'category', labelZh: '类别', labelEn: 'Category', type: 'select', optionsZh: ['说','想','做','感受'], optionsEn: ['Say','Think','Do','Feel'] },
+      { key: 'theme', labelZh: '主题', labelEn: 'Theme', type: 'text' }
+    ] }
   },
   { title: '用户画像', englishTitle: 'Customer Profile / Persona', slug: 'customer-persona', chapter: '2', subsectionId: '2.3', chapterTitle: '深度用户同理心与价值定义', chapterTitleEn: 'Empathy & Value Definition', tags: ['画像','细分','场景'], tagsEn: ['Persona','Segmentation','Scenario'], summary: '以场景与目标为核心构建画像，而非静态人口学清单。', summaryEn: 'Persona centered on scenarios and goals, not just demographics.', templateUrl: '/templates/customer-persona.pptx',
     htmlContent: `<h2>是什么 / 何时使用</h2><p>画像用于对齐目标用户的场景/目标/行为特征与渠道偏好。</p>
@@ -2070,7 +2097,13 @@ const seededFrameworks: Framework[] = [
     htmlContentEn: `<h2>What / When</h2><p>Persona aligns target scenarios/goals/behaviors and channel preferences.</p>
 <h2>Steps</h2><ol><li>Synthesize from archetypes</li><li>Add behavioral/channel/device/payment data</li><li>Write 1–2 scenario diaries</li><li>List key tasks and blockers</li></ol>
 <h2>Outputs</h2><ul><li>One‑pager persona card</li><li>Evidence‑backed scenarios</li><li>Messaging implications</li></ul>`,
-    diagrams: [{ title: '画像卡模板', url: '/diagrams/persona-card.svg', description: '一页式结构' }]
+    diagrams: [{ title: '画像卡模板', url: '/diagrams/persona-card.svg', description: '一页式结构' }],
+    interactive: { type: 'matrix-generic', title: { zh: '画像要素表', en: 'Persona Elements' }, schema: [
+      { key: 'attribute', labelZh: '要素', labelEn: 'Attribute', type: 'text' },
+      { key: 'value', labelZh: '取值', labelEn: 'Value', type: 'text' },
+      { key: 'evidence', labelZh: '证据', labelEn: 'Evidence', type: 'text' },
+      { key: 'impact', labelZh: '影响', labelEn: 'Impact', type: 'text' }
+    ] }
   },
   { title: '我们该如何…？', englishTitle: 'How Might We? (HMW)', slug: 'how-might-we', chapter: '2', subsectionId: '2.4', chapterTitle: '深度用户同理心与价值定义', chapterTitleEn: 'Empathy & Value Definition', tags: ['问题定义','创意','机会'], tagsEn: ['Problem Framing','Ideation','Opportunities'], summary: '把洞察转化为可激发创意的问题句式，确保范围可控且可验证。', summaryEn: 'Translate insights into creativity‑sparking, testable problem statements.', templateUrl: '/templates/how-might-we.pptx',
     htmlContent: `<h2>是什么 / 何时使用</h2><p>HMW 用开放且有边界的句式把机会具体化，作为创意工作坊与原型设计的输入。</p>
