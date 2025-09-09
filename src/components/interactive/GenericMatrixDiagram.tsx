@@ -15,7 +15,7 @@ export interface MatrixColumn {
 
 interface MatrixRow {
   id: string;
-  values: Record<string, string | number>;
+  values: Record<string, any>;
 }
 
 const defaultColumns: MatrixColumn[] = [
@@ -32,7 +32,6 @@ const GenericMatrixDiagram: React.FC<InteractiveComponentProps & {
   const [columns] = useState<MatrixColumn[]>(initialColumns && initialColumns.length ? initialColumns : defaultColumns);
   const [rows, setRows] = useState<MatrixRow[]>(() => {
     if (data && Array.isArray(data)) {
-      // map incoming rows to internal structure
       return (data as any[]).map((v, idx) => ({ id: `r${idx + 1}`, values: v }));
     }
     return [
@@ -52,7 +51,7 @@ const GenericMatrixDiagram: React.FC<InteractiveComponentProps & {
     ]);
   };
 
-  const updateCell = (rowId: string, colKey: string, value: string) => {
+  const updateCell = (rowId: string, colKey: string, value: any) => {
     setRows((prev) => prev.map((r) => (r.id === rowId ? { ...r, values: { ...r.values, [colKey]: value } } : r)));
   };
 
@@ -66,7 +65,12 @@ const GenericMatrixDiagram: React.FC<InteractiveComponentProps & {
         const obj: Record<string, any> = {};
         columns.forEach((c) => {
           const header = lang === 'en' ? c.labelEn : c.labelZh;
-          obj[header] = r.values[c.key] ?? '';
+          const v = r.values[c.key];
+          if (v && typeof v === 'object' && ('zh' in v || 'en' in v)) {
+            obj[header] = v[lang] ?? v.zh ?? v.en ?? '';
+          } else {
+            obj[header] = v ?? '';
+          }
         });
         return obj;
       });
@@ -92,6 +96,20 @@ const GenericMatrixDiagram: React.FC<InteractiveComponentProps & {
       </Button>
     </div>
   );
+
+  const getDisplay = (val: any): string => {
+    if (val && typeof val === 'object' && ('zh' in val || 'en' in val)) {
+      return val[lang] ?? val.zh ?? val.en ?? '';
+    }
+    return String(val ?? '');
+  };
+
+  const getSelectedKey = (col: MatrixColumn, val: any): string => {
+    const arr = lang === 'en' ? (col.optionsEn || []) : (col.optionsZh || []);
+    const display = getDisplay(val);
+    const idx = arr.findIndex((x) => x === display);
+    return idx >= 0 ? String(idx) : '';
+  };
 
   return (
     <BaseInteractiveLayout
@@ -127,24 +145,36 @@ const GenericMatrixDiagram: React.FC<InteractiveComponentProps & {
                         c.type === 'select' ? (
                           <Select
                             aria-label="select"
-                            selectedKeys={[String(r.values[c.key] ?? '')]}
-                            onSelectionChange={(keys) => updateCell(r.id, c.key, Array.from(keys)[0] as string)}
+                            selectedKeys={[getSelectedKey(c, r.values[c.key])]}
+                            onSelectionChange={(keys) => {
+                              const idx = parseInt(Array.from(keys)[0] as string, 10);
+                              const zhVal = (c.optionsZh || [])[idx] ?? '';
+                              const enVal = (c.optionsEn || [])[idx] ?? zhVal;
+                              updateCell(r.id, c.key, { zh: zhVal, en: enVal });
+                            }}
                             size="sm"
                           >
-                            {(lang === 'en' ? c.optionsEn || [] : c.optionsZh || []).map((opt) => (
-                              <SelectItem key={opt}>{opt}</SelectItem>
+                            {(lang === 'en' ? (c.optionsEn || []) : (c.optionsZh || [])).map((opt, i) => (
+                              <SelectItem key={String(i)}>{opt}</SelectItem>
                             ))}
                           </Select>
                         ) : (
                           <Input
                             size="sm"
                             type={c.type === 'number' ? 'number' : 'text'}
-                            value={String(r.values[c.key] ?? '')}
-                            onChange={(e) => updateCell(r.id, c.key, e.target.value)}
+                            value={c.type === 'number' ? String(r.values[c.key] ?? '') : getDisplay(r.values[c.key])}
+                            onChange={(e) => {
+                              if (c.type === 'number') {
+                                updateCell(r.id, c.key, Number(e.target.value));
+                              } else {
+                                const existing = r.values[c.key] && typeof r.values[c.key] === 'object' ? r.values[c.key] : { zh: '', en: '' };
+                                updateCell(r.id, c.key, { ...existing, [lang]: e.target.value });
+                              }
+                            }}
                           />
                         )
                       ) : (
-                        <span className="text-default-700">{String(r.values[c.key] ?? '')}</span>
+                        <span className="text-default-700">{getDisplay(r.values[c.key])}</span>
                       )}
                     </td>
                   ))}

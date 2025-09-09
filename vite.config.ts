@@ -6,6 +6,12 @@ import {defineConfig} from "vite";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+  base: '/Innovation-Frameworks-Library/',
+  build: {
+    outDir: 'docs',
+    assetsDir: 'assets',
+    emptyOutDir: true,
+  },
   server: {
     allowedHosts: true,
   },

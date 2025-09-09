@@ -24,7 +24,9 @@ const DownloadButton: React.FC<DownloadButtonProps> = ({ templateUrl, fileName }
     setError(null);
     setIsLoading(true);
 
-    const exists = await checkExists(templateUrl);
+    const normalizedBase = (import.meta as any).env?.BASE_URL || '/';
+    const prefixedUrl = templateUrl.startsWith('http') ? templateUrl : `${normalizedBase.replace(/\/$/, '')}${templateUrl}`;
+    const exists = await checkExists(prefixedUrl);
     if (!exists) {
       setIsLoading(false);
       setError('模板文件不存在，请稍后重试或联系维护者。');
@@ -33,7 +35,7 @@ const DownloadButton: React.FC<DownloadButtonProps> = ({ templateUrl, fileName }
 
     try {
       const link = document.createElement('a');
-      link.href = templateUrl;
+      link.href = prefixedUrl;
       link.download = fileName || templateUrl.split('/').pop() || 'template.pptx';
       document.body.appendChild(link);
       link.click();
