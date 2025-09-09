@@ -23,7 +23,7 @@ export interface Framework {
 
 // 交互配置（宽松定义，具体字段由类型决定）
 export interface InteractiveConfig {
-  type: 'radar' | 'matrix' | 'gantt' | 'table' | 'tree' | 'viz';
+  type: 'radar' | 'matrix' | 'gantt' | 'table' | 'tree' | 'viz' | 'matrix-generic';
   title?: { zh: string; en: string };
   schema?: any; // 允许对象或数组
   data?: any;   // 允许对象或数组
@@ -1995,7 +1995,8 @@ const seededFrameworks: Framework[] = [
 <ul><li>JTBD list with scores</li><li>3–5 top statements</li><li>Gap matrix and opportunities</li></ul>
 <h2>Pitfalls</h2>
 <ul><li>Solution masquerading as job</li><li>Missing context/constraints</li><li>One-off exercise</li></ul>`,
-    diagrams: [{ title: '重要度×满意度矩阵', url: '/diagrams/jtbd-matrix.svg', description: '发现机会空隙' }]
+    diagrams: [{ title: '重要度×满意度矩阵', url: '/diagrams/jtbd-matrix.svg', description: '发现机会空隙' }],
+    interactive: { type: 'matrix-generic', title: { zh: 'JTBD 重要×满意度', en: 'JTBD Importance × Satisfaction' } }
   },
   { title: '二手研究 vs. 一手研究', englishTitle: 'Secondary vs. Primary Research', slug: 'secondary-vs-primary-research', chapter: '2', subsectionId: '2.2', chapterTitle: '深度用户同理心与价值定义', chapterTitleEn: 'Empathy & Value Definition', tags: ['研究设计','数据来源','证据'], tagsEn: ['Research Design','Data Sources','Evidence'], summary: '明确二手与一手研究的适用边界与搭配方式，构建高性价比的证据体系。', summaryEn: 'Clarify when to use secondary vs primary research and how to combine them for cost‑effective evidence.', templateUrl: '/templates/secondary-vs-primary-research.pptx',
     htmlContent: `<h2>是什么 / 何时使用</h2>
@@ -2073,7 +2074,8 @@ const seededFrameworks: Framework[] = [
     htmlContentEn: `<h2>What / When</h2><p>HMW frames opportunities into open yet bounded prompts for ideation and prototyping.</p>
 <h2>Steps</h2><ol><li>Derive from empathy/research outputs</li><li>Use "How might we … so that …"</li><li>Score impact × feasibility × testability</li><li>Prioritize for prototyping</li></ol>
 <h2>Outputs</h2><ul><li>Scored HMW list</li><li>Top 3–5 for prototypes</li></ul>`,
-    diagrams: [{ title: 'HMW 优先级矩阵', url: '/diagrams/hmw-matrix.svg', description: '影响×可行×验证' }]
+    diagrams: [{ title: 'HMW 优先级矩阵', url: '/diagrams/hmw-matrix.svg', description: '影响×可行×验证' }],
+    interactive: { type: 'matrix-generic', title: { zh: 'HMW 优先级矩阵', en: 'HMW Prioritization' } }
   },
 
   // 第三章：设计商业模式与产品概念 (Design & Conception)

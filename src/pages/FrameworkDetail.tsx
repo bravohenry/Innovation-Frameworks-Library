@@ -14,6 +14,7 @@ const FiveDysfunctionsDiagram = React.lazy(() => import('../components/interacti
 const PestleAnalysisDiagram = React.lazy(() => import('../components/interactive/PestleAnalysisDiagram'));
 const SSwotAnalysisDiagram = React.lazy(() => import('../components/interactive/SSwotAnalysisDiagram'));
 const BusinessOpportunityDiagram = React.lazy(() => import('../components/interactive/BusinessOpportunityDiagram'));
+const GenericMatrixDiagram = React.lazy(() => import('../components/interactive/GenericMatrixDiagram'));
 const GanttChartDiagram = React.lazy(() => import('../components/interactive/GanttChartDiagram'));
 
 interface ParamTypes {
@@ -51,6 +52,8 @@ const InteractiveComponent: React.FC<{ framework: any; lang: 'zh' | 'en' }> = ({
         return <PestleAnalysisDiagram lang={lang} />;
       }
       break;
+    case 'matrix-generic':
+      return <GenericMatrixDiagram lang={lang} />;
     case 'swot':
       if (framework.slug === 'sswot-analysis') {
         return <SSwotAnalysisDiagram lang={lang} />;

@@ -10,6 +10,7 @@ export { default as PestleAnalysisDiagram } from './PestleAnalysisDiagram';
 export { default as SSwotAnalysisDiagram } from './SSwotAnalysisDiagram';
 export { default as BusinessOpportunityDiagram } from './BusinessOpportunityDiagram';
 export { default as GanttChartDiagram } from './GanttChartDiagram';
+export { default as GenericMatrixDiagram } from './GenericMatrixDiagram';
 
 // Export types
 export type {
@@ -84,6 +85,7 @@ export const COMPONENT_TYPE_MAP = {
   'swot': 'SSwotAnalysisDiagram',
   'canvas': 'BusinessOpportunityDiagram',
   'gantt': 'GanttChartDiagram',
+  'matrix-generic': 'GenericMatrixDiagram',
 } as const;
 
 // Framework slug to component mapping
