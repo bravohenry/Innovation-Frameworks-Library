@@ -103,7 +103,7 @@ const BaseInteractiveLayout: React.FC<BaseInteractiveLayoutProps> = ({
                   startContent={<Icon icon="lucide:image" />}
                   onPress={() => handleExport('png')}
                 >
-                  PNG
+                  {lang === 'zh' ? 'PNG 导出' : 'PNG'}
                 </Button>
                 <Button
                   size="sm"
@@ -111,7 +111,7 @@ const BaseInteractiveLayout: React.FC<BaseInteractiveLayoutProps> = ({
                   startContent={<Icon icon="lucide:table" />}
                   onPress={() => handleExport('csv')}
                 >
-                  CSV
+                  {lang === 'zh' ? 'CSV 导出' : 'CSV'}
                 </Button>
               </div>
             )}

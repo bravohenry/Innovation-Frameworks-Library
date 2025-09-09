@@ -21,49 +21,49 @@ interface ParamTypes {
 }
 
 // Component to render interactive elements based on framework type
-const InteractiveComponent: React.FC<{ framework: any }> = ({ framework }) => {
+const InteractiveComponent: React.FC<{ framework: any; lang: 'zh' | 'en' }> = ({ framework, lang }) => {
   const { interactive } = framework;
   if (!interactive) return null;
 
   switch (interactive.type) {
     case 'tree':
       if (framework.slug === 'north-star-framework') {
-        return <NorthStarFrameworkDiagram />;
+        return <NorthStarFrameworkDiagram lang={lang} />;
       }
       break;
     case 'radar':
       if (framework.slug === 'porters-five-forces') {
-        return <PortersFiveForcesDiagram />;
+        return <PortersFiveForcesDiagram lang={lang} />;
       }
       break;
     case 'table':
       if (framework.slug === 'raci-chart') {
-        return <RaciChartDiagram />;
+        return <RaciChartDiagram />; // 此组件内部使用 useI18n
       }
       break;
     case 'viz':
       if (framework.slug === 'five-dysfunctions-team') {
-        return <FiveDysfunctionsDiagram />;
+        return <FiveDysfunctionsDiagram lang={lang} />;
       }
       break;
     case 'matrix':
       if (framework.slug === 'pestle-analysis') {
-        return <PestleAnalysisDiagram />;
+        return <PestleAnalysisDiagram lang={lang} />;
       }
       break;
     case 'swot':
       if (framework.slug === 'sswot-analysis') {
-        return <SSwotAnalysisDiagram />;
+        return <SSwotAnalysisDiagram lang={lang} />;
       }
       break;
     case 'canvas':
       if (framework.slug === 'business-opportunity-statement') {
-        return <BusinessOpportunityDiagram />;
+        return <BusinessOpportunityDiagram lang={lang} />;
       }
       break;
     case 'gantt':
       if (framework.slug === 'gantt-chart') {
-        return <GanttChartDiagram />;
+        return <GanttChartDiagram lang={lang} />;
       }
       break;
     default:
@@ -71,8 +71,8 @@ const InteractiveComponent: React.FC<{ framework: any }> = ({ framework }) => {
       return (
         <div className="w-full aspect-video bg-content2 rounded-lg flex flex-col items-center justify-center p-6">
           <Icon icon="mdi:chart-box" className="text-4xl text-primary mb-3" />
-          <h4 className="text-lg font-semibold mb-2">{interactive.title?.zh || interactive.title?.en || '交互图表'}</h4>
-          <p className="text-default-500 text-center">交互组件开发中...</p>
+          <h4 className="text-lg font-semibold mb-2">{lang === 'en' ? (interactive.title?.en || interactive.title?.zh || 'Interactive Chart') : (interactive.title?.zh || '交互图表')}</h4>
+          <p className="text-default-500 text-center">{lang === 'en' ? 'Interactive component under development...' : '交互组件开发中...'}</p>
         </div>
       );
   }
@@ -189,7 +189,7 @@ const FrameworkDetail: React.FC = () => {
               <Spinner size="lg" />
             </div>
           }>
-            <InteractiveComponent framework={framework} />
+            <InteractiveComponent framework={framework} lang={lang} />
           </Suspense>
 
           {/* 图示画廊 */}
