@@ -28,11 +28,17 @@ const defaultColumns: MatrixColumn[] = [
 const GenericMatrixDiagram: React.FC<InteractiveComponentProps & {
   title?: { zh: string; en: string };
   initialColumns?: MatrixColumn[];
-}> = ({ lang = 'zh', onExport, showExportButtons = true, className = '', initialColumns, title }) => {
+}> = ({ lang = 'zh', onExport, showExportButtons = true, className = '', initialColumns, title, data }) => {
   const [columns] = useState<MatrixColumn[]>(initialColumns && initialColumns.length ? initialColumns : defaultColumns);
-  const [rows, setRows] = useState<MatrixRow[]>([
-    { id: 'r1', values: { name: lang === 'zh' ? '示例项' : 'Sample', importance: 4, satisfaction: 2, notes: '' } },
-  ]);
+  const [rows, setRows] = useState<MatrixRow[]>(() => {
+    if (data && Array.isArray(data)) {
+      // map incoming rows to internal structure
+      return (data as any[]).map((v, idx) => ({ id: `r${idx + 1}`, values: v }));
+    }
+    return [
+      { id: 'r1', values: { name: lang === 'zh' ? '示例项' : 'Sample', importance: 4, satisfaction: 2, notes: '' } },
+    ];
+  });
   const [isEditing, setIsEditing] = useState<boolean>(false);
 
   useEffect(() => {

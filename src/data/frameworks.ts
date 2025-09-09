@@ -2001,6 +2001,10 @@ const seededFrameworks: Framework[] = [
       { key: 'importance', labelZh: '重要度(1-5)', labelEn: 'Importance(1-5)', type: 'number' },
       { key: 'satisfaction', labelZh: '满意度(1-5)', labelEn: 'Satisfaction(1-5)', type: 'number' },
       { key: 'notes', labelZh: '备注', labelEn: 'Notes', type: 'text' }
+    ], data: [
+      { name: '通勤途中学习', importance: 5, satisfaction: 2, notes: '碎片化时间、离线课程' },
+      { name: '面试前速成', importance: 4, satisfaction: 2, notes: '路径清晰与题库' },
+      { name: '同事共享笔记', importance: 3, satisfaction: 3, notes: '协作功能' }
     ] }
   },
   { title: '二手研究 vs. 一手研究', englishTitle: 'Secondary vs. Primary Research', slug: 'secondary-vs-primary-research', chapter: '2', subsectionId: '2.2', chapterTitle: '深度用户同理心与价值定义', chapterTitleEn: 'Empathy & Value Definition', tags: ['研究设计','数据来源','证据'], tagsEn: ['Research Design','Data Sources','Evidence'], summary: '明确二手与一手研究的适用边界与搭配方式，构建高性价比的证据体系。', summaryEn: 'Clarify when to use secondary vs primary research and how to combine them for cost‑effective evidence.', templateUrl: '/templates/secondary-vs-primary-research.pptx',
@@ -2036,6 +2040,10 @@ const seededFrameworks: Framework[] = [
       { key: 'sample', labelZh: '样本', labelEn: 'Sample', type: 'text' },
       { key: 'cost', labelZh: '成本', labelEn: 'Cost', type: 'text' },
       { key: 'time', labelZh: '时间', labelEn: 'Time', type: 'text' }
+    ], data: [
+      { question: '市场规模', evidence: 'TAM/CAGR', method: '二手: 行研报告', sample: '-', cost: '低', time: '短' },
+      { question: '可用性问题', evidence: '任务成功率', method: '可用性测试', sample: '5-8 人', cost: '中', time: '中' },
+      { question: '转化瓶颈', evidence: 'A/B 结果', method: '对照实验', sample: '1-2 周流量', cost: '中', time: '长' }
     ] }
   },
   { title: '定量研究 vs. 定性研究', englishTitle: 'Quantitative vs. Qualitative Research', slug: 'quantitative-vs-qualitative-research', chapter: '2', subsectionId: '2.2', chapterTitle: '深度用户同理心与价值定义', chapterTitleEn: 'Empathy & Value Definition', tags: ['方法论','抽样','有效性'], tagsEn: ['Methodology','Sampling','Validity'], summary: '理解定量与定性的互补：规模与因果 vs. 深度与机制。选择取决于问题而非偏好。', summaryEn: 'Quant vs qual are complementary: scale/causality vs depth/mechanism; choose by question, not preference.', templateUrl: '/templates/quantitative-vs-qualitative-research.pptx',
@@ -2055,6 +2063,10 @@ const seededFrameworks: Framework[] = [
       { key: 'usecase', labelZh: '适用场景', labelEn: 'Use Case', type: 'text' },
       { key: 'strength', labelZh: '优势', labelEn: 'Strength', type: 'text' },
       { key: 'limit', labelZh: '局限', labelEn: 'Limit', type: 'text' }
+    ], data: [
+      { method: '问卷', type: '定量', usecase: '规模估计/相关性', strength: '样本大', limit: '自陈偏差' },
+      { method: '深度访谈', type: '定性', usecase: '动机/机制', strength: '深度高', limit: '样本小' },
+      { method: '可用性测试', type: '定性', usecase: '交互问题', strength: '发现具体问题', limit: '不代表规模' }
     ] }
   },
   { title: '用户原型/心智模型', englishTitle: 'Archetypes/Mindsets', slug: 'archetypes-mindsets', chapter: '2', subsectionId: '2.2', chapterTitle: '深度用户同理心与价值定义', chapterTitleEn: 'Empathy & Value Definition', tags: ['细分','心理模型','动机'], tagsEn: ['Segmentation','Mindsets','Motivation'], summary: '基于动机与心智而非人口统计进行细分，输出可行动的原型与暗含心理模型。', summaryEn: 'Segment by motivations/mindsets rather than demographics to create actionable archetypes.', templateUrl: '/templates/archetypes-mindsets.pptx',
@@ -2074,6 +2086,9 @@ const seededFrameworks: Framework[] = [
       { key: 'barriers', labelZh: '障碍', labelEn: 'Barriers', type: 'text' },
       { key: 'jtbd', labelZh: 'JTBD', labelEn: 'JTBD', type: 'text' },
       { key: 'channels', labelZh: '渠道', labelEn: 'Channels', type: 'text' }
+    ], data: [
+      { archetype: '效率追求者', motives: '省时省力', barriers: '学习曲线', jtbd: '快速完成任务', channels: 'Web/插件' },
+      { archetype: '深度研究者', motives: '掌握原理', barriers: '资料分散', jtbd: '系统化学习', channels: '桌面/长文' }
     ] }
   },
   { title: '同理心地图', englishTitle: 'Empathy Map', slug: 'empathy-map', chapter: '2', subsectionId: '2.3', chapterTitle: '深度用户同理心与价值定义', chapterTitleEn: 'Empathy & Value Definition', tags: ['共情','洞察','旅程'], tagsEn: ['Empathy','Insights','Journey'], summary: '用“说/想/做/感受”快速沉淀洞察，推动团队达成用户共识。', summaryEn: 'Capture insights with Say/Think/Do/Feel to align teams on user understanding.', templateUrl: '/templates/empathy-map.pptx',
@@ -2088,6 +2103,9 @@ const seededFrameworks: Framework[] = [
       { key: 'evidence', labelZh: '证据/引语', labelEn: 'Evidence/Quote', type: 'text' },
       { key: 'category', labelZh: '类别', labelEn: 'Category', type: 'select', optionsZh: ['说','想','做','感受'], optionsEn: ['Say','Think','Do','Feel'] },
       { key: 'theme', labelZh: '主题', labelEn: 'Theme', type: 'text' }
+    ], data: [
+      { evidence: '“总是找不到上次的草稿”', category: 'Say', theme: '查找效率' },
+      { evidence: '登录流程很烦', category: 'Feel', theme: '摩擦点' }
     ] }
   },
   { title: '用户画像', englishTitle: 'Customer Profile / Persona', slug: 'customer-persona', chapter: '2', subsectionId: '2.3', chapterTitle: '深度用户同理心与价值定义', chapterTitleEn: 'Empathy & Value Definition', tags: ['画像','细分','场景'], tagsEn: ['Persona','Segmentation','Scenario'], summary: '以场景与目标为核心构建画像，而非静态人口学清单。', summaryEn: 'Persona centered on scenarios and goals, not just demographics.', templateUrl: '/templates/customer-persona.pptx',
@@ -2103,6 +2121,9 @@ const seededFrameworks: Framework[] = [
       { key: 'value', labelZh: '取值', labelEn: 'Value', type: 'text' },
       { key: 'evidence', labelZh: '证据', labelEn: 'Evidence', type: 'text' },
       { key: 'impact', labelZh: '影响', labelEn: 'Impact', type: 'text' }
+    ], data: [
+      { attribute: '主要设备', value: 'iPhone', evidence: 'UA 统计', impact: '移动优先' },
+      { attribute: '决策角色', value: '团队内影响者', evidence: '访谈', impact: '内容需可分享' }
     ] }
   },
   { title: '我们该如何…？', englishTitle: 'How Might We? (HMW)', slug: 'how-might-we', chapter: '2', subsectionId: '2.4', chapterTitle: '深度用户同理心与价值定义', chapterTitleEn: 'Empathy & Value Definition', tags: ['问题定义','创意','机会'], tagsEn: ['Problem Framing','Ideation','Opportunities'], summary: '把洞察转化为可激发创意的问题句式，确保范围可控且可验证。', summaryEn: 'Translate insights into creativity‑sparking, testable problem statements.', templateUrl: '/templates/how-might-we.pptx',
@@ -2118,6 +2139,9 @@ const seededFrameworks: Framework[] = [
       { key: 'impact', labelZh: '影响(1-5)', labelEn: 'Impact(1-5)', type: 'number' },
       { key: 'feasibility', labelZh: '可行(1-5)', labelEn: 'Feasibility(1-5)', type: 'number' },
       { key: 'testability', labelZh: '验证(1-5)', labelEn: 'Testability(1-5)', type: 'number' }
+    ], data: [
+      { name: '如何降低首次上手门槛以便更快完成首次成功？', impact: 5, feasibility: 4, testability: 5 },
+      { name: '如何提升搜索的可发现性以便更快找到资料？', impact: 4, feasibility: 3, testability: 4 }
     ] }
   },
 
