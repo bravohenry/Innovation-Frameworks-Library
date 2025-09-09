@@ -2002,9 +2002,11 @@ const seededFrameworks: Framework[] = [
       { key: 'satisfaction', labelZh: '满意度(1-5)', labelEn: 'Satisfaction(1-5)', type: 'number' },
       { key: 'notes', labelZh: '备注', labelEn: 'Notes', type: 'text' }
     ], data: [
-      { name: '通勤途中学习', importance: 5, satisfaction: 2, notes: '碎片化时间、离线课程' },
-      { name: '面试前速成', importance: 4, satisfaction: 2, notes: '路径清晰与题库' },
-      { name: '同事共享笔记', importance: 3, satisfaction: 3, notes: '协作功能' }
+      { name: '跨设备无缝继续课程', importance: 5, satisfaction: 1, notes: '进度云同步/离线缓存' },
+      { name: '精准搜索示例与答案', importance: 5, satisfaction: 2, notes: '语义检索+难度/时长过滤' },
+      { name: '5–10 分钟微课利用碎片时间', importance: 4, satisfaction: 2, notes: '自动切片/倍速/字幕' },
+      { name: '与导师快速预约答疑', importance: 4, satisfaction: 1, notes: '一键约时/时区处理/录制回放' },
+      { name: '导出学习证明便于绩效/报销', importance: 3, satisfaction: 2, notes: '证书模板/API 对接 HR' }
     ] }
   },
   { title: '二手研究 vs. 一手研究', englishTitle: 'Secondary vs. Primary Research', slug: 'secondary-vs-primary-research', chapter: '2', subsectionId: '2.2', chapterTitle: '深度用户同理心与价值定义', chapterTitleEn: 'Empathy & Value Definition', tags: ['研究设计','数据来源','证据'], tagsEn: ['Research Design','Data Sources','Evidence'], summary: '明确二手与一手研究的适用边界与搭配方式，构建高性价比的证据体系。', summaryEn: 'Clarify when to use secondary vs primary research and how to combine them for cost‑effective evidence.', templateUrl: '/templates/secondary-vs-primary-research.pptx',
@@ -2041,9 +2043,11 @@ const seededFrameworks: Framework[] = [
       { key: 'cost', labelZh: '成本', labelEn: 'Cost', type: 'text' },
       { key: 'time', labelZh: '时间', labelEn: 'Time', type: 'text' }
     ], data: [
-      { question: '市场规模', evidence: 'TAM/CAGR', method: '二手: 行研报告', sample: '-', cost: '低', time: '短' },
-      { question: '可用性问题', evidence: '任务成功率', method: '可用性测试', sample: '5-8 人', cost: '中', time: '中' },
-      { question: '转化瓶颈', evidence: 'A/B 结果', method: '对照实验', sample: '1-2 周流量', cost: '中', time: '长' }
+      { question: '市场规模与细分潜力', evidence: 'TAM/SAM/SOM & CAGR', method: '二手：行研+公开财报', sample: '—', cost: '低', time: '短' },
+      { question: '首周留存受哪些因素影响', evidence: '相关性/因果', method: '日志分析+因果推断', sample: '近 90 天新用户', cost: '低', time: '短' },
+      { question: '课程发现是否顺畅', evidence: '任务成功率/时长', method: '主持可用性测试', sample: '6–8 人×2 轮', cost: '中', time: '中' },
+      { question: '推荐算法能否提升转化', evidence: '转化率差异', method: '线上 A/B 测试', sample: '2 周 5% 流量', cost: '中', time: '中' },
+      { question: '公司用户是否愿意付费', evidence: '付费意愿/价格区间', method: 'B2B 访谈+联合分析', sample: '15–20 家企业', cost: '中', time: '中' }
     ] }
   },
   { title: '定量研究 vs. 定性研究', englishTitle: 'Quantitative vs. Qualitative Research', slug: 'quantitative-vs-qualitative-research', chapter: '2', subsectionId: '2.2', chapterTitle: '深度用户同理心与价值定义', chapterTitleEn: 'Empathy & Value Definition', tags: ['方法论','抽样','有效性'], tagsEn: ['Methodology','Sampling','Validity'], summary: '理解定量与定性的互补：规模与因果 vs. 深度与机制。选择取决于问题而非偏好。', summaryEn: 'Quant vs qual are complementary: scale/causality vs depth/mechanism; choose by question, not preference.', templateUrl: '/templates/quantitative-vs-qualitative-research.pptx',
@@ -2064,9 +2068,12 @@ const seededFrameworks: Framework[] = [
       { key: 'strength', labelZh: '优势', labelEn: 'Strength', type: 'text' },
       { key: 'limit', labelZh: '局限', labelEn: 'Limit', type: 'text' }
     ], data: [
-      { method: '问卷', type: '定量', usecase: '规模估计/相关性', strength: '样本大', limit: '自陈偏差' },
-      { method: '深度访谈', type: '定性', usecase: '动机/机制', strength: '深度高', limit: '样本小' },
-      { method: '可用性测试', type: '定性', usecase: '交互问题', strength: '发现具体问题', limit: '不代表规模' }
+      { method: '问卷（线上）', type: '定量', usecase: '规模估计/相关性', strength: '样本大/速度快', limit: '自陈偏差/题目质量依赖' },
+      { method: '深度访谈（半结构化）', type: '定性', usecase: '动机/决策/反对意见', strength: '洞察深/灵活追问', limit: '样本小/主观性' },
+      { method: '日记研究', type: '定性', usecase: '长期行为/场景', strength: '跨场景真实', limit: '执行成本高' },
+      { method: '可用性测试（主持）', type: '定性', usecase: '关键任务流', strength: '定位问题精准', limit: '不代表规模/主持人效应' },
+      { method: 'A/B 测试', type: '定量', usecase: '因果验证/策略对比', strength: '因果识别强', limit: '实现/流量成本' },
+      { method: '日志/遥测', type: '定量', usecase: '留存/转化/漏斗', strength: '真实行为/连续', limit: '因果弱/埋点质量' }
     ] }
   },
   { title: '用户原型/心智模型', englishTitle: 'Archetypes/Mindsets', slug: 'archetypes-mindsets', chapter: '2', subsectionId: '2.2', chapterTitle: '深度用户同理心与价值定义', chapterTitleEn: 'Empathy & Value Definition', tags: ['细分','心理模型','动机'], tagsEn: ['Segmentation','Mindsets','Motivation'], summary: '基于动机与心智而非人口统计进行细分，输出可行动的原型与暗含心理模型。', summaryEn: 'Segment by motivations/mindsets rather than demographics to create actionable archetypes.', templateUrl: '/templates/archetypes-mindsets.pptx',
@@ -2087,8 +2094,9 @@ const seededFrameworks: Framework[] = [
       { key: 'jtbd', labelZh: 'JTBD', labelEn: 'JTBD', type: 'text' },
       { key: 'channels', labelZh: '渠道', labelEn: 'Channels', type: 'text' }
     ], data: [
-      { archetype: '效率追求者', motives: '省时省力', barriers: '学习曲线', jtbd: '快速完成任务', channels: 'Web/插件' },
-      { archetype: '深度研究者', motives: '掌握原理', barriers: '资料分散', jtbd: '系统化学习', channels: '桌面/长文' }
+      { archetype: '效率追求者', motives: '省时/自动化', barriers: '初始配置复杂', jtbd: '快速完成任务', channels: 'Web/浏览器插件' },
+      { archetype: '深度研究者', motives: '掌握原理/最佳实践', barriers: '资料分散/质量参差', jtbd: '系统化深入学习', channels: '桌面端/长文课程' },
+      { archetype: '协作推动者', motives: '团队对齐/复用', barriers: '权限与版本', jtbd: '沉淀 SOP 与模板', channels: '企业微信/Slack 集成' }
     ] }
   },
   { title: '同理心地图', englishTitle: 'Empathy Map', slug: 'empathy-map', chapter: '2', subsectionId: '2.3', chapterTitle: '深度用户同理心与价值定义', chapterTitleEn: 'Empathy & Value Definition', tags: ['共情','洞察','旅程'], tagsEn: ['Empathy','Insights','Journey'], summary: '用“说/想/做/感受”快速沉淀洞察，推动团队达成用户共识。', summaryEn: 'Capture insights with Say/Think/Do/Feel to align teams on user understanding.', templateUrl: '/templates/empathy-map.pptx',
@@ -2105,7 +2113,11 @@ const seededFrameworks: Framework[] = [
       { key: 'theme', labelZh: '主题', labelEn: 'Theme', type: 'text' }
     ], data: [
       { evidence: '“总是找不到上次的草稿”', category: 'Say', theme: '查找效率' },
-      { evidence: '登录流程很烦', category: 'Feel', theme: '摩擦点' }
+      { evidence: '实际看不到推荐为什么推给我', category: 'Think', theme: '可解释性' },
+      { evidence: '重复在两个设备上拷贝链接', category: 'Do', theme: '跨设备' },
+      { evidence: '登录流程很烦', category: 'Feel', theme: '摩擦点' },
+      { evidence: '“要是能直接生成课后练习就好了”', category: 'Say', theme: '生成式需求' },
+      { evidence: '面对空白页不知道从哪开始', category: 'Feel', theme: '起步焦虑' }
     ] }
   },
   { title: '用户画像', englishTitle: 'Customer Profile / Persona', slug: 'customer-persona', chapter: '2', subsectionId: '2.3', chapterTitle: '深度用户同理心与价值定义', chapterTitleEn: 'Empathy & Value Definition', tags: ['画像','细分','场景'], tagsEn: ['Persona','Segmentation','Scenario'], summary: '以场景与目标为核心构建画像，而非静态人口学清单。', summaryEn: 'Persona centered on scenarios and goals, not just demographics.', templateUrl: '/templates/customer-persona.pptx',
@@ -2122,8 +2134,14 @@ const seededFrameworks: Framework[] = [
       { key: 'evidence', labelZh: '证据', labelEn: 'Evidence', type: 'text' },
       { key: 'impact', labelZh: '影响', labelEn: 'Impact', type: 'text' }
     ], data: [
-      { attribute: '主要设备', value: 'iPhone', evidence: 'UA 统计', impact: '移动优先' },
-      { attribute: '决策角色', value: '团队内影响者', evidence: '访谈', impact: '内容需可分享' }
+      { attribute: '年龄/阶段', value: '25–34 岁，升职压力', evidence: '问卷样本 1.2k', impact: '强调职业影响' },
+      { attribute: '角色', value: '产品经理/前端工程师', evidence: '注册信息', impact: '示例/术语贴合' },
+      { attribute: '主要设备', value: 'iPhone + Mac', evidence: 'UA 统计', impact: '移动优先/跨端接力' },
+      { attribute: '时间窗口', value: '通勤/午休/睡前 15min', evidence: '日记研究', impact: '微课切片与续播' },
+      { attribute: '内容偏好', value: '演示+可运行示例', evidence: '访谈', impact: '代码沙盒/一键复制' },
+      { attribute: '价格敏感', value: '中等，支持分期', evidence: '支付实验', impact: '分层/团购' },
+      { attribute: '决策角色', value: '团队影响者', evidence: 'B2B 访谈', impact: '可分享/群体价' },
+      { attribute: '核心动机', value: '升职与认可', evidence: '主题归纳', impact: '证书/内推合作' }
     ] }
   },
   { title: '我们该如何…？', englishTitle: 'How Might We? (HMW)', slug: 'how-might-we', chapter: '2', subsectionId: '2.4', chapterTitle: '深度用户同理心与价值定义', chapterTitleEn: 'Empathy & Value Definition', tags: ['问题定义','创意','机会'], tagsEn: ['Problem Framing','Ideation','Opportunities'], summary: '把洞察转化为可激发创意的问题句式，确保范围可控且可验证。', summaryEn: 'Translate insights into creativity‑sparking, testable problem statements.', templateUrl: '/templates/how-might-we.pptx',
@@ -2140,8 +2158,12 @@ const seededFrameworks: Framework[] = [
       { key: 'feasibility', labelZh: '可行(1-5)', labelEn: 'Feasibility(1-5)', type: 'number' },
       { key: 'testability', labelZh: '验证(1-5)', labelEn: 'Testability(1-5)', type: 'number' }
     ], data: [
-      { name: '如何降低首次上手门槛以便更快完成首次成功？', impact: 5, feasibility: 4, testability: 5 },
-      { name: '如何提升搜索的可发现性以便更快找到资料？', impact: 4, feasibility: 3, testability: 4 }
+      { name: '如何降低首次上手门槛以便更快达成首次成功？', impact: 5, feasibility: 4, testability: 5 },
+      { name: '如何提高“搜索→学习”转化以便更快找到合适课程？', impact: 4, feasibility: 3, testability: 4 },
+      { name: '如何实现跨设备续播以便随时继续学习？', impact: 4, feasibility: 4, testability: 5 },
+      { name: '如何将学习成果可证明化以便用于绩效与简历？', impact: 4, feasibility: 3, testability: 4 },
+      { name: '如何把答疑等待从小时降到分钟以便降低流失？', impact: 5, feasibility: 3, testability: 4 },
+      { name: '如何在 7 天内形成习惯以便提升留存？', impact: 5, feasibility: 3, testability: 5 }
     ] }
   },
 
