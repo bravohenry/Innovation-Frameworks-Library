@@ -2419,14 +2419,19 @@ const seededFrameworks: Framework[] = [
 <p>Health management app discovered top pain was 'tedious logging' not 'missing features'. Simplified to one-tap recording + auto-analysis, DAU rose from 12% to 34%, paid conversion grew 2.1x</p>
 `
    },
-  { title: '商业模式画布', englishTitle: 'Business Model Canvas (BMC)', slug: 'business-model-canvas', chapter: '3', subsectionId: '3.3', chapterTitle: '设计商业模式与产品概念', chapterTitleEn: 'Design & Conception', tags: [], summary: '', templateUrl: '/templates/business-model-canvas.pptx',
+  { title: '商业模式画布', englishTitle: 'Business Model Canvas (BMC)', slug: 'business-model-canvas', chapter: '3', subsectionId: '3.3', chapterTitle: '设计商业模式与产品概念', chapterTitleEn: 'Design & Conception', 
+    tags: ["商业模式", "战略规划", "创业"], 
+    tagsEn: ["Business Model", "Strategy", "Entrepreneurship"],
+    summary: '九宫格商业模式设计工具，帮助企业描述、设计和优化商业模式。', 
+    summaryEn: 'Nine-block framework to describe, design and optimize business models.',
+    templateUrl: '/templates/business-model-canvas.pptx',
     oneLineDef: "九宫格商业模式图",
     oneLineDefEn: "Nine-block business model framework",
     scenario: "商业模式设计、战略规划、创业计划、模式创新、投资评估",
     scenarioEn: "Business model design, strategic planning, startup planning, model innovation, investment evaluation",
     coreSteps: ["定义客户细分","设计价值主张","规划渠道与关系","确定收入与成本","整体一致性检验"],
     coreStepsEn: ["Define customer segments","Design value propositions","Plan channels and relationships","Determine revenue and costs","Check overall coherence"],
-    miniCase: "共享办公企业用BMC发现：关键资源是'地段+社区运营'而非设施。调整为轻资产+合作模式后，单店盈亏平衡期从18月缩Short至9月",
+    miniCase: "共享办公企业用BMC发现：关键资源是'地段+社区运营'而非设施。调整为轻资产+合作模式后，单店盈亏平衡期从18月缩短至9月",
     miniCaseEn: "Co-working company discovered via BMC: key resources are 'location + community ops' not facilities. Shifted to asset-light + partnership model, breakeven dropped from 18 to 9 months",
     htmlContent: `<h2>是什么 / 何时使用</h2>
 <p><strong>定义：</strong>九宫格商业模式图</p>
@@ -2440,7 +2445,7 @@ const seededFrameworks: Framework[] = [
 <li>整体一致性检验</li>
 </ol>
 <h2>案例</h2>
-<p>共享办公企业用BMC发现：关键资源是'地段+社区运营'而非设施。调整为轻资产+合作模式后，单店盈亏平衡期从18月缩Short至9月</p>
+<p>共享办公企业用BMC发现：关键资源是'地段+社区运营'而非设施。调整为轻资产+合作模式后，单店盈亏平衡期从18月缩短至9月</p>
 `,
     htmlContentEn: `<h2>What / When to Use</h2>
 <p><strong>Definition:</strong> Nine-block business model framework</p>

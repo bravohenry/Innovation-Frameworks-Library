@@ -73,8 +73,8 @@ const DoubleDiamondDiagram: React.FC = () => {
       pathLength: 1,
       opacity: 1,
       transition: {
-        pathLength: { duration: 2.5, ease: 'easeInOut' },
-        opacity: { duration: 0.5 },
+        pathLength: { duration: 1.2, ease: 'easeInOut' },
+        opacity: { duration: 0.3 },
       },
     },
   };
@@ -85,10 +85,10 @@ const DoubleDiamondDiagram: React.FC = () => {
       scale: 1,
       opacity: 1,
       transition: {
-        delay: 2.7 + i * 0.15,
-        duration: 0.4,
+        delay: 1.3 + i * 0.1,
+        duration: 0.3,
         type: 'spring',
-        stiffness: 200,
+        stiffness: 250,
       },
     }),
   };
