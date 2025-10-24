@@ -52,12 +52,24 @@ const DoubleDiamondDiagram: React.FC = () => {
     },
   ];
 
+  const lineVariants = {
+    hidden: { scaleX: 0 },
+    visible: {
+      scaleX: 1,
+      transition: {
+        duration: 1,
+        ease: 'easeInOut',
+      },
+    },
+  };
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
         staggerChildren: 0.15,
+        delayChildren: 1.2,
       },
     },
   };
@@ -75,21 +87,26 @@ const DoubleDiamondDiagram: React.FC = () => {
 
   return (
     <div className="w-full py-8">
-      <motion.div
-        className="relative"
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-      >
-        {/* Horizontal Line */}
-        <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-primary-500 -translate-y-1/2" />
+      <div className="relative">
+        {/* Animated Horizontal Line */}
+        <motion.div
+          className="absolute top-1/2 left-0 right-0 h-0.5 bg-primary-500 -translate-y-1/2 origin-left"
+          variants={lineVariants}
+          initial="hidden"
+          animate="visible"
+        />
 
         {/* Chapters Container */}
-        <div className="relative grid grid-cols-5 gap-4">
-          {chapters.map((chapter, index) => (
+        <motion.div
+          className="relative grid grid-cols-5 gap-4"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          {chapters.map((chapter) => (
             <motion.div
               key={chapter.id}
-              className="flex flex-col items-center"
+              className="flex flex-col items-center group"
               variants={itemVariants}
             >
               {/* Phase Label (Top) */}
@@ -98,17 +115,14 @@ const DoubleDiamondDiagram: React.FC = () => {
               </div>
 
               {/* Dot Marker */}
-              <Link
-                to={`/chapters/${chapter.id}`}
-                className="group relative z-10"
-              >
+              <Link to={`/chapters/${chapter.id}`} className="relative z-10">
                 <div className="w-3 h-3 rounded-full bg-primary-500 transition-all group-hover:scale-150 group-hover:bg-primary-700" />
               </Link>
 
               {/* Chapter Title (Bottom) */}
               <Link
                 to={`/chapters/${chapter.id}`}
-                className="mt-4 text-center group"
+                className="mt-4 text-center"
               >
                 <div className="text-sm font-medium text-neutral-700 transition-colors group-hover:text-primary-700">
                   {lang === 'en' ? chapter.titleEn : chapter.titleZh}
@@ -116,8 +130,8 @@ const DoubleDiamondDiagram: React.FC = () => {
               </Link>
             </motion.div>
           ))}
-        </div>
-      </motion.div>
+        </motion.div>
+      </div>
     </div>
   );
 };
