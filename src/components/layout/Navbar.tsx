@@ -13,7 +13,7 @@ const Navbar: React.FC = () => {
   return (
     <HeroNavbar maxWidth="full" className="border-b border-divider">
       <NavbarBrand as={RouterLink} to="/" className="gap-2">
-        <Icon icon="lucide:book-open" className="text-primary text-2xl" />
+        <Icon icon="lucide:book-open" className="text-primary-500 text-2xl" />
         <p className="font-semibold text-inherit">{t('app_title')}</p>
       </NavbarBrand>
 

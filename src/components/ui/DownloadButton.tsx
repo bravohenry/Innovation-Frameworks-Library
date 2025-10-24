@@ -46,20 +46,22 @@ const DownloadButton: React.FC<DownloadButtonProps> = ({ templateUrl, fileName }
   };
 
   return (
-    <Tooltip content="下载空白模板">
-      <Button
-        color={error ? "danger" : "primary"}
-        variant="solid"
-        onPress={handleDownload}
-        isLoading={isLoading}
-        startContent={!isLoading && <Icon icon={error ? "mdi:alert" : "lucide:download"} />}
-      >
-        下载模板
-      </Button>
+    <div className="flex items-center gap-2">
+      <Tooltip content="下载空白模板">
+        <Button
+          color={error ? "danger" : "primary"}
+          variant="solid"
+          onPress={handleDownload}
+          isLoading={isLoading}
+          startContent={!isLoading && <Icon icon={error ? "mdi:alert" : "lucide:download"} />}
+        >
+          下载模板
+        </Button>
+      </Tooltip>
       {error && (
-        <span className="ml-2 text-danger text-sm">{error}</span>
+        <span className="text-danger text-sm">{error}</span>
       )}
-    </Tooltip>
+    </div>
   );
 };
 

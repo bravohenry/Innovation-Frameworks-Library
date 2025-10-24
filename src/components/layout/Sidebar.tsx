@@ -46,7 +46,7 @@ const Sidebar: React.FC = () => {
                   onClick={(e) => e.stopPropagation()}
                   className="flex flex-col leading-tight hover:opacity-90"
                 >
-                  <span className="text-primary font-medium">{t('chapter_prefix', { n: chapter.id })}</span>
+                  <span className="text-primary-500 font-medium">{t('chapter_prefix', { n: chapter.id })}</span>
                   <span className="text-neutral-400 text-sm">{lang === 'en' ? (chapter.titleEn || chapter.title) : chapter.title}</span>
                 </Link>
               }

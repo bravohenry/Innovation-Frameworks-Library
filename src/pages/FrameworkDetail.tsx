@@ -73,7 +73,7 @@ const InteractiveComponent: React.FC<{ framework: any; lang: 'zh' | 'en' }> = ({
       // Generic interactive component placeholder for other types
       return (
         <div className="w-full aspect-video bg-content2 rounded-lg flex flex-col items-center justify-center p-6">
-          <Icon icon="mdi:chart-box" className="text-4xl text-primary mb-3" />
+          <Icon icon="mdi:chart-box" className="text-4xl text-primary-500 mb-3" />
           <h4 className="text-lg font-semibold mb-2">{lang === 'en' ? (interactive.title?.en || interactive.title?.zh || 'Interactive Chart') : (interactive.title?.zh || '交互图表')}</h4>
           <p className="text-default-500 text-center">{lang === 'en' ? 'Interactive component under development...' : '交互组件开发中...'}</p>
         </div>
@@ -204,9 +204,7 @@ const FrameworkDetail: React.FC = () => {
               <div className="flex items-center justify-between">
                 <h3 className="text-lg font-semibold">{t('diagrams')}</h3>
                 <div className="flex gap-2">
-                  <Tooltip content={t('preview')}>
-                    <Button size="sm" variant="flat" startContent={<Icon icon="mdi:image-search" />} onPress={() => { setActiveDiagramIndex(0); onOpen(); }}>{t('preview')}</Button>
-                  </Tooltip>
+                  <Button size="sm" variant="flat" startContent={<Icon icon="mdi:image-search" />} onPress={() => { setActiveDiagramIndex(0); onOpen(); }}>{t('preview')}</Button>
                 </div>
               </div>
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
