@@ -13,6 +13,14 @@ export interface Framework {
   tagsEn?: string[];
   summary: string;
   summaryEn?: string;
+  oneLineDef?: string;
+  oneLineDefEn?: string;
+  scenario?: string;
+  scenarioEn?: string;
+  coreSteps?: string[];
+  coreStepsEn?: string[];
+  miniCase?: string;
+  miniCaseEn?: string;
   templateUrl: string;
   content?: string;
   htmlContent?: string;
@@ -60,6 +68,14 @@ const frameworksData: Record<string, Framework> = {
     tagsEn: ["Strategy Analysis", "Competition", "Industry Structure"],
     summary: "一个用于分析行业吸引力和竞争强度的强大工具，帮助企业理解其所处的竞争环境。",
     summaryEn: "Analyze industry attractiveness and competitive intensity to understand market structure.",
+    oneLineDef: "评估行业竞争格局的五维分析工具",
+    oneLineDefEn: "Five-dimensional tool for assessing industry competitive landscape",
+    scenario: "进入新市场前评估吸引力、制定竞争战略、分析行业结构变化",
+    scenarioEn: "Assessing attractiveness before entering new markets, formulating competitive strategy, analyzing industry structure changes",
+    coreSteps: ["分析现有竞争者强度", "评估新进入者威胁", "识别替代品威胁", "分析供应商议价能力", "评估购买者议价能力"],
+    coreStepsEn: ["Analyze existing rivals intensity", "Assess new entrant threats", "Identify substitute threats", "Analyze supplier bargaining power", "Assess buyer bargaining power"],
+    miniCase: "某科技公司分析云计算市场：AWS/Azure竞争激烈，进入壁垒极高，客户锁定效应强，决定聚焦垂直行业SaaS避开正面竞争",
+    miniCaseEn: "A tech firm analyzed cloud market: AWS/Azure compete intensely, entry barriers extremely high, customer lock-in strong, decided to focus on vertical SaaS to avoid head-on competition",
     templateUrl: "/templates/porters-five-forces.pptx",
     content: `## 这是什么？ (What is it?)
 
@@ -167,6 +183,14 @@ const frameworksData: Record<string, Framework> = {
     tagsEn: ["Team Collaboration", "Organizational Effectiveness", "Leadership", "Trust Building"],
     summary: "识别并化解信任缺失、冲突畏惧、责任规避、投入不足、结果忽视五大障碍，构建高效团队基础。产出症状诊断表、团队契约与改善行动计划。",
     summaryEn: "Identify and resolve five team dysfunctions to build high-performing teams. Delivers diagnostic assessments, team charter and improvement action plans.",
+    oneLineDef: "团队效能五层障碍诊断模型",
+    oneLineDefEn: "Five-layer team dysfunction diagnostic model",
+    scenario: "团队组建期、效能诊断、冲突频发、目标不对齐、合并重组",
+    scenarioEn: "Team formation, performance diagnosis, frequent conflicts, misaligned goals, mergers and reorganizations",
+    coreSteps: ["障碍诊断识别", "根因分析层级", "优先级排序", "设计干预活动", "实施强化"],
+    coreStepsEn: ["Diagnose dysfunctions", "Analyze root causes layer by layer", "Prioritize interventions", "Design intervention activities", "Implement and reinforce"],
+    miniCase: "某产品团队频繁延期：成员缺乏信任不敢提资源担忧→避免与PM冲突→被动接受不合理期限→无人问责进度→各自优化个人KPI。通过信任建设+冲突管理培训，准时交付率从40%升至85%",
+    miniCaseEn: "A product team frequently missed deadlines: Members lacked trust, afraid to voice resource concerns→avoided conflict with PM→passively accepted unrealistic timelines→no one held peers accountable→each optimized personal KPIs. Through trust-building + conflict training, on-time delivery rose from 40% to 85%",
     templateUrl: "/templates/five-dysfunctions-team.pptx",
     htmlContent: `<h2>是什么 / 何时使用</h2>
 <p>团队协作五大障碍模型由Patrick Lencioni提出，识别团队效能的核心障碍。五大障碍按层级关系排列：</p>
@@ -346,6 +370,14 @@ const frameworksData: Record<string, Framework> = {
     tagsEn: ["Project Governance", "Role Clarity", "Process Clarity", "Responsibility Assignment"],
     summary: "通过 R（负责）、A（签核）、C（咨询）、I（知会）澄清跨角色分工，降低协调成本。产出角色定义表、任务分解矩阵与导出CSV模板。",
     summaryEn: "Clarify cross-role responsibilities using R (Responsible), A (Accountable), C (Consulted), I (Informed) to reduce coordination costs. Delivers role definition table, task breakdown matrix and CSV export template.",
+    oneLineDef: "四角色责任分配矩阵",
+    oneLineDefEn: "Four-role responsibility assignment matrix",
+    scenario: "项目启动、跨部门协作、职责不清、决策缓慢、重复沟通成本高",
+    scenarioEn: "Project kickoff, cross-departmental collaboration, unclear responsibilities, slow decision-making, high communication costs",
+    coreSteps: ["任务梳理分解", "识别所有角色", "分配RACI角色", "解决角色冲突", "确认发布"],
+    coreStepsEn: ["List and decompose tasks", "Identify all roles", "Assign RACI roles", "Resolve role conflicts", "Confirm and publish"],
+    miniCase: "某软件产品发布混乱：需求确认A=产品经理R=需求分析师，开发A=技术负责人R=工程师，测试验收A=QA经理C=产品经理。职责清晰后，需求变更减少60%，准时交付率从40%升至85%",
+    miniCaseEn: "A software product launch was chaotic: Requirements confirmation A=Product Manager R=Analyst, Development A=Tech Lead R=Engineers, Testing A=QA Manager C=Product Manager. After clear roles, requirement changes dropped 60%, on-time delivery rose from 40% to 85%",
     templateUrl: "/templates/raci-chart.pptx",
     htmlContent: `<h2>是什么 / 何时使用</h2>
 <p>RACI责任分配矩阵是一种项目管理工具，通过四种角色类型澄清任务与人员的责任关系：</p>
@@ -523,6 +555,14 @@ const frameworksData: Record<string, Framework> = {
     tagsEn: ["Project Planning", "Progress Management", "Milestones", "Time Management"],
     summary: "以时间轴展示任务起止、依赖与里程碑，统一节奏与关键路径。产出任务分解表、时间进度计划与风险缓冲方案。",
     summaryEn: "Display task timelines, dependencies and milestones to unify pace and critical path. Delivers task breakdown, timeline schedule and risk buffer plan.",
+    oneLineDef: "时间轴任务依赖可视化工具",
+    oneLineDefEn: "Timeline-based task dependency visualization tool",
+    scenario: "项目计划、复杂任务协调、进度监控、跨团队协作、里程碑管理",
+    scenarioEn: "Project planning, complex task coordination, progress monitoring, cross-team collaboration, milestone management",
+    coreSteps: ["分解任务WBS", "估算时长资源", "识别任务依赖", "定义关键路径", "设置里程碑"],
+    coreStepsEn: ["Decompose WBS tasks", "Estimate duration and resources", "Identify task dependencies", "Define critical path", "Set milestones"],
+    miniCase: "某App开发6个月周期：M1需求研究，M2 UI/UX设计并行技术架构，M3-5模块开发（关键路径：用户模块→核心业务→支付模块），M6集成测试。通过关键路径管理，提前1周交付",
+    miniCaseEn: "An APP development with 6-month timeline: M1 requirements research, M2 UI/UX design parallel with architecture, M3-5 modular development (critical path: User Module→Core Business→Payment), M6 integration testing. Delivered 1 week early via critical path management",
     templateUrl: "/templates/gantt-chart.pptx",
     htmlContent: `<h2>是什么 / 何时使用</h2>
 <p>甘特图由亨利·甘特（Henry Gantt）发明，是一种项目进度管理工具，以条形图形式显示项目、任务的开始时间、结束时间和持续时间。关键特点：</p>
@@ -708,6 +748,14 @@ const frameworksData: Record<string, Framework> = {
     tagsEn: ["Macro Environment", "External Analysis", "Strategic Context", "Environmental Scanning"],
     summary: "从政治、经济、社会、技术、法律、环境六维度系统扫描外部环境，识别影响业务的关键因素。产出环境因子清单、影响度评估与机会风险映射表。",
     summaryEn: "Systematically scan external environment across Political, Economic, Social, Technological, Legal, Environmental dimensions to identify key business factors. Delivers environmental factor inventory, impact assessment and opportunity-risk mapping.",
+    oneLineDef: "六维度宏观环境扫描工具",
+    oneLineDefEn: "Six-dimensional macro environmental scanning tool",
+    scenario: "战略规划、进入新市场、业务模式调整、风险评估、投资决策",
+    scenarioEn: "Strategic planning, entering new markets, business model adjustment, risk assessment, investment decisions",
+    coreSteps: ["维度分解收集信息", "识别关键影响因子", "评估影响程度方向", "分析维度间关联", "映射机会风险"],
+    coreStepsEn: ["Decompose dimensions and collect info", "Identify key impact factors", "Assess impact degree and direction", "Analyze cross-dimensional correlations", "Map opportunities and risks"],
+    miniCase: "某零售企业计划拓展东南亚市场，PESTLE分析发现：政治稳定性风险中等，经济增长强劲（机会），移动支付普及率高（技术机会），环保法规趋严（成本压力），决定采用轻资产运营模式",
+    miniCaseEn: "A retailer planning Southeast Asia expansion used PESTLE: found medium political stability risk, strong economic growth (opportunity), high mobile payment penetration (tech opportunity), tightening environmental regulations (cost pressure), decided on asset-light operating model",
     templateUrl: "/templates/pestle-analysis.pptx",
     htmlContent: `<h2>是什么 / 何时使用</h2>
 <p>PESTLE分析是一种宏观环境分析工具，通过六个维度系统性扫描外部环境：</p>
@@ -890,6 +938,14 @@ const frameworksData: Record<string, Framework> = {
     tagsEn: ["Strategic Analysis", "Internal-External Matching", "Contextualization", "Strategy Formulation"],
     summary: "在SWOT基础上强调情境化，将内部要素与外部环境精准匹配，形成SO/ST/WO/WT四组具体策略。产出情境化分析报告与行动策略矩阵。",
     summaryEn: "Emphasizes contextualization based on SWOT, precisely matching internal factors with external environment to form four specific strategy groups: SO/ST/WO/WT. Delivers contextualized analysis report and action strategy matrix.",
+    oneLineDef: "情境化SWOT策略推导工具",
+    oneLineDefEn: "Contextualized SWOT strategy derivation tool",
+    scenario: "战略转型、竞争策略制定、问题解决、投资决策、危机应对",
+    scenarioEn: "Strategic transformation, competitive strategy formulation, problem-solving, investment decisions, crisis response",
+    coreSteps: ["明确分析情境", "识别SWOT要素", "要素精准匹配", "生成四组策略", "确定优先级"],
+    coreStepsEn: ["Clarify analysis context", "Identify SWOT elements", "Precisely match elements", "Generate four strategy groups", "Prioritize strategies"],
+    miniCase: "制造企业数字化转型sSWOT：情境-工业4.0背景下保持竞争力。S:制造经验/客户关系，W:IT能力不足/创新文化缺乏，O:工业4.0政策/新技术成熟，T:数字化竞争者出现。选择WO策略与科技公司合作补足数字化短板，成功实现转型",
+    miniCaseEn: "Manufacturer's digital transformation sSWOT: Context-maintaining competitiveness amid Industry 4.0. S:Manufacturing experience/customer relationships, W:Insufficient IT capabilities/lacking innovation culture, O:Industry 4.0 policies/emerging tech maturity, T:Digital competitors emerging. Chose WO strategy to partner with tech companies filling digital gaps, successfully achieved transformation",
     templateUrl: "/templates/sswot-analysis.pptx",
     htmlContent: `<h2>是什么 / 何时使用</h2>
 <p>sSWOT（Situational SWOT）是传统SWOT分析的升级版，强调情境化和策略导向。与传统SWOT不同，sSWOT：</p>
@@ -1084,6 +1140,14 @@ const frameworksData: Record<string, Framework> = {
     tagsEn: ["Opportunity Definition", "Problem Statement", "Alignment Consensus", "Value Proposition"],
     summary: "用简洁四要素结构（对象、痛点、价值、成功标准）描述商业机会，形成团队统一理解的机会锚点。产出一页纸机会画布与验证假设清单。",
     summaryEn: "Uses concise four-element structure (target, pain point, value, success criteria) to describe business opportunities, forming unified team understanding. Delivers one-page opportunity canvas and validation hypothesis list.",
+    oneLineDef: "四要素机会定义画布",
+    oneLineDefEn: "Four-element opportunity definition canvas",
+    scenario: "项目立项、投资决策、产品规划、市场进入、战略转型",
+    scenarioEn: "Project initiation, investment decisions, product planning, market entry, strategic transformation",
+    coreSteps: ["定义目标对象", "识别核心痛点", "提炼价值主张", "设定成功标准", "标注关键假设"],
+    coreStepsEn: ["Define target audience", "Identify core pain points", "Refine value proposition", "Set success criteria", "Mark key assumptions"],
+    miniCase: "在线教育公司定义机会：对象-二三线城市25-40岁双职工家庭，痛点-优质教育资源稀缺且时间受限，价值-名师1对1在线辅导+灵活时间，成功-12个月50万注册用户15%付费转化80%留存。通过渐进假设验证成功进入细分市场",
+    miniCaseEn: "Online education company defined opportunity: Audience-tier-2/3 city dual-income families aged 25-40, Pain point-scarce quality education resources and time constraints, Value-famous teacher 1-on-1 online tutoring + flexible scheduling, Success-500K registered users 15% paid conversion 80% retention in 12 months. Successfully entered niche market through gradual hypothesis validation",
     templateUrl: "/templates/business-opportunity-statement.pptx",
     htmlContent: `<h2>是什么 / 何时使用</h2>
 <p>商业机会声明是一个结构化的一页纸工具，通过四个核心要素清晰定义商业机会：</p>
@@ -1278,6 +1342,14 @@ const frameworksData: Record<string, Framework> = {
     tagsEn: ["Growth Metrics", "Strategic Alignment", "Indicator System", "Team Goals", "Driving Factors"],
     summary: "以北极星指标（NSM）与驱动指标树对齐战略与执行，统一团队关注点与优先级。产出NSM定义、驱动因子分解树与实验路线图。",
     summaryEn: "Align strategy and execution using North Star Metric (NSM) and driving indicator tree to unify team focus and priorities. Delivers NSM definition, driving factor decomposition tree and experiment roadmap.",
+    oneLineDef: "单一关键指标对齐框架",
+    oneLineDefEn: "Single key metric alignment framework",
+    scenario: "产品发展期、团队扩张期、战略转型期、跨部门协作、增长瓶颈突破",
+    scenarioEn: "Product growth stage, team scaling, strategic transformation, cross-department collaboration, growth bottleneck breakthrough",
+    coreSteps: ["定义北极星指标", "分解驱动因子树", "识别关键假设", "设计验证实验", "建立追踪仪表盘"],
+    coreStepsEn: ["Define North Star Metric", "Decompose driving factor tree", "Identify key assumptions", "Design validation experiments", "Build tracking dashboard"],
+    miniCase: "Spotify的NSM是\"听歌时长\"：驱动因子包括新用户获取、歌单推荐质量、播放界面体验。团队通过实验验证：提升推荐准确率30%→听歌时长增长15%→用户留存提升20%。统一指标后跨部门协作效率提升40%",
+    miniCaseEn: "Spotify's NSM is 'listening time': Driving factors include new user acquisition, playlist recommendation quality, player interface experience. Team validated through experiments: 30% recommendation accuracy improvement → 15% listening time increase → 20% user retention boost. Cross-department collaboration efficiency improved 40% after metric alignment",
     templateUrl: "/templates/north-star-framework.pptx",
     htmlContent: `<h2>是什么 / 何时使用</h2>
 <p>北极星框架（North Star Framework）是谷歌等科技公司广泛使用的战略对齐工具，核心理念是确定一个关键指标作为"北极星"，指导团队所有决策和行动。框架包含三个核心要素：</p>
@@ -1583,8 +1655,17 @@ const frameworksData: Record<string, Framework> = {
     chapterTitle: "发现与战略基础",
     chapterTitleEn: "Discovery & Strategy",
     tags: ["战略分析", "内部评估", "外部评估"],
+    tagsEn: ["Strategy Analysis", "Internal Assessment", "External Assessment"],
     summary: "一种评估组织优势、劣势、机会和威胁的战略规划工具，帮助识别内部和外部因素对组织目标的影响。",
     summaryEn: "Evaluate strengths, weaknesses, opportunities and threats to inform strategy.",
+    oneLineDef: "内外部优劣分析的四象限工具",
+    oneLineDefEn: "Four-quadrant tool for internal-external strength-weakness analysis",
+    scenario: "战略规划、项目评估、竞争分析、业务诊断、个人职业规划",
+    scenarioEn: "Strategic planning, project evaluation, competitive analysis, business diagnosis, personal career planning",
+    coreSteps: ["识别内部优势", "识别内部劣势", "识别外部机会", "识别外部威胁", "制定SO/WO/ST/WT策略"],
+    coreStepsEn: ["Identify internal strengths", "Identify internal weaknesses", "Identify external opportunities", "Identify external threats", "Formulate SO/WO/ST/WT strategies"],
+    miniCase: "某传统制造企业转型：优势-生产经验丰富，劣势-数字化能力弱，机会-智能制造政策支持，威胁-新兴竞争者进入。策略：利用优势抓住智能制造机会（SO），补足数字化短板降低威胁（WT）",
+    miniCaseEn: "A traditional manufacturer transforming: Strength-rich production experience, Weakness-weak digitalization, Opportunity-smart manufacturing policy support, Threat-new competitors. Strategy: leverage strength for smart manufacturing (SO), address digital gap to reduce threats (WT)",
     templateUrl: "/templates/swot-analysis.pptx",
     content: `## 这是什么？ (What is it?)
 
