@@ -82,7 +82,6 @@ const Home: React.FC = () => {
             <Button 
               variant="bordered" 
               size="lg"
-              startContent={<Icon icon="lucide:download" />}
               as="a"
               href="/templates"
             >

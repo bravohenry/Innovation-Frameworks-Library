@@ -24,9 +24,9 @@ const FrameworkCard: React.FC<FrameworkCardProps> = ({ framework }) => {
     <Link to={`/frameworks/${framework.slug}`} className="block h-full">
       <Card 
         isPressable
-        className="framework-card h-full hover:shadow-lg transition-shadow"
+        className="framework-card h-full hover:shadow-lg transition-shadow flex flex-col"
       >
-        <CardBody className="p-4 flex flex-col gap-4">
+        <CardBody className="p-4 flex flex-col gap-4 h-full">
           <div className="flex items-center gap-4 flex-wrap">
             <Chip size="sm" variant="flat" className="bg-primary-50 text-primary-700">
               {lang === 'zh' ? `第${framework.chapter}章` : `Ch.${framework.chapter}`}
@@ -38,7 +38,7 @@ const FrameworkCard: React.FC<FrameworkCardProps> = ({ framework }) => {
             ))}
           </div>
           
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 flex-1">
             <h3 className="text-lg font-semibold text-neutral-900">
               {lang === 'zh' ? framework.title : framework.englishTitle}
             </h3>
@@ -71,7 +71,7 @@ const FrameworkCard: React.FC<FrameworkCardProps> = ({ framework }) => {
             )}
           </div>
           
-          <div className="w-full text-center p-4 bg-primary-50 text-primary-700 rounded-lg text-sm font-medium hover:bg-primary-500 hover:text-neutral-100 transition-colors">
+          <div className="w-full text-center p-4 bg-primary-50 text-primary-700 rounded-lg text-sm font-medium hover:bg-primary-500 hover:text-neutral-100 transition-colors mt-auto">
             {lang === 'zh' ? '查看详情' : 'View Details'}
           </div>
         </CardBody>
