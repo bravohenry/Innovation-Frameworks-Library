@@ -27,9 +27,9 @@ const ChapterPage: React.FC = () => {
   if (!currentChapter) {
     return (
       <div className="flex flex-col items-center justify-center h-[70vh]">
-        <Icon icon="lucide:file-question" className="text-default-300 text-6xl mb-4" />
+        <Icon icon="lucide:file-question" className="text-neutral-400 text-6xl mb-4" />
         <h2 className="text-2xl font-semibold mb-2">{t('chapter_not_found')}</h2>
-        <p className="text-default-500 mb-6">{t('chapter_empty_desc')}</p>
+        <p className="text-neutral-400 mb-6">{t('chapter_empty_desc')}</p>
         <Button as={Link} to="/" color="primary">
           {t('go_home')}
         </Button>
@@ -52,14 +52,14 @@ const ChapterPage: React.FC = () => {
         </h1>
         {/* Chapter Goal & Subsections (统一架构) */}
         {chapterMeta && (
-          <div className="mt-3">
+          <div className="mt-4">
             <div className="flex items-start gap-3">
               <div className="flex-1">
-                <h3 className="text-lg font-semibold mb-1">
+                <h3 className="text-lg font-semibold mb-2">
                   {lang === 'en' ? 'Goal' : '目标'}: {lang === 'en' ? chapterMeta.goalEn : chapterMeta.goalZh}
                 </h3>
                 {chapterMeta.descZh && (
-                  <p className="text-default-600">
+                  <p className="text-neutral-400">
                     {lang === 'en' ? (chapterMeta.descEn || '') : chapterMeta.descZh}
                   </p>
                 )}
@@ -96,10 +96,10 @@ const ChapterPage: React.FC = () => {
       
       {/* Empty State */}
       {frameworks.length === 0 && (
-        <div className="text-center py-12">
-          <Icon icon="lucide:book-x" className="text-default-300 text-5xl mx-auto mb-4" />
+        <div className="text-center py-8">
+          <Icon icon="lucide:book-x" className="text-neutral-400 text-5xl mx-auto mb-4" />
           <h3 className="text-xl font-medium mb-2">{t('chapter_empty')}</h3>
-          <p className="text-default-500 mb-6">{t('chapter_empty_desc')}</p>
+          <p className="text-neutral-400 mb-6">{t('chapter_empty_desc')}</p>
           <Button 
             as={Link}
             to="/"
@@ -112,7 +112,7 @@ const ChapterPage: React.FC = () => {
       )}
       
       {/* Chapter Navigation (Bottom) */}
-      <div className="mt-12 flex flex-wrap justify-between">
+      <div className="mt-8 flex flex-wrap justify-between">
         {prevChapter && (
           <Button 
             as={Link}

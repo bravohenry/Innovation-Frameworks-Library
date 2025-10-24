@@ -17,7 +17,7 @@ const Navbar: React.FC = () => {
         <p className="font-semibold text-inherit">{t('app_title')}</p>
       </NavbarBrand>
 
-      <NavbarContent justify="end" className="gap-4">
+      <NavbarContent justify="end" className="gap-3">
         <NavbarItem className="hidden sm:flex w-full max-w-xs">
           <SearchBar />
         </NavbarItem>

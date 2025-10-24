@@ -101,9 +101,9 @@ const FrameworkDetail: React.FC = () => {
   if (!framework) {
     return (
       <div className="flex flex-col items-center justify-center h-[70vh]">
-        <Icon icon="lucide:file-question" className="text-default-300 text-6xl mb-4" />
+        <Icon icon="lucide:file-question" className="text-neutral-400 text-6xl mb-4" />
         <h2 className="text-2xl font-semibold mb-2">{t('framework_not_found')}</h2>
-        <p className="text-default-500 mb-6">{t('chapter_empty_desc')}</p>
+        <p className="text-neutral-400 mb-6">{t('chapter_empty_desc')}</p>
         <Button as={Link} to="/" color="primary">
           {t('go_home')}
         </Button>
@@ -139,17 +139,17 @@ const FrameworkDetail: React.FC = () => {
             
             <h1 className="text-3xl font-bold">{lang === 'en' ? framework.englishTitle : framework.title}</h1>
             
-            <p className="text-lg text-default-600">{lang === 'en' ? (framework.summaryEn || framework.summary) : framework.summary}</p>
+            <p className="text-lg text-neutral-400">{lang === 'en' ? (framework.summaryEn || framework.summary) : framework.summary}</p>
             
-            <div className="flex flex-wrap gap-2 mt-2">
+            <div className="flex flex-wrap gap-2 mt-1">
               {(lang === 'en' ? (framework.tagsEn && framework.tagsEn.length ? framework.tagsEn : framework.tags) : framework.tags).map((tag, index) => (
                 <Chip key={index} variant="flat">{tag}</Chip>
               ))}
             </div>
             
-            <Divider className="my-2" />
+            <Divider className="my-1" />
             
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-2">
               <DownloadButton templateUrl={framework.templateUrl} fileName={`${framework.slug}.pptx`} />
               <Button 
                 variant="flat" 
@@ -213,12 +213,12 @@ const FrameworkDetail: React.FC = () => {
                 {framework.diagrams.map((d, idx) => (
                   <Card key={idx} isPressable onPress={() => { setActiveDiagramIndex(idx); onOpen(); }} className="overflow-hidden">
                     <CardBody className="p-0">
-                      <div className="aspect-video bg-default-100 flex items-center justify-center">
-                        <Icon icon="mdi:chart-donut-variant" className="text-default-400 text-3xl" />
+                      <div className="aspect-video bg-neutral-100 flex items-center justify-center">
+                        <Icon icon="mdi:chart-donut-variant" className="text-neutral-400 text-3xl" />
                       </div>
                       <div className="p-3">
                         <div className="font-medium text-sm line-clamp-1">{d.title}</div>
-                        {d.description && <div className="text-xs text-default-500 line-clamp-1">{d.description}</div>}
+                        {d.description && <div className="text-xs text-neutral-400 line-clamp-1">{d.description}</div>}
                       </div>
                     </CardBody>
                   </Card>
@@ -241,11 +241,11 @@ const FrameworkDetail: React.FC = () => {
             </ModalHeader>
             <ModalBody>
               <div className="w-full">
-                <div className="w-full aspect-video bg-content2 flex items-center justify-center rounded-lg">
-                  <Icon icon="mdi:file-image" className="text-5xl text-default-400" />
+                <div className="w-full aspect-video bg-neutral-100 flex items-center justify-center rounded-lg">
+                  <Icon icon="mdi:file-image" className="text-5xl text-neutral-400" />
                 </div>
                 {framework.diagrams[activeDiagramIndex]?.description && (
-                  <p className="text-default-600 text-sm mt-3">{framework.diagrams[activeDiagramIndex]?.description}</p>
+                  <p className="text-neutral-400 text-sm mt-3">{framework.diagrams[activeDiagramIndex]?.description}</p>
                 )}
               </div>
             </ModalBody>

@@ -48,23 +48,23 @@ const Home: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto">
       {/* Hero Section */}
-      <section className="mb-12">
-        <div className="bg-gradient-to-r from-primary-50 to-primary-100 rounded-xl p-8 md:p-12">
+      <section className="mb-8">
+        <div className="bg-gradient-to-r from-primary-50 to-primary-50 rounded-xl p-8">
           <h1 className="text-3xl md:text-4xl font-bold mb-6">{t('home_hero_title')}</h1>
           
           {/* Three Value Points */}
           <ul className="space-y-3 mb-8 max-w-2xl">
             <li className="flex items-start gap-3">
-              <Icon icon="lucide:check-circle" className="text-primary text-xl mt-0.5 flex-shrink-0" />
-              <span className="text-base md:text-lg text-default-700">{t('home_value_1')}</span>
+              <Icon icon="lucide:check-circle" className="text-primary text-xl flex-shrink-0" />
+              <span className="text-base md:text-lg text-primary-700">{t('home_value_1')}</span>
             </li>
             <li className="flex items-start gap-3">
-              <Icon icon="lucide:check-circle" className="text-primary text-xl mt-0.5 flex-shrink-0" />
-              <span className="text-base md:text-lg text-default-700">{t('home_value_2')}</span>
+              <Icon icon="lucide:check-circle" className="text-primary text-xl flex-shrink-0" />
+              <span className="text-base md:text-lg text-primary-700">{t('home_value_2')}</span>
             </li>
             <li className="flex items-start gap-3">
-              <Icon icon="lucide:check-circle" className="text-primary text-xl mt-0.5 flex-shrink-0" />
-              <span className="text-base md:text-lg text-default-700">{t('home_value_3')}</span>
+              <Icon icon="lucide:check-circle" className="text-primary text-xl flex-shrink-0" />
+              <span className="text-base md:text-lg text-primary-700">{t('home_value_3')}</span>
             </li>
           </ul>
           
@@ -98,7 +98,7 @@ const Home: React.FC = () => {
             placeholder={t('search_placeholder')}
             value={searchQuery}
             onValueChange={setSearchQuery}
-            startContent={<Icon icon="lucide:search" className="text-default-400" />}
+            startContent={<Icon icon="lucide:search" className="text-neutral-400" />}
             className="w-full md:w-80"
           />
           <div className="flex-1 overflow-x-auto pb-2">
@@ -126,7 +126,7 @@ const Home: React.FC = () => {
         if (chapterFrameworks.length === 0) return null;
         
         return (
-          <section key={chapter.id} className="mb-12">
+          <section key={chapter.id} className="mb-8">
             <div className="flex items-center justify-between mb-4">
               <h2 className="text-xl font-semibold">
                 {t('chapter_prefix', { n: chapter.id })}: {lang === 'en' ? (chapter.titleEn || chapter.title) : chapter.title}
@@ -152,10 +152,10 @@ const Home: React.FC = () => {
       
       {/* No Results */}
       {Object.values(frameworksByChapter).every(arr => arr.length === 0) && (
-        <div className="text-center py-12">
-          <Icon icon="lucide:search-x" className="text-default-300 text-5xl mx-auto mb-4" />
+        <div className="text-center py-8">
+          <Icon icon="lucide:search-x" className="text-neutral-400 text-5xl mx-auto mb-4" />
           <h3 className="text-xl font-medium mb-2">{t('search_no_result')}</h3>
-          <p className="text-default-500 mb-6">{t('home_browse_all')}</p>
+          <p className="text-neutral-400 mb-6">{t('home_browse_all')}</p>
           <Button 
             color="primary" 
             variant="flat"

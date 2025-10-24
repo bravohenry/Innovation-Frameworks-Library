@@ -40,7 +40,7 @@ const SearchBar: React.FC = () => {
             placeholder={t('search_placeholder')}
             value={query}
             onValueChange={handleSearch}
-            startContent={<Icon icon="lucide:search" className="text-default-400" />}
+            startContent={<Icon icon="lucide:search" className="text-neutral-400" />}
             classNames={{
               input: "text-sm",
             }}
@@ -57,12 +57,12 @@ const SearchBar: React.FC = () => {
                 <p className="font-medium">{lang === 'en' ? framework.englishTitle : framework.title}</p>
                 <div className="flex gap-1">
                   {(lang === 'en' ? (framework.tagsEn && framework.tagsEn.length ? framework.tagsEn : framework.tags) : framework.tags).slice(0, 2).map((tag, index) => (
-                    <span key={index} className="text-xs bg-default-100 px-1 py-0.5 rounded-sm">
+                    <span key={index} className="text-xs bg-neutral-100 px-1 rounded-sm">
                       {tag}
                     </span>
                   ))}
                   {((lang === 'en' ? (framework.tagsEn && framework.tagsEn.length ? framework.tagsEn : framework.tags) : framework.tags).length > 2) && (
-                    <span className="text-xs text-default-400">+{(lang === 'en' ? (framework.tagsEn && framework.tagsEn.length ? framework.tagsEn : framework.tags) : framework.tags).length - 2}</span>
+                    <span className="text-xs text-neutral-400">+{(lang === 'en' ? (framework.tagsEn && framework.tagsEn.length ? framework.tagsEn : framework.tags) : framework.tags).length - 2}</span>
                   )}
                 </div>
               </div>
