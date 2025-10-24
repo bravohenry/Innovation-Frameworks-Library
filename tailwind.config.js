@@ -8,7 +8,13 @@ export default {
     "./node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      spacing: {
+        '4': '16px',
+        '6': '24px',
+        '12': '48px',
+      },
+    },
   },
   darkMode: "class",
   plugins: [
@@ -43,18 +49,18 @@ export default {
         light: {
           colors: {
             primary: {
-              50: "#eef2ff",
-              100: "#e0e7ff",
-              200: "#c7d2fe",
-              300: "#a5b4fc",
-              400: "#818cf8",
-              500: "#6366f1",
-              600: "#4f46e5",
-              700: "#4338ca",
-              800: "#3730a3",
-              900: "#312e81",
-              DEFAULT: "#4f46e5",
+              50: "#eff6ff",
+              500: "#3b82f6",
+              700: "#1d4ed8",
+              DEFAULT: "#3b82f6",
               foreground: "#ffffff"
+            },
+            default: {
+              100: "#f5f5f5",
+              400: "#a3a3a3",
+              900: "#171717",
+              DEFAULT: "#f5f5f5",
+              foreground: "#171717"
             }
           }
         }

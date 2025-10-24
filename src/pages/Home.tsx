@@ -50,22 +50,41 @@ const Home: React.FC = () => {
       {/* Hero Section */}
       <section className="mb-12">
         <div className="bg-gradient-to-r from-primary-50 to-primary-100 rounded-xl p-8 md:p-12">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">{t('home_hero_title')}</h1>
-          <p className="text-lg md:text-xl text-default-700 mb-6 max-w-3xl">{t('home_hero_desc')}</p>
+          <h1 className="text-3xl md:text-4xl font-bold mb-6">{t('home_hero_title')}</h1>
+          
+          {/* Three Value Points */}
+          <ul className="space-y-3 mb-8 max-w-2xl">
+            <li className="flex items-start gap-3">
+              <Icon icon="lucide:check-circle" className="text-primary text-xl mt-0.5 flex-shrink-0" />
+              <span className="text-base md:text-lg text-default-700">{t('home_value_1')}</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <Icon icon="lucide:check-circle" className="text-primary text-xl mt-0.5 flex-shrink-0" />
+              <span className="text-base md:text-lg text-default-700">{t('home_value_2')}</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <Icon icon="lucide:check-circle" className="text-primary text-xl mt-0.5 flex-shrink-0" />
+              <span className="text-base md:text-lg text-default-700">{t('home_value_3')}</span>
+            </li>
+          </ul>
+          
+          {/* CTA Buttons */}
           <div className="flex flex-wrap gap-3">
             <Button 
               color="primary" 
               size="lg"
-              startContent={<Icon icon="lucide:book-open" />}
-              as={Link}
-              to={`/chapters/${chapters[0]?.id || '1'}`}
+              endContent={<Icon icon="lucide:arrow-right" />}
+              as="a"
+              href="#frameworks"
             >
               {t('home_start')}
             </Button>
             <Button 
-              variant="flat" 
+              variant="bordered" 
               size="lg"
-              startContent={<Icon icon="lucide:search" />}
+              startContent={<Icon icon="lucide:download" />}
+              as="a"
+              href="/templates"
             >
               {t('home_browse_all')}
             </Button>
@@ -102,6 +121,7 @@ const Home: React.FC = () => {
       </section>
       
       {/* Frameworks by Chapter */}
+      <div id="frameworks">
       {chapters.map(chapter => {
         const chapterFrameworks = frameworksByChapter[chapter.id] || [];
         if (chapterFrameworks.length === 0) return null;
@@ -149,6 +169,7 @@ const Home: React.FC = () => {
           </Button>
         </div>
       )}
+      </div>
     </div>
   );
 };
