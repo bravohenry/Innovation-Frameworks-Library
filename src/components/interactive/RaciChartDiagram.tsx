@@ -5,10 +5,10 @@ const RaciChartDiagram: React.FC = () => {
   const { t, lang } = useI18n();
 
   const initialData = [
-    { task: t('raci_task1_title', 'Design User Interface'), taskEn: 'Design UI', 'UI Designer': 'R', 'Product Manager': 'A', 'Frontend Engineer': 'C', 'Marketing': 'I' },
-    { task: t('raci_task2_title', 'Develop Backend API'), taskEn: 'Develop Backend API', 'UI Designer': '', 'Product Manager': 'A', 'Frontend Engineer': 'R', 'Marketing': '' },
-    { task: t('raci_task3_title', 'Testing & QA'), taskEn: 'Testing & QA', 'UI Designer': 'C', 'Product Manager': 'A', 'Frontend Engineer': 'R', 'Marketing': 'I' },
-    { task: t('raci_task4_title', 'Write User Documentation'), taskEn: 'Write User Docs', 'UI Designer': '', 'Product Manager': 'C', 'Frontend Engineer': '', 'Marketing': 'R' },
+    { task: 'Design User Interface', taskEn: 'Design UI', 'UI Designer': 'R', 'Product Manager': 'A', 'Frontend Engineer': 'C', 'Marketing': 'I' },
+    { task: 'Develop Backend API', taskEn: 'Develop Backend API', 'UI Designer': '', 'Product Manager': 'A', 'Frontend Engineer': 'R', 'Marketing': '' },
+    { task: 'Testing & QA', taskEn: 'Testing & QA', 'UI Designer': 'C', 'Product Manager': 'A', 'Frontend Engineer': 'R', 'Marketing': 'I' },
+    { task: 'Write User Documentation', taskEn: 'Write User Docs', 'UI Designer': '', 'Product Manager': 'C', 'Frontend Engineer': '', 'Marketing': 'R' },
   ];
 
   const [data, setData] = useState(initialData);

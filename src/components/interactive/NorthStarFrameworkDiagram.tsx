@@ -41,31 +41,31 @@ const NorthStarFrameworkDiagram: React.FC = () => {
   const { t } = useI18n();
 
   const initialData: TreeNode = {
-    name: t('nsm_root', 'Total Listening Time'),
+    name: 'Total Listening Time',
     nameEn: 'Total Listening Time',
     children: [
       { 
-        name: t('nsm_driver1', 'Monthly Active Users'),
+        name: 'Monthly Active Users',
         nameEn: 'Monthly Active Users',
         children: [
-          { name: t('nsm_sub_driver1_1', 'New User Registrations'), nameEn: 'New User Registrations' },
-          { name: t('nsm_sub_driver1_2', 'User Retention Rate'), nameEn: 'User Retention Rate' },
+          { name: 'New User Registrations', nameEn: 'New User Registrations' },
+          { name: 'User Retention Rate', nameEn: 'User Retention Rate' },
         ]
       },
       { 
-        name: t('nsm_driver2', 'Listening Time per Session'),
+        name: 'Listening Time per Session',
         nameEn: 'Listening Time per Session',
         children: [
-          { name: t('nsm_sub_driver2_1', 'Playlists Created'), nameEn: 'Playlists Created' },
-          { name: t('nsm_sub_driver2_2', 'Songs Shared'), nameEn: 'Songs Shared' },
+          { name: 'Playlists Created', nameEn: 'Playlists Created' },
+          { name: 'Songs Shared', nameEn: 'Songs Shared' },
         ]
       },
       { 
-        name: t('nsm_driver3', 'Recommendation CTR'),
+        name: 'Recommendation CTR',
         nameEn: 'Recommendation CTR',
         children: [
-          { name: t('nsm_sub_driver3_1', 'Algorithm Accuracy'), nameEn: 'Algorithm Accuracy' },
-          { name: t('nsm_sub_driver3_2', 'UI Presentation Optimization'), nameEn: 'UI Presentation Optimization' },
+          { name: 'Algorithm Accuracy', nameEn: 'Algorithm Accuracy' },
+          { name: 'UI Presentation Optimization', nameEn: 'UI Presentation Optimization' },
         ]
       },
     ],
