@@ -9,6 +9,8 @@ interface Chapter {
   titleEn: string;
   phase: string;
   phaseEn: string;
+  x: number;
+  y: number;
 }
 
 const DoubleDiamondDiagram: React.FC = () => {
@@ -21,6 +23,8 @@ const DoubleDiamondDiagram: React.FC = () => {
       titleEn: 'Discovery & Strategy',
       phase: '发现',
       phaseEn: 'Discover',
+      x: 100,
+      y: 150,
     },
     {
       id: 2,
@@ -28,6 +32,8 @@ const DoubleDiamondDiagram: React.FC = () => {
       titleEn: 'Empathy & Value',
       phase: '定义',
       phaseEn: 'Define',
+      x: 350,
+      y: 150,
     },
     {
       id: 3,
@@ -35,6 +41,8 @@ const DoubleDiamondDiagram: React.FC = () => {
       titleEn: 'Design & Conception',
       phase: '开发',
       phaseEn: 'Develop',
+      x: 475,
+      y: 150,
     },
     {
       id: 4,
@@ -42,6 +50,8 @@ const DoubleDiamondDiagram: React.FC = () => {
       titleEn: 'Test & Iteration',
       phase: '交付',
       phaseEn: 'Deliver',
+      x: 600,
+      y: 150,
     },
     {
       id: 5,
@@ -49,89 +59,155 @@ const DoubleDiamondDiagram: React.FC = () => {
       titleEn: 'Launch & Storytelling',
       phase: '扩展',
       phaseEn: 'Scale',
+      x: 700,
+      y: 150,
     },
   ];
 
-  const lineVariants = {
-    hidden: { scaleX: 0 },
+  const pathVariants = {
+    hidden: {
+      pathLength: 0,
+      opacity: 0,
+    },
     visible: {
-      scaleX: 1,
+      pathLength: 1,
+      opacity: 1,
       transition: {
-        duration: 1,
-        ease: 'easeInOut',
+        pathLength: { duration: 2.5, ease: 'easeInOut' },
+        opacity: { duration: 0.5 },
       },
     },
   };
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
+  const nodeVariants = {
+    hidden: { scale: 0, opacity: 0 },
+    visible: (i: number) => ({
+      scale: 1,
       opacity: 1,
       transition: {
-        staggerChildren: 0.15,
-        delayChildren: 1.2,
+        delay: 2.7 + i * 0.15,
+        duration: 0.4,
+        type: 'spring',
+        stiffness: 200,
       },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5,
-      },
-    },
+    }),
   };
 
   return (
     <div className="w-full py-8">
-      <div className="relative">
-        {/* Animated Horizontal Line */}
-        <motion.div
-          className="absolute top-1/2 left-0 right-0 h-0.5 bg-primary-500 -translate-y-1/2 origin-left"
-          variants={lineVariants}
+      <svg
+        viewBox="0 0 800 300"
+        className="w-full h-auto"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs>
+          <linearGradient id="diamondGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.05" />
+            <stop offset="25%" stopColor="#3b82f6" stopOpacity="0.15" />
+            <stop offset="50%" stopColor="#3b82f6" stopOpacity="0.05" />
+            <stop offset="75%" stopColor="#3b82f6" stopOpacity="0.15" />
+            <stop offset="100%" stopColor="#3b82f6" stopOpacity="0.05" />
+          </linearGradient>
+        </defs>
+
+        {/* First Diamond: Discover → Define */}
+        <motion.path
+          d="M 100 150 L 225 50 L 350 150 L 225 250 Z"
+          fill="url(#diamondGradient)"
+          stroke="#3b82f6"
+          strokeWidth="2"
+          variants={pathVariants}
           initial="hidden"
           animate="visible"
         />
 
-        {/* Chapters Container */}
-        <motion.div
-          className="relative grid grid-cols-5 gap-4"
-          variants={containerVariants}
+        {/* Second Diamond: Develop → Deliver */}
+        <motion.path
+          d="M 350 150 L 475 50 L 600 150 L 475 250 Z"
+          fill="url(#diamondGradient)"
+          stroke="#3b82f6"
+          strokeWidth="2"
+          variants={pathVariants}
           initial="hidden"
           animate="visible"
+        />
+
+        {/* Extension line to Scale */}
+        <motion.line
+          x1="600"
+          y1="150"
+          x2="700"
+          y2="150"
+          stroke="#3b82f6"
+          strokeWidth="2"
+          variants={pathVariants}
+          initial="hidden"
+          animate="visible"
+        />
+
+        {/* Phase Labels */}
+        <motion.text
+          x="225"
+          y="35"
+          textAnchor="middle"
+          className="fill-neutral-900 text-xs font-bold uppercase tracking-wider select-none"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 2.8, duration: 0.5 }}
         >
-          {chapters.map((chapter) => (
-            <motion.div
-              key={chapter.id}
-              className="flex flex-col items-center group"
-              variants={itemVariants}
-            >
-              {/* Phase Label (Top) */}
-              <div className="text-xs font-semibold uppercase tracking-wider text-neutral-900 mb-4 text-center">
-                {lang === 'en' ? chapter.phaseEn : chapter.phase}
-              </div>
+          {lang === 'en' ? 'Discover' : '发现'}
+        </motion.text>
 
-              {/* Dot Marker */}
-              <Link to={`/chapters/${chapter.id}`} className="relative z-10">
-                <div className="w-3 h-3 rounded-full bg-primary-500 transition-all group-hover:scale-150 group-hover:bg-primary-700" />
-              </Link>
+        <motion.text
+          x="475"
+          y="35"
+          textAnchor="middle"
+          className="fill-neutral-900 text-xs font-bold uppercase tracking-wider select-none"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 3.0, duration: 0.5 }}
+        >
+          {lang === 'en' ? 'Develop' : '开发'}
+        </motion.text>
 
-              {/* Chapter Title (Bottom) */}
-              <Link
-                to={`/chapters/${chapter.id}`}
-                className="mt-4 text-center"
-              >
-                <div className="text-sm font-medium text-neutral-700 transition-colors group-hover:text-primary-700">
+        {/* Chapter Nodes */}
+        {chapters.map((chapter, index) => (
+          <g key={chapter.id}>
+            <Link to={`/chapters/${chapter.id}`}>
+              <g className="group cursor-pointer">
+                {/* Node Circle */}
+                <motion.circle
+                  cx={chapter.x}
+                  cy={chapter.y}
+                  r="10"
+                  fill="#ffffff"
+                  stroke="#3b82f6"
+                  strokeWidth="3"
+                  custom={index}
+                  variants={nodeVariants}
+                  initial="hidden"
+                  animate="visible"
+                  className="transition-all group-hover:fill-primary-500"
+                />
+
+                {/* Chapter Title */}
+                <motion.text
+                  x={chapter.x}
+                  y={chapter.y + 35}
+                  textAnchor="middle"
+                  className="fill-neutral-700 text-xs font-medium select-none transition-colors group-hover:fill-primary-700"
+                  custom={index}
+                  variants={nodeVariants}
+                  initial="hidden"
+                  animate="visible"
+                >
                   {lang === 'en' ? chapter.titleEn : chapter.titleZh}
-                </div>
-              </Link>
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>
+                </motion.text>
+              </g>
+            </Link>
+          </g>
+        ))}
+      </svg>
     </div>
   );
 };
