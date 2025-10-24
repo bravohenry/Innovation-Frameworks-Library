@@ -4,7 +4,6 @@ import { Button, Card, CardBody, Chip, Divider, Breadcrumbs, BreadcrumbItem, Mod
 import { Icon } from '@iconify/react';
 import { getFrameworkBySlug, getChapterMeta } from '../data/frameworks';
 import { useI18n } from '../contexts/I18nContext';
-import DownloadButton from '../components/ui/DownloadButton';
 
 // Lazy load interactive components
 const NorthStarFrameworkDiagram = React.lazy(() => import('../components/interactive/NorthStarFrameworkDiagram'));
@@ -150,7 +149,6 @@ const FrameworkDetail: React.FC = () => {
             <Divider className="my-1" />
             
             <div className="flex flex-wrap gap-2">
-              <DownloadButton templateUrl={framework.templateUrl} fileName={`${framework.slug}.pptx`} />
               <Button 
                 variant="flat" 
                 startContent={<Icon icon="lucide:share-2" />}
@@ -259,7 +257,7 @@ const FrameworkDetail: React.FC = () => {
       )}
       
       {/* Navigation */}
-      <div className="mt-8 flex justify-between">
+      <div className="mt-8">
         <Button 
           as={Link} 
           to={`/chapters/${framework.chapter}`}
@@ -268,7 +266,6 @@ const FrameworkDetail: React.FC = () => {
         >
           {t('back_to_chapter')}
         </Button>
-        <DownloadButton templateUrl={framework.templateUrl} fileName={`${framework.slug}.pptx`} />
       </div>
     </div>
   );

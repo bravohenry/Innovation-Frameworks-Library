@@ -79,14 +79,6 @@ const Home: React.FC = () => {
             >
               {t('home_start')}
             </Button>
-            <Button 
-              variant="flat" 
-              size="lg"
-              as="a"
-              href="/templates"
-            >
-              {t('home_browse_all')}
-            </Button>
           </div>
         </div>
       </section>
@@ -156,7 +148,7 @@ const Home: React.FC = () => {
         <div className="text-center py-8">
           <Icon icon="lucide:search-x" className="text-neutral-400 text-5xl mx-auto mb-4" />
           <h3 className="text-xl font-medium mb-2">{t('search_no_result')}</h3>
-          <p className="text-neutral-400 mb-6">{t('home_browse_all')}</p>
+          <p className="text-neutral-400 mb-6">{t('home_value_1')}</p>
           <Button 
             color="primary" 
             variant="flat"
@@ -165,7 +157,7 @@ const Home: React.FC = () => {
               setSelectedTags([]);
             }}
           >
-            {t('home_browse_all')}
+            Clear Filters
           </Button>
         </div>
       )}
