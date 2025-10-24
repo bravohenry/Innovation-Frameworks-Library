@@ -6,51 +6,51 @@ import { InteractiveComponentProps, SSwotData, SwotFactor, SwotStrategy } from '
 
 // Sample data for sSWOT Analysis
 const initialSSwotData: SSwotData = {
-  situation: '我们需要决定是否进入新兴的人工智能助手市场',
+  situation: 'We need to decide whether to enter the emerging AI assistant market',
   situationEn: 'We need to decide whether to enter the emerging AI assistant market',
   factors: [
     {
       id: 'strength-1',
       type: 'strength',
-      title: '强大的技术团队',
+      title: 'Strong Technical Team',
       titleEn: 'Strong Technical Team',
-      description: '拥有经验丰富的AI和机器学习专家',
+      description: 'Experienced AI and machine learning experts',
       descriptionEn: 'Experienced AI and machine learning experts',
       weight: 4
     },
     {
       id: 'strength-2',
       type: 'strength',
-      title: '充足的资金支持',
+      title: 'Adequate Funding',
       titleEn: 'Adequate Funding',
-      description: '近期完成B轮融资，资金充足',
+      description: 'Recently completed Series B funding with adequate resources',
       descriptionEn: 'Recently completed Series B funding with adequate resources',
       weight: 5
     },
     {
       id: 'weakness-1',
       type: 'weakness',
-      title: '缺乏市场经验',
+      title: 'Lack of Market Experience',
       titleEn: 'Lack of Market Experience',
-      description: '在消费者AI产品方面缺乏经验',
+      description: 'Limited experience in consumer AI products',
       descriptionEn: 'Limited experience in consumer AI products',
       weight: 4
     },
     {
       id: 'opportunity-1',
       type: 'opportunity',
-      title: '市场快速增长',
+      title: 'Rapid Market Growth',
       titleEn: 'Rapid Market Growth',
-      description: 'AI助手市场预计未来5年增长300%',
+      description: 'AI assistant market expected to grow 300% in next 5 years',
       descriptionEn: 'AI assistant market expected to grow 300% in next 5 years',
       weight: 5
     },
     {
       id: 'threat-1',
       type: 'threat',
-      title: '大厂竞争激烈',
+      title: 'Intense Big Tech Competition',
       titleEn: 'Intense Big Tech Competition',
-      description: '谷歌、苹果、微软等巨头已占据主要市场份额',
+      description: 'Google, Apple, Microsoft and other giants dominate market share',
       descriptionEn: 'Google, Apple, Microsoft and other giants dominate market share',
       weight: 5
     }
@@ -59,9 +59,9 @@ const initialSSwotData: SSwotData = {
     {
       id: 'so-1',
       type: 'SO',
-      title: '技术差异化战略',
+      title: 'Technical Differentiation Strategy',
       titleEn: 'Technical Differentiation Strategy',
-      description: '利用强大技术团队开发独特AI功能，抓住市场增长机会',
+      description: 'Leverage strong tech team to develop unique AI features and capture market growth',
       descriptionEn: 'Leverage strong tech team to develop unique AI features and capture market growth',
       feasibility: 4,
       impact: 5,
@@ -70,9 +70,9 @@ const initialSSwotData: SSwotData = {
     {
       id: 'wo-1',
       type: 'WO',
-      title: '合作伙伴战略',
+      title: 'Partnership Strategy',
       titleEn: 'Partnership Strategy',
-      description: '通过与有市场经验的公司合作，快速进入增长市场',
+      description: 'Partner with experienced market players to quickly enter growing market',
       descriptionEn: 'Partner with experienced market players to quickly enter growing market',
       feasibility: 3,
       impact: 4,
@@ -81,9 +81,9 @@ const initialSSwotData: SSwotData = {
     {
       id: 'st-1',
       type: 'ST',
-      title: '垂直专业化',
+      title: 'Vertical Specialization',
       titleEn: 'Vertical Specialization',
-      description: '专注特定垂直领域，避免与大厂直接竞争',
+      description: 'Focus on specific verticals to avoid direct competition with big tech',
       descriptionEn: 'Focus on specific verticals to avoid direct competition with big tech',
       feasibility: 4,
       impact: 3,
@@ -92,9 +92,9 @@ const initialSSwotData: SSwotData = {
     {
       id: 'wt-1',
       type: 'WT',
-      title: '审慎观望',
+      title: 'Cautious Observation',
       titleEn: 'Cautious Observation',
-      description: '考虑到市场经验不足和竞争激烈，选择观望时机',
+      description: 'Given lack of market experience and intense competition, wait for better timing',
       descriptionEn: 'Given lack of market experience and intense competition, wait for better timing',
       feasibility: 5,
       impact: 2,

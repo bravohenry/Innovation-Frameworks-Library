@@ -6,23 +6,23 @@ import { InteractiveComponentProps, TeamDysfunctionData, Dysfunction } from './t
 
 // Sample data for Five Dysfunctions
 const initialDysfunctionData: TeamDysfunctionData = {
-  teamName: '产品开发团队',
+  teamName: 'Product Development Team',
   teamNameEn: 'Product Development Team',
   assessmentDate: new Date().toISOString().split('T')[0],
   dysfunctions: [
     {
       id: 'trust',
       level: 1,
-      labelZh: '缺乏信任',
+      labelZh: 'Absence of Trust',
       labelEn: 'Absence of Trust',
-      descriptionZh: '团队成员不愿意展露弱点和错误',
+      descriptionZh: 'Team members are reluctant to be vulnerable with one another',
       descriptionEn: 'Team members are reluctant to be vulnerable with one another',
       score: 3,
       symptoms: [
-        '会议中保持沉默',
-        '避免寻求帮助',
-        '不承认错误',
-        '互相猜疑'
+        'Remain silent in meetings',
+        'Avoid asking for help',
+        'Don\'t admit mistakes',
+        'Mutual suspicion'
       ],
       symptomsEn: [
         'Remain silent in meetings',
@@ -31,10 +31,10 @@ const initialDysfunctionData: TeamDysfunctionData = {
         'Mutual suspicion'
       ],
       solutions: [
-        '分享个人背景和经历',
-        '定期团队建设活动',
-        '鼓励公开讨论失败',
-        '领导者以身作则'
+        'Share personal backgrounds',
+        'Regular team building',
+        'Encourage discussing failures',
+        'Leader sets example'
       ],
       solutionsEn: [
         'Share personal backgrounds',
@@ -46,16 +46,16 @@ const initialDysfunctionData: TeamDysfunctionData = {
     {
       id: 'conflict',
       level: 2,
-      labelZh: '惧怕冲突',
+      labelZh: 'Fear of Conflict',
       labelEn: 'Fear of Conflict',
-      descriptionZh: '团队避免有益的辩论和争论',
+      descriptionZh: 'Teams avoid productive debates and disagreements',
       descriptionEn: 'Teams avoid productive debates and disagreements',
       score: 4,
       symptoms: [
-        '人为和谐',
-        '避免争议话题',
-        '会后私下抱怨',
-        '决策缺乏深度讨论'
+        'Artificial harmony',
+        'Avoid controversial topics',
+        'Complain privately after meetings',
+        'Lack deep discussion in decisions'
       ],
       symptomsEn: [
         'Artificial harmony',
@@ -64,10 +64,10 @@ const initialDysfunctionData: TeamDysfunctionData = {
         'Lack deep discussion in decisions'
       ],
       solutions: [
-        '鼓励健康辩论',
-        '设立"恶魔代言人"角色',
-        '明确冲突规则',
-        '庆祝有益的争论'
+        'Encourage healthy debate',
+        'Assign devil\'s advocate role',
+        'Establish conflict rules',
+        'Celebrate productive arguments'
       ],
       solutionsEn: [
         'Encourage healthy debate',
@@ -79,16 +79,16 @@ const initialDysfunctionData: TeamDysfunctionData = {
     {
       id: 'commitment',
       level: 3,
-      labelZh: '缺乏承诺',
+      labelZh: 'Lack of Commitment',
       labelEn: 'Lack of Commitment',
-      descriptionZh: '团队成员不能全力投入决策和计划',
+      descriptionZh: 'Team members don\'t fully commit to decisions and plans',
       descriptionEn: 'Team members don\'t fully commit to decisions and plans',
       score: 2,
       symptoms: [
-        '模糊的方向和优先级',
-        '无休止的分析和讨论',
-        '对决策不确定',
-        '错过机会和截止日期'
+        'Unclear direction and priorities',
+        'Endless analysis and discussion',
+        'Uncertainty about decisions',
+        'Miss opportunities and deadlines'
       ],
       symptomsEn: [
         'Unclear direction and priorities',
@@ -97,10 +97,10 @@ const initialDysfunctionData: TeamDysfunctionData = {
         'Miss opportunities and deadlines'
       ],
       solutions: [
-        '明确决策流程',
-        '设定具体截止日期',
-        '总结会议决定',
-        '定期回顾承诺'
+        'Clear decision process',
+        'Set specific deadlines',
+        'Summarize meeting decisions',
+        'Regular commitment reviews'
       ],
       solutionsEn: [
         'Clear decision process',
@@ -112,16 +112,16 @@ const initialDysfunctionData: TeamDysfunctionData = {
     {
       id: 'accountability',
       level: 4,
-      labelZh: '逃避责任',
+      labelZh: 'Avoidance of Accountability',
       labelEn: 'Avoidance of Accountability',
-      descriptionZh: '团队成员不愿意互相问责',
+      descriptionZh: 'Team members are reluctant to hold each other accountable',
       descriptionEn: 'Team members are reluctant to hold each other accountable',
       score: 3,
       symptoms: [
-        '低标准和低期望',
-        '错过截止日期',
-        '团队中的怨恨',
-        '鼓励平庸'
+        'Low standards and expectations',
+        'Miss deadlines',
+        'Resentment among team',
+        'Encourage mediocrity'
       ],
       symptomsEn: [
         'Low standards and expectations',
@@ -130,10 +130,10 @@ const initialDysfunctionData: TeamDysfunctionData = {
         'Encourage mediocrity'
       ],
       solutions: [
-        '明确团队标准',
-        '定期进度审查',
-        '同级问责制',
-        '庆祝高绩效'
+        'Clear team standards',
+        'Regular progress reviews',
+        'Peer accountability',
+        'Celebrate high performance'
       ],
       solutionsEn: [
         'Clear team standards',
@@ -145,16 +145,16 @@ const initialDysfunctionData: TeamDysfunctionData = {
     {
       id: 'results',
       level: 5,
-      labelZh: '忽视结果',
+      labelZh: 'Inattention to Results',
       labelEn: 'Inattention to Results',
-      descriptionZh: '团队成员把个人需求置于集体目标之上',
+      descriptionZh: 'Team members put individual needs above collective goals',
       descriptionEn: 'Team members put individual needs above collective goals',
       score: 2,
       symptoms: [
-        '团队士气低落',
-        '个人目标优先',
-        '失去成就导向的员工',
-        '很难实现目标'
+        'Low team morale',
+        'Individual goals prioritized',
+        'Lose achievement-oriented employees',
+        'Difficulty achieving goals'
       ],
       symptomsEn: [
         'Low team morale',
@@ -163,10 +163,10 @@ const initialDysfunctionData: TeamDysfunctionData = {
         'Difficulty achieving goals'
       ],
       solutions: [
-        '明确团队目标',
-        '公开跟踪结果',
-        '奖励集体成就',
-        '定期庆祝成功'
+        'Clear team objectives',
+        'Publicly track results',
+        'Reward collective achievements',
+        'Regular success celebrations'
       ],
       solutionsEn: [
         'Clear team objectives',

@@ -5,15 +5,15 @@ const RaciChartDiagram: React.FC = () => {
   const { t, lang } = useI18n();
 
   const initialData = [
-    { task: t('raci_task1_title', '设计用户界面'), taskEn: 'Design UI', 'UI Designer': 'R', 'Product Manager': 'A', 'Frontend Engineer': 'C', 'Marketing': 'I' },
-    { task: t('raci_task2_title', '开发后端 API'), taskEn: 'Develop Backend API', 'UI Designer': '', 'Product Manager': 'A', 'Frontend Engineer': 'R', 'Marketing': '' },
-    { task: t('raci_task3_title', '测试与品控'), taskEn: 'Testing & QA', 'UI Designer': 'C', 'Product Manager': 'A', 'Frontend Engineer': 'R', 'Marketing': 'I' },
-    { task: t('raci_task4_title', '撰写用户文档'), taskEn: 'Write User Docs', 'UI Designer': '', 'Product Manager': 'C', 'Frontend Engineer': '', 'Marketing': 'R' },
+    { task: t('raci_task1_title', 'Design User Interface'), taskEn: 'Design UI', 'UI Designer': 'R', 'Product Manager': 'A', 'Frontend Engineer': 'C', 'Marketing': 'I' },
+    { task: t('raci_task2_title', 'Develop Backend API'), taskEn: 'Develop Backend API', 'UI Designer': '', 'Product Manager': 'A', 'Frontend Engineer': 'R', 'Marketing': '' },
+    { task: t('raci_task3_title', 'Testing & QA'), taskEn: 'Testing & QA', 'UI Designer': 'C', 'Product Manager': 'A', 'Frontend Engineer': 'R', 'Marketing': 'I' },
+    { task: t('raci_task4_title', 'Write User Documentation'), taskEn: 'Write User Docs', 'UI Designer': '', 'Product Manager': 'C', 'Frontend Engineer': '', 'Marketing': 'R' },
   ];
 
   const [data, setData] = useState(initialData);
   const roles = {
-    zh: ['UI 设计师', '产品经理', '前端工程师', '市场部'],
+    zh: ['UI Designer', 'Product Manager', 'Frontend Engineer', 'Marketing'],
     en: ['UI Designer', 'Product Manager', 'Frontend Engineer', 'Marketing'],
   };
 

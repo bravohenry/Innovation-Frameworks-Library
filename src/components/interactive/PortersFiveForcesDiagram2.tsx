@@ -9,57 +9,57 @@ const initialPorterData: PorterData = {
   forces: [
     {
       key: 'rivalry',
-      labelZh: '现有竞争者竞争',
+      labelZh: 'Competitive Rivalry',
       labelEn: 'Competitive Rivalry',
       weight: 3,
-      description: '现有企业间的竞争强度',
+      description: 'Intensity of competition among existing players',
       descriptionEn: 'Intensity of competition among existing players',
-      factors: ['竞争者数量', '产品差异化', '转换成本', '退出壁垒'],
+      factors: ['Number of competitors', 'Product differentiation', 'Switching costs', 'Exit barriers'],
       factorsEn: ['Number of competitors', 'Product differentiation', 'Switching costs', 'Exit barriers']
     },
     {
       key: 'suppliers',
-      labelZh: '供应商议价能力',
+      labelZh: 'Supplier Power',
       labelEn: 'Supplier Power',
       weight: 2,
-      description: '供应商对价格和条款的控制力',
+      description: 'Suppliers\' control over pricing and terms',
       descriptionEn: 'Suppliers\' control over pricing and terms',
-      factors: ['供应商集中度', '替代投入品', '前向整合威胁', '行业重要性'],
+      factors: ['Supplier concentration', 'Substitute inputs', 'Forward integration threat', 'Industry importance'],
       factorsEn: ['Supplier concentration', 'Substitute inputs', 'Forward integration threat', 'Industry importance']
     },
     {
       key: 'buyers',
-      labelZh: '买方议价能力',
+      labelZh: 'Buyer Power',
       labelEn: 'Buyer Power',
       weight: 4,
-      description: '客户对价格和条款的议价能力',
+      description: 'Customers\' bargaining power over prices and terms',
       descriptionEn: 'Customers\' bargaining power over prices and terms',
-      factors: ['买方集中度', '购买量', '产品标准化', '后向整合威胁'],
+      factors: ['Buyer concentration', 'Purchase volume', 'Product standardization', 'Backward integration threat'],
       factorsEn: ['Buyer concentration', 'Purchase volume', 'Product standardization', 'Backward integration threat']
     },
     {
       key: 'substitutes',
-      labelZh: '替代品威胁',
+      labelZh: 'Threat of Substitutes',
       labelEn: 'Threat of Substitutes',
       weight: 3,
-      description: '替代产品或服务的威胁程度',
+      description: 'Threat level from alternative products or services',
       descriptionEn: 'Threat level from alternative products or services',
-      factors: ['替代品性能', '价格优势', '转换成本', '客户偏好'],
+      factors: ['Substitute performance', 'Price advantage', 'Switching costs', 'Customer preference'],
       factorsEn: ['Substitute performance', 'Price advantage', 'Switching costs', 'Customer preference']
     },
     {
       key: 'entrants',
-      labelZh: '新进入者威胁',
+      labelZh: 'Threat of New Entrants',
       labelEn: 'Threat of New Entrants',
       weight: 2,
-      description: '新竞争者进入市场的可能性',
+      description: 'Likelihood of new competitors entering the market',
       descriptionEn: 'Likelihood of new competitors entering the market',
-      factors: ['进入壁垒', '规模经济', '资本需求', '政府政策'],
+      factors: ['Entry barriers', 'Economies of scale', 'Capital requirements', 'Government policy'],
       factorsEn: ['Entry barriers', 'Economies of scale', 'Capital requirements', 'Government policy']
     }
   ],
   overallRating: 2.8,
-  summary: '该行业竞争激烈，买方议价能力较强，但进入壁垒相对较高。',
+  summary: 'The industry is highly competitive with strong buyer power, but entry barriers are relatively high.',
   summaryEn: 'The industry is highly competitive with strong buyer power, but entry barriers are relatively high.'
 };
 

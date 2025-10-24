@@ -6,19 +6,19 @@ import { InteractiveComponentProps, OpportunityData } from './types';
 
 // Sample data for Business Opportunity Statement
 const initialOpportunityData: OpportunityData = {
-  who: '25-40岁的职场人士，他们需要在繁忙的工作中保持学习和个人发展',
+  who: '25-40 year old working professionals who need to maintain learning and personal development while managing busy careers',
   whoEn: '25-40 year old working professionals who need to maintain learning and personal development while managing busy careers',
-  what: '缺乏时间和个性化的学习路径，导致技能提升停滞和职业发展受阻',
+  what: 'Lack of time and personalized learning paths, leading to stagnant skill development and career progression obstacles',
   whatEn: 'Lack of time and personalized learning paths, leading to stagnant skill development and career progression obstacles',
-  why: '通过AI驱动的个性化学习平台，提供碎片化时间学习和智能推荐，帮助用户高效提升职场技能',
+  why: 'AI-driven personalized learning platform providing micro-learning and intelligent recommendations to help users efficiently develop career skills',
   whyEn: 'AI-driven personalized learning platform providing micro-learning and intelligent recommendations to help users efficiently develop career skills',
-  how: '月活用户超过50万，用户平均学习时长增加200%，70%的用户在6个月内获得职业晋升或加薪',
+  how: 'Over 500K monthly active users, 200% increase in average learning time, 70% of users receive promotions or raises within 6 months',
   howEn: 'Over 500K monthly active users, 200% increase in average learning time, 70% of users receive promotions or raises within 6 months',
   assumptions: [
-    '目标用户愿意为个性化学习体验付费',
-    'AI推荐算法能够有效提升学习效率',
-    '企业用户愿意为员工学习发展买单',
-    '移动端学习成为主流学习方式'
+    'Target users are willing to pay for personalized learning experiences',
+    'AI recommendation algorithms can effectively improve learning efficiency',
+    'Enterprise customers will pay for employee learning and development',
+    'Mobile learning becomes the mainstream learning method'
   ],
   assumptionsEn: [
     'Target users are willing to pay for personalized learning experiences',
@@ -27,10 +27,10 @@ const initialOpportunityData: OpportunityData = {
     'Mobile learning becomes the mainstream learning method'
   ],
   validationPlan: {
-    '用户访谈': '深度访谈50位目标用户，了解学习痛点和付费意愿',
-    '原型测试': '开发MVP产品，邀请100位用户进行为期1个月的测试',
-    '市场调研': '分析竞争对手定价策略和用户评价',
-    '企业试点': '与5家企业合作，测试B2B市场需求'
+    'User Interviews': 'Conduct in-depth interviews with 50 target users to understand learning pain points and willingness to pay',
+    'Prototype Testing': 'Develop MVP product and invite 100 users for 1-month testing',
+    'Market Research': 'Analyze competitor pricing strategies and user reviews',
+    'Enterprise Pilot': 'Partner with 5 companies to test B2B market demand'
   },
   validationPlanEn: {
     'User Interviews': 'Conduct in-depth interviews with 50 target users to understand learning pain points and willingness to pay',

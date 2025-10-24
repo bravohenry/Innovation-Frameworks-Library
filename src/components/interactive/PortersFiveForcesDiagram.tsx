@@ -6,11 +6,11 @@ const PortersFiveForcesDiagram: React.FC = () => {
   const { t, lang } = useI18n();
 
   const initialData = [
-    { subject: t('porters_rivalry', '行业内竞争'), subjectEn: 'Rivalry', value: 8, fullMark: 10 },
-    { subject: t('porters_new_entrants', '新进入者威胁'), subjectEn: 'New Entrants', value: 6, fullMark: 10 },
-    { subject: t('porters_substitutes', '替代品威胁'), subjectEn: 'Substitutes', value: 7, fullMark: 10 },
-    { subject: t('porters_suppliers', '供应商议价能力'), subjectEn: 'Suppliers', value: 4, fullMark: 10 },
-    { subject: t('porters_buyers', '购买者议价能力'), subjectEn: 'Buyers', value: 5, fullMark: 10 },
+    { subject: t('porters_rivalry', 'Competitive Rivalry'), subjectEn: 'Rivalry', value: 8, fullMark: 10 },
+    { subject: t('porters_new_entrants', 'Threat of New Entrants'), subjectEn: 'New Entrants', value: 6, fullMark: 10 },
+    { subject: t('porters_substitutes', 'Threat of Substitutes'), subjectEn: 'Substitutes', value: 7, fullMark: 10 },
+    { subject: t('porters_suppliers', 'Supplier Bargaining Power'), subjectEn: 'Suppliers', value: 4, fullMark: 10 },
+    { subject: t('porters_buyers', 'Buyer Bargaining Power'), subjectEn: 'Buyers', value: 5, fullMark: 10 },
   ];
 
   const [data, setData] = useState(initialData);

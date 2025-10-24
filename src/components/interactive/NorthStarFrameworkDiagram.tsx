@@ -41,31 +41,31 @@ const NorthStarFrameworkDiagram: React.FC = () => {
   const { t } = useI18n();
 
   const initialData: TreeNode = {
-    name: t('nsm_root', '总听歌时长'),
+    name: t('nsm_root', 'Total Listening Time'),
     nameEn: 'Total Listening Time',
     children: [
       { 
-        name: t('nsm_driver1', '月活跃用户数'),
+        name: t('nsm_driver1', 'Monthly Active Users'),
         nameEn: 'Monthly Active Users',
         children: [
-          { name: t('nsm_sub_driver1_1', '新用户注册数'), nameEn: 'New User Registrations' },
-          { name: t('nsm_sub_driver1_2', '用户留存率'), nameEn: 'User Retention Rate' },
+          { name: t('nsm_sub_driver1_1', 'New User Registrations'), nameEn: 'New User Registrations' },
+          { name: t('nsm_sub_driver1_2', 'User Retention Rate'), nameEn: 'User Retention Rate' },
         ]
       },
       { 
-        name: t('nsm_driver2', '每次会话听歌时长'),
+        name: t('nsm_driver2', 'Listening Time per Session'),
         nameEn: 'Listening Time per Session',
         children: [
-          { name: t('nsm_sub_driver2_1', '播放列表创建数'), nameEn: 'Playlists Created' },
-          { name: t('nsm_sub_driver2_2', '歌曲分享数'), nameEn: 'Songs Shared' },
+          { name: t('nsm_sub_driver2_1', 'Playlists Created'), nameEn: 'Playlists Created' },
+          { name: t('nsm_sub_driver2_2', 'Songs Shared'), nameEn: 'Songs Shared' },
         ]
       },
       { 
-        name: t('nsm_driver3', '推荐点击率'),
+        name: t('nsm_driver3', 'Recommendation CTR'),
         nameEn: 'Recommendation CTR',
         children: [
-          { name: t('nsm_sub_driver3_1', '算法准确率'), nameEn: 'Algorithm Accuracy' },
-          { name: t('nsm_sub_driver3_2', 'UI 呈现优化'), nameEn: 'UI Presentation Optimization' },
+          { name: t('nsm_sub_driver3_1', 'Algorithm Accuracy'), nameEn: 'Algorithm Accuracy' },
+          { name: t('nsm_sub_driver3_2', 'UI Presentation Optimization'), nameEn: 'UI Presentation Optimization' },
         ]
       },
     ],

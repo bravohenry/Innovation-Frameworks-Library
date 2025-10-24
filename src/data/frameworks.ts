@@ -2314,6 +2314,34 @@ const seededFrameworks: Framework[] = [
     coreStepsEn: ["Define comparison dimensions","Select key competitors","Collect data and score","Visualize matrix","Extract differentiation opportunities"],
     miniCase: "SaaS团队通过竞品矩阵发现：虽有5家竞品，但无一同时做到'易集成+本地化部署+7×24支持'。据此定位获客成本降低40%，签约率提升28%",
     miniCaseEn: "SaaS team discovered via competitive matrix: despite 5 competitors, none offered 'easy integration + on-premise + 24/7 support' together. This positioning reduced CAC by 40%, increased close rate 28%",
+    htmlContent: `<h2>是什么 / 何时使用</h2>
+<p><strong>定义：</strong>竞品多维度对比矩阵</p>
+<p><strong>适用场景：</strong>市场定位、差异化策略、产品规划、投资决策、战略评估</p>
+<h2>核心步骤</h2>
+<ol>
+<li>确定对比维度</li>
+<li>筛选关键竞品</li>
+<li>收集数据与评分</li>
+<li>可视化矩阵</li>
+<li>提炼差异化机会</li>
+</ol>
+<h2>案例</h2>
+<p>SaaS团队通过竞品矩阵发现：虽有5家竞品，但无一同时做到'易集成+本地化部署+7×24支持'。据此定位获客成本降低40%，签约率提升28%</p>
+`,
+    htmlContentEn: `<h2>What / When to Use</h2>
+<p><strong>Definition:</strong> Multi-dimensional competitive comparison matrix</p>
+<p><strong>Use Cases:</strong> Market positioning, differentiation strategy, product planning, investment decisions, strategic assessment</p>
+<h2>Core Steps</h2>
+<ol>
+<li>Define comparison dimensions</li>
+<li>Select key competitors</li>
+<li>Collect data and score</li>
+<li>Visualize matrix</li>
+<li>Extract differentiation opportunities</li>
+</ol>
+<h2>Case Example</h2>
+<p>SaaS team discovered via competitive matrix: despite 5 competitors, none offered 'easy integration + on-premise + 24/7 support' together. This positioning reduced CAC by 40%, increased close rate 28%</p>
+`
    },
   { title: '功能对比分析', englishTitle: 'Feature Comparison', slug: 'feature-comparison', chapter: '3', subsectionId: '3.1', chapterTitle: '设计商业模式与产品概念', chapterTitleEn: 'Design & Conception', tags: [], summary: '', templateUrl: '/templates/feature-comparison.pptx',
     oneLineDef: "功能级对比分析表",
@@ -2324,6 +2352,34 @@ const seededFrameworks: Framework[] = [
     coreStepsEn: ["List core features","Compare competitor implementations","Mark strengths/weaknesses","Identify feature gaps","Plan enhancements"],
     miniCase: "项目管理工具发现竞品均缺少'离线编辑+冲突智能合并'。3个月实现该功能后，企业客户留存从68%提升至82%，NPS增长19分",
     miniCaseEn: "Project management tool found all competitors lacked 'offline editing + smart conflict resolution'. After 3-month implementation, enterprise retention rose from 68% to 82%, NPS increased 19 points",
+    htmlContent: `<h2>是什么 / 何时使用</h2>
+<p><strong>定义：</strong>功能级对比分析表</p>
+<p><strong>适用场景：</strong>功能规划、优先级决策、产品演示、销售赋能、用户迁移</p>
+<h2>核心步骤</h2>
+<ol>
+<li>列举核心功能点</li>
+<li>对比竞品实现</li>
+<li>标注优劣势</li>
+<li>识别功能缺口</li>
+<li>制定补强计划</li>
+</ol>
+<h2>案例</h2>
+<p>项目管理工具发现竞品均缺少'离线编辑+冲突智能合并'。3个月实现该功能后，企业客户留存从68%提升至82%，NPS增长19分</p>
+`,
+    htmlContentEn: `<h2>What / When to Use</h2>
+<p><strong>Definition:</strong> Feature-level comparison table</p>
+<p><strong>Use Cases:</strong> Feature planning, prioritization, product demos, sales enablement, user migration</p>
+<h2>Core Steps</h2>
+<ol>
+<li>List core features</li>
+<li>Compare competitor implementations</li>
+<li>Mark strengths/weaknesses</li>
+<li>Identify feature gaps</li>
+<li>Plan enhancements</li>
+</ol>
+<h2>Case Example</h2>
+<p>Project management tool found all competitors lacked 'offline editing + smart conflict resolution'. After 3-month implementation, enterprise retention rose from 68% to 82%, NPS increased 19 points</p>
+`
    },
   { title: '价值主张画布', englishTitle: 'Value Proposition Canvas', slug: 'value-proposition-canvas', chapter: '3', subsectionId: '3.2', chapterTitle: '设计商业模式与产品概念', chapterTitleEn: 'Design & Conception', tags: [], summary: '', templateUrl: '/templates/value-proposition-canvas.pptx',
     oneLineDef: "产品-市场契合度画布",
@@ -2334,6 +2390,34 @@ const seededFrameworks: Framework[] = [
     coreStepsEn: ["Profile customer segment","List pains and gains","Design products and services","Match pain relievers","Validate gain creators"],
     miniCase: "健康管理应用发现用户最大痛点是'记录繁琐'而非'缺少功能'。简化为一键记录+自动分析后，日活从12%提升至34%，付费转化增长2.1倍",
     miniCaseEn: "Health management app discovered top pain was 'tedious logging' not 'missing features'. Simplified to one-tap recording + auto-analysis, DAU rose from 12% to 34%, paid conversion grew 2.1x",
+    htmlContent: `<h2>是什么 / 何时使用</h2>
+<p><strong>定义：</strong>产品-市场契合度画布</p>
+<p><strong>适用场景：</strong>价值主张设计、产品定位、痛点解决、收益匹配、MVP规划</p>
+<h2>核心步骤</h2>
+<ol>
+<li>描绘客户画像</li>
+<li>列举痛点与收益</li>
+<li>设计产品与服务</li>
+<li>匹配痛点缓解器</li>
+<li>验证收益创造器</li>
+</ol>
+<h2>案例</h2>
+<p>健康管理应用发现用户最大痛点是'记录繁琐'而非'缺少功能'。简化为一键记录+自动分析后，日活从12%提升至34%，付费转化增长2.1倍</p>
+`,
+    htmlContentEn: `<h2>What / When to Use</h2>
+<p><strong>Definition:</strong> Product-market fit canvas</p>
+<p><strong>Use Cases:</strong> Value proposition design, product positioning, pain relief, gain creation, MVP planning</p>
+<h2>Core Steps</h2>
+<ol>
+<li>Profile customer segment</li>
+<li>List pains and gains</li>
+<li>Design products and services</li>
+<li>Match pain relievers</li>
+<li>Validate gain creators</li>
+</ol>
+<h2>Case Example</h2>
+<p>Health management app discovered top pain was 'tedious logging' not 'missing features'. Simplified to one-tap recording + auto-analysis, DAU rose from 12% to 34%, paid conversion grew 2.1x</p>
+`
    },
   { title: '商业模式画布', englishTitle: 'Business Model Canvas (BMC)', slug: 'business-model-canvas', chapter: '3', subsectionId: '3.3', chapterTitle: '设计商业模式与产品概念', chapterTitleEn: 'Design & Conception', tags: [], summary: '', templateUrl: '/templates/business-model-canvas.pptx',
     oneLineDef: "九宫格商业模式图",
@@ -2344,6 +2428,34 @@ const seededFrameworks: Framework[] = [
     coreStepsEn: ["Define customer segments","Design value propositions","Plan channels and relationships","Determine revenue and costs","Check overall coherence"],
     miniCase: "共享办公企业用BMC发现：关键资源是'地段+社区运营'而非设施。调整为轻资产+合作模式后，单店盈亏平衡期从18月缩短至9月",
     miniCaseEn: "Co-working company discovered via BMC: key resources are 'location + community ops' not facilities. Shifted to asset-light + partnership model, breakeven dropped from 18 to 9 months",
+    htmlContent: `<h2>是什么 / 何时使用</h2>
+<p><strong>定义：</strong>九宫格商业模式图</p>
+<p><strong>适用场景：</strong>商业模式设计、战略规划、创业计划、模式创新、投资评估</p>
+<h2>核心步骤</h2>
+<ol>
+<li>定义客户细分</li>
+<li>设计价值主张</li>
+<li>规划渠道与关系</li>
+<li>确定收入与成本</li>
+<li>整体一致性检验</li>
+</ol>
+<h2>案例</h2>
+<p>共享办公企业用BMC发现：关键资源是'地段+社区运营'而非设施。调整为轻资产+合作模式后，单店盈亏平衡期从18月缩短至9月</p>
+`,
+    htmlContentEn: `<h2>What / When to Use</h2>
+<p><strong>Definition:</strong> Nine-block business model framework</p>
+<p><strong>Use Cases:</strong> Business model design, strategic planning, startup planning, model innovation, investment evaluation</p>
+<h2>Core Steps</h2>
+<ol>
+<li>Define customer segments</li>
+<li>Design value propositions</li>
+<li>Plan channels and relationships</li>
+<li>Determine revenue and costs</li>
+<li>Check overall coherence</li>
+</ol>
+<h2>Case Example</h2>
+<p>Co-working company discovered via BMC: key resources are 'location + community ops' not facilities. Shifted to asset-light + partnership model, breakeven dropped from 18 to 9 months</p>
+`
    },
   { title: '蓝海战略', englishTitle: 'Blue Ocean Strategy', slug: 'blue-ocean-strategy', chapter: '3', subsectionId: '3.4', chapterTitle: '设计商业模式与产品概念', chapterTitleEn: 'Design & Conception', tags: [], summary: '', templateUrl: '/templates/blue-ocean-strategy.pptx',
     oneLineDef: "非竞争性市场开创策略",
@@ -2354,6 +2466,34 @@ const seededFrameworks: Framework[] = [
     coreStepsEn: ["Draw strategy canvas","Apply ERRC framework","Identify blue ocean opportunities","Validate value curve","Build execution roadmap"],
     miniCase: "传统健身房面对价格战，通过蓝海策略取消器械（降低成本）、增加社交元素（创造价值），打造'运动社交空间'，会员增长3倍且客单价提高50%",
     miniCaseEn: "Traditional gym facing price wars used blue ocean to eliminate equipment (reduce cost), add social elements (create value), built 'fitness social space', membership grew 3x with 50% higher ARPU",
+    htmlContent: `<h2>是什么 / 何时使用</h2>
+<p><strong>定义：</strong>非竞争性市场开创策略</p>
+<p><strong>适用场景：</strong>战略转型、市场开拓、差异化定位、价值创新、红海突围</p>
+<h2>核心步骤</h2>
+<ol>
+<li>绘制战略画布</li>
+<li>应用ERRC框架</li>
+<li>识别蓝海机会</li>
+<li>验证价值曲线</li>
+<li>构建执行路线</li>
+</ol>
+<h2>案例</h2>
+<p>传统健身房面对价格战，通过蓝海策略取消器械（降低成本）、增加社交元素（创造价值），打造'运动社交空间'，会员增长3倍且客单价提高50%</p>
+`,
+    htmlContentEn: `<h2>What / When to Use</h2>
+<p><strong>Definition:</strong> Non-competitive market creation strategy</p>
+<p><strong>Use Cases:</strong> Strategic transformation, market development, differentiation, value innovation, red ocean escape</p>
+<h2>Core Steps</h2>
+<ol>
+<li>Draw strategy canvas</li>
+<li>Apply ERRC framework</li>
+<li>Identify blue ocean opportunities</li>
+<li>Validate value curve</li>
+<li>Build execution roadmap</li>
+</ol>
+<h2>Case Example</h2>
+<p>Traditional gym facing price wars used blue ocean to eliminate equipment (reduce cost), add social elements (create value), built 'fitness social space', membership grew 3x with 50% higher ARPU</p>
+`
    },
   { title: '战略画布', englishTitle: 'Strategy Canvas', slug: 'strategy-canvas', chapter: '3', subsectionId: '3.4', chapterTitle: '设计商业模式与产品概念', chapterTitleEn: 'Design & Conception', tags: [], summary: '', templateUrl: '/templates/strategy-canvas.pptx',
     oneLineDef: "竞争要素可视化对比图",
@@ -2364,6 +2504,34 @@ const seededFrameworks: Framework[] = [
     coreStepsEn: ["Identify competitive factors","Assess industry status","Draw value curves","Compare own positioning","Extract strategic insights"],
     miniCase: "航空公司绘制战略画布发现：所有竞品在'餐食、座位'上同质化。转而强化'准点率+无忧改签'，客户满意度从68分升至86分",
     miniCaseEn: "Airline drew strategy canvas and found: all competitors homogenized on 'meals, seats'. Shifted emphasis to 'on-time + hassle-free changes', customer satisfaction rose from 68 to 86",
+    htmlContent: `<h2>是什么 / 何时使用</h2>
+<p><strong>定义：</strong>竞争要素可视化对比图</p>
+<p><strong>适用场景：</strong>战略分析、竞争定位、价值曲线设计、差异化识别、市场调研</p>
+<h2>核心步骤</h2>
+<ol>
+<li>确定竞争要素</li>
+<li>评估行业现状</li>
+<li>绘制价值曲线</li>
+<li>对比自身定位</li>
+<li>提炼战略洞察</li>
+</ol>
+<h2>案例</h2>
+<p>航空公司绘制战略画布发现：所有竞品在'餐食、座位'上同质化。转而强化'准点率+无忧改签'，客户满意度从68分升至86分</p>
+`,
+    htmlContentEn: `<h2>What / When to Use</h2>
+<p><strong>Definition:</strong> Competitive factors visualization chart</p>
+<p><strong>Use Cases:</strong> Strategic analysis, competitive positioning, value curve design, differentiation identification, market research</p>
+<h2>Core Steps</h2>
+<ol>
+<li>Identify competitive factors</li>
+<li>Assess industry status</li>
+<li>Draw value curves</li>
+<li>Compare own positioning</li>
+<li>Extract strategic insights</li>
+</ol>
+<h2>Case Example</h2>
+<p>Airline drew strategy canvas and found: all competitors homogenized on 'meals, seats'. Shifted emphasis to 'on-time + hassle-free changes', customer satisfaction rose from 68 to 86</p>
+`
    },
   { title: '四步动作框架', englishTitle: 'ERRC Grid', slug: 'errc-grid', chapter: '3', subsectionId: '3.4', chapterTitle: '设计商业模式与产品概念', chapterTitleEn: 'Design & Conception', tags: [], summary: '', templateUrl: '/templates/errc-grid.pptx',
     oneLineDef: "增减消除提升四步法",
@@ -2374,6 +2542,34 @@ const seededFrameworks: Framework[] = [
     coreStepsEn: ["List industry factors","Eliminate non-essentials","Reduce over-investments","Raise key factors","Create new value"],
     miniCase: "在线教育平台应用ERRC：消除实体教材、减少直播时长、提升个性化推荐、创造学习社群。运营成本降35%同时续费率提升至78%",
     miniCaseEn: "Online education applied ERRC: eliminated physical textbooks, reduced live session duration, raised personalized recommendations, created learning communities. Operating costs down 35%, renewal rate up to 78%",
+    htmlContent: `<h2>是什么 / 何时使用</h2>
+<p><strong>定义：</strong>增减消除提升四步法</p>
+<p><strong>适用场景：</strong>价值创新、成本优化、产品简化、战略重构、蓝海开拓</p>
+<h2>核心步骤</h2>
+<ol>
+<li>列举行业要素</li>
+<li>消除非必要项</li>
+<li>减少过度投入</li>
+<li>提升关键要素</li>
+<li>创造新价值点</li>
+</ol>
+<h2>案例</h2>
+<p>在线教育平台应用ERRC：消除实体教材、减少直播时长、提升个性化推荐、创造学习社群。运营成本降35%同时续费率提升至78%</p>
+`,
+    htmlContentEn: `<h2>What / When to Use</h2>
+<p><strong>Definition:</strong> Eliminate-reduce-raise-create framework</p>
+<p><strong>Use Cases:</strong> Value innovation, cost optimization, product simplification, strategic restructuring, blue ocean creation</p>
+<h2>Core Steps</h2>
+<ol>
+<li>List industry factors</li>
+<li>Eliminate non-essentials</li>
+<li>Reduce over-investments</li>
+<li>Raise key factors</li>
+<li>Create new value</li>
+</ol>
+<h2>Case Example</h2>
+<p>Online education applied ERRC: eliminated physical textbooks, reduced live session duration, raised personalized recommendations, created learning communities. Operating costs down 35%, renewal rate up to 78%</p>
+`
    },
   { title: '价值-复杂度矩阵', englishTitle: 'Value vs. Effort Matrix', slug: 'value-vs-effort-matrix', chapter: '3', subsectionId: '3.5', chapterTitle: '设计商业模式与产品概念', chapterTitleEn: 'Design & Conception', tags: [], summary: '', templateUrl: '/templates/value-vs-effort-matrix.pptx',
     oneLineDef: "价值-工作量优先级矩阵",
@@ -2384,6 +2580,34 @@ const seededFrameworks: Framework[] = [
     coreStepsEn: ["List items to evaluate","Assess business value","Estimate implementation cost","Plot 2D matrix","Determine execution priority"],
     miniCase: "产品团队用价值-工作量矩阵评估52个需求，优先做13个'高价值低成本'项。3个月后用户留存提升19%，研发效率提高2.3倍",
     miniCaseEn: "Product team evaluated 52 requirements with value-effort matrix, prioritized 13 'high-value low-cost' items. After 3 months, user retention up 19%, dev efficiency improved 2.3x",
+    htmlContent: `<h2>是什么 / 何时使用</h2>
+<p><strong>定义：</strong>价值-工作量优先级矩阵</p>
+<p><strong>适用场景：</strong>产品路线图、Sprint规划、资源分配、需求评审、快速决策</p>
+<h2>核心步骤</h2>
+<ol>
+<li>列举待评估项</li>
+<li>评估业务价值</li>
+<li>估算实现成本</li>
+<li>绘制二维矩阵</li>
+<li>确定执行优先级</li>
+</ol>
+<h2>案例</h2>
+<p>产品团队用价值-工作量矩阵评估52个需求，优先做13个'高价值低成本'项。3个月后用户留存提升19%，研发效率提高2.3倍</p>
+`,
+    htmlContentEn: `<h2>What / When to Use</h2>
+<p><strong>Definition:</strong> Value-effort prioritization matrix</p>
+<p><strong>Use Cases:</strong> Product roadmap, sprint planning, resource allocation, requirement review, rapid decision-making</p>
+<h2>Core Steps</h2>
+<ol>
+<li>List items to evaluate</li>
+<li>Assess business value</li>
+<li>Estimate implementation cost</li>
+<li>Plot 2D matrix</li>
+<li>Determine execution priority</li>
+</ol>
+<h2>Case Example</h2>
+<p>Product team evaluated 52 requirements with value-effort matrix, prioritized 13 'high-value low-cost' items. After 3 months, user retention up 19%, dev efficiency improved 2.3x</p>
+`
    },
   { title: 'Kano 模型', englishTitle: 'Kano Model', slug: 'kano-model', chapter: '3', subsectionId: '3.5', chapterTitle: '设计商业模式与产品概念', chapterTitleEn: 'Design & Conception', tags: [], summary: '', templateUrl: '/templates/kano-model.pptx',
     oneLineDef: "用户满意度分类模型",
@@ -2394,6 +2618,34 @@ const seededFrameworks: Framework[] = [
     coreStepsEn: ["Design Kano questionnaire","Classify as basic/performance/delighters","Draw satisfaction curves","Calculate Better-Worse coefficients","Formulate priority strategy"],
     miniCase: "智能家居产品通过Kano分析发现：用户认为'语音控制'已是基本型需求，而'场景自学习'是兴奋型。调整研发投入后市场份额6个月内增长12%",
     miniCaseEn: "Smart home product discovered via Kano: users consider 'voice control' basic, while 'scenario self-learning' is delighter. Adjusted R&D investment, market share grew 12% in 6 months",
+    htmlContent: `<h2>是什么 / 何时使用</h2>
+<p><strong>定义：</strong>用户满意度分类模型</p>
+<p><strong>适用场景：</strong>功能优先级、需求分级、产品路线图、资源分配、满意度预测</p>
+<h2>核心步骤</h2>
+<ol>
+<li>设计Kano问卷</li>
+<li>分类为基本/期望/兴奋</li>
+<li>绘制满意度曲线</li>
+<li>计算Better-Worse系数</li>
+<li>制定优先级策略</li>
+</ol>
+<h2>案例</h2>
+<p>智能家居产品通过Kano分析发现：用户认为'语音控制'已是基本型需求，而'场景自学习'是兴奋型。调整研发投入后市场份额6个月内增长12%</p>
+`,
+    htmlContentEn: `<h2>What / When to Use</h2>
+<p><strong>Definition:</strong> User satisfaction classification model</p>
+<p><strong>Use Cases:</strong> Feature prioritization, requirement classification, product roadmap, resource allocation, satisfaction forecasting</p>
+<h2>Core Steps</h2>
+<ol>
+<li>Design Kano questionnaire</li>
+<li>Classify as basic/performance/delighters</li>
+<li>Draw satisfaction curves</li>
+<li>Calculate Better-Worse coefficients</li>
+<li>Formulate priority strategy</li>
+</ol>
+<h2>Case Example</h2>
+<p>Smart home product discovered via Kano: users consider 'voice control' basic, while 'scenario self-learning' is delighter. Adjusted R&D investment, market share grew 12% in 6 months</p>
+`
    },
   { title: 'MoSCoW 方法', englishTitle: 'MoSCoW Method', slug: 'moscow-method', chapter: '3', subsectionId: '3.5', chapterTitle: '设计商业模式与产品概念', chapterTitleEn: 'Design & Conception', tags: [], summary: '', templateUrl: '/templates/moscow-method.pptx',
     oneLineDef: "四级优先级分类法",
@@ -2404,6 +2656,34 @@ const seededFrameworks: Framework[] = [
     coreStepsEn: ["List all requirements","Classify as Must/Should/Could/Won't","Confirm team consensus","Assign to iterations","Regularly reassess priorities"],
     miniCase: "电商团队用MoSCoW规划改版：Must仅6项（支付+搜索+购物车核心流程），Should 12项，Could 23项。MVP在3周上线，核心转化率达预期的98%",
     miniCaseEn: "E-commerce team used MoSCoW for redesign: Must had only 6 items (payment+search+cart core flows), Should 12, Could 23. MVP launched in 3 weeks, core conversion reached 98% of target",
+    htmlContent: `<h2>是什么 / 何时使用</h2>
+<p><strong>定义：</strong>四级优先级分类法</p>
+<p><strong>适用场景：</strong>敏捷开发、MVP定义、Sprint规划、资源分配、范围管理</p>
+<h2>核心步骤</h2>
+<ol>
+<li>列举所有需求</li>
+<li>分类Must/Should/Could/Won't</li>
+<li>团队共识确认</li>
+<li>分配到迭代</li>
+<li>定期重评优先级</li>
+</ol>
+<h2>案例</h2>
+<p>电商团队用MoSCoW规划改版：Must仅6项（支付+搜索+购物车核心流程），Should 12项，Could 23项。MVP在3周上线，核心转化率达预期的98%</p>
+`,
+    htmlContentEn: `<h2>What / When to Use</h2>
+<p><strong>Definition:</strong> Four-tier priority classification method</p>
+<p><strong>Use Cases:</strong> Agile development, MVP definition, sprint planning, resource allocation, scope management</p>
+<h2>Core Steps</h2>
+<ol>
+<li>List all requirements</li>
+<li>Classify as Must/Should/Could/Won't</li>
+<li>Confirm team consensus</li>
+<li>Assign to iterations</li>
+<li>Regularly reassess priorities</li>
+</ol>
+<h2>Case Example</h2>
+<p>E-commerce team used MoSCoW for redesign: Must had only 6 items (payment+search+cart core flows), Should 12, Could 23. MVP launched in 3 weeks, core conversion reached 98% of target</p>
+`
    },
   { title: '滩头策略', englishTitle: 'Beachhead Strategy', slug: 'beachhead-strategy', chapter: '3', subsectionId: '3.5', chapterTitle: '设计商业模式与产品概念', chapterTitleEn: 'Design & Conception', tags: [], summary: '', templateUrl: '/templates/beachhead-strategy.pptx',
     oneLineDef: "首个目标市场攻坚策略",
@@ -2414,6 +2694,34 @@ const seededFrameworks: Framework[] = [
     coreStepsEn: ["Segment potential markets","Assess accessibility and size","Select beachhead","Concentrate resources","Build reference cases"],
     miniCase: "企业协作工具锁定'50-200人设计公司'作为滩头市场，6个月拿下该细分80%头部客户。凭借案例成功扩展至咨询、建筑等相邻领域",
     miniCaseEn: "Enterprise collaboration tool targeted '50-200 person design firms' as beachhead, captured 80% of segment leaders in 6 months. Leveraged cases to expand into consulting, architecture adjacencies",
+    htmlContent: `<h2>是什么 / 何时使用</h2>
+<p><strong>定义：</strong>首个目标市场攻坚策略</p>
+<p><strong>适用场景：</strong>新产品上市、市场进入、资源聚焦、早期客户获取、口碑建立</p>
+<h2>核心步骤</h2>
+<ol>
+<li>细分潜在市场</li>
+<li>评估可达性与规模</li>
+<li>选择滩头阵地</li>
+<li>集中资源攻坚</li>
+<li>建立参考案例</li>
+</ol>
+<h2>案例</h2>
+<p>企业协作工具锁定'50-200人设计公司'作为滩头市场，6个月拿下该细分80%头部客户。凭借案例成功扩展至咨询、建筑等相邻领域</p>
+`,
+    htmlContentEn: `<h2>What / When to Use</h2>
+<p><strong>Definition:</strong> Initial target market penetration strategy</p>
+<p><strong>Use Cases:</strong> New product launch, market entry, resource focus, early customer acquisition, reputation building</p>
+<h2>Core Steps</h2>
+<ol>
+<li>Segment potential markets</li>
+<li>Assess accessibility and size</li>
+<li>Select beachhead</li>
+<li>Concentrate resources</li>
+<li>Build reference cases</li>
+</ol>
+<h2>Case Example</h2>
+<p>Enterprise collaboration tool targeted '50-200 person design firms' as beachhead, captured 80% of segment leaders in 6 months. Leveraged cases to expand into consulting, architecture adjacencies</p>
+`
    },
   { title: '低保真原型', englishTitle: 'Low-Fidelity Prototype', slug: 'low-fidelity-prototype', chapter: '3', subsectionId: '3.6', chapterTitle: '设计商业模式与产品概念', chapterTitleEn: 'Design & Conception', tags: [], summary: '', templateUrl: '/templates/low-fidelity-prototype.pptx',
     oneLineDef: "快速低成本原型验证",
@@ -2424,6 +2732,34 @@ const seededFrameworks: Framework[] = [
     coreStepsEn: ["Define hypotheses to validate","Sketch paper/wireframes","Conduct walkthrough tests","Collect feedback","Rapidly adjust and iterate"],
     miniCase: "金融产品用纸质原型测试新流程，5天内完成3轮迭代。发现用户对'智能填写'理解有偏差，调整后再开发使上线后客诉减少73%",
     miniCaseEn: "Financial product tested new flow with paper prototypes, completed 3 iterations in 5 days. Discovered users misunderstood 'smart-fill', adjustment before development reduced post-launch complaints 73%",
+    htmlContent: `<h2>是什么 / 何时使用</h2>
+<p><strong>定义：</strong>快速低成本原型验证</p>
+<p><strong>适用场景：</strong>概念验证、早期测试、快速迭代、需求澄清、团队沟通</p>
+<h2>核心步骤</h2>
+<ol>
+<li>确定验证假设</li>
+<li>绘制纸面/线框图</li>
+<li>进行走查测试</li>
+<li>收集反馈</li>
+<li>快速调整迭代</li>
+</ol>
+<h2>案例</h2>
+<p>金融产品用纸质原型测试新流程，5天内完成3轮迭代。发现用户对'智能填写'理解有偏差，调整后再开发使上线后客诉减少73%</p>
+`,
+    htmlContentEn: `<h2>What / When to Use</h2>
+<p><strong>Definition:</strong> Fast low-cost prototype validation</p>
+<p><strong>Use Cases:</strong> Concept validation, early testing, rapid iteration, requirement clarification, team communication</p>
+<h2>Core Steps</h2>
+<ol>
+<li>Define hypotheses to validate</li>
+<li>Sketch paper/wireframes</li>
+<li>Conduct walkthrough tests</li>
+<li>Collect feedback</li>
+<li>Rapidly adjust and iterate</li>
+</ol>
+<h2>Case Example</h2>
+<p>Financial product tested new flow with paper prototypes, completed 3 iterations in 5 days. Discovered users misunderstood 'smart-fill', adjustment before development reduced post-launch complaints 73%</p>
+`
    },
   { title: '高保真原型', englishTitle: 'High-Fidelity Prototype', slug: 'high-fidelity-prototype', chapter: '3', subsectionId: '3.6', chapterTitle: '设计商业模式与产品概念', chapterTitleEn: 'Design & Conception', tags: [], summary: '', templateUrl: '/templates/high-fidelity-prototype.pptx',
     oneLineDef: "高逼真交互原型",
@@ -2434,6 +2770,34 @@ const seededFrameworks: Framework[] = [
     coreStepsEn: ["Refine from low-fidelity","Add visual and interaction design","Build interaction logic","Conduct usability tests","Output development specs"],
     miniCase: "医疗应用在高保真原型阶段发现：医生误以为'提交'会立即发送处方。增加二次确认弹窗后，测试任务成功率从62%跃升至96%",
     miniCaseEn: "Medical app discovered in high-fidelity stage: doctors mistook 'submit' as immediate prescription send. Added confirmation dialog, test task success rate jumped from 62% to 96%",
+    htmlContent: `<h2>是什么 / 何时使用</h2>
+<p><strong>定义：</strong>高逼真交互原型</p>
+<p><strong>适用场景：</strong>可用性测试、投资展示、开发对接、营销预热、用户预览</p>
+<h2>核心步骤</h2>
+<ol>
+<li>基于低保真细化</li>
+<li>添加视觉与交互</li>
+<li>构建交互逻辑</li>
+<li>进行可用性测试</li>
+<li>输出开发规范</li>
+</ol>
+<h2>案例</h2>
+<p>医疗应用在高保真原型阶段发现：医生误以为'提交'会立即发送处方。增加二次确认弹窗后，测试任务成功率从62%跃升至96%</p>
+`,
+    htmlContentEn: `<h2>What / When to Use</h2>
+<p><strong>Definition:</strong> High-fidelity interactive prototype</p>
+<p><strong>Use Cases:</strong> Usability testing, investor demos, development handoff, marketing preview, user preview</p>
+<h2>Core Steps</h2>
+<ol>
+<li>Refine from low-fidelity</li>
+<li>Add visual and interaction design</li>
+<li>Build interaction logic</li>
+<li>Conduct usability tests</li>
+<li>Output development specs</li>
+</ol>
+<h2>Case Example</h2>
+<p>Medical app discovered in high-fidelity stage: doctors mistook 'submit' as immediate prescription send. Added confirmation dialog, test task success rate jumped from 62% to 96%</p>
+`
    },
 
   // 第四章：测试、迭代与战略优化 (Test & Iteration)
@@ -2446,6 +2810,34 @@ const seededFrameworks: Framework[] = [
     coreStepsEn: ["Define test tasks","Recruit typical users","Moderate and observe","Record issues and insights","Prioritize improvements"],
     miniCase: "支付应用可用性测试发现：67%用户在'转账确认'步骤卡住超过15秒。简化为'金额+收款人+确认'三步后，任务成功率从58%提升至94%",
     miniCaseEn: "Payment app usability testing found: 67% users stuck over 15sec at 'transfer confirmation'. Simplified to 'amount+recipient+confirm' 3 steps, task success rate rose from 58% to 94%",
+    htmlContent: `<h2>是什么 / 何时使用</h2>
+<p><strong>定义：</strong>真实用户任务测试</p>
+<p><strong>适用场景：</strong>产品验证、界面优化、流程改进、原型测试、问题诊断</p>
+<h2>核心步骤</h2>
+<ol>
+<li>定义测试任务</li>
+<li>招募典型用户</li>
+<li>主持测试观察</li>
+<li>记录问题与洞察</li>
+<li>优先级排序改进</li>
+</ol>
+<h2>案例</h2>
+<p>支付应用可用性测试发现：67%用户在'转账确认'步骤卡住超过15秒。简化为'金额+收款人+确认'三步后，任务成功率从58%提升至94%</p>
+`,
+    htmlContentEn: `<h2>What / When to Use</h2>
+<p><strong>Definition:</strong> Real user task testing</p>
+<p><strong>Use Cases:</strong> Product validation, interface optimization, flow improvement, prototype testing, issue diagnosis</p>
+<h2>Core Steps</h2>
+<ol>
+<li>Define test tasks</li>
+<li>Recruit typical users</li>
+<li>Moderate and observe</li>
+<li>Record issues and insights</li>
+<li>Prioritize improvements</li>
+</ol>
+<h2>Case Example</h2>
+<p>Payment app usability testing found: 67% users stuck over 15sec at 'transfer confirmation'. Simplified to 'amount+recipient+confirm' 3 steps, task success rate rose from 58% to 94%</p>
+`
    },
   { title: 'A/B 测试', englishTitle: 'A/B Testing', slug: 'ab-testing', chapter: '4', subsectionId: '4.1', chapterTitle: '测试、迭代与战略优化', chapterTitleEn: 'Test & Iteration', tags: [], summary: '', templateUrl: '/templates/ab-testing.pptx',
     oneLineDef: "对照实验验证框架",
@@ -2456,6 +2848,34 @@ const seededFrameworks: Framework[] = [
     coreStepsEn: ["Define hypotheses and metrics","Design test groups","Calculate sample size","Launch and monitor","Statistical analysis and decision"],
     miniCase: "电商平台A/B测试'推荐理由显示'：实验组转化率提升3.2%且统计显著(p<0.01)。全量上线后GMV月增800万美元，ROI达12倍",
     miniCaseEn: "E-commerce A/B tested 'show recommendation rationale': test group conversion up 3.2% with statistical significance (p<0.01). Full rollout increased GMV by $8M/month, ROI 12x",
+    htmlContent: `<h2>是什么 / 何时使用</h2>
+<p><strong>定义：</strong>对照实验验证框架</p>
+<p><strong>适用场景：</strong>功能验证、转化优化、算法对比、定价测试、增长实验</p>
+<h2>核心步骤</h2>
+<ol>
+<li>定义假设与指标</li>
+<li>设计实验分组</li>
+<li>计算样本量</li>
+<li>上线监测</li>
+<li>统计分析与决策</li>
+</ol>
+<h2>案例</h2>
+<p>电商平台A/B测试'推荐理由显示'：实验组转化率提升3.2%且统计显著(p<0.01)。全量上线后GMV月增800万美元，ROI达12倍</p>
+`,
+    htmlContentEn: `<h2>What / When to Use</h2>
+<p><strong>Definition:</strong> Controlled experiment validation framework</p>
+<p><strong>Use Cases:</strong> Feature validation, conversion optimization, algorithm comparison, pricing tests, growth experiments</p>
+<h2>Core Steps</h2>
+<ol>
+<li>Define hypotheses and metrics</li>
+<li>Design test groups</li>
+<li>Calculate sample size</li>
+<li>Launch and monitor</li>
+<li>Statistical analysis and decision</li>
+</ol>
+<h2>Case Example</h2>
+<p>E-commerce A/B tested 'show recommendation rationale': test group conversion up 3.2% with statistical significance (p<0.01). Full rollout increased GMV by $8M/month, ROI 12x</p>
+`
    },
   { title: '出声思维法', englishTitle: 'Think Aloud Protocol', slug: 'think-aloud-protocol', chapter: '4', subsectionId: '4.1', chapterTitle: '测试、迭代与战略优化', chapterTitleEn: 'Test & Iteration', tags: [], summary: '', templateUrl: '/templates/think-aloud-protocol.pptx',
     oneLineDef: "边用边说认知追踪法",
@@ -2466,6 +2886,34 @@ const seededFrameworks: Framework[] = [
     coreStepsEn: ["Design task scenarios","Instruct users to think aloud","Observe and record","Identify cognitive barriers","Extract design recommendations"],
     miniCase: "企业软件用出声思维法发现：用户将'归档'理解为'删除'，导致误操作率23%。改为'移至历史记录'后，误操作降至不足2%",
     miniCaseEn: "Enterprise software discovered via think-aloud: users interpreted 'archive' as 'delete', causing 23% error rate. Changed to 'move to history', errors dropped below 2%",
+    htmlContent: `<h2>是什么 / 何时使用</h2>
+<p><strong>定义：</strong>边用边说认知追踪法</p>
+<p><strong>适用场景：</strong>可用性研究、认知分析、流程诊断、原型测试、培训改进</p>
+<h2>核心步骤</h2>
+<ol>
+<li>设计任务场景</li>
+<li>指导用户出声思考</li>
+<li>观察记录</li>
+<li>识别认知障碍</li>
+<li>提炼设计建议</li>
+</ol>
+<h2>案例</h2>
+<p>企业软件用出声思维法发现：用户将'归档'理解为'删除'，导致误操作率23%。改为'移至历史记录'后，误操作降至不足2%</p>
+`,
+    htmlContentEn: `<h2>What / When to Use</h2>
+<p><strong>Definition:</strong> Concurrent verbalization method</p>
+<p><strong>Use Cases:</strong> Usability research, cognitive analysis, flow diagnosis, prototype testing, training improvement</p>
+<h2>Core Steps</h2>
+<ol>
+<li>Design task scenarios</li>
+<li>Instruct users to think aloud</li>
+<li>Observe and record</li>
+<li>Identify cognitive barriers</li>
+<li>Extract design recommendations</li>
+</ol>
+<h2>Case Example</h2>
+<p>Enterprise software discovered via think-aloud: users interpreted 'archive' as 'delete', causing 23% error rate. Changed to 'move to history', errors dropped below 2%</p>
+`
    },
   { title: '迭代式设计', englishTitle: 'Iterative Design', slug: 'iterative-design', chapter: '4', subsectionId: '4.2', chapterTitle: '测试、迭代与战略优化', chapterTitleEn: 'Test & Iteration', tags: [], summary: '', templateUrl: '/templates/iterative-design.pptx',
     oneLineDef: "循环优化设计流程",
@@ -2476,6 +2924,34 @@ const seededFrameworks: Framework[] = [
     coreStepsEn: ["Build initial version","Test and collect feedback","Analyze and identify issues","Refine design","Repeat cycle"],
     miniCase: "社交产品通过5轮迭代设计（每轮2周）：从低保真→高保真→Beta→正式版。每轮融入用户反馈，最终首月留存达68%，超行业均值2.1倍",
     miniCaseEn: "Social product conducted 5 design iterations (2 weeks each): low-fi→high-fi→beta→launch. Incorporated user feedback each round, achieved 68% first-month retention, 2.1x industry average",
+    htmlContent: `<h2>是什么 / 何时使用</h2>
+<p><strong>定义：</strong>循环优化设计流程</p>
+<p><strong>适用场景：</strong>产品迭代、敏捷开发、持续改进、用户反馈整合、MVP演进</p>
+<h2>核心步骤</h2>
+<ol>
+<li>构建初版</li>
+<li>测试收集反馈</li>
+<li>分析识别问题</li>
+<li>优化设计</li>
+<li>重复循环</li>
+</ol>
+<h2>案例</h2>
+<p>社交产品通过5轮迭代设计（每轮2周）：从低保真→高保真→Beta→正式版。每轮融入用户反馈，最终首月留存达68%，超行业均值2.1倍</p>
+`,
+    htmlContentEn: `<h2>What / When to Use</h2>
+<p><strong>Definition:</strong> Cyclical refinement design process</p>
+<p><strong>Use Cases:</strong> Product iteration, agile development, continuous improvement, user feedback integration, MVP evolution</p>
+<h2>Core Steps</h2>
+<ol>
+<li>Build initial version</li>
+<li>Test and collect feedback</li>
+<li>Analyze and identify issues</li>
+<li>Refine design</li>
+<li>Repeat cycle</li>
+</ol>
+<h2>Case Example</h2>
+<p>Social product conducted 5 design iterations (2 weeks each): low-fi→high-fi→beta→launch. Incorporated user feedback each round, achieved 68% first-month retention, 2.1x industry average</p>
+`
    },
   { title: '平衡计分卡', englishTitle: 'Balanced Scorecard', slug: 'balanced-scorecard', chapter: '4', subsectionId: '4.3', chapterTitle: '测试、迭代与战略优化', chapterTitleEn: 'Test & Iteration', tags: [], summary: '', templateUrl: '/templates/balanced-scorecard.pptx',
     oneLineDef: "四维平衡战略评估卡",
@@ -2486,6 +2962,34 @@ const seededFrameworks: Framework[] = [
     coreStepsEn: ["Define strategic objectives","Build four-perspective metrics","Set target values","Monitor execution","Review and adjust"],
     miniCase: "SaaS公司用平衡计分卡发现：虽财务指标达标，但'客户续费率'和'员工创新提案'双低。调整激励后，次年NRR从95%升至118%",
     miniCaseEn: "SaaS company discovered via balanced scorecard: despite meeting financial targets, 'customer renewal' and 'employee innovation' were low. Adjusted incentives, next year NRR rose from 95% to 118%",
+    htmlContent: `<h2>是什么 / 何时使用</h2>
+<p><strong>定义：</strong>四维平衡战略评估卡</p>
+<p><strong>适用场景：</strong>战略执行、绩效管理、目标对齐、KPI设计、组织评估</p>
+<h2>核心步骤</h2>
+<ol>
+<li>定义战略目标</li>
+<li>构建四维指标</li>
+<li>设定目标值</li>
+<li>监测执行</li>
+<li>复盘与调整</li>
+</ol>
+<h2>案例</h2>
+<p>SaaS公司用平衡计分卡发现：虽财务指标达标，但'客户续费率'和'员工创新提案'双低。调整激励后，次年NRR从95%升至118%</p>
+`,
+    htmlContentEn: `<h2>What / When to Use</h2>
+<p><strong>Definition:</strong> Four-perspective strategic measurement</p>
+<p><strong>Use Cases:</strong> Strategy execution, performance management, goal alignment, KPI design, organizational assessment</p>
+<h2>Core Steps</h2>
+<ol>
+<li>Define strategic objectives</li>
+<li>Build four-perspective metrics</li>
+<li>Set target values</li>
+<li>Monitor execution</li>
+<li>Review and adjust</li>
+</ol>
+<h2>Case Example</h2>
+<p>SaaS company discovered via balanced scorecard: despite meeting financial targets, 'customer renewal' and 'employee innovation' were low. Adjusted incentives, next year NRR rose from 95% to 118%</p>
+`
    },
 
   // 第五章：市场推广叙事与发布 (Launch & Storytelling)
@@ -2498,6 +3002,34 @@ const seededFrameworks: Framework[] = [
     coreStepsEn: ["Distill core story","Design logical structure","Visualize key data","Rehearse and polish","Prepare Q&A"],
     miniCase: "创业团队将32页Pitch压缩至12页：聚焦问题-方案-市场-团队-数据。首轮路演10家机构8家进二轮，最终获600万美元A轮融资",
     miniCaseEn: "Startup team compressed 32-page pitch to 12 pages: focused on problem-solution-market-team-metrics. First roadshow: 8 of 10 investors advanced to round 2, secured $6M Series A",
+    htmlContent: `<h2>是什么 / 何时使用</h2>
+<p><strong>定义：</strong>简洁有力的演示文稿</p>
+<p><strong>适用场景：</strong>融资路演、商业提案、项目汇报、合作谈判、战略展示</p>
+<h2>核心步骤</h2>
+<ol>
+<li>提炼核心故事</li>
+<li>设计逻辑结构</li>
+<li>可视化关键数据</li>
+<li>预演打磨</li>
+<li>准备Q&A</li>
+</ol>
+<h2>案例</h2>
+<p>创业团队将32页Pitch压缩至12页：聚焦问题-方案-市场-团队-数据。首轮路演10家机构8家进二轮，最终获600万美元A轮融资</p>
+`,
+    htmlContentEn: `<h2>What / When to Use</h2>
+<p><strong>Definition:</strong> Concise impactful presentation</p>
+<p><strong>Use Cases:</strong> Fundraising roadshow, business proposals, project reporting, partnership negotiation, strategy presentation</p>
+<h2>Core Steps</h2>
+<ol>
+<li>Distill core story</li>
+<li>Design logical structure</li>
+<li>Visualize key data</li>
+<li>Rehearse and polish</li>
+<li>Prepare Q&A</li>
+</ol>
+<h2>Case Example</h2>
+<p>Startup team compressed 32-page pitch to 12 pages: focused on problem-solution-market-team-metrics. First roadshow: 8 of 10 investors advanced to round 2, secured $6M Series A</p>
+`
    },
   { title: '愿景视频', englishTitle: 'Vision Video', slug: 'vision-video', chapter: '5', subsectionId: '5.1', chapterTitle: '市场推广叙事与发布', chapterTitleEn: 'Launch & Storytelling', tags: [], summary: '', templateUrl: '/templates/vision-video.pptx',
     oneLineDef: "未来愿景视频呈现",
@@ -2508,6 +3040,34 @@ const seededFrameworks: Framework[] = [
     coreStepsEn: ["Conceptualize vision story","Write script and storyboard","Produce prototype video","Add voiceover and music","Test and iterate"],
     miniCase: "智能家居品牌发布3分钟愿景视频，展示'一句话控制全屋'未来场景。视频播放量破500万，预售订单达2.3万单，超预期4倍",
     miniCaseEn: "Smart home brand released 3-min vision video showing 'voice-control entire home' future. Video reached 5M views, pre-orders hit 23K units, 4x above forecast",
+    htmlContent: `<h2>是什么 / 何时使用</h2>
+<p><strong>定义：</strong>未来愿景视频呈现</p>
+<p><strong>适用场景：</strong>产品发布、投资展示、团队激励、用户预热、品牌传播</p>
+<h2>核心步骤</h2>
+<ol>
+<li>构思愿景故事</li>
+<li>编写脚本分镜</li>
+<li>制作原型视频</li>
+<li>配音配乐</li>
+<li>测试迭代</li>
+</ol>
+<h2>案例</h2>
+<p>智能家居品牌发布3分钟愿景视频，展示'一句话控制全屋'未来场景。视频播放量破500万，预售订单达2.3万单，超预期4倍</p>
+`,
+    htmlContentEn: `<h2>What / When to Use</h2>
+<p><strong>Definition:</strong> Future vision video presentation</p>
+<p><strong>Use Cases:</strong> Product launch, investor demos, team motivation, user pre-launch, brand communication</p>
+<h2>Core Steps</h2>
+<ol>
+<li>Conceptualize vision story</li>
+<li>Write script and storyboard</li>
+<li>Produce prototype video</li>
+<li>Add voiceover and music</li>
+<li>Test and iterate</li>
+</ol>
+<h2>Case Example</h2>
+<p>Smart home brand released 3-min vision video showing 'voice-control entire home' future. Video reached 5M views, pre-orders hit 23K units, 4x above forecast</p>
+`
    },
   { title: '品牌遗书', englishTitle: 'Brand Obituary', slug: 'brand-obituary', chapter: '5', subsectionId: '5.1', chapterTitle: '市场推广叙事与发布', chapterTitleEn: 'Launch & Storytelling', tags: [], summary: '', templateUrl: '/templates/brand-obituary.pptx',
     oneLineDef: "品牌遗愿倒推法",
@@ -2518,6 +3078,34 @@ const seededFrameworks: Framework[] = [
     coreStepsEn: ["Envision brand endpoint","Write ideal obituary","Backcast key milestones","Identify core values","Convert to actions"],
     miniCase: "环保品牌用遗书法明确愿景：'50年后被誉为推动行业碳中和的先驱'。据此制定5年路线图，第二年获B Corp认证并成为行业标杆",
     miniCaseEn: "Eco brand used obituary method to clarify vision: '50 years later, hailed as carbon-neutral industry pioneer'. Created 5-year roadmap, achieved B Corp certification year 2, became industry benchmark",
+    htmlContent: `<h2>是什么 / 何时使用</h2>
+<p><strong>定义：</strong>品牌遗愿倒推法</p>
+<p><strong>适用场景：</strong>品牌战略、愿景定义、价值观塑造、长期规划、文化建设</p>
+<h2>核心步骤</h2>
+<ol>
+<li>想象品牌终点</li>
+<li>撰写理想悼词</li>
+<li>倒推关键里程碑</li>
+<li>识别价值观</li>
+<li>转化为行动</li>
+</ol>
+<h2>案例</h2>
+<p>环保品牌用遗书法明确愿景：'50年后被誉为推动行业碳中和的先驱'。据此制定5年路线图，第二年获B Corp认证并成为行业标杆</p>
+`,
+    htmlContentEn: `<h2>What / When to Use</h2>
+<p><strong>Definition:</strong> Brand legacy backcasting method</p>
+<p><strong>Use Cases:</strong> Brand strategy, vision definition, values shaping, long-term planning, culture building</p>
+<h2>Core Steps</h2>
+<ol>
+<li>Envision brand endpoint</li>
+<li>Write ideal obituary</li>
+<li>Backcast key milestones</li>
+<li>Identify core values</li>
+<li>Convert to actions</li>
+</ol>
+<h2>Case Example</h2>
+<p>Eco brand used obituary method to clarify vision: '50 years later, hailed as carbon-neutral industry pioneer'. Created 5-year roadmap, achieved B Corp certification year 2, became industry benchmark</p>
+`
    },
   { title: '执行摘要', englishTitle: 'Executive Summary', slug: 'executive-summary', chapter: '5', subsectionId: '5.2', chapterTitle: '市场推广叙事与发布', chapterTitleEn: 'Launch & Storytelling', tags: [], summary: '', templateUrl: '/templates/executive-summary.pptx',
     oneLineDef: "高管级摘要文档",
@@ -2528,6 +3116,34 @@ const seededFrameworks: Framework[] = [
     coreStepsEn: ["Distill core conclusions","Highlight key metrics","Simplify complex analysis","Clarify action recommendations","Limit to 1-2 pages"],
     miniCase: "咨询报告执行摘要将120页分析压缩至1页：3个核心发现+2项建议+ROI预测。董事会15分钟通过，节省原计划3小时评审时间",
     miniCaseEn: "Consulting report executive summary compressed 120-page analysis to 1 page: 3 key findings + 2 recommendations + ROI forecast. Board approved in 15min, saved planned 3-hour review",
+    htmlContent: `<h2>是什么 / 何时使用</h2>
+<p><strong>定义：</strong>高管级摘要文档</p>
+<p><strong>适用场景：</strong>商业计划、项目汇报、决策支持、投资文件、战略提案</p>
+<h2>核心步骤</h2>
+<ol>
+<li>提炼核心结论</li>
+<li>突出关键数据</li>
+<li>简化复杂分析</li>
+<li>明确行动建议</li>
+<li>控制1-2页篇幅</li>
+</ol>
+<h2>案例</h2>
+<p>咨询报告执行摘要将120页分析压缩至1页：3个核心发现+2项建议+ROI预测。董事会15分钟通过，节省原计划3小时评审时间</p>
+`,
+    htmlContentEn: `<h2>What / When to Use</h2>
+<p><strong>Definition:</strong> Executive-level summary document</p>
+<p><strong>Use Cases:</strong> Business plans, project reports, decision support, investment documents, strategic proposals</p>
+<h2>Core Steps</h2>
+<ol>
+<li>Distill core conclusions</li>
+<li>Highlight key metrics</li>
+<li>Simplify complex analysis</li>
+<li>Clarify action recommendations</li>
+<li>Limit to 1-2 pages</li>
+</ol>
+<h2>Case Example</h2>
+<p>Consulting report executive summary compressed 120-page analysis to 1 page: 3 key findings + 2 recommendations + ROI forecast. Board approved in 15min, saved planned 3-hour review</p>
+`
    },
   { title: '过程书', englishTitle: 'Process Book', slug: 'process-book', chapter: '5', subsectionId: '5.3', chapterTitle: '市场推广叙事与发布', chapterTitleEn: 'Launch & Storytelling', tags: [], summary: '', templateUrl: '/templates/process-book.pptx',
     oneLineDef: "完整设计过程记录本",
@@ -2538,6 +3154,34 @@ const seededFrameworks: Framework[] = [
     coreStepsEn: ["Document full process","Organize research findings","Show design evolution","Summarize methodology","Extract reusable assets"],
     miniCase: "设计团队为重大项目制作Process Book，记录6个月从研究到上线的完整过程。该文档成为新人培训教材，使新人上手周期从8周缩短至3周",
     miniCaseEn: "Design team created process book for major project, documenting 6-month journey from research to launch. Document became onboarding material, reducing new hire ramp-up from 8 to 3 weeks",
+    htmlContent: `<h2>是什么 / 何时使用</h2>
+<p><strong>定义：</strong>完整设计过程记录本</p>
+<p><strong>适用场景：</strong>设计复盘、案例展示、团队传承、客户汇报、作品集</p>
+<h2>核心步骤</h2>
+<ol>
+<li>记录全流程</li>
+<li>整理研究发现</li>
+<li>展示设计演进</li>
+<li>总结方法论</li>
+<li>提炼可复用资产</li>
+</ol>
+<h2>案例</h2>
+<p>设计团队为重大项目制作Process Book，记录6个月从研究到上线的完整过程。该文档成为新人培训教材，使新人上手周期从8周缩短至3周</p>
+`,
+    htmlContentEn: `<h2>What / When to Use</h2>
+<p><strong>Definition:</strong> Complete design process documentation</p>
+<p><strong>Use Cases:</strong> Design review, case showcase, team knowledge transfer, client reporting, portfolio</p>
+<h2>Core Steps</h2>
+<ol>
+<li>Document full process</li>
+<li>Organize research findings</li>
+<li>Show design evolution</li>
+<li>Summarize methodology</li>
+<li>Extract reusable assets</li>
+</ol>
+<h2>Case Example</h2>
+<p>Design team created process book for major project, documenting 6-month journey from research to launch. Document became onboarding material, reducing new hire ramp-up from 8 to 3 weeks</p>
+`
    },
 ];
 

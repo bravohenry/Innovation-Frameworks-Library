@@ -10,9 +10,9 @@ const initialPestleData: PestleData = {
     {
       id: 'political-1',
       dimension: 'political',
-      title: '政府政策变化',
+      title: 'Government Policy Changes',
       titleEn: 'Government Policy Changes',
-      description: '政府对行业监管政策的调整可能影响业务运营',
+      description: 'Government regulatory policy adjustments may affect business operations',
       descriptionEn: 'Government regulatory policy adjustments may affect business operations',
       impact: 4,
       direction: 'threat',
@@ -22,9 +22,9 @@ const initialPestleData: PestleData = {
     {
       id: 'economic-1',
       dimension: 'economic',
-      title: '经济增长放缓',
+      title: 'Economic Growth Slowdown',
       titleEn: 'Economic Growth Slowdown',
-      description: '宏观经济环境变化影响消费者购买力',
+      description: 'Macroeconomic changes affect consumer purchasing power',
       descriptionEn: 'Macroeconomic changes affect consumer purchasing power',
       impact: 3,
       direction: 'threat',
@@ -34,9 +34,9 @@ const initialPestleData: PestleData = {
     {
       id: 'social-1',
       dimension: 'social',
-      title: '消费行为数字化',
+      title: 'Digital Consumer Behavior',
       titleEn: 'Digital Consumer Behavior',
-      description: '消费者越来越倾向于数字化购物体验',
+      description: 'Consumers increasingly prefer digital shopping experiences',
       descriptionEn: 'Consumers increasingly prefer digital shopping experiences',
       impact: 5,
       direction: 'opportunity',
@@ -46,9 +46,9 @@ const initialPestleData: PestleData = {
     {
       id: 'technological-1',
       dimension: 'technological',
-      title: 'AI技术发展',
+      title: 'AI Technology Development',
       titleEn: 'AI Technology Development',
-      description: '人工智能技术的快速发展创造新的商业机会',
+      description: 'Rapid development of AI technology creates new business opportunities',
       descriptionEn: 'Rapid development of AI technology creates new business opportunities',
       impact: 4,
       direction: 'opportunity',
@@ -58,9 +58,9 @@ const initialPestleData: PestleData = {
     {
       id: 'legal-1',
       dimension: 'legal',
-      title: '数据保护法规',
+      title: 'Data Protection Regulations',
       titleEn: 'Data Protection Regulations',
-      description: '严格的数据保护法规增加合规成本',
+      description: 'Strict data protection regulations increase compliance costs',
       descriptionEn: 'Strict data protection regulations increase compliance costs',
       impact: 3,
       direction: 'threat',
@@ -70,9 +70,9 @@ const initialPestleData: PestleData = {
     {
       id: 'environmental-1',
       dimension: 'environmental',
-      title: '可持续发展需求',
+      title: 'Sustainability Requirements',
       titleEn: 'Sustainability Requirements',
-      description: '消费者和监管机构对环保的要求不断提高',
+      description: 'Growing environmental requirements from consumers and regulators',
       descriptionEn: 'Growing environmental requirements from consumers and regulators',
       impact: 3,
       direction: 'opportunity',
@@ -80,7 +80,7 @@ const initialPestleData: PestleData = {
       probability: 4
     }
   ],
-  summary: '该分析显示数字化转型和AI技术发展带来重大机遇，但政策变化和经济环境存在挑战。',
+  summary: 'The analysis shows significant opportunities from digital transformation and AI development, but challenges from policy changes and economic environment.',
   summaryEn: 'The analysis shows significant opportunities from digital transformation and AI development, but challenges from policy changes and economic environment.'
 };
 
