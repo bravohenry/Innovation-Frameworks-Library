@@ -251,7 +251,7 @@ const frameworksData: Record<string, Framework> = {
 
 <h2>关联</h2>
 <ul>
-<li><strong>前置</strong>：RACI矩阵明确角色分工，为责任承诺奠定基础</li>
+<li><strong>前置</strong>：RACI矩阵明确Role分工，为责任承诺奠定基础</li>
 <li><strong>后续</strong>：North Star Framework对齐团队目标，强化结果导向</li>
 <li><strong>互补</strong>：甘特图规划改善活动的时间安排</li>
 </ul>
@@ -264,7 +264,7 @@ const frameworksData: Record<string, Framework> = {
 <li><strong>层级跳跃</strong>：试图绕过信任建设直接解决上层问题</li>
 <li><strong>表象治理</strong>：只关注行为表现而忽视深层心理因素</li>
 <li><strong>一刀切方案</strong>：对所有团队使用相同的改善方法</li>
-<li><strong>缺乏耐心</strong>：期望短期内彻底解决所有障碍</li>
+<li><strong>缺乏耐心</strong>：期望Short期内彻底解决所有障碍</li>
 <li><strong>领导缺位</strong>：认为这是HR或外部顾问的工作</li>
 </ul>`,
     htmlContentEn: `<h2>What / When to Use</h2>
@@ -366,21 +366,21 @@ const frameworksData: Record<string, Framework> = {
     subsectionId: '1.1',
     chapterTitle: "发现与战略基础",
     chapterTitleEn: "Discovery & Strategy",
-    tags: ["项目治理", "角色职责", "流程清晰", "责任分配"],
+    tags: ["项目治理", "Role职责", "流程清晰", "责任分配"],
     tagsEn: ["Project Governance", "Role Clarity", "Process Clarity", "Responsibility Assignment"],
-    summary: "通过 R（负责）、A（签核）、C（咨询）、I（知会）澄清跨角色分工，降低协调成本。产出角色定义表、任务分解矩阵与导出CSV模板。",
+    summary: "通过 R（负责）、A（签核）、C（咨询）、I（知会）澄清跨Role分工，reduce协调成本。产出Role定义表、任务分解矩阵与导出CSV模板。",
     summaryEn: "Clarify cross-role responsibilities using R (Responsible), A (Accountable), C (Consulted), I (Informed) to reduce coordination costs. Delivers role definition table, task breakdown matrix and CSV export template.",
-    oneLineDef: "四角色责任分配矩阵",
+    oneLineDef: "四Role责任分配矩阵",
     oneLineDefEn: "Four-role responsibility assignment matrix",
     scenario: "项目启动、跨部门协作、职责不清、决策缓慢、重复沟通成本高",
     scenarioEn: "Project kickoff, cross-departmental collaboration, unclear responsibilities, slow decision-making, high communication costs",
-    coreSteps: ["任务梳理分解", "识别所有角色", "分配RACI角色", "解决角色冲突", "确认发布"],
+    coreSteps: ["任务梳理分解", "识别所有Role", "分配RACIRole", "解决Role冲突", "确认发布"],
     coreStepsEn: ["List and decompose tasks", "Identify all roles", "Assign RACI roles", "Resolve role conflicts", "Confirm and publish"],
-    miniCase: "某软件产品发布混乱：需求确认A=产品经理R=需求分析师，开发A=技术负责人R=工程师，测试验收A=QA经理C=产品经理。职责清晰后，需求变更减少60%，准时交付率从40%升至85%",
+    miniCase: "某软件产品发布混乱：需求确认A=Product ManagerR=Requirements Analysis师，开发A=技术负责人R=工程师，测试验收A=QA经理C=Product Manager。职责清晰后，需求变更减少60%，准时交付率从40%升至85%",
     miniCaseEn: "A software product launch was chaotic: Requirements confirmation A=Product Manager R=Analyst, Development A=Tech Lead R=Engineers, Testing A=QA Manager C=Product Manager. After clear roles, requirement changes dropped 60%, on-time delivery rose from 40% to 85%",
     templateUrl: "/templates/raci-chart.pptx",
     htmlContent: `<h2>是什么 / 何时使用</h2>
-<p>RACI责任分配矩阵是一种项目管理工具，通过四种角色类型澄清任务与人员的责任关系：</p>
+<p>RACI责任分配矩阵是一种项目管理工具，通过四种Role类型澄清任务与人员的责任关系：</p>
 <ul>
 <li><strong>R - Responsible（负责）</strong>：实际执行任务的人员</li>
 <li><strong>A - Accountable（签核）</strong>：对任务结果负最终责任并签字确认的人，每个任务只能有一个A</li>
@@ -392,36 +392,36 @@ const frameworksData: Record<string, Framework> = {
 <h2>前置输入</h2>
 <ul>
 <li>完整的任务分解结构（WBS）或活动清单</li>
-<li>项目涉及的所有角色和人员名单</li>
+<li>项目涉及的所有Role和人员名单</li>
 <li>现有的组织架构和汇报关系</li>
 <li>关键决策点和审批流程要求</li>
 </ul>
 
 <h2>步骤</h2>
 <ol>
-<li><strong>任务梳理</strong>：列出所有需要明确责任的任务或交付物；按重要性和复杂度排序；识别跨部门或跨角色的关键任务。<em>示例：需求收集、方案设计、开发实施、测试验收、上线部署。</em></li>
-<li><strong>角色识别</strong>：确定所有相关的角色、部门或具体人员；明确每个角色的专业能力和权限范围；标注汇报关系和决策层级。<em>常见错误：遗漏关键角色或将角色定义过于宽泛。</em></li>
-<li><strong>矩阵填充</strong>：为每个任务分配RACI角色；确保每个任务有且仅有一个A；避免过多的C和I角色。<em>原则：一个任务可以有多个R，但A必须唯一；C角色需要真正的专业输入，I角色仅需了解结果。</em></li>
-<li><strong>冲突解决</strong>：识别角色冲突或空缺；通过讨论协商解决分歧；必要时调整任务分解或组织结构。<em>常见冲突：多人争夺A角色、关键任务无人负责、C/I角色过多导致沟通成本高。</em></li>
+<li><strong>任务梳理</strong>：列出所有需要明确责任的任务或交付物；按重要性和复杂度排序；识别跨部门或跨Role的关键任务。<em>示例：需求收集、方案设计、开发实施、测试验收、上线部署。</em></li>
+<li><strong>Role识别</strong>：确定所有相关的Role、部门或具体人员；明确每个Role的专业能力和权限范围；标注汇报关系和决策层级。<em>常见错误：遗漏关键Role或将Role定义过于宽泛。</em></li>
+<li><strong>矩阵填充</strong>：为每个任务分配RACIRole；确保每个任务有且仅有一个A；避免过多的C和IRole。<em>原则：一个任务可以有多个R，但A必须唯一；CRole需要真正的专业输入，IRole仅需了解结果。</em></li>
+<li><strong>冲突解决</strong>：识别Role冲突或空缺；通过讨论协商解决分歧；必要时调整任务分解或组织结构。<em>常见冲突：多人争夺ARole、关键任务无人负责、C/IRole过多导致沟通成本高。</em></li>
 <li><strong>确认与发布</strong>：与所有相关方确认矩阵内容；形成正式文档并广泛分发；建立定期回顾更新机制。<em>常见错误：一次性制定后不再维护更新。</em></li>
 </ol>
 
 <h2>输出与判定（DoD）</h2>
 <ul>
-<li>RACI责任分配矩阵表格，包含所有任务和角色映射</li>
-<li>角色定义文档，明确各角色的职责边界和权限</li>
+<li>RACI责任分配矩阵表格，包含所有任务和Role映射</li>
+<li>Role定义文档，明确各Role的职责边界和权限</li>
 <li>CSV格式的可编辑模板，支持项目定制化调整</li>
 <li>冲突识别和解决方案记录</li>
-<li><strong>合格标准</strong>：每个任务都有明确的A角色；无角色冲突或空缺；所有相关方对分工达成共识；建立定期回顾机制。</li>
+<li><strong>合格标准</strong>：每个任务都有明确的ARole；无Role冲突或空缺；所有相关方对分工达成共识；建立定期回顾机制。</li>
 </ul>
 
 <h2>核查清单</h2>
 <ul>
-<li>☐ 每个任务都分配了RACI角色</li>
+<li>☐ 每个任务都分配了RACIRole</li>
 <li>☐ 每个任务有且仅有一个A（Accountable）</li>
-<li>☐ R角色具备执行任务的能力和资源</li>
-<li>☐ C角色确实需要双向沟通，非形式主义</li>
-<li>☐ I角色控制在必要范围，避免信息过载</li>
+<li>☐ RRole具备执行任务的能力和资源</li>
+<li>☐ CRole确实需要双向沟通，非形式主义</li>
+<li>☐ IRole控制在必要范围，避免信息过载</li>
 <li>☐ 跨部门任务的协调机制已明确</li>
 <li>☐ 所有相关方已确认并承诺执行</li>
 </ul>
@@ -431,23 +431,23 @@ const frameworksData: Record<string, Framework> = {
 <li><strong>决策效率</strong>：决策周期时间、决策质量评分</li>
 <li><strong>沟通成本</strong>：会议时长、邮件往来次数、重复询问频率</li>
 <li><strong>任务完成率</strong>：按时完成率、质量达标率</li>
-<li><strong>角色满意度</strong>：工作量合理性、职责清晰度评价</li>
+<li><strong>Role满意度</strong>：工作量合理性、职责清晰度评价</li>
 <li><strong>矩阵维护</strong>：更新频率、实际执行与矩阵一致性</li>
 </ul>
 
 <h2>关联</h2>
 <ul>
 <li><strong>前置</strong>：五大障碍诊断解决信任问题，为责任承诺创造条件</li>
-<li><strong>后续</strong>：甘特图规划时间安排，明确各角色的时间投入</li>
-<li><strong>互补</strong>：北极星框架确保所有角色朝向共同目标</li>
+<li><strong>后续</strong>：甘特图规划时间安排，明确各Role的时间投入</li>
+<li><strong>互补</strong>：北极星框架确保所有Role朝向共同目标</li>
 </ul>
 
 <h2>案例</h2>
-<p>某软件公司新产品发布项目中，产品经理、开发团队、QA、运维、市场部职责混乱，导致需求反复变更、测试延期、上线失败。通过RACI梳理：需求确认A=产品经理，R=需求分析师；开发任务A=技术主管，R=开发工程师；测试验收A=QA主管，C=产品经理；市场推广A=市场总监，I=产品经理。明确分工后，需求变更减少60%，项目按时交付率从40%提升到85%。</p>
+<p>某软件公司新产品发布项目中，Product Manager、Dev Team、QA、运维、市场部职责混乱，导致需求反复变更、测试延期、上线失败。通过RACI梳理：需求确认A=Product Manager，R=Requirements Analysis师；开发任务A=技术主管，R=开发工程师；测试验收A=QA主管，C=Product Manager；市场推广A=市场总监，I=Product Manager。明确分工后，需求变更减少60%，项目按时交付率从40%提升到85%。</p>
 
 <h2>易错点</h2>
 <ul>
-<li><strong>A角色过多</strong>：一个任务分配多个A，导致责任稀释</li>
+<li><strong>ARole过多</strong>：一个任务分配多个A，导致责任稀释</li>
 <li><strong>形式主义</strong>：为了平衡关系让所有人都参与C或I</li>
 <li><strong>粒度不当</strong>：任务分解过细或过粗，难以操作</li>
 <li><strong>静态思维</strong>：制定后不根据项目进展调整</li>
@@ -528,7 +528,7 @@ const frameworksData: Record<string, Framework> = {
 <li><strong>Authority-responsibility mismatch</strong>: Assigning responsibility without corresponding authority and resources</li>
 </ul>`,
     diagrams: [
-      { title: "RACI 示例表", url: "/diagrams/raci-chart.svg", description: "行=任务，列=角色，单元格填 R/A/C/I" }
+      { title: "RACI 示例表", url: "/diagrams/raci-chart.svg", description: "行=任务，列=Role，单元格填 R/A/C/I" }
     ],
     interactive: {
       type: "table",
@@ -536,7 +536,7 @@ const frameworksData: Record<string, Framework> = {
       schema: {
         columns: ["task", "role1", "role2", "role3", "role4"],
         rows: [
-          { "task": "需求分析", "role1": "R", "role2": "A", "role3": "C", "role4": "I" },
+          { "task": "Requirements Analysis", "role1": "R", "role2": "A", "role3": "C", "role4": "I" },
           { "task": "方案设计", "role1": "C", "role2": "R", "role3": "A", "role4": "I" }
         ]
       },
@@ -587,7 +587,7 @@ const frameworksData: Record<string, Framework> = {
 <h2>步骤</h2>
 <ol>
 <li><strong>任务分解</strong>：将项目分解为可管理的具体任务；确定任务粒度（建议1-2周）；明确任务的可交付成果。<em>原则：任务太细难以管理，太粗缺乏控制。</em></li>
-<li><strong>时间估算</strong>：使用三点估算法（乐观/可能/悲观）；考虑历史数据和团队经验；为高风险任务添加缓冲时间。<em>常见错误：过度乐观，忽略风险和不确定性。</em></li>
+<li><strong>时间估算</strong>：使用三点估算法（乐观/可能/悲观）；考虑历史数据和团队经验；为高风险任务添加缓冲时间。<em>常见错误：过度乐观，忽略风险和不确Qual。</em></li>
 <li><strong>依赖映射</strong>：标识任务间的前置关系（FS/SS/FF/SF）；建立关键路径网络；检查循环依赖和逻辑矛盾。<em>示例：需求确认完成后才能开始设计，设计完成后才能开发。</em></li>
 <li><strong>资源分配</strong>：为每个任务分配责任人和资源；检查资源冲突和过载情况；进行资源平衡优化。<em>常见错误：假设资源100%可用，忽略请假、会议等非生产时间。</em></li>
 <li><strong>里程碑设置</strong>：识别关键交付节点和检查点；设置明确的里程碑标准；建立里程碑审查机制。<em>建议：里程碑不占用工期，但需要明确的完成条件。</em></li>
@@ -640,7 +640,7 @@ const frameworksData: Record<string, Framework> = {
 <li><strong>时间估算偏差</strong>：过度乐观或悲观，缺乏历史数据支撑</li>
 <li><strong>资源假设不实</strong>：假设资源100%投入，忽略请假和其他工作</li>
 <li><strong>静态管理</strong>：一次制定后不再更新，失去指导意义</li>
-<li><strong>忽略缓冲</strong>：不考虑风险和不确定性，计划过于紧凑</li>
+<li><strong>忽略缓冲</strong>：不考虑风险和不确Qual，计划过于紧凑</li>
 </ul>`,
     htmlContentEn: `<h2>What / When to Use</h2>
 <p>Gantt Chart, invented by Henry Gantt, is a project progress management tool that displays project tasks' start time, end time and duration in bar chart format. Key features:</p>
@@ -728,9 +728,9 @@ const frameworksData: Record<string, Framework> = {
       title: { "zh": "项目进度计划", "en": "Project Schedule" },
       schema: {
         tasks: [
-          { "task": "需求分析", "start": "2024-01-01", "end": "2024-01-15", "owner": "产品经理", "dependency": "", "progress": 100 },
-          { "task": "设计原型", "start": "2024-01-16", "end": "2024-02-15", "owner": "UI设计师", "dependency": "需求分析", "progress": 80 },
-          { "task": "开发实现", "start": "2024-02-16", "end": "2024-04-15", "owner": "开发团队", "dependency": "设计原型", "progress": 60 }
+          { "task": "Requirements Analysis", "start": "2024-01-01", "end": "2024-01-15", "owner": "Product Manager", "dependency": "", "progress": 100 },
+          { "task": "Design Prototype", "start": "2024-01-16", "end": "2024-02-15", "owner": "UI Designer", "dependency": "Requirements Analysis", "progress": 80 },
+          { "task": "Development", "start": "2024-02-16", "end": "2024-04-15", "owner": "Dev Team", "dependency": "Design Prototype", "progress": 60 }
         ]
       },
       export: { "png": true, "csv": true }
@@ -754,13 +754,13 @@ const frameworksData: Record<string, Framework> = {
     scenarioEn: "Strategic planning, entering new markets, business model adjustment, risk assessment, investment decisions",
     coreSteps: ["维度分解收集信息", "识别关键影响因子", "评估影响程度方向", "分析维度间关联", "映射机会风险"],
     coreStepsEn: ["Decompose dimensions and collect info", "Identify key impact factors", "Assess impact degree and direction", "Analyze cross-dimensional correlations", "Map opportunities and risks"],
-    miniCase: "某零售企业计划拓展东南亚市场，PESTLE分析发现：政治稳定性风险中等，经济增长强劲（机会），移动支付普及率高（技术机会），环保法规趋严（成本压力），决定采用轻资产运营模式",
+    miniCase: "某零售企业计划拓展东南亚市场，PESTLE分析发现：政治稳Qual风险medium，经济增长强劲（机会），移动支付普及率高（技术机会），环保法规趋严（成本压力），决定采用轻资产运营模式",
     miniCaseEn: "A retailer planning Southeast Asia expansion used PESTLE: found medium political stability risk, strong economic growth (opportunity), high mobile payment penetration (tech opportunity), tightening environmental regulations (cost pressure), decided on asset-light operating model",
     templateUrl: "/templates/pestle-analysis.pptx",
     htmlContent: `<h2>是什么 / 何时使用</h2>
 <p>PESTLE分析是一种宏观环境分析工具，通过六个维度系统性扫描外部环境：</p>
 <ul>
-<li><strong>政治（Political）</strong>：政策法规、政治稳定性、贸易政策、税收制度</li>
+<li><strong>政治（Political）</strong>：政策法规、政治稳Qual、贸易政策、税收制度</li>
 <li><strong>经济（Economic）</strong>：经济增长、利率汇率、通胀失业、消费水平</li>
 <li><strong>社会（Social）</strong>：人口结构、文化价值观、生活方式、教育水平</li>
 <li><strong>技术（Technological）</strong>：技术创新、研发投入、数字化程度、专利保护</li>
@@ -781,7 +781,7 @@ const frameworksData: Record<string, Framework> = {
 <ol>
 <li><strong>维度分解</strong>：按P-E-S-T-L-E六维度收集相关信息；关注与业务直接相关的因素；避免泛泛而谈的宏观描述。<em>示例：政治维度关注具体的行业监管政策，而非一般政治环境。</em></li>
 <li><strong>因子识别</strong>：每个维度列出3-7个关键影响因子；基于事实和数据，避免主观臆测；关注变化趋势而非静态现状。<em>常见错误：罗列过多琐碎因素，缺乏重点。</em></li>
-<li><strong>影响评估</strong>：评估每个因子对业务的影响程度（高/中/低）；判断影响方向（机会/威胁/中性）；考虑时间维度（短期/中期/长期）。<em>工具：可使用1-5分评分法量化影响度。</em></li>
+<li><strong>影响评估</strong>：评估每个因子对业务的影响程度（高/Med/Low）；判断影响方向（机会/威胁/中性）；考虑时间维度（Short期/中期/长期）。<em>工具：可使用1-5分评分法量化影响度。</em></li>
 <li><strong>关联分析</strong>：识别维度间的相互作用和联动效应；关注政策与技术的组合影响；发现可能的连锁反应。<em>示例：环保政策推动新技术发展，进而影响成本结构。</em></li>
 <li><strong>机会风险映射</strong>：将高影响因子转化为具体的机会或风险；制定应对策略和行动计划；建立监控预警机制。<em>常见错误：分析停留在因子识别，未转化为行动。</em></li>
 </ol>
@@ -944,7 +944,7 @@ const frameworksData: Record<string, Framework> = {
     scenarioEn: "Strategic transformation, competitive strategy formulation, problem-solving, investment decisions, crisis response",
     coreSteps: ["明确分析情境", "识别SWOT要素", "要素精准匹配", "生成四组策略", "确定优先级"],
     coreStepsEn: ["Clarify analysis context", "Identify SWOT elements", "Precisely match elements", "Generate four strategy groups", "Prioritize strategies"],
-    miniCase: "制造企业数字化转型sSWOT：情境-工业4.0背景下保持竞争力。S:制造经验/客户关系，W:IT能力不足/创新文化缺乏，O:工业4.0政策/新技术成熟，T:数字化竞争者出现。选择WO策略与科技公司合作补足数字化短板，成功实现转型",
+    miniCase: "制造企业数字化转型sSWOT：情境-工业4.0背景下保持竞争力。S:制造经验/客户关系，W:IT能力不足/创新文化缺乏，O:工业4.0政策/新技术成熟，T:数字化竞争者出现。选择WO策略与科技公司合作补足数字化Short板，成功实现转型",
     miniCaseEn: "Manufacturer's digital transformation sSWOT: Context-maintaining competitiveness amid Industry 4.0. S:Manufacturing experience/customer relationships, W:Insufficient IT capabilities/lacking innovation culture, O:Industry 4.0 policies/emerging tech maturity, T:Digital competitors emerging. Chose WO strategy to partner with tech companies filling digital gaps, successfully achieved transformation",
     templateUrl: "/templates/sswot-analysis.pptx",
     htmlContent: `<h2>是什么 / 何时使用</h2>
@@ -975,7 +975,7 @@ const frameworksData: Record<string, Framework> = {
 <h2>步骤</h2>
 <ol>
 <li><strong>情境界定</strong>：明确分析的具体问题、目标或情境；设定分析边界和时间范围；识别关键利益相关方。<em>示例：不是分析"公司整体状况"，而是"进入新兴市场的可行性"。</em></li>
-<li><strong>要素识别</strong>：基于特定情境收集内部优势/劣势；识别该情境下的外部机会/威胁；每个象限3-5个关键要素即可。<em>常见错误：要素过于宽泛，与具体情境关联度低。</em></li>
+<li><strong>要素识别</strong>：基于特定情境收集内部优势/劣势；识别该情境下的外部机会/威胁；每个象限3-5个关键要素即可。<em>常见错误：要素过于宽泛，与具体情境关联度Low。</em></li>
 <li><strong>匹配分析</strong>：将每个优势与每个机会进行配对，评估匹配度；同理进行S-T、W-O、W-T配对；识别最有潜力的组合。<em>工具：可使用匹配度矩阵评分1-5分。</em></li>
 <li><strong>策略制定</strong>：为每个高匹配度组合制定具体策略；策略应包含目标、行动、资源、时间；按可行性和影响力排序。<em>示例：SO策略"利用技术优势（S）抓住数字化机会（O）→开发AI产品线"。</em></li>
 <li><strong>执行路径</strong>：为优先策略制定详细执行计划；分解关键里程碑和成功指标；识别风险点和应对方案。<em>常见错误：策略制定后缺乏可执行的行动计划。</em></li>
@@ -1018,7 +1018,7 @@ const frameworksData: Record<string, Framework> = {
 </ul>
 
 <h2>案例</h2>
-<p>某传统制造企业面临数字化转型的sSWOT分析：情境—在行业数字化浪潮中保持竞争力。S：深厚制造经验、客户关系稳固；W：IT能力不足、创新文化缺乏；O：工业4.0政策支持、新兴技术成熟；T：数字化竞争对手涌现、客户需求变化。SO策略：利用客户关系推广智能制造解决方案；WO策略：与科技公司合作补齐数字化能力；ST策略：强化传统优势建立差异化壁垒；WT策略：渐进式转型降低变革风险。最终选择WO策略为主，成功实现数字化升级。</p>
+<p>某传统制造企业面临数字化转型的sSWOT分析：情境—在行业数字化浪潮中保持竞争力。S：深厚制造经验、客户关系稳固；W：IT能力不足、创新文化缺乏；O：工业4.0政策支持、新兴技术成熟；T：数字化竞争对手涌现、客户需求变化。SO策略：利用客户关系推广智能制造解决方案；WO策略：与科技公司合作补齐数字化能力；ST策略：强化传统优势建立差异化壁垒；WT策略：渐进式转型reduce变革风险。最终选择WO策略为主，成功实现数字化升级。</p>
 
 <h2>易错点</h2>
 <ul>
@@ -1227,7 +1227,7 @@ const frameworksData: Record<string, Framework> = {
 <li><strong>目标过于宽泛</strong>："所有家长"等无法执行的泛泛定义</li>
 <li><strong>痛点主观臆测</strong>：基于个人经验而非用户调研</li>
 <li><strong>价值表述模糊</strong>：功能罗列而非核心价值凝练</li>
-<li><strong>指标无法衡量</strong>："大幅提升"等定性描述</li>
+<li><strong>指标无法衡量</strong>："大幅提升"等Qual描述</li>
 <li><strong>假设当作事实</strong>：对不确定因素过度自信</li>
 </ul>`,
     htmlContentEn: `<h2>What / When to Use</h2>
@@ -1325,7 +1325,7 @@ const frameworksData: Record<string, Framework> = {
           { key: "how", labelZh: "成功标准", labelEn: "Success Criteria", content: "可衡量的成功指标" }
         ],
         assumptions: ["目标用户愿意付费", "解决方案技术可行", "市场规模足够大"],
-        validation: ["用户访谈", "MVP测试", "市场调研"]
+        validation: ["用户Interviews", "MVP测试", "市场调研"]
       },
       export: { "png": true, "csv": true }
     }
@@ -1361,7 +1361,7 @@ const frameworksData: Record<string, Framework> = {
 <p>与传统KPI不同，NSM强调：</p>
 <ul>
 <li><strong>价值导向</strong>：衡量用户获得的真实价值，而非虚荣指标</li>
-<li><strong>长期视角</strong>：平衡短期增长与长期健康</li>
+<li><strong>长期视角</strong>：平衡Short期增长与长期健康</li>
 <li><strong>全员对齐</strong>：跨部门统一目标，减少内耗</li>
 <li><strong>实验驱动</strong>：通过假设验证指导决策</li>
 </ul>
@@ -1381,15 +1381,15 @@ const frameworksData: Record<string, Framework> = {
 <li><strong>NSM候选识别</strong>：基于产品核心价值提出3-5个候选指标；评估指标与用户价值的直接关联度；考虑指标的可量化性和影响范围。<em>示例：电商平台的候选NSM可能是月活购买用户数、人均订单价值、用户生命周期价值等。</em></li>
 <li><strong>NSM筛选确认</strong>：使用HEART框架（快乐度、参与度、接受度、留存率、任务成功率）评估；选择最能反映产品核心价值的指标；确保指标平衡增长与健康。<em>常见错误：选择易操控的虚荣指标，如注册用户数而非活跃用户数。</em></li>
 <li><strong>驱动因子分解</strong>：将NSM拆解为2-4个一级驱动因子；每个一级因子继续拆解为可执行的二级因子；标注各因子间的逻辑关系和权重。<em>工具：可使用指标树或公式分解法，如DAU = 新用户获取 + 老用户留存。</em></li>
-<li><strong>假设标注</strong>：为每个驱动因子标注关键假设；评估假设的重要性和不确定性；识别需要优先验证的假设。<em>示例：假设"提升产品推荐准确率能增加用户留存"需要通过A/B测试验证。</em></li>
-<li><strong>实验路线设计</strong>：为高优先级假设设计验证实验；制定实验时间表和成功标准；建立学习反馈机制和指标监控体系。<em>常见错误：实验设计缺乏统计显著性考量，或实验周期过短无法得出可靠结论。</em></li>
+<li><strong>假设标注</strong>：为每个驱动因子标注关键假设；评估假设的重要性和不确Qual；识别需要优先验证的假设。<em>示例：假设"提升产品推荐准确率能增加用户留存"需要通过A/B测试验证。</em></li>
+<li><strong>实验路线设计</strong>：为高优先级假设设计验证实验；制定实验时间表和成功标准；建立学习反馈机制和指标监控体系。<em>常见错误：实验设计缺乏统计显著性考量，或实验周期过Short无法得出可靠结论。</em></li>
 </ol>
 
 <h2>输出与判定（DoD）</h2>
 <ul>
 <li>北极星指标定义卡片，包含指标公式、目标值、测量方式</li>
 <li>驱动因子分解树，显示各层级因子及其逻辑关系</li>
-<li>关键假设清单，标注优先级、不确定性、验证方法</li>
+<li>关键假设清单，标注优先级、不确Qual、验证方法</li>
 <li>3个月实验路线图，包含实验设计、时间安排、成功标准</li>
 <li>NSM仪表板设计，支持实时监控和趋势分析</li>
 <li><strong>合格标准</strong>：NSM与产品价值强关联；驱动因子可量化可控制；假设清晰可验证；团队对目标达成共识；建立了定期回顾机制。</li>
@@ -1431,7 +1431,7 @@ const frameworksData: Record<string, Framework> = {
 <li><strong>指标选择偏差</strong>：选择易操控但与用户价值弱相关的虚荣指标</li>
 <li><strong>分解过度复杂</strong>：驱动因子层级过多，执行团队理解困难</li>
 <li><strong>假设缺乏验证</strong>：将假设当作事实，缺乏实验验证意识</li>
-<li><strong>短期优化陷阱</strong>：过度关注短期NSM提升而忽视长期健康</li>
+<li><strong>Short期优化陷阱</strong>：过度关注Short期NSM提升而忽视长期健康</li>
 <li><strong>部门各自为政</strong>：各部门基于NSM制定冲突的子目标</li>
 <li><strong>指标僵化</strong>：NSM确定后长期不调整，无法适应业务发展</li>
 </ul>`,
@@ -1532,7 +1532,7 @@ const frameworksData: Record<string, Framework> = {
           { id: "activation", parentId: "nsm", name: "用户激活", nameEn: "User Activation", type: "driver", unit: "%", owner: "产品团队" },
           { id: "retention", parentId: "nsm", name: "用户留存", nameEn: "User Retention", type: "driver", unit: "%", owner: "运营团队" },
           { id: "channels", parentId: "acquisition", name: "获客渠道", nameEn: "Acquisition Channels", type: "input", unit: "个", owner: "市场团队" },
-          { id: "conversion", parentId: "activation", name: "转化漏斗", nameEn: "Conversion Funnel", type: "input", unit: "%", owner: "产品经理" },
+          { id: "conversion", parentId: "activation", name: "转化漏斗", nameEn: "Conversion Funnel", type: "input", unit: "%", owner: "Product Manager" },
           { id: "engagement", parentId: "retention", name: "参与度", nameEn: "Engagement", type: "input", unit: "次/月", owner: "运营经理" }
         ],
         hypotheses: [
@@ -1664,7 +1664,7 @@ const frameworksData: Record<string, Framework> = {
     scenarioEn: "Strategic planning, project evaluation, competitive analysis, business diagnosis, personal career planning",
     coreSteps: ["识别内部优势", "识别内部劣势", "识别外部机会", "识别外部威胁", "制定SO/WO/ST/WT策略"],
     coreStepsEn: ["Identify internal strengths", "Identify internal weaknesses", "Identify external opportunities", "Identify external threats", "Formulate SO/WO/ST/WT strategies"],
-    miniCase: "某传统制造企业转型：优势-生产经验丰富，劣势-数字化能力弱，机会-智能制造政策支持，威胁-新兴竞争者进入。策略：利用优势抓住智能制造机会（SO），补足数字化短板降低威胁（WT）",
+    miniCase: "某传统制造企业转型：优势-生产经验丰富，劣势-数字化能力弱，机会-智能制造政策支持，威胁-新兴竞争者进入。策略：利用优势抓住智能制造机会（SO），补足数字化Short板reduce威胁（WT）",
     miniCaseEn: "A traditional manufacturer transforming: Strength-rich production experience, Weakness-weak digitalization, Opportunity-smart manufacturing policy support, Threat-new competitors. Strategy: leverage strength for smart manufacturing (SO), address digital gap to reduce threats (WT)",
     templateUrl: "/templates/swot-analysis.pptx",
     content: `## 这是什么？ (What is it?)
@@ -1715,7 +1715,7 @@ SWOT分析适用于以下场景：
 **劣势**：
 - 有限的在线销售能力
 - 高固定成本结构
-- 供应链效率低下
+- 供应链效率Low下
 - 技术基础设施落后
 
 **机会**：
@@ -1727,7 +1727,7 @@ SWOT分析适用于以下场景：
 **威胁**：
 - 纯电商竞争对手崛起
 - 消费者购物习惯转向线上
-- 经济不确定性
+- 经济不确Qual
 - 租金和人力成本上升
 
 基于此分析，该零售企业可能会制定发展全渠道销售策略，利用其品牌声誉和实体店优势，同时加强在线销售能力，以应对市场变化。`,
@@ -1786,7 +1786,7 @@ SWOT分析适用于以下场景：
 <ul>
 <li>有限的在线销售能力</li>
 <li>高固定成本结构</li>
-<li>供应链效率低下</li>
+<li>供应链效率Low下</li>
 <li>技术基础设施落后</li>
 </ul>
 <p><strong>机会</strong>：</p>
@@ -1800,7 +1800,7 @@ SWOT分析适用于以下场景：
 <ul>
 <li>纯电商竞争对手崛起</li>
 <li>消费者购物习惯转向线上</li>
-<li>经济不确定性</li>
+<li>经济不确Qual</li>
 <li>租金和人力成本上升</li>
 </ul>
 <p>基于此分析，该零售企业可能会制定发展全渠道销售策略，利用其品牌声誉和实体店优势，同时加强在线销售能力，以应对市场变化。</p>`
@@ -1842,7 +1842,7 @@ SWOT分析适用于以下场景：
 ## 如何使用？ (How to use?)
 
 1. **共情阶段**：
-   - 进行用户访谈和观察
+   - 进行用户Interviews和观察
    - 创建用户画像
    - 体验用户旅程
    - 收集用户故事和反馈
@@ -1860,7 +1860,7 @@ SWOT分析适用于以下场景：
    - 汇总和筛选创意
 
 4. **原型阶段**：
-   - 快速创建低保真原型
+   - 快速创建Low保真原型
    - 关注核心功能和体验
    - 使用简单材料和工具
    - 准备好迭代和改进
@@ -1875,9 +1875,9 @@ SWOT分析适用于以下场景：
 
 以改进医院急诊室等待体验为例：
 
-**共情**：研究团队在急诊室观察患者和家属，进行访谈，发现等待时间不确定性是主要痛点。
+**共情**：研究团队在急诊室观察患者和家属，进行Interviews，发现等待时间不确Qual是主要痛点。
 
-**定义**：问题陈述："我们如何减轻患者在急诊室等待期间的焦虑和不确定性？"
+**定义**：问题陈述："我们如何减轻患者在急诊室等待期间的焦虑和不确Qual？"
 
 **构思**：团队提出多种创意，包括实时等待时间显示系统、分诊优先级可视化、等待区域重新设计等。
 
@@ -1910,7 +1910,7 @@ SWOT分析适用于以下场景：
 <ol>
 <li><strong>共情阶段</strong>：
 <ul>
-<li>进行用户访谈和观察</li>
+<li>进行用户Interviews和观察</li>
 <li>创建用户画像</li>
 <li>体验用户旅程</li>
 <li>收集用户故事和反馈</li>
@@ -1934,7 +1934,7 @@ SWOT分析适用于以下场景：
 </li>
 <li><strong>原型阶段</strong>：
 <ul>
-<li>快速创建低保真原型</li>
+<li>快速创建Low保真原型</li>
 <li>关注核心功能和体验</li>
 <li>使用简单材料和工具</li>
 <li>准备好迭代和改进</li>
@@ -1951,8 +1951,8 @@ SWOT分析适用于以下场景：
 </ol>
 <h2>案例 (Example)</h2>
 <p>以改进医院急诊室等待体验为例：</p>
-<p><strong>共情</strong>：研究团队在急诊室观察患者和家属，进行访谈，发现等待时间不确定性是主要痛点。</p>
-<p><strong>定义</strong>：问题陈述："我们如何减轻患者在急诊室等待期间的焦虑和不确定性？"</p>
+<p><strong>共情</strong>：研究团队在急诊室观察患者和家属，进行Interviews，发现等待时间不确Qual是主要痛点。</p>
+<p><strong>定义</strong>：问题陈述："我们如何减轻患者在急诊室等待期间的焦虑和不确Qual？"</p>
 <p><strong>构思</strong>：团队提出多种创意，包括实时等待时间显示系统、分诊优先级可视化、等待区域重新设计等。</p>
 <p><strong>原型</strong>：开发一个简单的移动应用原型，显示实时等待时间、当前位置在队列中的状态，以及提供医疗状况信息。</p>
 <p><strong>测试</strong>：让患者和家属使用原型，收集反馈。发现用户喜欢实时更新功能，但希望增加与医护人员沟通的选项。</p>
@@ -1969,7 +1969,7 @@ const sanitizeFramework = (f: Framework): Framework => ({
 const seededFrameworks: Framework[] = [
   // 第一章：发现与战略基础 (Discovery & Strategy)
   { title: '团队协作的五大障碍', englishTitle: 'The Five Dysfunctions of a Team', slug: 'five-dysfunctions-team', chapter: '1', subsectionId: '1.1', chapterTitle: '发现与战略基础', chapterTitleEn: 'Discovery & Strategy', tags: ['团队协作','组织效能','领导力'], tagsEn: ['Teamwork','Organizational Effectiveness','Leadership'], summary: '识别并化解信任缺失、冲突畏惧、责任规避、投入不足、结果忽视，打造高效团队。', summaryEn: 'Identify and resolve five dysfunctions to build a high-performing team.', templateUrl: '/templates/five-dysfunctions-team.pptx' },
-  { title: 'RACI 责任分配矩阵', englishTitle: 'RACI Chart', slug: 'raci-chart', chapter: '1', subsectionId: '1.1', chapterTitle: '发现与战略基础', chapterTitleEn: 'Discovery & Strategy', tags: ['角色职责','项目治理','协同'], tagsEn: ['Roles & Responsibilities','Governance','Collaboration'], summary: '用 R/A/C/I 明确分工与决策权，降低协调成本。', summaryEn: 'Clarify roles and decision ownership with R/A/C/I to reduce coordination cost.', templateUrl: '/templates/raci-chart.pptx' },
+  { title: 'RACI 责任分配矩阵', englishTitle: 'RACI Chart', slug: 'raci-chart', chapter: '1', subsectionId: '1.1', chapterTitle: '发现与战略基础', chapterTitleEn: 'Discovery & Strategy', tags: ['Role职责','项目治理','协同'], tagsEn: ['Roles & Responsibilities','Governance','Collaboration'], summary: '用 R/A/C/I 明确分工与决策权，reduce协调成本。', summaryEn: 'Clarify roles and decision ownership with R/A/C/I to reduce coordination cost.', templateUrl: '/templates/raci-chart.pptx' },
   { title: '甘特图', englishTitle: 'Gantt Chart', slug: 'gantt-chart', chapter: '1', subsectionId: '1.1', chapterTitle: '发现与战略基础', chapterTitleEn: 'Discovery & Strategy', tags: ['进度管理','里程碑','关键路径'], tagsEn: ['Schedule','Milestones','Critical Path'], summary: '用时间轴呈现任务、依赖与里程碑，统一节奏与关键路径。', summaryEn: 'Timeline view of tasks, dependencies and milestones to align cadence and critical path.', templateUrl: '/templates/gantt-chart.pptx' },
   { title: 'PESTLE 分析', englishTitle: 'PESTLE Analysis', slug: 'pestle-analysis', chapter: '1', subsectionId: '1.2', chapterTitle: '发现与战略基础', chapterTitleEn: 'Discovery & Strategy', tags: ['宏观环境','外部分析','政策技术'], tagsEn: ['Macro Environment','External Analysis','Policy & Tech'], summary: '从政治、经济、社会、技术、法律与环境六维扫描外部环境，识别机会与风险。', summaryEn: 'Scan external environment across P,E,S,T,L,E to surface opportunities and risks.', templateUrl: '/templates/pestle-analysis.pptx', interactive: { type: 'matrix', title: { zh: 'PESTLE 维度面板', en: 'PESTLE Dashboard' } } },
   { title: '波特五力模型', englishTitle: "Porter's Five Forces", slug: 'porters-five-forces', chapter: '1', subsectionId: '1.2', chapterTitle: '发现与战略基础', chapterTitleEn: 'Discovery & Strategy', tags: ['行业结构','竞争强度','战略分析'], tagsEn: ['Industry Structure','Competitive Intensity','Strategy'], summary: '基于五力评估行业吸引力与竞争强度，发现结构性约束与机会。', summaryEn: 'Assess attractiveness and competitive intensity via five forces to find structural insights.', templateUrl: '/templates/porters-five-forces.pptx',
@@ -2052,7 +2052,7 @@ const seededFrameworks: Framework[] = [
     htmlContent: `<h2>是什么 / 何时使用</h2>
 <p>JTBD 用“要完成的工作”替代“用户画像=需求”的假设，关注 <strong>情境-动机-期望结果</strong>。适用于早期发现机会、优化产品定位与功能优先级。</p>
 <h2>前置输入</h2>
-<ul><li>关键用户旅程/触点</li><li>近期投诉/需求单</li><li>代表性用户访谈样本</li></ul>
+<ul><li>关键用户旅程/触点</li><li>近期投诉/需求单</li><li>代表性用户Interviews样本</li></ul>
 <h2>步骤</h2>
 <ol>
 <li><strong>收集情境</strong>：记录何时何地、与谁、受什么限制。</li>
@@ -2091,11 +2091,11 @@ const seededFrameworks: Framework[] = [
       { key: 'satisfaction', labelZh: '满意度(1-5)', labelEn: 'Satisfaction(1-5)', type: 'number' },
       { key: 'notes', labelZh: '备注', labelEn: 'Notes', type: 'text' }
     ], data: [
-      { name: '跨设备无缝继续课程', importance: 5, satisfaction: 1, notes: '进度云同步/离线缓存' },
-      { name: '精准搜索示例与答案', importance: 5, satisfaction: 2, notes: '语义检索+难度/时长过滤' },
-      { name: '5–10 分钟微课利用碎片时间', importance: 4, satisfaction: 2, notes: '自动切片/倍速/字幕' },
-      { name: '与导师快速预约答疑', importance: 4, satisfaction: 1, notes: '一键约时/时区处理/录制回放' },
-      { name: '导出学习证明便于绩效/报销', importance: 3, satisfaction: 2, notes: '证书模板/API 对接 HR' }
+      { name: 'Seamless course continuation across devices', importance: 5, satisfaction: 1, notes: 'Cloud sync/offline cache' },
+      { name: 'Precise search for examples and answers', importance: 5, satisfaction: 2, notes: 'Semantic search + difficulty/duration filters' },
+      { name: '5-10 min micro-lessons for fragmented time', importance: 4, satisfaction: 2, notes: 'Auto-segmentation/speed/subtitles' },
+      { name: 'Quick Q&A scheduling with tutors', importance: 4, satisfaction: 1, notes: 'One-tap scheduling/timezone handling/replay' },
+      { name: 'Export learning certificates for performance/reimbursement', importance: 3, satisfaction: 2, notes: 'Certificate templates/HR API integration' }
     ] }
   },
   { title: '二手研究 vs. 一手研究', englishTitle: 'Secondary vs. Primary Research', slug: 'secondary-vs-primary-research', chapter: '2', subsectionId: '2.2', chapterTitle: '深度用户同理心与价值定义', chapterTitleEn: 'Empathy & Value Definition', tags: ['研究设计','数据来源','证据'], tagsEn: ['Research Design','Data Sources','Evidence'], summary: '明确二手与一手研究的适用边界与搭配方式，构建高性价比的证据体系。', summaryEn: 'Clarify when to use secondary vs primary research and how to combine them for cost‑effective evidence.', templateUrl: '/templates/secondary-vs-primary-research.pptx',
@@ -2105,7 +2105,7 @@ const seededFrameworks: Framework[] = [
     scenarioEn: "Market research, user research planning, evidence system building, due diligence, competitive analysis",
     coreSteps: ["问题分解","二手研究先行","标注证据缺口","设计一手研究","整合与偏差校正"],
     coreStepsEn: ["Decompose questions","Secondary research first","Mark evidence gaps","Design primary research","Synthesize and correct biases"],
-    miniCase: "B2B SaaS进入新市场：先用二手研究（行业报告+财报）确定TAM为50亿美元，再通过20次一手访谈验证痛点优先级和付费意愿，最终聚焦中型企业细分市场实现PMF",
+    miniCase: "B2B SaaS进入新市场：先用二手研究（行业报告+财报）确定TAM为50亿美元，再通过20次一手Interviews验证痛点优先级和付费意愿，最终聚焦mid-market细分市场实现PMF",
     miniCaseEn: "B2B SaaS entering new market: Used secondary research (industry reports+financials) to confirm $5B TAM, then 20 primary interviews to validate pain priorities and willingness-to-pay, ultimately focused on mid-market segment achieving PMF",
     htmlContent: `<h2>是什么 / 何时使用</h2>
 <p>二手研究利用既有资料；一手研究通过调研/实验采集新数据。二者应按 <strong>问题→证据→方法</strong> 选择与组合。</p>
@@ -2116,7 +2116,7 @@ const seededFrameworks: Framework[] = [
 <li><strong>问题分解</strong>：明确待验证假设与证据标准。</li>
 <li><strong>二手先行</strong>：行业报告/数据库/竞品公开信息。</li>
 <li><strong>缺口清单</strong>：标注需要一手补齐的变量。</li>
-<li><strong>一手设计</strong>：定性访谈/可用性/问卷/对照试验。</li>
+<li><strong>一手设计</strong>：qualitative interviews/可用性/问卷/对照试验。</li>
 <li><strong>整合与偏差校正</strong>：交叉验证，记录局限性。</li>
 </ol>
 <h2>输出与判定（DoD）</h2>
@@ -2140,45 +2140,45 @@ const seededFrameworks: Framework[] = [
       { key: 'cost', labelZh: '成本', labelEn: 'Cost', type: 'text' },
       { key: 'time', labelZh: '时间', labelEn: 'Time', type: 'text' }
     ], data: [
-      { question: '市场规模与细分潜力', evidence: 'TAM/SAM/SOM & CAGR', method: '二手：行研+公开财报', sample: '—', cost: '低', time: '短' },
-      { question: '首周留存受哪些因素影响', evidence: '相关性/因果', method: '日志分析+因果推断', sample: '近 90 天新用户', cost: '低', time: '短' },
-      { question: '课程发现是否顺畅', evidence: '任务成功率/时长', method: '主持可用性测试', sample: '6–8 人×2 轮', cost: '中', time: '中' },
-      { question: '推荐算法能否提升转化', evidence: '转化率差异', method: '线上 A/B 测试', sample: '2 周 5% 流量', cost: '中', time: '中' },
-      { question: '公司用户是否愿意付费', evidence: '付费意愿/价格区间', method: 'B2B 访谈+联合分析', sample: '15–20 家企业', cost: '中', time: '中' }
+      { question: 'Market size and segmentation potential', evidence: 'TAM/SAM/SOM & CAGR', method: 'Secondary: industry research + public financials', sample: '—', cost: 'Low', time: 'Short' },
+      { question: 'Factors affecting first-week retention', evidence: 'Correlation/causation', method: 'Log analysis + causal inference', sample: 'New users in last 90 days', cost: 'Low', time: 'Short' },
+      { question: 'Course discovery smoothness', evidence: 'Task success rate/duration', method: 'Moderated usability testing', sample: '6-8 participants × 2 rounds', cost: 'Med', time: 'Med' },
+      { question: 'Can recommendation algorithm improve conversion', evidence: 'Conversion rate difference', method: 'Online A/B test', sample: '2 weeks, 5% traffic', cost: 'Med', time: 'Med' },
+      { question: 'Are enterprise users willing to pay', evidence: 'Payment willingness/price range', method: 'B2B interviews + conjoint analysis', sample: '15-20 companies', cost: 'Med', time: 'Med' }
     ] }
   },
-  { title: '定量研究 vs. 定性研究', englishTitle: 'Quantitative vs. Qualitative Research', slug: 'quantitative-vs-qualitative-research', chapter: '2', subsectionId: '2.2', chapterTitle: '深度用户同理心与价值定义', chapterTitleEn: 'Empathy & Value Definition', tags: ['方法论','抽样','有效性'], tagsEn: ['Methodology','Sampling','Validity'], summary: '理解定量与定性的互补：规模与因果 vs. 深度与机制。选择取决于问题而非偏好。', summaryEn: 'Quant vs qual are complementary: scale/causality vs depth/mechanism; choose by question, not preference.', templateUrl: '/templates/quantitative-vs-qualitative-research.pptx',
-    oneLineDef: "定量定性研究方法框架",
+  { title: 'Quant研究 vs. Qual研究', englishTitle: 'Quantitative vs. Qualitative Research', slug: 'quantitative-vs-qualitative-research', chapter: '2', subsectionId: '2.2', chapterTitle: '深度用户同理心与价值定义', chapterTitleEn: 'Empathy & Value Definition', tags: ['方法论','抽样','有效性'], tagsEn: ['Methodology','Sampling','Validity'], summary: '理解Quant与Qual的互补：规模与因果 vs. 深度与机制。选择取决于问题而非偏好。', summaryEn: 'Quant vs qual are complementary: scale/causality vs depth/mechanism; choose by question, not preference.', templateUrl: '/templates/quantitative-vs-qualitative-research.pptx',
+    oneLineDef: "QuantQual研究方法框架",
     oneLineDefEn: "Quantitative-qualitative research methods framework",
     scenario: "研究方案设计、假设验证、用户洞察、样本规划、混合方法研究",
     scenarioEn: "Research design, hypothesis validation, user insights, sampling planning, mixed methods research",
     coreSteps: ["明确研究问题","选择方法与抽样","设计测量工具","控制偏差与伦理","分析与三角验证"],
     coreStepsEn: ["Define research questions","Choose methods and sampling","Design measurement instruments","Control bias and ethics","Analyze and triangulate"],
-    miniCase: "电商平台先通过20次定性访谈发现用户对'推荐理由'的深层需求，再用5000人问卷定量验证：显示理由可使点击率提升22%且不增加认知负荷",
+    miniCase: "电商平台先通过20次qualitative interviews发现用户对'推荐理由'的深层需求，再用5000人问卷quantitative validation：显示理由可使点击率提升22%且不增加认知负荷",
     miniCaseEn: "E-commerce platform conducted 20 qualitative interviews to discover deep needs for 'recommendation rationale', then quantitatively validated with 5,000-person survey: showing rationale increased CTR by 22% without cognitive load",
     htmlContent: `<h2>是什么 / 何时使用</h2>
-<p>定量回答“多少/是否显著”，定性回答“为什么/如何发生”。真实项目常为 <strong>定性探索 → 定量验证</strong>。</p>
+<p>Quant回答“多少/是否显著”，Qual回答“为什么/如何发生”。真实项目常为 <strong>qual exploration → quantitative validation</strong>。</p>
 <h2>步骤</h2>
-<ol><li>定义变量与操作化</li><li>选择抽样与样本量</li><li>确定测量工具（量表/访谈提纲）</li><li>控制偏差与伦理</li><li>分析与三角验证</li></ol>
+<ol><li>定义变量与操作化</li><li>选择抽样与样本量</li><li>确定测量工具（量表/interview guide）</li><li>控制偏差与伦理</li><li>分析与三角验证</li></ol>
 <h2>输出与判定</h2>
-<ul><li>研究方案与样本说明</li><li>显著性/效应量或主题归纳</li><li>对产品与策略的含义</li></ul>`,
+<ul><li>研究方案与样本说明</li><li>显著性/效应量或Thematic synthesis</li><li>对产品与策略的含义</li></ul>`,
     htmlContentEn: `<h2>What / When</h2><p>Quant answers how much/causal; qual answers why/how. Typical flow: <strong>qual explore → quant validate</strong>.</p>
 <h2>Steps</h2><ol><li>Operationalize variables</li><li>Sampling/size</li><li>Instruments</li><li>Bias/ethics control</li><li>Analysis & triangulation</li></ol>
 <h2>Outputs</h2><ul><li>Plan & sampling note</li><li>Significance/effect or thematic results</li><li>Implications</li></ul>`,
-    diagrams: [{ title: '研究流程', url: '/diagrams/quant-qual-flow.svg', description: '定性→定量组合' }],
+    diagrams: [{ title: '研究流程', url: '/diagrams/quant-qual-flow.svg', description: 'Qual→Quant组合' }],
     interactive: { type: 'matrix-generic', title: { zh: '方法对比表', en: 'Method Comparison' }, schema: [
       { key: 'method', labelZh: '方法', labelEn: 'Method', type: 'text' },
-      { key: 'type', labelZh: '类型', labelEn: 'Type', type: 'select', optionsZh: ['定量','定性'], optionsEn: ['Quant','Qual'] },
+      { key: 'type', labelZh: '类型', labelEn: 'Type', type: 'select', optionsZh: ['Quant','Qual'], optionsEn: ['Quant','Qual'] },
       { key: 'usecase', labelZh: '适用场景', labelEn: 'Use Case', type: 'text' },
       { key: 'strength', labelZh: '优势', labelEn: 'Strength', type: 'text' },
       { key: 'limit', labelZh: '局限', labelEn: 'Limit', type: 'text' }
     ], data: [
-      { method: '问卷（线上）', type: '定量', usecase: '规模估计/相关性', strength: '样本大/速度快', limit: '自陈偏差/题目质量依赖' },
-      { method: '深度访谈（半结构化）', type: '定性', usecase: '动机/决策/反对意见', strength: '洞察深/灵活追问', limit: '样本小/主观性' },
-      { method: '日记研究', type: '定性', usecase: '长期行为/场景', strength: '跨场景真实', limit: '执行成本高' },
-      { method: '可用性测试（主持）', type: '定性', usecase: '关键任务流', strength: '定位问题精准', limit: '不代表规模/主持人效应' },
-      { method: 'A/B 测试', type: '定量', usecase: '因果验证/策略对比', strength: '因果识别强', limit: '实现/流量成本' },
-      { method: '日志/遥测', type: '定量', usecase: '留存/转化/漏斗', strength: '真实行为/连续', limit: '因果弱/埋点质量' }
+      { method: 'Online Survey', type: 'Quant', usecase: 'Scale estimation/correlation', strength: 'Large sample/fast', limit: 'Self-report bias/question quality' },
+      { method: 'In-depth Interview (Semi-structured)', type: 'Qual', usecase: 'Motivations/decisions/objections', strength: 'Deep insights/flexible probing', limit: 'Small sample/subjectivity' },
+      { method: 'Diary study', type: 'Qual', usecase: 'Long-term behavior/context', strength: 'Real cross-context', limit: 'High execution cost' },
+      { method: 'Moderated Usability Test', type: 'Qual', usecase: 'Critical task flows', strength: 'Precise problem identification', limit: 'Not at scale/moderator effect' },
+      { method: 'A/B Test', type: 'Quant', usecase: 'Causal validation/strategy comparison', strength: 'Strong causal identification', limit: 'Implementation/traffic cost' },
+      { method: 'Logs/Telemetry', type: 'Quant', usecase: 'Retention/conversion/funnel', strength: 'Real behavior/continuous', limit: 'Weak causality/tracking quality' }
     ] }
   },
   { title: '用户原型/心智模型', englishTitle: 'Archetypes/Mindsets', slug: 'archetypes-mindsets', chapter: '2', subsectionId: '2.2', chapterTitle: '深度用户同理心与价值定义', chapterTitleEn: 'Empathy & Value Definition', tags: ['细分','心理模型','动机'], tagsEn: ['Segmentation','Mindsets','Motivation'], summary: '基于动机与心智而非人口统计进行细分，输出可行动的原型与暗含心理模型。', summaryEn: 'Segment by motivations/mindsets rather than demographics to create actionable archetypes.', templateUrl: '/templates/archetypes-mindsets.pptx',
@@ -2186,14 +2186,14 @@ const seededFrameworks: Framework[] = [
     oneLineDefEn: "Motivation-driven user segmentation",
     scenario: "精准营销、产品定位、个性化设计、内容策略、渠道选择",
     scenarioEn: "Precision marketing, product positioning, personalized design, content strategy, channel selection",
-    coreSteps: ["定性数据归纳动机","聚类形成原型","定义JTBD与障碍","绘制心智模型","映射旅程与渠道"],
+    coreSteps: ["Qual数据归纳动机","聚类形成原型","定义JTBD与障碍","绘制心智模型","映射旅程与渠道"],
     coreStepsEn: ["Induce motivations from qualitative data","Cluster to form archetypes","Define JTBD and barriers","Draw mental models","Map journeys and channels"],
     miniCase: "健身应用识别出3类原型：竞技者（追求排名）、社交者（需要陪伴）、完成者（只要打卡）。针对性设计功能后30天留存从38%升至61%",
     miniCaseEn: "Fitness app identified 3 archetypes: Competitor (rank-seeking), Socializer (needs company), Completer (just check-in). Tailored features increased 30-day retention from 38% to 61%",
     htmlContent: `<h2>是什么 / 何时使用</h2>
 <p>原型比“平均用户”更能指导设计；心智模型帮助预测其行为边界。</p>
 <h2>步骤</h2>
-<ol><li>从定性材料中归纳动机与障碍</li><li>聚类形成 3–6 个原型</li><li>为每个原型定义 JTBD/触发/反对意见</li><li>绘制心智模型（目标→策略→规则）</li><li>映射到旅程与渠道</li></ol>
+<ol><li>从qualitative materials归纳动机与障碍</li><li>聚类形成 3–6 个原型</li><li>为每个原型定义 JTBD/触发/反对意见</li><li>绘制心智模型（目标→策略→规则）</li><li>映射到旅程与渠道</li></ol>
 <h2>输出与判定</h2>
 <ul><li>原型卡（故事/引语/行为线索）</li><li>心智模型图</li><li>与关键场景的匹配度</li></ul>`,
     htmlContentEn: `<h2>What / When</h2><p>Archetypes guide design; mindsets reveal boundaries.</p>
@@ -2207,9 +2207,9 @@ const seededFrameworks: Framework[] = [
       { key: 'jtbd', labelZh: 'JTBD', labelEn: 'JTBD', type: 'text' },
       { key: 'channels', labelZh: '渠道', labelEn: 'Channels', type: 'text' }
     ], data: [
-      { archetype: '效率追求者', motives: '省时/自动化', barriers: '初始配置复杂', jtbd: '快速完成任务', channels: 'Web/浏览器插件' },
-      { archetype: '深度研究者', motives: '掌握原理/最佳实践', barriers: '资料分散/质量参差', jtbd: '系统化深入学习', channels: '桌面端/长文课程' },
-      { archetype: '协作推动者', motives: '团队对齐/复用', barriers: '权限与版本', jtbd: '沉淀 SOP 与模板', channels: '企业微信/Slack 集成' }
+      { archetype: 'Efficiency Seeker', motives: 'Time-saving/automation', barriers: 'Complex initial setup', jtbd: 'Quick task completion', channels: 'Web/browser extension' },
+      { archetype: 'Deep Researcher', motives: 'Master principles/best practices', barriers: 'Scattered materials/varying quality', jtbd: 'Systematic deep learning', channels: 'Desktop/long-form courses' },
+      { archetype: 'Collaboration Facilitator', motives: 'Team alignment/reuse', barriers: 'Permissions and versioning', jtbd: 'Capture SOPs and templates', channels: 'WeCom/Slack integration' }
     ] }
   },
   { title: '同理心地图', englishTitle: 'Empathy Map', slug: 'empathy-map', chapter: '2', subsectionId: '2.3', chapterTitle: '深度用户同理心与价值定义', chapterTitleEn: 'Empathy & Value Definition', tags: ['共情','洞察','旅程'], tagsEn: ['Empathy','Insights','Journey'], summary: '用“说/想/做/感受”快速沉淀洞察，推动团队达成用户共识。', summaryEn: 'Capture insights with Say/Think/Do/Feel to align teams on user understanding.', templateUrl: '/templates/empathy-map.pptx',
@@ -2217,11 +2217,11 @@ const seededFrameworks: Framework[] = [
     oneLineDefEn: "User empathy visualization tool",
     scenario: "用户研究总结、设计工作坊、团队对齐、洞察沉淀、需求验证",
     scenarioEn: "User research synthesis, design workshops, team alignment, insight capture, need validation",
-    coreSteps: ["收集观察与访谈","填充说想做感四象限","识别痛点与收益","提炼关键洞察","转化为设计原则"],
+    coreSteps: ["收集观察与Interviews","填充说想做感四象限","识别痛点与收益","提炼关键洞察","转化为设计原则"],
     coreStepsEn: ["Collect observations and interviews","Fill say-think-do-feel quadrants","Identify pains and gains","Distill key insights","Transform into design principles"],
     miniCase: "医疗产品团队通过同理心地图发现患者'说'希望快速预约，但'想'的是减少焦虑。据此调整为全流程透明+实时进度推送，满意度从62分升至89分",
     miniCaseEn: "Medical product team discovered via empathy map that patients 'say' they want fast appointments but 'think' they want reduced anxiety. Adjusted to full-process transparency + real-time progress updates, satisfaction rose from 62 to 89",
-    htmlContent: `<h2>是什么 / 何时使用</h2><p>同理心地图帮助团队从证据出发共创洞察，适合访谈后梳理与工作坊协作。</p>
+    htmlContent: `<h2>是什么 / 何时使用</h2><p>同理心地图帮助团队从证据出发共创洞察，适合Interviews后梳理与工作坊协作。</p>
 <h2>步骤</h2><ol><li>收集证据与引语</li><li>四象限贴卡并归纳主题</li><li>提取痛点/渴望/阻碍</li><li>形成机会陈述与待验证假设</li></ol>
 <h2>输出与判定</h2><ul><li>同理心地图与主题簇</li><li>机会陈述 3–5 条</li><li>下一步验证清单</li></ul>`,
     htmlContentEn: `<h2>What / When</h2><p>Align team with evidence-based empathy after research sessions.</p>
@@ -2233,12 +2233,12 @@ const seededFrameworks: Framework[] = [
       { key: 'category', labelZh: '类别', labelEn: 'Category', type: 'select', optionsZh: ['说','想','做','感受'], optionsEn: ['Say','Think','Do','Feel'] },
       { key: 'theme', labelZh: '主题', labelEn: 'Theme', type: 'text' }
     ], data: [
-      { evidence: '“总是找不到上次的草稿”', category: 'Say', theme: '查找效率' },
-      { evidence: '实际看不到推荐为什么推给我', category: 'Think', theme: '可解释性' },
-      { evidence: '重复在两个设备上拷贝链接', category: 'Do', theme: '跨设备' },
-      { evidence: '登录流程很烦', category: 'Feel', theme: '摩擦点' },
-      { evidence: '“要是能直接生成课后练习就好了”', category: 'Say', theme: '生成式需求' },
-      { evidence: '面对空白页不知道从哪开始', category: 'Feel', theme: '起步焦虑' }
+      { evidence: '“Can never find my last draft”', category: 'Say', theme: 'Search efficiency' },
+      { evidence: 'Cannot see why recommendations are made', category: 'Think', theme: 'Explainability' },
+      { evidence: 'Repeatedly copying links between devices', category: 'Do', theme: 'Cross-device' },
+      { evidence: 'Login flow is annoying', category: 'Feel', theme: 'Friction point' },
+      { evidence: '“Wish it could generate post-lesson exercises automatically”', category: 'Say', theme: 'Generative needs' },
+      { evidence: 'Facing blank page, don\'t know where to start', category: 'Feel', theme: 'Getting started anxiety' }
     ] }
   },
   { title: '用户画像', englishTitle: 'Customer Profile / Persona', slug: 'customer-persona', chapter: '2', subsectionId: '2.3', chapterTitle: '深度用户同理心与价值定义', chapterTitleEn: 'Empathy & Value Definition', tags: ['画像','细分','场景'], tagsEn: ['Persona','Segmentation','Scenario'], summary: '以场景与目标为核心构建画像，而非静态人口学清单。', summaryEn: 'Persona centered on scenarios and goals, not just demographics.', templateUrl: '/templates/customer-persona.pptx',
@@ -2248,7 +2248,7 @@ const seededFrameworks: Framework[] = [
     scenarioEn: "Product planning, marketing strategy, feature prioritization, experience design, team communication",
     coreSteps: ["基于数据识别细分","提炼典型场景与目标","定义痛点与动机","补充人口学与行为","制作画像卡片"],
     coreStepsEn: ["Identify segments from data","Extract typical scenarios and goals","Define pain points and motivations","Add demographics and behaviors","Create persona cards"],
-    miniCase: "B2B SaaS团队为CTO画像：技术决策者、关注安全与集成、预算20-50万、决策周期3-6月。据此调整销售策略，成单周期从5.2月缩短至3.8月",
+    miniCase: "B2B SaaS团队为CTO画像：技术决策者、关注安全与集成、预算20-50万、决策周期3-6月。据此调整销售策略，成单周期从5.2月缩Short至3.8月",
     miniCaseEn: "B2B SaaS team created CTO persona: technical decision-maker, security/integration-focused, budget 200-500K, 3-6 month cycles. Adjusted sales strategy, closing time dropped from 5.2 to 3.8 months",
     htmlContent: `<h2>是什么 / 何时使用</h2><p>画像用于对齐目标用户的场景/目标/行为特征与渠道偏好。</p>
 <h2>步骤</h2><ol><li>基于原型聚合典型特征</li><li>补充行为/渠道/设备/支付等数据</li><li>选择 1–2 个关键场景写“使用日记”</li><li>列关键任务与阻碍</li></ol>
@@ -2263,14 +2263,14 @@ const seededFrameworks: Framework[] = [
       { key: 'evidence', labelZh: '证据', labelEn: 'Evidence', type: 'text' },
       { key: 'impact', labelZh: '影响', labelEn: 'Impact', type: 'text' }
     ], data: [
-      { attribute: '年龄/阶段', value: '25–34 岁，升职压力', evidence: '问卷样本 1.2k', impact: '强调职业影响' },
-      { attribute: '角色', value: '产品经理/前端工程师', evidence: '注册信息', impact: '示例/术语贴合' },
-      { attribute: '主要设备', value: 'iPhone + Mac', evidence: 'UA 统计', impact: '移动优先/跨端接力' },
-      { attribute: '时间窗口', value: '通勤/午休/睡前 15min', evidence: '日记研究', impact: '微课切片与续播' },
-      { attribute: '内容偏好', value: '演示+可运行示例', evidence: '访谈', impact: '代码沙盒/一键复制' },
-      { attribute: '价格敏感', value: '中等，支持分期', evidence: '支付实验', impact: '分层/团购' },
-      { attribute: '决策角色', value: '团队影响者', evidence: 'B2B 访谈', impact: '可分享/群体价' },
-      { attribute: '核心动机', value: '升职与认可', evidence: '主题归纳', impact: '证书/内推合作' }
+      { attribute: 'Age/Stage', value: '25-34 years old, promotion pressure', evidence: 'Survey sample 1.2k', impact: 'Emphasize career impact' },
+      { attribute: 'Role', value: 'Product Manager/Frontend Engineer', evidence: 'Registration data', impact: 'Examples/terminology fit' },
+      { attribute: 'Primary Device', value: 'iPhone + Mac', evidence: 'UA stats', impact: 'Mobile-first/cross-device handoff' },
+      { attribute: 'Time Window', value: 'Commute/lunch/bedtime 15min', evidence: 'Diary study', impact: 'Micro-lesson clips & resume' },
+      { attribute: 'Content Preference', value: 'Demos + runnable examples', evidence: 'Interviews', impact: 'Code sandbox/one-click copy' },
+      { attribute: 'Price Sensitivity', value: 'Medium, supports installments', evidence: 'Payment experiments', impact: 'Tiered pricing/group buy' },
+      { attribute: 'Decision Role', value: 'Team influencer', evidence: 'B2B Interviews', impact: 'Shareable/group pricing' },
+      { attribute: 'Core Motivation', value: 'Promotion and recognition', evidence: 'Thematic synthesis', impact: 'Certificates/referral partnerships' }
     ] }
   },
   { title: '我们该如何…？', englishTitle: 'How Might We? (HMW)', slug: 'how-might-we', chapter: '2', subsectionId: '2.4', chapterTitle: '深度用户同理心与价值定义', chapterTitleEn: 'Empathy & Value Definition', tags: ['问题定义','创意','机会'], tagsEn: ['Problem Framing','Ideation','Opportunities'], summary: '把洞察转化为可激发创意的问题句式，确保范围可控且可验证。', summaryEn: 'Translate insights into creativity‑sparking, testable problem statements.', templateUrl: '/templates/how-might-we.pptx',
@@ -2295,12 +2295,12 @@ const seededFrameworks: Framework[] = [
       { key: 'feasibility', labelZh: '可行(1-5)', labelEn: 'Feasibility(1-5)', type: 'number' },
       { key: 'testability', labelZh: '验证(1-5)', labelEn: 'Testability(1-5)', type: 'number' }
     ], data: [
-      { name: '如何降低首次上手门槛以便更快达成首次成功？', impact: 5, feasibility: 4, testability: 5 },
-      { name: '如何提高“搜索→学习”转化以便更快找到合适课程？', impact: 4, feasibility: 3, testability: 4 },
-      { name: '如何实现跨设备续播以便随时继续学习？', impact: 4, feasibility: 4, testability: 5 },
-      { name: '如何将学习成果可证明化以便用于绩效与简历？', impact: 4, feasibility: 3, testability: 4 },
-      { name: '如何把答疑等待从小时降到分钟以便降低流失？', impact: 5, feasibility: 3, testability: 4 },
-      { name: '如何在 7 天内形成习惯以便提升留存？', impact: 5, feasibility: 3, testability: 5 }
+      { name: 'How might we reduce onboarding friction to achieve first success faster?', impact: 5, feasibility: 4, testability: 5 },
+      { name: 'How might we improve search-to-learning conversion to find suitable courses faster?', impact: 4, feasibility: 3, testability: 4 },
+      { name: 'How might we enable cross-device playback resume for learning anywhere?', impact: 4, feasibility: 4, testability: 5 },
+      { name: 'How might we make learning outcomes verifiable for performance reviews and resumes?', impact: 4, feasibility: 3, testability: 4 },
+      { name: 'How might we reduce Q&A wait time from hours to minutes to reduce churn?', impact: 5, feasibility: 3, testability: 4 },
+      { name: 'How might we build habits within 7 days to improve retention?', impact: 5, feasibility: 3, testability: 5 }
     ] }
   },
 
@@ -2312,7 +2312,7 @@ const seededFrameworks: Framework[] = [
     scenarioEn: "Market positioning, differentiation strategy, product planning, investment decisions, strategic assessment",
     coreSteps: ["确定对比维度","筛选关键竞品","收集数据与评分","可视化矩阵","提炼差异化机会"],
     coreStepsEn: ["Define comparison dimensions","Select key competitors","Collect data and score","Visualize matrix","Extract differentiation opportunities"],
-    miniCase: "SaaS团队通过竞品矩阵发现：虽有5家竞品，但无一同时做到'易集成+本地化部署+7×24支持'。据此定位获客成本降低40%，签约率提升28%",
+    miniCase: "SaaS团队通过竞品矩阵发现：虽有5家竞品，但无一同时做到'易集成+本地化部署+7×24支持'。据此定位获客成本reduced by 40%，签约率提升28%",
     miniCaseEn: "SaaS team discovered via competitive matrix: despite 5 competitors, none offered 'easy integration + on-premise + 24/7 support' together. This positioning reduced CAC by 40%, increased close rate 28%",
     htmlContent: `<h2>是什么 / 何时使用</h2>
 <p><strong>定义：</strong>竞品多维度对比矩阵</p>
@@ -2326,7 +2326,7 @@ const seededFrameworks: Framework[] = [
 <li>提炼差异化机会</li>
 </ol>
 <h2>案例</h2>
-<p>SaaS团队通过竞品矩阵发现：虽有5家竞品，但无一同时做到'易集成+本地化部署+7×24支持'。据此定位获客成本降低40%，签约率提升28%</p>
+<p>SaaS团队通过竞品矩阵发现：虽有5家竞品，但无一同时做到'易集成+本地化部署+7×24支持'。据此定位获客成本reduced by 40%，签约率提升28%</p>
 `,
     htmlContentEn: `<h2>What / When to Use</h2>
 <p><strong>Definition:</strong> Multi-dimensional competitive comparison matrix</p>
@@ -2426,7 +2426,7 @@ const seededFrameworks: Framework[] = [
     scenarioEn: "Business model design, strategic planning, startup planning, model innovation, investment evaluation",
     coreSteps: ["定义客户细分","设计价值主张","规划渠道与关系","确定收入与成本","整体一致性检验"],
     coreStepsEn: ["Define customer segments","Design value propositions","Plan channels and relationships","Determine revenue and costs","Check overall coherence"],
-    miniCase: "共享办公企业用BMC发现：关键资源是'地段+社区运营'而非设施。调整为轻资产+合作模式后，单店盈亏平衡期从18月缩短至9月",
+    miniCase: "共享办公企业用BMC发现：关键资源是'地段+社区运营'而非设施。调整为轻资产+合作模式后，单店盈亏平衡期从18月缩Short至9月",
     miniCaseEn: "Co-working company discovered via BMC: key resources are 'location + community ops' not facilities. Shifted to asset-light + partnership model, breakeven dropped from 18 to 9 months",
     htmlContent: `<h2>是什么 / 何时使用</h2>
 <p><strong>定义：</strong>九宫格商业模式图</p>
@@ -2440,7 +2440,7 @@ const seededFrameworks: Framework[] = [
 <li>整体一致性检验</li>
 </ol>
 <h2>案例</h2>
-<p>共享办公企业用BMC发现：关键资源是'地段+社区运营'而非设施。调整为轻资产+合作模式后，单店盈亏平衡期从18月缩短至9月</p>
+<p>共享办公企业用BMC发现：关键资源是'地段+社区运营'而非设施。调整为轻资产+合作模式后，单店盈亏平衡期从18月缩Short至9月</p>
 `,
     htmlContentEn: `<h2>What / When to Use</h2>
 <p><strong>Definition:</strong> Nine-block business model framework</p>
@@ -2464,7 +2464,7 @@ const seededFrameworks: Framework[] = [
     scenarioEn: "Strategic transformation, market development, differentiation, value innovation, red ocean escape",
     coreSteps: ["绘制战略画布","应用ERRC框架","识别蓝海机会","验证价值曲线","构建执行路线"],
     coreStepsEn: ["Draw strategy canvas","Apply ERRC framework","Identify blue ocean opportunities","Validate value curve","Build execution roadmap"],
-    miniCase: "传统健身房面对价格战，通过蓝海策略取消器械（降低成本）、增加社交元素（创造价值），打造'运动社交空间'，会员增长3倍且客单价提高50%",
+    miniCase: "传统健身房面对价格战，通过蓝海策略取消器械（reduce成本）、增加社交元素（创造价值），打造'运动社交空间'，会员增长3倍且客单价提高50%",
     miniCaseEn: "Traditional gym facing price wars used blue ocean to eliminate equipment (reduce cost), add social elements (create value), built 'fitness social space', membership grew 3x with 50% higher ARPU",
     htmlContent: `<h2>是什么 / 何时使用</h2>
 <p><strong>定义：</strong>非竞争性市场开创策略</p>
@@ -2478,7 +2478,7 @@ const seededFrameworks: Framework[] = [
 <li>构建执行路线</li>
 </ol>
 <h2>案例</h2>
-<p>传统健身房面对价格战，通过蓝海策略取消器械（降低成本）、增加社交元素（创造价值），打造'运动社交空间'，会员增长3倍且客单价提高50%</p>
+<p>传统健身房面对价格战，通过蓝海策略取消器械（reduce成本）、增加社交元素（创造价值），打造'运动社交空间'，会员增长3倍且客单价提高50%</p>
 `,
     htmlContentEn: `<h2>What / When to Use</h2>
 <p><strong>Definition:</strong> Non-competitive market creation strategy</p>
@@ -2578,7 +2578,7 @@ const seededFrameworks: Framework[] = [
     scenarioEn: "Product roadmap, sprint planning, resource allocation, requirement review, rapid decision-making",
     coreSteps: ["列举待评估项","评估业务价值","估算实现成本","绘制二维矩阵","确定执行优先级"],
     coreStepsEn: ["List items to evaluate","Assess business value","Estimate implementation cost","Plot 2D matrix","Determine execution priority"],
-    miniCase: "产品团队用价值-工作量矩阵评估52个需求，优先做13个'高价值低成本'项。3个月后用户留存提升19%，研发效率提高2.3倍",
+    miniCase: "产品团队用价值-工作量矩阵评估52个需求，优先做13个'高价值Low成本'项。3个月后用户留存提升19%，研发效率提高2.3倍",
     miniCaseEn: "Product team evaluated 52 requirements with value-effort matrix, prioritized 13 'high-value low-cost' items. After 3 months, user retention up 19%, dev efficiency improved 2.3x",
     htmlContent: `<h2>是什么 / 何时使用</h2>
 <p><strong>定义：</strong>价值-工作量优先级矩阵</p>
@@ -2592,7 +2592,7 @@ const seededFrameworks: Framework[] = [
 <li>确定执行优先级</li>
 </ol>
 <h2>案例</h2>
-<p>产品团队用价值-工作量矩阵评估52个需求，优先做13个'高价值低成本'项。3个月后用户留存提升19%，研发效率提高2.3倍</p>
+<p>产品团队用价值-工作量矩阵评估52个需求，优先做13个'高价值Low成本'项。3个月后用户留存提升19%，研发效率提高2.3倍</p>
 `,
     htmlContentEn: `<h2>What / When to Use</h2>
 <p><strong>Definition:</strong> Value-effort prioritization matrix</p>
@@ -2723,8 +2723,8 @@ const seededFrameworks: Framework[] = [
 <p>Enterprise collaboration tool targeted '50-200 person design firms' as beachhead, captured 80% of segment leaders in 6 months. Leveraged cases to expand into consulting, architecture adjacencies</p>
 `
    },
-  { title: '低保真原型', englishTitle: 'Low-Fidelity Prototype', slug: 'low-fidelity-prototype', chapter: '3', subsectionId: '3.6', chapterTitle: '设计商业模式与产品概念', chapterTitleEn: 'Design & Conception', tags: [], summary: '', templateUrl: '/templates/low-fidelity-prototype.pptx',
-    oneLineDef: "快速低成本原型验证",
+  { title: 'Low保真原型', englishTitle: 'Low-Fidelity Prototype', slug: 'low-fidelity-prototype', chapter: '3', subsectionId: '3.6', chapterTitle: '设计商业模式与产品概念', chapterTitleEn: 'Design & Conception', tags: [], summary: '', templateUrl: '/templates/low-fidelity-prototype.pptx',
+    oneLineDef: "快速Low成本原型验证",
     oneLineDefEn: "Fast low-cost prototype validation",
     scenario: "概念验证、早期测试、快速迭代、需求澄清、团队沟通",
     scenarioEn: "Concept validation, early testing, rapid iteration, requirement clarification, team communication",
@@ -2733,7 +2733,7 @@ const seededFrameworks: Framework[] = [
     miniCase: "金融产品用纸质原型测试新流程，5天内完成3轮迭代。发现用户对'智能填写'理解有偏差，调整后再开发使上线后客诉减少73%",
     miniCaseEn: "Financial product tested new flow with paper prototypes, completed 3 iterations in 5 days. Discovered users misunderstood 'smart-fill', adjustment before development reduced post-launch complaints 73%",
     htmlContent: `<h2>是什么 / 何时使用</h2>
-<p><strong>定义：</strong>快速低成本原型验证</p>
+<p><strong>定义：</strong>快速Low成本原型验证</p>
 <p><strong>适用场景：</strong>概念验证、早期测试、快速迭代、需求澄清、团队沟通</p>
 <h2>核心步骤</h2>
 <ol>
@@ -2766,7 +2766,7 @@ const seededFrameworks: Framework[] = [
     oneLineDefEn: "High-fidelity interactive prototype",
     scenario: "可用性测试、投资展示、开发对接、营销预热、用户预览",
     scenarioEn: "Usability testing, investor demos, development handoff, marketing preview, user preview",
-    coreSteps: ["基于低保真细化","添加视觉与交互","构建交互逻辑","进行可用性测试","输出开发规范"],
+    coreSteps: ["基于Low保真细化","添加视觉与交互","构建交互逻辑","进行可用性测试","输出开发规范"],
     coreStepsEn: ["Refine from low-fidelity","Add visual and interaction design","Build interaction logic","Conduct usability tests","Output development specs"],
     miniCase: "医疗应用在高保真原型阶段发现：医生误以为'提交'会立即发送处方。增加二次确认弹窗后，测试任务成功率从62%跃升至96%",
     miniCaseEn: "Medical app discovered in high-fidelity stage: doctors mistook 'submit' as immediate prescription send. Added confirmation dialog, test task success rate jumped from 62% to 96%",
@@ -2775,7 +2775,7 @@ const seededFrameworks: Framework[] = [
 <p><strong>适用场景：</strong>可用性测试、投资展示、开发对接、营销预热、用户预览</p>
 <h2>核心步骤</h2>
 <ol>
-<li>基于低保真细化</li>
+<li>基于Low保真细化</li>
 <li>添加视觉与交互</li>
 <li>构建交互逻辑</li>
 <li>进行可用性测试</li>
@@ -2839,7 +2839,7 @@ const seededFrameworks: Framework[] = [
 <p>Payment app usability testing found: 67% users stuck over 15sec at 'transfer confirmation'. Simplified to 'amount+recipient+confirm' 3 steps, task success rate rose from 58% to 94%</p>
 `
    },
-  { title: 'A/B 测试', englishTitle: 'A/B Testing', slug: 'ab-testing', chapter: '4', subsectionId: '4.1', chapterTitle: '测试、迭代与战略优化', chapterTitleEn: 'Test & Iteration', tags: [], summary: '', templateUrl: '/templates/ab-testing.pptx',
+  { title: 'A/B Test', englishTitle: 'A/B Testing', slug: 'ab-testing', chapter: '4', subsectionId: '4.1', chapterTitle: '测试、迭代与战略优化', chapterTitleEn: 'Test & Iteration', tags: [], summary: '', templateUrl: '/templates/ab-testing.pptx',
     oneLineDef: "对照实验验证框架",
     oneLineDefEn: "Controlled experiment validation framework",
     scenario: "功能验证、转化优化、算法对比、定价测试、增长实验",
@@ -2922,7 +2922,7 @@ const seededFrameworks: Framework[] = [
     scenarioEn: "Product iteration, agile development, continuous improvement, user feedback integration, MVP evolution",
     coreSteps: ["构建初版","测试收集反馈","分析识别问题","优化设计","重复循环"],
     coreStepsEn: ["Build initial version","Test and collect feedback","Analyze and identify issues","Refine design","Repeat cycle"],
-    miniCase: "社交产品通过5轮迭代设计（每轮2周）：从低保真→高保真→Beta→正式版。每轮融入用户反馈，最终首月留存达68%，超行业均值2.1倍",
+    miniCase: "社交产品通过5轮迭代设计（每轮2周）：从Low保真→高保真→Beta→正式版。每轮融入用户反馈，最终首月留存达68%，超行业均值2.1倍",
     miniCaseEn: "Social product conducted 5 design iterations (2 weeks each): low-fi→high-fi→beta→launch. Incorporated user feedback each round, achieved 68% first-month retention, 2.1x industry average",
     htmlContent: `<h2>是什么 / 何时使用</h2>
 <p><strong>定义：</strong>循环优化设计流程</p>
@@ -2936,7 +2936,7 @@ const seededFrameworks: Framework[] = [
 <li>重复循环</li>
 </ol>
 <h2>案例</h2>
-<p>社交产品通过5轮迭代设计（每轮2周）：从低保真→高保真→Beta→正式版。每轮融入用户反馈，最终首月留存达68%，超行业均值2.1倍</p>
+<p>社交产品通过5轮迭代设计（每轮2周）：从Low保真→高保真→Beta→正式版。每轮融入用户反馈，最终首月留存达68%，超行业均值2.1倍</p>
 `,
     htmlContentEn: `<h2>What / When to Use</h2>
 <p><strong>Definition:</strong> Cyclical refinement design process</p>
@@ -2960,7 +2960,7 @@ const seededFrameworks: Framework[] = [
     scenarioEn: "Strategy execution, performance management, goal alignment, KPI design, organizational assessment",
     coreSteps: ["定义战略目标","构建四维指标","设定目标值","监测执行","复盘与调整"],
     coreStepsEn: ["Define strategic objectives","Build four-perspective metrics","Set target values","Monitor execution","Review and adjust"],
-    miniCase: "SaaS公司用平衡计分卡发现：虽财务指标达标，但'客户续费率'和'员工创新提案'双低。调整激励后，次年NRR从95%升至118%",
+    miniCase: "SaaS公司用平衡计分卡发现：虽财务指标达标，但'客户续费率'和'员工创新提案'双Low。调整激励后，次年NRR从95%升至118%",
     miniCaseEn: "SaaS company discovered via balanced scorecard: despite meeting financial targets, 'customer renewal' and 'employee innovation' were low. Adjusted incentives, next year NRR rose from 95% to 118%",
     htmlContent: `<h2>是什么 / 何时使用</h2>
 <p><strong>定义：</strong>四维平衡战略评估卡</p>
@@ -2974,7 +2974,7 @@ const seededFrameworks: Framework[] = [
 <li>复盘与调整</li>
 </ol>
 <h2>案例</h2>
-<p>SaaS公司用平衡计分卡发现：虽财务指标达标，但'客户续费率'和'员工创新提案'双低。调整激励后，次年NRR从95%升至118%</p>
+<p>SaaS公司用平衡计分卡发现：虽财务指标达标，但'客户续费率'和'员工创新提案'双Low。调整激励后，次年NRR从95%升至118%</p>
 `,
     htmlContentEn: `<h2>What / When to Use</h2>
 <p><strong>Definition:</strong> Four-perspective strategic measurement</p>
@@ -3152,7 +3152,7 @@ const seededFrameworks: Framework[] = [
     scenarioEn: "Design review, case showcase, team knowledge transfer, client reporting, portfolio",
     coreSteps: ["记录全流程","整理研究发现","展示设计演进","总结方法论","提炼可复用资产"],
     coreStepsEn: ["Document full process","Organize research findings","Show design evolution","Summarize methodology","Extract reusable assets"],
-    miniCase: "设计团队为重大项目制作Process Book，记录6个月从研究到上线的完整过程。该文档成为新人培训教材，使新人上手周期从8周缩短至3周",
+    miniCase: "设计团队为重大项目制作Process Book，记录6个月从研究到上线的完整过程。该文档成为新人培训教材，使新人上手周期从8周缩Short至3周",
     miniCaseEn: "Design team created process book for major project, documenting 6-month journey from research to launch. Document became onboarding material, reducing new hire ramp-up from 8 to 3 weeks",
     htmlContent: `<h2>是什么 / 何时使用</h2>
 <p><strong>定义：</strong>完整设计过程记录本</p>
@@ -3166,7 +3166,7 @@ const seededFrameworks: Framework[] = [
 <li>提炼可复用资产</li>
 </ol>
 <h2>案例</h2>
-<p>设计团队为重大项目制作Process Book，记录6个月从研究到上线的完整过程。该文档成为新人培训教材，使新人上手周期从8周缩短至3周</p>
+<p>设计团队为重大项目制作Process Book，记录6个月从研究到上线的完整过程。该文档成为新人培训教材，使新人上手周期从8周缩Short至3周</p>
 `,
     htmlContentEn: `<h2>What / When to Use</h2>
 <p><strong>Definition:</strong> Complete design process documentation</p>
