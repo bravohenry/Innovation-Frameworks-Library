@@ -149,7 +149,6 @@ const Home: React.FC = () => {
         <div className="text-center py-8">
           <Icon icon="lucide:search-x" className="text-neutral-400 text-5xl mx-auto mb-4" />
           <h3 className="text-xl font-medium mb-2">{t('search_no_result')}</h3>
-          <p className="text-neutral-400 mb-6">{t('home_value_1')}</p>
           <Button 
             color="primary" 
             variant="flat"
@@ -158,7 +157,7 @@ const Home: React.FC = () => {
               setSelectedTags([]);
             }}
           >
-            Clear Filters
+            {lang === 'en' ? 'Clear Filters' : '清除筛选'}
           </Button>
         </div>
       )}
