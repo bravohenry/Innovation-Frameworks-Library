@@ -1,8 +1,10 @@
 node_modules/
 dist/
+docs/
 .vscode/
 .DS_Store
 .env
 .env.local
 *.log
 .cache/
+*.tsbuildinfo

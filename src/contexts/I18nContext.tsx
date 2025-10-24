@@ -185,7 +185,6 @@ const zh: Dict = {
   overall_progress: '整体进度',
   month_view: '月视图',
   week_view: '周视图',
-  add_task: '添加任务',
   edit_task: '编辑任务',
   new_task: '新任务',
   unassigned: '待分配',
