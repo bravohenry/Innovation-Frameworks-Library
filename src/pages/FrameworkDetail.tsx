@@ -28,7 +28,7 @@ const InteractiveComponent: React.FC<{ framework: any; lang: 'zh' | 'en' }> = ({
   switch (interactive.type) {
     case 'tree':
       if (framework.slug === 'north-star-framework') {
-        return <NorthStarFrameworkDiagram lang={lang} />;
+        return <NorthStarFrameworkDiagram />;
       }
       break;
     case 'radar':
