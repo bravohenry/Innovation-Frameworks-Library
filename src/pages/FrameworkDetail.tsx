@@ -174,6 +174,17 @@ const FrameworkDetail: React.FC = () => {
         </CardBody>
       </Card>
       
+      {/* 交互组件 */}
+      <div className="mt-8">
+        <Suspense fallback={
+          <div className="w-full aspect-video bg-content2 rounded-lg flex items-center justify-center">
+            <Spinner size="lg" />
+          </div>
+        }>
+          <InteractiveComponent framework={framework} lang={lang} />
+        </Suspense>
+      </div>
+
       {/* Framework Content */}
       <Card>
         <CardBody className="p-6">
@@ -185,15 +196,6 @@ const FrameworkDetail: React.FC = () => {
           ) : (
             <p>{t('loading')}</p>
           )}
-
-          {/* 交互组件 */}
-          <Suspense fallback={
-            <div className="mt-8 w-full aspect-video bg-content2 rounded-lg flex items-center justify-center">
-              <Spinner size="lg" />
-            </div>
-          }>
-            <InteractiveComponent framework={framework} lang={lang} />
-          </Suspense>
 
           {/* 图示画廊 */}
           {framework.diagrams && framework.diagrams.length > 0 && (
