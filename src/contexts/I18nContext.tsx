@@ -205,7 +205,7 @@ const en: Dict = {
   nav_home: 'Home',
   nav_github: 'GitHub',
   home_main_title: 'Innovation Frameworks Library',
-  home_subtitle: 'Master Strategic Innovation: From Insight to Execution',
+  home_subtitle: 'From Insight to Execution',
   home_hero_title: 'Master Strategic Innovation: From Insight to Execution',
   home_hero_desc: 'Explore frameworks from “Product Reborn”. Learn and apply them systematically to boost innovation and product thinking.',
   home_start: 'Browse 9 Frameworks',
