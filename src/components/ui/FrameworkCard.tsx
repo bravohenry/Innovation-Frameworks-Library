@@ -38,31 +38,31 @@ const FrameworkCard: React.FC<FrameworkCardProps> = ({ framework }) => {
             ))}
           </div>
           
-          <div className="flex flex-col gap-3 flex-1">
-            <h3 className="text-lg font-semibold text-neutral-900">
+          <div className="flex flex-col gap-2 flex-1">
+            <h3 className="text-xl font-bold text-neutral-900 leading-tight">
               {lang === 'zh' ? framework.title : framework.englishTitle}
             </h3>
             
             {oneLineDef && (
-              <p className="text-sm text-neutral-400 italic">
+              <p className="text-xs text-neutral-400 italic leading-relaxed">
                 {oneLineDef}
               </p>
             )}
             
             {stepsPreview.length > 0 && (
-              <div className="flex flex-col gap-2">
-                <p className="text-xs font-medium text-neutral-400 uppercase tracking-wide">
+              <div className="flex flex-col gap-2 mt-2">
+                <p className="text-xs font-bold text-neutral-400 uppercase tracking-wider">
                   {lang === 'zh' ? '核心步骤' : 'Core Steps'}
                 </p>
-                <ul className="text-sm text-neutral-900 flex flex-col gap-2">
+                <ul className="text-xs text-neutral-900 flex flex-col gap-1">
                   {stepsPreview.map((step, index) => (
                     <li key={index} className="flex items-start gap-2">
-                      <span className="text-primary-500 font-medium">{index + 1}.</span>
-                      <span className="line-clamp-1">{step}</span>
+                      <span className="text-primary-500 font-bold flex-shrink-0">{index + 1}.</span>
+                      <span className="line-clamp-1 leading-relaxed">{step}</span>
                     </li>
                   ))}
                   {coreSteps && coreSteps.length > 3 && (
-                    <li className="text-xs text-neutral-400 italic">
+                    <li className="text-xs text-neutral-400 italic mt-1">
                       {lang === 'zh' ? `+${coreSteps.length - 3}个步骤` : `+${coreSteps.length - 3} more`}
                     </li>
                   )}

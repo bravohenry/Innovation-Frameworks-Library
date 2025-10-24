@@ -46,34 +46,35 @@ const ChapterPage: React.FC = () => {
       </Breadcrumbs>
       
       {/* Chapter Header */}
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold mb-2">
+      <div className="mb-8 bg-neutral-100 rounded-lg p-6">
+        <h1 className="text-4xl font-bold mb-4 text-neutral-900 leading-tight">
           {t('chapter_prefix', { n: currentChapter.id })}: {lang === 'en' ? (currentChapter.titleEn || currentChapter.title) : currentChapter.title}
         </h1>
         {/* Chapter Goal & Subsections (统一架构) */}
         {chapterMeta && (
-          <div className="mt-4">
-            <div className="flex items-start gap-3">
-              <div className="flex-1">
-                <h3 className="text-lg font-semibold mb-2">
-                  {lang === 'en' ? 'Goal' : '目标'}: {lang === 'en' ? chapterMeta.goalEn : chapterMeta.goalZh}
-                </h3>
-                {chapterMeta.descZh && (
-                  <p className="text-neutral-400">
-                    {lang === 'en' ? (chapterMeta.descEn || '') : chapterMeta.descZh}
-                  </p>
-                )}
-                {chapterMeta.subsections && (
-                  <div className="mt-3 flex flex-wrap gap-2">
-                    {chapterMeta.subsections.map((s) => (
-                      <Chip key={s.id} variant="flat">
-                        {s.id} {lang === 'en' ? s.labelEn : s.labelZh}
-                      </Chip>
-                    ))}
-                  </div>
-                )}
-              </div>
+          <div className="flex flex-col gap-3">
+            <div>
+              <h3 className="text-sm font-bold text-neutral-400 uppercase tracking-wider mb-2">
+                {lang === 'en' ? 'Goal' : '目标'}
+              </h3>
+              <p className="text-lg font-semibold text-neutral-900">
+                {lang === 'en' ? chapterMeta.goalEn : chapterMeta.goalZh}
+              </p>
             </div>
+            {chapterMeta.descZh && (
+              <p className="text-base text-neutral-400 leading-relaxed">
+                {lang === 'en' ? (chapterMeta.descEn || '') : chapterMeta.descZh}
+              </p>
+            )}
+            {chapterMeta.subsections && (
+              <div className="flex flex-wrap gap-2">
+                {chapterMeta.subsections.map((s) => (
+                  <Chip key={s.id} variant="flat" size="sm" className="bg-primary-50 text-primary-700">
+                    {s.id} {lang === 'en' ? s.labelEn : s.labelZh}
+                  </Chip>
+                ))}
+              </div>
+            )}
           </div>
         )}
       </div>

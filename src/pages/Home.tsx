@@ -49,22 +49,22 @@ const Home: React.FC = () => {
     <div className="max-w-7xl mx-auto">
       {/* Hero Section */}
       <section className="mb-8">
-        <div className="bg-gradient-to-r from-primary-50 to-primary-50 rounded-xl p-8">
-          <h1 className="text-3xl md:text-4xl font-bold mb-6">{t('home_hero_title')}</h1>
+        <div className="bg-primary-50 rounded-lg p-6">
+          <h1 className="text-4xl font-bold text-neutral-900 mb-3 leading-tight">{t('home_hero_title')}</h1>
           
           {/* Three Value Points */}
-          <ul className="space-y-3 mb-8 max-w-2xl">
-            <li className="flex items-start gap-3">
-              <Icon icon="lucide:check-circle" className="text-primary text-xl flex-shrink-0" />
-              <span className="text-base md:text-lg text-primary-700">{t('home_value_1')}</span>
+          <ul className="flex flex-col gap-2 mb-6 max-w-3xl">
+            <li className="flex items-start gap-2">
+              <Icon icon="lucide:check-circle" className="text-primary-500 text-lg mt-1 flex-shrink-0" />
+              <span className="text-base text-neutral-900 font-medium">{t('home_value_1')}</span>
             </li>
-            <li className="flex items-start gap-3">
-              <Icon icon="lucide:check-circle" className="text-primary text-xl flex-shrink-0" />
-              <span className="text-base md:text-lg text-primary-700">{t('home_value_2')}</span>
+            <li className="flex items-start gap-2">
+              <Icon icon="lucide:check-circle" className="text-primary-500 text-lg mt-1 flex-shrink-0" />
+              <span className="text-base text-neutral-900 font-medium">{t('home_value_2')}</span>
             </li>
-            <li className="flex items-start gap-3">
-              <Icon icon="lucide:check-circle" className="text-primary text-xl flex-shrink-0" />
-              <span className="text-base md:text-lg text-primary-700">{t('home_value_3')}</span>
+            <li className="flex items-start gap-2">
+              <Icon icon="lucide:check-circle" className="text-primary-500 text-lg mt-1 flex-shrink-0" />
+              <span className="text-base text-neutral-900 font-medium">{t('home_value_3')}</span>
             </li>
           </ul>
           
@@ -80,7 +80,7 @@ const Home: React.FC = () => {
               {t('home_start')}
             </Button>
             <Button 
-              variant="bordered" 
+              variant="flat" 
               size="lg"
               as="a"
               href="/templates"
@@ -128,7 +128,7 @@ const Home: React.FC = () => {
         return (
           <section key={chapter.id} className="mb-8">
             <div className="flex items-center justify-between mb-4">
-              <h2 className="text-xl font-semibold">
+              <h2 className="text-2xl font-bold text-neutral-900">
                 {t('chapter_prefix', { n: chapter.id })}: {lang === 'en' ? (chapter.titleEn || chapter.title) : chapter.title}
               </h2>
               <Button 
@@ -136,6 +136,7 @@ const Home: React.FC = () => {
                 to={`/chapters/${chapter.id}`}
                 variant="light"
                 color="primary"
+                size="sm"
                 endContent={<Icon icon="lucide:chevron-right" />}
               >
                 {t('chapter_view_all')}
