@@ -141,7 +141,7 @@ const Home: React.FC = () => {
                 {t('chapter_view_all')}
               </Button>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-fr">
               {chapterFrameworks.slice(0, 3).map(framework => (
                 <FrameworkCard key={framework.slug} framework={framework} />
               ))}

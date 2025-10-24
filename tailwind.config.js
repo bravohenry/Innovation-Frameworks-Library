@@ -14,6 +14,9 @@ export default {
         '6': '24px',
         '12': '48px',
       },
+      gridAutoRows: {
+        'fr': 'minmax(0, 1fr)',
+      },
     },
   },
   darkMode: "class",
