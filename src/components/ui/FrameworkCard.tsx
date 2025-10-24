@@ -21,10 +21,10 @@ const FrameworkCard: React.FC<FrameworkCardProps> = ({ framework }) => {
   const stepsPreview = coreSteps ? coreSteps.slice(0, 3) : [];
   
   return (
-    <Link to={`/frameworks/${framework.slug}`} className="block h-full">
+    <Link to={`/frameworks/${framework.slug}`} className="block w-full h-full">
       <Card 
         isPressable
-        className="framework-card h-full hover:shadow-lg transition-shadow flex flex-col"
+        className="framework-card w-full h-full hover:shadow-lg transition-shadow flex flex-col"
       >
         <CardBody className="p-4 flex flex-col gap-4 h-full">
           <div className="flex items-center gap-4 flex-wrap">
