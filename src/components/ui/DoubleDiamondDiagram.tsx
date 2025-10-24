@@ -9,8 +9,6 @@ interface Chapter {
   titleEn: string;
   phase: string;
   phaseEn: string;
-  x: string;
-  y: string;
 }
 
 const DoubleDiamondDiagram: React.FC = () => {
@@ -23,8 +21,6 @@ const DoubleDiamondDiagram: React.FC = () => {
       titleEn: 'Discovery & Strategy',
       phase: '发现',
       phaseEn: 'Discover',
-      x: '12.5%',
-      y: '50%',
     },
     {
       id: 2,
@@ -32,8 +28,6 @@ const DoubleDiamondDiagram: React.FC = () => {
       titleEn: 'Empathy & Value',
       phase: '定义',
       phaseEn: 'Define',
-      x: '31.25%',
-      y: '50%',
     },
     {
       id: 3,
@@ -41,8 +35,6 @@ const DoubleDiamondDiagram: React.FC = () => {
       titleEn: 'Design & Conception',
       phase: '开发',
       phaseEn: 'Develop',
-      x: '50%',
-      y: '50%',
     },
     {
       id: 4,
@@ -50,8 +42,6 @@ const DoubleDiamondDiagram: React.FC = () => {
       titleEn: 'Test & Iteration',
       phase: '交付',
       phaseEn: 'Deliver',
-      x: '68.75%',
-      y: '50%',
     },
     {
       id: 5,
@@ -59,144 +49,75 @@ const DoubleDiamondDiagram: React.FC = () => {
       titleEn: 'Launch & Storytelling',
       phase: '扩展',
       phaseEn: 'Scale',
-      x: '81.25%',
-      y: '50%',
     },
   ];
 
-  const pathVariants = {
-    hidden: {
-      pathLength: 0,
-      opacity: 0,
-    },
+  const containerVariants = {
+    hidden: { opacity: 0 },
     visible: {
-      pathLength: 1,
       opacity: 1,
       transition: {
-        pathLength: { duration: 2, ease: 'easeInOut' },
-        opacity: { duration: 0.5 },
+        staggerChildren: 0.15,
       },
     },
   };
 
-  const nodeVariants = {
-    hidden: { scale: 0, opacity: 0 },
-    visible: (i: number) => ({
-      scale: 1,
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
       opacity: 1,
+      y: 0,
       transition: {
-        delay: 0.4 + i * 0.2,
-        duration: 0.4,
-        type: 'spring',
-        stiffness: 200,
+        duration: 0.5,
       },
-    }),
+    },
   };
 
   return (
-    <div className="w-full">
-      <svg
-        viewBox="0 0 800 300"
-        className="w-full h-auto"
-        xmlns="http://www.w3.org/2000/svg"
+    <div className="w-full py-8">
+      <motion.div
+        className="relative"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
       >
-        <defs>
-          <linearGradient id="diamondGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.3" />
-            <stop offset="50%" stopColor="#3b82f6" stopOpacity="0.1" />
-            <stop offset="100%" stopColor="#3b82f6" stopOpacity="0.3" />
-          </linearGradient>
-        </defs>
+        {/* Horizontal Line */}
+        <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-primary-500 -translate-y-1/2" />
 
-        {/* Double Diamond Path */}
-        <motion.path
-          d="M 50 150 L 200 50 L 350 150 L 200 250 L 50 150 Z M 350 150 L 500 50 L 650 150 L 500 250 L 350 150 Z"
-          fill="url(#diamondGradient)"
-          stroke="#3b82f6"
-          strokeWidth="3"
-          variants={pathVariants}
-          initial="hidden"
-          animate="visible"
-        />
-
-        {/* Chapter Nodes */}
-        {chapters.map((chapter, index) => {
-          const xPos = (parseFloat(chapter.x) / 100) * 800;
-          const yPos = (parseFloat(chapter.y) / 100) * 300;
-
-          return (
-            <g key={chapter.id}>
-              {/* Node Circle */}
-              <motion.circle
-                cx={xPos}
-                cy={yPos}
-                r="28"
-                fill="#ffffff"
-                stroke="#3b82f6"
-                strokeWidth="3"
-                custom={index}
-                variants={nodeVariants}
-                initial="hidden"
-                animate="visible"
-                className="cursor-pointer transition-all hover:fill-primary-50"
-              />
-
-              {/* Chapter Number */}
-              <motion.text
-                x={xPos}
-                y={yPos + 6}
-                textAnchor="middle"
-                className="fill-primary-500 text-2xl font-bold select-none"
-                custom={index}
-                variants={nodeVariants}
-                initial="hidden"
-                animate="visible"
-              >
-                {chapter.id}
-              </motion.text>
-
-              {/* Phase Label */}
-              <motion.text
-                x={xPos}
-                y={yPos - 45}
-                textAnchor="middle"
-                className="fill-neutral-900 text-xs font-semibold uppercase tracking-wider select-none"
-                custom={index}
-                variants={nodeVariants}
-                initial="hidden"
-                animate="visible"
-              >
+        {/* Chapters Container */}
+        <div className="relative grid grid-cols-5 gap-4">
+          {chapters.map((chapter, index) => (
+            <motion.div
+              key={chapter.id}
+              className="flex flex-col items-center"
+              variants={itemVariants}
+            >
+              {/* Phase Label (Top) */}
+              <div className="text-xs font-semibold uppercase tracking-wider text-neutral-900 mb-4 text-center">
                 {lang === 'en' ? chapter.phaseEn : chapter.phase}
-              </motion.text>
+              </div>
 
-              {/* Chapter Title */}
-              <motion.text
-                x={xPos}
-                y={yPos + 50}
-                textAnchor="middle"
-                className="fill-neutral-700 text-sm font-medium select-none"
-                custom={index}
-                variants={nodeVariants}
-                initial="hidden"
-                animate="visible"
+              {/* Dot Marker */}
+              <Link
+                to={`/chapters/${chapter.id}`}
+                className="group relative z-10"
               >
-                {lang === 'en' ? chapter.titleEn : chapter.titleZh}
-              </motion.text>
-
-              {/* Invisible clickable area for better UX */}
-              <Link to={`/chapters/${chapter.id}`}>
-                <circle
-                  cx={xPos}
-                  cy={yPos}
-                  r="40"
-                  fill="transparent"
-                  className="cursor-pointer"
-                />
+                <div className="w-3 h-3 rounded-full bg-primary-500 transition-all group-hover:scale-150 group-hover:bg-primary-700" />
               </Link>
-            </g>
-          );
-        })}
-      </svg>
+
+              {/* Chapter Title (Bottom) */}
+              <Link
+                to={`/chapters/${chapter.id}`}
+                className="mt-4 text-center group"
+              >
+                <div className="text-sm font-medium text-neutral-700 transition-colors group-hover:text-primary-700">
+                  {lang === 'en' ? chapter.titleEn : chapter.titleZh}
+                </div>
+              </Link>
+            </motion.div>
+          ))}
+        </div>
+      </motion.div>
     </div>
   );
 };
