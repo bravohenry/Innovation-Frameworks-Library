@@ -2305,7 +2305,12 @@ const seededFrameworks: Framework[] = [
   },
 
   // 第三章：设计商业模式与产品概念 (Design & Conception)
-  { title: '竞品分析矩阵', englishTitle: 'Competitive Analysis Matrix', slug: 'competitive-analysis-matrix', chapter: '3', subsectionId: '3.1', chapterTitle: '设计商业模式与产品概念', chapterTitleEn: 'Design & Conception', tags: [], summary: '', templateUrl: '/templates/competitive-analysis-matrix.pptx',
+  { title: '竞品分析矩阵', englishTitle: 'Competitive Analysis Matrix', slug: 'competitive-analysis-matrix', chapter: '3', subsectionId: '3.1', chapterTitle: '设计商业模式与产品概念', chapterTitleEn: 'Design & Conception', 
+    tags: ["竞品分析", "市场定位", "差异化"], 
+    tagsEn: ["Competitive Analysis", "Market Positioning", "Differentiation"],
+    summary: '多维度对比竞品特征，识别差异化机会和战略定位空间。', 
+    summaryEn: 'Multi-dimensional competitor comparison to identify differentiation opportunities and strategic positioning.',
+    templateUrl: '/templates/competitive-analysis-matrix.pptx',
     oneLineDef: "竞品多维度对比矩阵",
     oneLineDefEn: "Multi-dimensional competitive comparison matrix",
     scenario: "市场定位、差异化策略、产品规划、投资决策、战略评估",
@@ -2343,7 +2348,12 @@ const seededFrameworks: Framework[] = [
 <p>SaaS team discovered via competitive matrix: despite 5 competitors, none offered 'easy integration + on-premise + 24/7 support' together. This positioning reduced CAC by 40%, increased close rate 28%</p>
 `
    },
-  { title: '功能对比分析', englishTitle: 'Feature Comparison', slug: 'feature-comparison', chapter: '3', subsectionId: '3.1', chapterTitle: '设计商业模式与产品概念', chapterTitleEn: 'Design & Conception', tags: [], summary: '', templateUrl: '/templates/feature-comparison.pptx',
+  { title: '功能对比分析', englishTitle: 'Feature Comparison', slug: 'feature-comparison', chapter: '3', subsectionId: '3.1', chapterTitle: '设计商业模式与产品概念', chapterTitleEn: 'Design & Conception', 
+    tags: ["功能规划", "产品对比", "优先级"], 
+    tagsEn: ["Feature Planning", "Product Comparison", "Prioritization"],
+    summary: '功能级对比分析，发现产品优劣势和功能缺口。', 
+    summaryEn: 'Feature-level comparison to discover product strengths, weaknesses and gaps.',
+    templateUrl: '/templates/feature-comparison.pptx',
     oneLineDef: "功能级对比分析表",
     oneLineDefEn: "Feature-level comparison table",
     scenario: "功能规划、优先级决策、产品演示、销售赋能、用户迁移",
@@ -2381,7 +2391,12 @@ const seededFrameworks: Framework[] = [
 <p>Project management tool found all competitors lacked 'offline editing + smart conflict resolution'. After 3-month implementation, enterprise retention rose from 68% to 82%, NPS increased 19 points</p>
 `
    },
-  { title: '价值主张画布', englishTitle: 'Value Proposition Canvas', slug: 'value-proposition-canvas', chapter: '3', subsectionId: '3.2', chapterTitle: '设计商业模式与产品概念', chapterTitleEn: 'Design & Conception', tags: [], summary: '', templateUrl: '/templates/value-proposition-canvas.pptx',
+  { title: '价值主张画布', englishTitle: 'Value Proposition Canvas', slug: 'value-proposition-canvas', chapter: '3', subsectionId: '3.2', chapterTitle: '设计商业模式与产品概念', chapterTitleEn: 'Design & Conception', 
+    tags: ["价值主张", "产品定位", "痛点"], 
+    tagsEn: ["Value Proposition", "Product Positioning", "Pain Points"],
+    summary: '匹配产品功能与客户痛点收益，实现产品-市场契合。', 
+    summaryEn: 'Match product features with customer pains and gains to achieve product-market fit.',
+    templateUrl: '/templates/value-proposition-canvas.pptx',
     oneLineDef: "产品-市场契合度画布",
     oneLineDefEn: "Product-market fit canvas",
     scenario: "价值主张设计、产品定位、痛点解决、收益匹配、MVP规划",
@@ -2462,7 +2477,12 @@ const seededFrameworks: Framework[] = [
 <p>Co-working company discovered via BMC: key resources are 'location + community ops' not facilities. Shifted to asset-light + partnership model, breakeven dropped from 18 to 9 months</p>
 `
    },
-  { title: '蓝海战略', englishTitle: 'Blue Ocean Strategy', slug: 'blue-ocean-strategy', chapter: '3', subsectionId: '3.4', chapterTitle: '设计商业模式与产品概念', chapterTitleEn: 'Design & Conception', tags: [], summary: '', templateUrl: '/templates/blue-ocean-strategy.pptx',
+  { title: '蓝海战略', englishTitle: 'Blue Ocean Strategy', slug: 'blue-ocean-strategy', chapter: '3', subsectionId: '3.4', chapterTitle: '设计商业模式与产品概念', chapterTitleEn: 'Design & Conception', 
+    tags: ["蓝海战略", "价值创新", "市场开拓"], 
+    tagsEn: ["Blue Ocean", "Value Innovation", "Market Creation"],
+    summary: '跳出红海竞争，创造无人竞争的全新市场空间。', 
+    summaryEn: 'Escape red ocean competition to create uncontested new market space.',
+    templateUrl: '/templates/blue-ocean-strategy.pptx',
     oneLineDef: "非竞争性市场开创策略",
     oneLineDefEn: "Non-competitive market creation strategy",
     scenario: "战略转型、市场开拓、差异化定位、价值创新、红海突围",
@@ -2500,7 +2520,12 @@ const seededFrameworks: Framework[] = [
 <p>Traditional gym facing price wars used blue ocean to eliminate equipment (reduce cost), add social elements (create value), built 'fitness social space', membership grew 3x with 50% higher ARPU</p>
 `
    },
-  { title: '战略画布', englishTitle: 'Strategy Canvas', slug: 'strategy-canvas', chapter: '3', subsectionId: '3.4', chapterTitle: '设计商业模式与产品概念', chapterTitleEn: 'Design & Conception', tags: [], summary: '', templateUrl: '/templates/strategy-canvas.pptx',
+  { title: '战略画布', englishTitle: 'Strategy Canvas', slug: 'strategy-canvas', chapter: '3', subsectionId: '3.4', chapterTitle: '设计商业模式与产品概念', chapterTitleEn: 'Design & Conception', 
+    tags: ["战略分析", "竞争定位", "价值曲线"], 
+    tagsEn: ["Strategy Analysis", "Competitive Positioning", "Value Curve"],
+    summary: '可视化竞争要素对比，提炼差异化战略洞察。', 
+    summaryEn: 'Visualize competitive factors to extract differentiation insights.',
+    templateUrl: '/templates/strategy-canvas.pptx',
     oneLineDef: "竞争要素可视化对比图",
     oneLineDefEn: "Competitive factors visualization chart",
     scenario: "战略分析、竞争定位、价值曲线设计、差异化识别、市场调研",
@@ -2538,7 +2563,12 @@ const seededFrameworks: Framework[] = [
 <p>Airline drew strategy canvas and found: all competitors homogenized on 'meals, seats'. Shifted emphasis to 'on-time + hassle-free changes', customer satisfaction rose from 68 to 86</p>
 `
    },
-  { title: '四步动作框架', englishTitle: 'ERRC Grid', slug: 'errc-grid', chapter: '3', subsectionId: '3.4', chapterTitle: '设计商业模式与产品概念', chapterTitleEn: 'Design & Conception', tags: [], summary: '', templateUrl: '/templates/errc-grid.pptx',
+  { title: '四步动作框架', englishTitle: 'ERRC Grid', slug: 'errc-grid', chapter: '3', subsectionId: '3.4', chapterTitle: '设计商业模式与产品概念', chapterTitleEn: 'Design & Conception', 
+    tags: ["价值创新", "成本优化", "战略重构"], 
+    tagsEn: ["Value Innovation", "Cost Optimization", "Strategic Restructuring"],
+    summary: '通过消除、减少、提升、创造四步动作重构价值曲线。', 
+    summaryEn: 'Reconstruct value curve through eliminate, reduce, raise and create actions.',
+    templateUrl: '/templates/errc-grid.pptx',
     oneLineDef: "增减消除提升四步法",
     oneLineDefEn: "Eliminate-reduce-raise-create framework",
     scenario: "价值创新、成本优化、产品简化、战略重构、蓝海开拓",
@@ -2576,7 +2606,12 @@ const seededFrameworks: Framework[] = [
 <p>Online education applied ERRC: eliminated physical textbooks, reduced live session duration, raised personalized recommendations, created learning communities. Operating costs down 35%, renewal rate up to 78%</p>
 `
    },
-  { title: '价值-复杂度矩阵', englishTitle: 'Value vs. Effort Matrix', slug: 'value-vs-effort-matrix', chapter: '3', subsectionId: '3.5', chapterTitle: '设计商业模式与产品概念', chapterTitleEn: 'Design & Conception', tags: [], summary: '', templateUrl: '/templates/value-vs-effort-matrix.pptx',
+  { title: '价值-复杂度矩阵', englishTitle: 'Value vs. Effort Matrix', slug: 'value-vs-effort-matrix', chapter: '3', subsectionId: '3.5', chapterTitle: '设计商业模式与产品概念', chapterTitleEn: 'Design & Conception', 
+    tags: ["优先级", "产品规划", "资源分配"], 
+    tagsEn: ["Prioritization", "Product Planning", "Resource Allocation"],
+    summary: '用价值与工作量两维度快速决策需求优先级。', 
+    summaryEn: 'Quickly prioritize requirements using value vs. effort dimensions.',
+    templateUrl: '/templates/value-vs-effort-matrix.pptx',
     oneLineDef: "价值-工作量优先级矩阵",
     oneLineDefEn: "Value-effort prioritization matrix",
     scenario: "产品路线图、Sprint规划、资源分配、需求评审、快速决策",
@@ -2614,7 +2649,12 @@ const seededFrameworks: Framework[] = [
 <p>Product team evaluated 52 requirements with value-effort matrix, prioritized 13 'high-value low-cost' items. After 3 months, user retention up 19%, dev efficiency improved 2.3x</p>
 `
    },
-  { title: 'Kano 模型', englishTitle: 'Kano Model', slug: 'kano-model', chapter: '3', subsectionId: '3.5', chapterTitle: '设计商业模式与产品概念', chapterTitleEn: 'Design & Conception', tags: [], summary: '', templateUrl: '/templates/kano-model.pptx',
+  { title: 'Kano 模型', englishTitle: 'Kano Model', slug: 'kano-model', chapter: '3', subsectionId: '3.5', chapterTitle: '设计商业模式与产品概念', chapterTitleEn: 'Design & Conception', 
+    tags: ["用户满意度", "功能分级", "需求分类"], 
+    tagsEn: ["User Satisfaction", "Feature Classification", "Requirement Analysis"],
+    summary: '将功能分为基本型、期望型和兴奋型，指导资源投入。', 
+    summaryEn: 'Classify features as basic, performance and delighters to guide resource allocation.',
+    templateUrl: '/templates/kano-model.pptx',
     oneLineDef: "用户满意度分类模型",
     oneLineDefEn: "User satisfaction classification model",
     scenario: "功能优先级、需求分级、产品路线图、资源分配、满意度预测",
@@ -2652,7 +2692,12 @@ const seededFrameworks: Framework[] = [
 <p>Smart home product discovered via Kano: users consider 'voice control' basic, while 'scenario self-learning' is delighter. Adjusted R&D investment, market share grew 12% in 6 months</p>
 `
    },
-  { title: 'MoSCoW 方法', englishTitle: 'MoSCoW Method', slug: 'moscow-method', chapter: '3', subsectionId: '3.5', chapterTitle: '设计商业模式与产品概念', chapterTitleEn: 'Design & Conception', tags: [], summary: '', templateUrl: '/templates/moscow-method.pptx',
+  { title: 'MoSCoW 方法', englishTitle: 'MoSCoW Method', slug: 'moscow-method', chapter: '3', subsectionId: '3.5', chapterTitle: '设计商业模式与产品概念', chapterTitleEn: 'Design & Conception', 
+    tags: ["优先级管理", "敏捷开发", "MVP"], 
+    tagsEn: ["Priority Management", "Agile", "MVP"],
+    summary: '将需求分为Must/Should/Could/Won't四类，快速聚焦核心功能。', 
+    summaryEn: 'Classify requirements into Must/Should/Could/Won\'t to quickly focus on core features.',
+    templateUrl: '/templates/moscow-method.pptx',
     oneLineDef: "四级优先级分类法",
     oneLineDefEn: "Four-tier priority classification method",
     scenario: "敏捷开发、MVP定义、Sprint规划、资源分配、范围管理",
@@ -2690,7 +2735,12 @@ const seededFrameworks: Framework[] = [
 <p>E-commerce team used MoSCoW for redesign: Must had only 6 items (payment+search+cart core flows), Should 12, Could 23. MVP launched in 3 weeks, core conversion reached 98% of target</p>
 `
    },
-  { title: '滩头策略', englishTitle: 'Beachhead Strategy', slug: 'beachhead-strategy', chapter: '3', subsectionId: '3.5', chapterTitle: '设计商业模式与产品概念', chapterTitleEn: 'Design & Conception', tags: [], summary: '', templateUrl: '/templates/beachhead-strategy.pptx',
+  { title: '滩头策略', englishTitle: 'Beachhead Strategy', slug: 'beachhead-strategy', chapter: '3', subsectionId: '3.5', chapterTitle: '设计商业模式与产品概念', chapterTitleEn: 'Design & Conception', 
+    tags: ["市场进入", "资源聚焦", "早期客户"], 
+    tagsEn: ["Market Entry", "Resource Focus", "Early Customers"],
+    summary: '选择首个目标市场集中攻坚，建立参考案例后拓展相邻领域。', 
+    summaryEn: 'Select initial target market for focused penetration, then expand to adjacent areas.',
+    templateUrl: '/templates/beachhead-strategy.pptx',
     oneLineDef: "首个目标市场攻坚策略",
     oneLineDefEn: "Initial target market penetration strategy",
     scenario: "新产品上市、市场进入、资源聚焦、早期客户获取、口碑建立",
@@ -2728,7 +2778,12 @@ const seededFrameworks: Framework[] = [
 <p>Enterprise collaboration tool targeted '50-200 person design firms' as beachhead, captured 80% of segment leaders in 6 months. Leveraged cases to expand into consulting, architecture adjacencies</p>
 `
    },
-  { title: 'Low保真原型', englishTitle: 'Low-Fidelity Prototype', slug: 'low-fidelity-prototype', chapter: '3', subsectionId: '3.6', chapterTitle: '设计商业模式与产品概念', chapterTitleEn: 'Design & Conception', tags: [], summary: '', templateUrl: '/templates/low-fidelity-prototype.pptx',
+  { title: 'Low保真原型', englishTitle: 'Low-Fidelity Prototype', slug: 'low-fidelity-prototype', chapter: '3', subsectionId: '3.6', chapterTitle: '设计商业模式与产品概念', chapterTitleEn: 'Design & Conception', 
+    tags: ["原型设计", "快速验证", "迭代"], 
+    tagsEn: ["Prototyping", "Quick Validation", "Iteration"],
+    summary: '用低成本纸面或线框原型快速验证假设和流程。', 
+    summaryEn: 'Quickly validate hypotheses and flows with low-cost paper or wireframe prototypes.',
+    templateUrl: '/templates/low-fidelity-prototype.pptx',
     oneLineDef: "快速Low成本原型验证",
     oneLineDefEn: "Fast low-cost prototype validation",
     scenario: "概念验证、早期测试、快速迭代、需求澄清、团队沟通",
@@ -2766,7 +2821,12 @@ const seededFrameworks: Framework[] = [
 <p>Financial product tested new flow with paper prototypes, completed 3 iterations in 5 days. Discovered users misunderstood 'smart-fill', adjustment before development reduced post-launch complaints 73%</p>
 `
    },
-  { title: '高保真原型', englishTitle: 'High-Fidelity Prototype', slug: 'high-fidelity-prototype', chapter: '3', subsectionId: '3.6', chapterTitle: '设计商业模式与产品概念', chapterTitleEn: 'Design & Conception', tags: [], summary: '', templateUrl: '/templates/high-fidelity-prototype.pptx',
+  { title: '高保真原型', englishTitle: 'High-Fidelity Prototype', slug: 'high-fidelity-prototype', chapter: '3', subsectionId: '3.6', chapterTitle: '设计商业模式与产品概念', chapterTitleEn: 'Design & Conception', 
+    tags: ["原型设计", "可用性测试", "开发对接"], 
+    tagsEn: ["Prototyping", "Usability Testing", "Dev Handoff"],
+    summary: '高逼真交互原型，用于可用性测试和开发规范输出。', 
+    summaryEn: 'High-fidelity interactive prototype for usability testing and development specs.',
+    templateUrl: '/templates/high-fidelity-prototype.pptx',
     oneLineDef: "高逼真交互原型",
     oneLineDefEn: "High-fidelity interactive prototype",
     scenario: "可用性测试、投资展示、开发对接、营销预热、用户预览",
@@ -2806,7 +2866,12 @@ const seededFrameworks: Framework[] = [
    },
 
   // 第四章：测试、迭代与战略优化 (Test & Iteration)
-  { title: '可用性测试', englishTitle: 'Usability Testing', slug: 'usability-testing', chapter: '4', subsectionId: '4.1', chapterTitle: '测试、迭代与战略优化', chapterTitleEn: 'Test & Iteration', tags: [], summary: '', templateUrl: '/templates/usability-testing.pptx',
+  { title: '可用性测试', englishTitle: 'Usability Testing', slug: 'usability-testing', chapter: '4', subsectionId: '4.1', chapterTitle: '测试、迭代与战略优化', chapterTitleEn: 'Test & Iteration', 
+    tags: ["可用性", "用户测试", "产品验证"], 
+    tagsEn: ["Usability", "User Testing", "Product Validation"],
+    summary: '让真实用户执行任务，发现界面和流程问题并优化。', 
+    summaryEn: 'Have real users perform tasks to discover interface and flow issues for optimization.',
+    templateUrl: '/templates/usability-testing.pptx',
     oneLineDef: "真实用户任务测试",
     oneLineDefEn: "Real user task testing",
     scenario: "产品验证、界面优化、流程改进、原型测试、问题诊断",
@@ -2844,7 +2909,12 @@ const seededFrameworks: Framework[] = [
 <p>Payment app usability testing found: 67% users stuck over 15sec at 'transfer confirmation'. Simplified to 'amount+recipient+confirm' 3 steps, task success rate rose from 58% to 94%</p>
 `
    },
-  { title: 'A/B Test', englishTitle: 'A/B Testing', slug: 'ab-testing', chapter: '4', subsectionId: '4.1', chapterTitle: '测试、迭代与战略优化', chapterTitleEn: 'Test & Iteration', tags: [], summary: '', templateUrl: '/templates/ab-testing.pptx',
+  { title: 'A/B Test', englishTitle: 'A/B Testing', slug: 'ab-testing', chapter: '4', subsectionId: '4.1', chapterTitle: '测试、迭代与战略优化', chapterTitleEn: 'Test & Iteration', 
+    tags: ["A/B测试", "数据驱动", "转化优化"], 
+    tagsEn: ["A/B Testing", "Data-Driven", "Conversion Optimization"],
+    summary: '通过对照实验验证功能效果，用数据指导产品决策。', 
+    summaryEn: 'Validate feature effectiveness through controlled experiments and data-driven decisions.',
+    templateUrl: '/templates/ab-testing.pptx',
     oneLineDef: "对照实验验证框架",
     oneLineDefEn: "Controlled experiment validation framework",
     scenario: "功能验证、转化优化、算法对比、定价测试、增长实验",
@@ -2882,7 +2952,12 @@ const seededFrameworks: Framework[] = [
 <p>E-commerce A/B tested 'show recommendation rationale': test group conversion up 3.2% with statistical significance (p<0.01). Full rollout increased GMV by $8M/month, ROI 12x</p>
 `
    },
-  { title: '出声思维法', englishTitle: 'Think Aloud Protocol', slug: 'think-aloud-protocol', chapter: '4', subsectionId: '4.1', chapterTitle: '测试、迭代与战略优化', chapterTitleEn: 'Test & Iteration', tags: [], summary: '', templateUrl: '/templates/think-aloud-protocol.pptx',
+  { title: '出声思维法', englishTitle: 'Think Aloud Protocol', slug: 'think-aloud-protocol', chapter: '4', subsectionId: '4.1', chapterTitle: '测试、迭代与战略优化', chapterTitleEn: 'Test & Iteration', 
+    tags: ["用户研究", "认知分析", "可用性"], 
+    tagsEn: ["User Research", "Cognitive Analysis", "Usability"],
+    summary: '用户边使用边说出想法，揭示认知过程和可用性问题。', 
+    summaryEn: 'Users verbalize thoughts while using product to reveal cognitive processes and usability issues.',
+    templateUrl: '/templates/think-aloud-protocol.pptx',
     oneLineDef: "边用边说认知追踪法",
     oneLineDefEn: "Concurrent verbalization method",
     scenario: "可用性研究、认知分析、流程诊断、原型测试、培训改进",
@@ -2920,7 +2995,12 @@ const seededFrameworks: Framework[] = [
 <p>Enterprise software discovered via think-aloud: users interpreted 'archive' as 'delete', causing 23% error rate. Changed to 'move to history', errors dropped below 2%</p>
 `
    },
-  { title: '迭代式设计', englishTitle: 'Iterative Design', slug: 'iterative-design', chapter: '4', subsectionId: '4.2', chapterTitle: '测试、迭代与战略优化', chapterTitleEn: 'Test & Iteration', tags: [], summary: '', templateUrl: '/templates/iterative-design.pptx',
+  { title: '迭代式设计', englishTitle: 'Iterative Design', slug: 'iterative-design', chapter: '4', subsectionId: '4.2', chapterTitle: '测试、迭代与战略优化', chapterTitleEn: 'Test & Iteration', 
+    tags: ["迭代", "敏捷开发", "持续改进"], 
+    tagsEn: ["Iteration", "Agile", "Continuous Improvement"],
+    summary: '循环构建-测试-优化流程，基于反馈持续完善产品。', 
+    summaryEn: 'Cyclical build-test-refine process for continuous product improvement based on feedback.',
+    templateUrl: '/templates/iterative-design.pptx',
     oneLineDef: "循环优化设计流程",
     oneLineDefEn: "Cyclical refinement design process",
     scenario: "产品迭代、敏捷开发、持续改进、用户反馈整合、MVP演进",
@@ -2958,7 +3038,12 @@ const seededFrameworks: Framework[] = [
 <p>Social product conducted 5 design iterations (2 weeks each): low-fi→high-fi→beta→launch. Incorporated user feedback each round, achieved 68% first-month retention, 2.1x industry average</p>
 `
    },
-  { title: '平衡计分卡', englishTitle: 'Balanced Scorecard', slug: 'balanced-scorecard', chapter: '4', subsectionId: '4.3', chapterTitle: '测试、迭代与战略优化', chapterTitleEn: 'Test & Iteration', tags: [], summary: '', templateUrl: '/templates/balanced-scorecard.pptx',
+  { title: '平衡计分卡', englishTitle: 'Balanced Scorecard', slug: 'balanced-scorecard', chapter: '4', subsectionId: '4.3', chapterTitle: '测试、迭代与战略优化', chapterTitleEn: 'Test & Iteration', 
+    tags: ["战略管理", "绩效评估", "平衡发展"], 
+    tagsEn: ["Strategic Management", "Performance Measurement", "Balanced Growth"],
+    summary: '从财务、客户、流程、学习四维度评估组织战略执行。', 
+    summaryEn: 'Assess strategic execution from financial, customer, process and learning perspectives.',
+    templateUrl: '/templates/balanced-scorecard.pptx',
     oneLineDef: "四维平衡战略评估卡",
     oneLineDefEn: "Four-perspective strategic measurement",
     scenario: "战略执行、绩效管理、目标对齐、KPI设计、组织评估",
@@ -2998,7 +3083,12 @@ const seededFrameworks: Framework[] = [
    },
 
   // 第五章：市场推广叙事与发布 (Launch & Storytelling)
-  { title: '演示文稿', englishTitle: 'Pitch Deck', slug: 'pitch-deck', chapter: '5', subsectionId: '5.1', chapterTitle: '市场推广叙事与发布', chapterTitleEn: 'Launch & Storytelling', tags: [], summary: '', templateUrl: '/templates/pitch-deck.pptx',
+  { title: '演示文稿', englishTitle: 'Pitch Deck', slug: 'pitch-deck', chapter: '5', subsectionId: '5.1', chapterTitle: '市场推广叙事与发布', chapterTitleEn: 'Launch & Storytelling', 
+    tags: ["融资", "演示", "商业叙事"], 
+    tagsEn: ["Fundraising", "Pitch", "Business Storytelling"],
+    summary: '简洁有力的演示文稿，用于融资、合作和商业机会展示。', 
+    summaryEn: 'Concise and powerful presentation for fundraising, partnerships and business opportunities.',
+    templateUrl: '/templates/pitch-deck.pptx',
     oneLineDef: "简洁有力的演示文稿",
     oneLineDefEn: "Concise impactful presentation",
     scenario: "融资路演、商业提案、项目汇报、合作谈判、战略展示",
@@ -3036,7 +3126,12 @@ const seededFrameworks: Framework[] = [
 <p>Startup team compressed 32-page pitch to 12 pages: focused on problem-solution-market-team-metrics. First roadshow: 8 of 10 investors advanced to round 2, secured $6M Series A</p>
 `
    },
-  { title: '愿景视频', englishTitle: 'Vision Video', slug: 'vision-video', chapter: '5', subsectionId: '5.1', chapterTitle: '市场推广叙事与发布', chapterTitleEn: 'Launch & Storytelling', tags: [], summary: '', templateUrl: '/templates/vision-video.pptx',
+  { title: '愿景视频', englishTitle: 'Vision Video', slug: 'vision-video', chapter: '5', subsectionId: '5.1', chapterTitle: '市场推广叙事与发布', chapterTitleEn: 'Launch & Storytelling', 
+    tags: ["视频", "愿景传达", "品牌故事"], 
+    tagsEn: ["Video", "Vision Communication", "Brand Story"],
+    summary: '用视频呈现产品或公司的未来愿景，感染目标受众。', 
+    summaryEn: 'Present product or company vision through video to inspire target audiences.',
+    templateUrl: '/templates/vision-video.pptx',
     oneLineDef: "未来愿景视频呈现",
     oneLineDefEn: "Future vision video presentation",
     scenario: "产品发布、投资展示、团队激励、用户预热、品牌传播",
@@ -3074,7 +3169,12 @@ const seededFrameworks: Framework[] = [
 <p>Smart home brand released 3-min vision video showing 'voice-control entire home' future. Video reached 5M views, pre-orders hit 23K units, 4x above forecast</p>
 `
    },
-  { title: '品牌遗书', englishTitle: 'Brand Obituary', slug: 'brand-obituary', chapter: '5', subsectionId: '5.1', chapterTitle: '市场推广叙事与发布', chapterTitleEn: 'Launch & Storytelling', tags: [], summary: '', templateUrl: '/templates/brand-obituary.pptx',
+  { title: '品牌遗书', englishTitle: 'Brand Obituary', slug: 'brand-obituary', chapter: '5', subsectionId: '5.1', chapterTitle: '市场推广叙事与发布', chapterTitleEn: 'Launch & Storytelling', 
+    tags: ["品牌愿景", "长期规划", "使命定义"], 
+    tagsEn: ["Brand Vision", "Long-term Planning", "Mission Definition"],
+    summary: '通过想象品牌的未来讣告，倒推长期愿景和影响力。', 
+    summaryEn: 'Define long-term vision and impact by imagining future brand obituary.',
+    templateUrl: '/templates/brand-obituary.pptx',
     oneLineDef: "品牌遗愿倒推法",
     oneLineDefEn: "Brand legacy backcasting method",
     scenario: "品牌战略、愿景定义、价值观塑造、长期规划、文化建设",
@@ -3112,7 +3212,12 @@ const seededFrameworks: Framework[] = [
 <p>Eco brand used obituary method to clarify vision: '50 years later, hailed as carbon-neutral industry pioneer'. Created 5-year roadmap, achieved B Corp certification year 2, became industry benchmark</p>
 `
    },
-  { title: '执行摘要', englishTitle: 'Executive Summary', slug: 'executive-summary', chapter: '5', subsectionId: '5.2', chapterTitle: '市场推广叙事与发布', chapterTitleEn: 'Launch & Storytelling', tags: [], summary: '', templateUrl: '/templates/executive-summary.pptx',
+  { title: '执行摘要', englishTitle: 'Executive Summary', slug: 'executive-summary', chapter: '5', subsectionId: '5.2', chapterTitle: '市场推广叙事与发布', chapterTitleEn: 'Launch & Storytelling', 
+    tags: ["高管沟通", "汇报", "决策支持"], 
+    tagsEn: ["Executive Communication", "Reporting", "Decision Support"],
+    summary: '高管级摘要文档，快速传达关键信息和决策建议。', 
+    summaryEn: 'Executive-level summary document to quickly convey key information and recommendations.',
+    templateUrl: '/templates/executive-summary.pptx',
     oneLineDef: "高管级摘要文档",
     oneLineDefEn: "Executive-level summary document",
     scenario: "商业计划、项目汇报、决策支持、投资文件、战略提案",
@@ -3150,7 +3255,12 @@ const seededFrameworks: Framework[] = [
 <p>Consulting report executive summary compressed 120-page analysis to 1 page: 3 key findings + 2 recommendations + ROI forecast. Board approved in 15min, saved planned 3-hour review</p>
 `
    },
-  { title: '过程书', englishTitle: 'Process Book', slug: 'process-book', chapter: '5', subsectionId: '5.3', chapterTitle: '市场推广叙事与发布', chapterTitleEn: 'Launch & Storytelling', tags: [], summary: '', templateUrl: '/templates/process-book.pptx',
+  { title: '过程书', englishTitle: 'Process Book', slug: 'process-book', chapter: '5', subsectionId: '5.3', chapterTitle: '市场推广叙事与发布', chapterTitleEn: 'Launch & Storytelling', 
+    tags: ["设计文档", "过程记录", "案例展示"], 
+    tagsEn: ["Design Documentation", "Process Recording", "Case Showcase"],
+    summary: '完整记录设计全过程，展示思考和迭代轨迹。', 
+    summaryEn: 'Comprehensively document design process to showcase thinking and iteration journey.',
+    templateUrl: '/templates/process-book.pptx',
     oneLineDef: "完整设计过程记录本",
     oneLineDefEn: "Complete design process documentation",
     scenario: "设计复盘、案例展示、团队传承、客户汇报、作品集",
