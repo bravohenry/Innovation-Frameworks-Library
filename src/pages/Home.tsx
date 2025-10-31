@@ -5,7 +5,6 @@ import { Icon } from '@iconify/react';
 import { motion } from 'framer-motion';
 import { getAllFrameworks, getAllChapters, Framework } from '../data/frameworks';
 import FrameworkCard from '../components/ui/FrameworkCard';
-import DoubleDiamondDiagram from '../components/ui/DoubleDiamondDiagram';
 import { useI18n } from '../contexts/I18nContext';
 
 const Home: React.FC = () => {
@@ -54,7 +53,7 @@ const Home: React.FC = () => {
         <div className="bg-primary-50 rounded-lg p-8">
           {/* Main Title */}
           <motion.div
-            className="mb-8 text-center"
+            className="text-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
@@ -66,20 +65,46 @@ const Home: React.FC = () => {
               {t('home_main_title')}
             </h1>
             <h2 
-              className="text-5xl font-bold text-neutral-900"
+              className="text-5xl font-bold text-neutral-900 mb-6"
               style={{ fontFamily: 'Manrope, sans-serif' }}
             >
               {t('home_subtitle')}
             </h2>
-          </motion.div>
-
-          {/* Double Diamond Diagram - Full Width */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.4, delay: 0.1 }}
-          >
-            <DoubleDiamondDiagram />
+            
+            {/* Author Info Card */}
+            <motion.div
+              className="mt-8 bg-white rounded-lg p-4 max-w-md mx-auto shadow-sm"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: 0.2 }}
+            >
+              <div className="flex flex-col gap-3">
+                <div className="text-center">
+                  <h3 className="text-lg font-bold text-neutral-900 mb-1">Zihan Huang</h3>
+                  <p className="text-sm text-neutral-600">SCAD Design Management</p>
+                </div>
+                <div className="flex items-center justify-center gap-4 text-sm">
+                  <a 
+                    href="https://bravohenry.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1 text-primary-600 hover:text-primary-700 transition-colors"
+                  >
+                    <Icon icon="lucide:globe" width={16} />
+                    <span>bravohenry.com</span>
+                  </a>
+                  <a 
+                    href="https://www.linkedin.com/in/zihanhwang/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1 text-primary-600 hover:text-primary-700 transition-colors"
+                  >
+                    <Icon icon="lucide:linkedin" width={16} />
+                    <span>LinkedIn</span>
+                  </a>
+                </div>
+              </div>
+            </motion.div>
           </motion.div>
         </div>
       </section>
