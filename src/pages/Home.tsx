@@ -50,59 +50,55 @@ const Home: React.FC = () => {
     <div className="max-w-7xl mx-auto">
       {/* Hero Section */}
       <section className="mb-8">
-        <div className="bg-primary-50 rounded-lg p-8">
+        <div className="bg-primary-50 p-8">
           {/* Main Title */}
           <motion.div
-            className="text-center"
+            className="flex flex-col items-start text-left gap-4 max-w-xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
           >
             <h1 
-              className="text-2xl font-semibold text-neutral-700 mb-2"
+              className="text-2xl font-semibold text-neutral-700"
               style={{ fontFamily: 'Manrope, sans-serif' }}
             >
               {t('home_main_title')}
             </h1>
             <h2 
-              className="text-5xl font-bold text-neutral-900 mb-6"
+              className="text-5xl font-bold text-neutral-900"
               style={{ fontFamily: 'Manrope, sans-serif' }}
             >
               {t('home_subtitle')}
             </h2>
             
-            {/* Author Info Card */}
+            {/* Author Info */}
             <motion.div
-              className="mt-8 bg-white rounded-lg p-4 max-w-md mx-auto shadow-sm"
+              className="mt-4 bg-transparent flex flex-col items-start gap-2"
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: 0.2 }}
             >
-              <div className="flex flex-col gap-3">
-                <div className="text-center">
-                  <h3 className="text-lg font-bold text-neutral-900 mb-1">Zihan Huang</h3>
-                  <p className="text-sm text-neutral-600">SCAD Design Management</p>
-                </div>
-                <div className="flex items-center justify-center gap-4 text-sm">
-                  <a 
-                    href="https://bravohenry.com" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-1 text-primary-600 hover:text-primary-700 transition-colors"
-                  >
-                    <Icon icon="lucide:globe" width={16} />
-                    <span>bravohenry.com</span>
-                  </a>
-                  <a 
-                    href="https://www.linkedin.com/in/zihanhwang/" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-1 text-primary-600 hover:text-primary-700 transition-colors"
-                  >
-                    <Icon icon="lucide:linkedin" width={16} />
-                    <span>LinkedIn</span>
-                  </a>
-                </div>
+              <div className="flex flex-col gap-1 items-start">
+                <h3 className="text-lg font-bold text-neutral-900">Zihan Huang</h3>
+                <p className="text-sm text-neutral-700">SCAD Design Management</p>
+              </div>
+              <div className="flex items-center gap-4 text-sm">
+                <a 
+                  href="https://bravohenry.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-primary-500 hover:text-primary-700 transition-colors"
+                >
+                  bravohenry.com
+                </a>
+                <a 
+                  href="https://www.linkedin.com/in/zihanhwang/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-primary-500 hover:text-primary-700 transition-colors"
+                >
+                  LinkedIn
+                </a>
               </div>
             </motion.div>
           </motion.div>

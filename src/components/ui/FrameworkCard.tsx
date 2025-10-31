@@ -24,7 +24,7 @@ const FrameworkCard: React.FC<FrameworkCardProps> = ({ framework }) => {
     <Link to={`/frameworks/${framework.slug}`} className="block w-full h-full">
       <Card 
         isPressable
-        className="framework-card w-full h-full hover:shadow-lg transition-shadow flex flex-col"
+        className="framework-card w-full h-full border-none shadow-none bg-neutral-100 hover:bg-primary-50 transition-colors flex flex-col"
       >
         <CardBody className="p-4 flex flex-col gap-3 h-full">
           <div className="flex items-center gap-2 flex-wrap">
@@ -71,7 +71,7 @@ const FrameworkCard: React.FC<FrameworkCardProps> = ({ framework }) => {
             )}
           </div>
           
-          <div className="w-full text-center p-3 bg-primary-50 text-primary-700 rounded-lg text-sm font-medium hover:bg-primary-500 hover:text-white transition-colors mt-auto">
+          <div className="w-full text-left text-primary-700 text-sm font-medium underline underline-offset-2 mt-auto">
             {lang === 'zh' ? '查看详情' : 'View Details'}
           </div>
         </CardBody>
