@@ -52,11 +52,29 @@ The project has been configured to run in Replit environment with:
 - **Template Downloads**: PowerPoint templates for various frameworks
 - **Search Functionality**: Search across all frameworks
 - **Chapter Navigation**: Organized by strategic topics
+- **Collapsible Sidebar**: Space-efficient navigation with smooth transitions
+- **Ultra-Minimal Design**: Borderless, left-aligned layout with strict 3-layer color palette
+
+## Design System
+- **Color Palette**: Strict 3-layer system
+  - Primary: primary-50/500/700
+  - Neutral: neutral-100/400/900
+- **Spacing**: Standardized p-4/gap-4 scale
+- **Typography**: Manrope font family for hero titles
+- **Layout**: Left-aligned content, borderless cards, flat design aesthetic
 
 ## Running the Project
 The workflow is configured to run `npm run dev` which starts the Vite development server on port 5000.
 
 ## Recent Changes
+- **November 2, 2025**: Implemented ultra-minimal design
+  - Removed all card borders and shadows (borderless, flat design)
+  - Converted all content to left-aligned layout
+  - Updated Hero section with left-aligned titles and author info
+  - Modified framework cards to use neutral-100 background with hover effects
+  - Updated detail page cards to match flat design aesthetic
+  - Removed DoubleDiamondDiagram component
+  - Added collapsible sidebar functionality with smooth animations
 - Updated Vite configuration for Replit environment (October 24, 2025)
 - Fixed duplicate key issue in I18nContext.tsx
 - Configured workflow to serve on port 5000

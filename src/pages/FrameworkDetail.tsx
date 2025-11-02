@@ -124,7 +124,7 @@ const FrameworkDetail: React.FC = () => {
       </Breadcrumbs>
       
       {/* Framework Header */}
-      <Card className="mb-8">
+      <Card className="mb-8 border-none shadow-none bg-primary-50">
         <CardBody className="p-6">
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-2">
@@ -184,7 +184,7 @@ const FrameworkDetail: React.FC = () => {
       </div>
 
       {/* Framework Content */}
-      <Card>
+      <Card className="border-none shadow-none bg-neutral-100">
         <CardBody className="p-6">
           { (lang === 'en' ? framework.htmlContentEn : framework.htmlContent) ? (
             <div 
@@ -207,7 +207,7 @@ const FrameworkDetail: React.FC = () => {
               </div>
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
                 {framework.diagrams.map((d, idx) => (
-                  <Card key={idx} isPressable onPress={() => { setActiveDiagramIndex(idx); onOpen(); }} className="overflow-hidden">
+                  <Card key={idx} isPressable onPress={() => { setActiveDiagramIndex(idx); onOpen(); }} className="overflow-hidden border-none shadow-none bg-neutral-100 hover:bg-primary-50 transition-colors">
                     <CardBody className="p-0">
                       <div className="aspect-video bg-neutral-100 flex items-center justify-center">
                         <Icon icon="mdi:chart-donut-variant" className="text-neutral-400 text-3xl" />
