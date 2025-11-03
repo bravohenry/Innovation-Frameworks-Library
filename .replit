@@ -29,6 +29,15 @@ waitForPort = 5000
 [workflows.workflow.metadata]
 outputType = "webview"
 
+[[workflows.workflow]]
+name = "Main"
+mode = "sequential"
+author = 48874228
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "git push https://github.com/bravohenry/Innovation-Frameworks-Library"
+
 [[ports]]
 localPort = 5000
 externalPort = 80
