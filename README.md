@@ -1,5 +1,292 @@
-## DMGT Toolkit（创新框架知识库）
+# DMGT Toolkit (Innovation Framework Knowledgebase)
 
+Language: **English** · [简体中文](#简体中文)
+
+## Overview
+This project is a bilingual (Chinese/English) innovation methodology knowledge base built with React, Vite, HeroUI, and Tailwind. Frameworks are organized by chapter and subchapter, with built-in search, breadcrumbs, side navigation, template downloads, and diagram previews.
+
+---
+
+### Framework Authoring Guidelines (Core)
+Every framework must include the following ten components (provided in both Chinese and English):
+- What / Why / When (definition, value, and applicable scenarios)
+- Inputs (required materials or artifacts before starting)
+- Step-by-step (3–7 steps; each step highlights key actions, examples, and common mistakes)
+- Outputs (deliverables and Definition of Done criteria)
+- Diagnostics (checklist)
+- Metrics (recommended interim metrics)
+- Cross-links (dependencies or mappings with other frameworks)
+- Visuals (at least one diagram stored in `public/diagrams/`)
+- Case (concise case study)
+- Pitfalls (common anti-patterns)
+
+Data placement lives in `src/data/frameworks.ts`:
+- `summary` / `summaryEn`: ≤ 200 characters highlighting deliverables and value.
+- `tags` / `tagsEn`: 3–7 keywords.
+- `htmlContent` / `htmlContentEn`: structured HTML starting from `<h2>`.
+- `diagrams`: 0–3 diagrams (`title` / `url` / `description`).
+- `interactive` (optional): interactive configuration, see below.
+
+Suggested HTML template (share directly with content authors):
+```html
+<h2>What / When to Use</h2>
+<p>...</p>
+<h2>Prerequisite Inputs</h2>
+<ul><li>...</li></ul>
+<h2>Steps</h2>
+<ol>
+  <li><strong>Step name</strong>: key actions; example; common mistakes</li>
+  <li>...</li>
+  <li>...</li>
+</ol>
+<h2>Outputs & DoD</h2>
+<ul><li>Deliverable list + acceptance criteria</li></ul>
+<h2>Diagnostics</h2>
+<ul><li>...</li></ul>
+<h2>Metrics</h2>
+<ul><li>...</li></ul>
+<h2>Cross-links</h2>
+<ul><li>Dependencies or mapping with X/Y</li></ul>
+<h2>Case</h2>
+<p>One concise case covering context and outcome</p>
+<h2>Pitfalls</h2>
+<ul><li>...</li></ul>
+```
+
+### Chapter 1 Content Expectations (target deliverables)
+- 1.1 Team & Mission:
+  - Team Dysfunctions: pyramid symptoms vs. countermeasures table; key checklist items for team chartering.
+  - RACI: role definitions, task breakdown, and example table; CSV export field description.
+  - Gantt: critical path/milestone example; cadence recommendations and risk buffers.
+- 1.2 Industry Structure:
+  - PESTLE: six-dimension scanning prompts and evidence examples.
+  - Five Forces: driver table, scoring example, and evidence index.
+  - sSWOT / SWOT: four-quadrant strategy draft and mapping example.
+- 1.3 Opportunity Space:
+  - Opportunity Statement: one-pager template covering target, pain point, value, and success criteria.
+  - North Star: NSM decomposition method and indicator tree illustration.
+
+---
+
+### Interactive Diagram & Visualization Standards (new)
+Goal: provide an interactive data experience for every framework. If a framework is not suited for interactivity, supply a visualization that clearly structures the information. All implementations must follow consistent design standards and export conventions.
+
+#### Design Standards
+- Unified path labels: top navigation shows `Chapter N` + `1.x subchapter` (switches with language toggle).
+- Consistent visual style: HeroUI + Tailwind, light theme; charts use the same palette and rounded corners.
+- Bilingual parity: titles, legends, axes, and tooltips switch languages together (powered by `useI18n()`).
+- Empty and error states: provide placeholders and guidance; show prompts when required inputs are missing.
+- Export capabilities:
+  - PNG (chart or container snapshot)
+  - CSV (underlying data table)
+- Performance: lazily load interactive modules; allow read-only fallback on mobile.
+
+#### Recommended Tech Stack (pick one or combine)
+- General charts: ECharts (feature-rich, built-in export), Recharts (lightweight)
+- Relationship / metric trees: React Flow, AntV G6 (folding and dragging)
+- Gantt / timeline: Frappé Gantt, vis-timeline
+- Editable tables: TanStack Table (e.g., RACI)
+- Snapshot export: `html-to-image` (for non-ECharts scenarios)
+
+#### Framework-to-Interaction Mapping Suggestions (Chapter 1)
+- 1.1 Team & Mission
+  - RACI Chart → editable table (CSV export)
+  - Gantt Chart → draggable task bars and milestones (PNG/CSV)
+  - Five Dysfunctions → pyramid visualization with expandable symptoms/countermeasures
+- 1.2 Industry Structure
+  - Porter’s Five Forces → radar chart with weight sliders and evidence counts (PNG/CSV)
+  - PESTLE → dimension filters with list/tag cloud (CSV)
+  - SWOT / sSWOT → 2×2 strategy matrix (PNG/CSV)
+- 1.3 Opportunity Space
+  - Business Opportunity Statement → one-page preview (PNG)
+  - North Star Framework → collapsible metric tree (PNG/CSV)
+
+#### Interactive Configuration Data Model (documentation level, not code)
+Each framework may include an `interactive` descriptor in its data object to drive the component (fields below illustrate the convention).
+```json
+{
+  "slug": "porters-five-forces",
+  "interactive": {
+    "type": "radar",
+    "title": { "zh": "五力评分", "en": "Five Forces" },
+    "schema": [
+      { "key": "rivalry", "labelZh": "现有竞争", "labelEn": "Rivalry" },
+      { "key": "newEntrants", "labelZh": "新进入者", "labelEn": "New Entrants" },
+      { "key": "substitutes", "labelZh": "替代品", "labelEn": "Substitutes" },
+      { "key": "suppliers", "labelZh": "供应商议价", "labelEn": "Suppliers" },
+      { "key": "buyers", "labelZh": "购买者议价", "labelEn": "Buyers" }
+    ],
+    "data": [
+      { "factor": "rivalry", "value": 3.5, "weight": 0.25, "evidenceCount": 6 }
+    ],
+    "export": { "png": true, "csv": true }
+  }
+}
+```
+
+Common types:
+- `radar` (five forces / capability assessments)
+- `matrix` (sSWOT 2×2, value vs. complexity)
+- `gantt` (project timelines)
+- `table` (RACI, comparison checklists)
+- `tree` (North Star metric tree)
+- `viz` (structured visualization without numeric data)
+
+CSV field recommendations:
+- Five Forces: `factor,value,weight,evidenceCount,notes`
+- RACI: `task,<role1>,<role2>...` (cells contain R/A/C/I; separate multiples with semicolons)
+- Gantt: `task,start,end,owner,dependency,progress`
+- Metric tree: `metricId,parentId,name,type,unit,owner,hypothesis`
+File naming: `{slug}-{lang}-{yyyyMMdd-HHmm}.png|csv`
+
+Process for adding interactivity/visualization to a framework:
+1. Add an `interactive` description to the framework object in `src/data/frameworks.ts` (see above).
+2. Lazily load the page component based on `interactive.type` and render accordingly (implementation WIP).
+3. Support exports:
+   - ECharts → use `getDataURL()` for PNG output
+   - Other components → snapshot the container via `html-to-image`
+   - CSV → serialize `interactive.data`
+4. Bilingual support: all copy strings come from `useI18n()`; schema text provides both `zh` and `en`.
+
+---
+
+## Prompt Templates (ready to copy for content authoring assistants)
+
+> Note: The prompts below prioritize data-ready, production-quality output that can be written directly into `src/data/frameworks.ts`. Provide Chinese as the primary language with faithful English translations. Avoid extra explanations.
+
+### 1) Framework Content Authoring (JSON output)
+Produce bilingual content for the frameworks below. Return a JSON array where each element corresponds to one framework.
+
+Input (example)
+```json
+{
+  "frameworks": [
+    { "slug": "porters-five-forces", "title": "波特五力模型", "englishTitle": "Porter's Five Forces" },
+    { "slug": "business-opportunity-statement", "title": "商业机会声明", "englishTitle": "Business Opportunity Statement" }
+  ]
+}
+```
+
+Requirements:
+- Populate `summary/summaryEn`, `tags/tagsEn`, `htmlContent/htmlContentEn`, and `diagrams` (allow empty array).
+- `htmlContent*` must use structured HTML starting from `<h2>` with `<p>`, `<ul>`, `<ol>`.
+- Tone: action oriented, avoid fluff; each step provides key actions and common mistakes.
+
+Output format (example)
+```json
+[
+  {
+    "slug": "porters-five-forces",
+    "summary": "……",
+    "summaryEn": "……",
+    "tags": ["战略分析", "行业结构"],
+    "tagsEn": ["Strategy Analysis", "Industry Structure"],
+    "htmlContent": "<h2>是什么/何时使用</h2><p>……</p>…",
+    "htmlContentEn": "<h2>What/When</h2><p>…</p>…",
+    "diagrams": [ { "title": "五力雷达", "url": "/diagrams/porters-five-forces.svg", "description": "评分示意" } ]
+  }
+]
+```
+
+#### Chapter 1 batch authoring (one-shot)
+Generate a bilingual JSON array for all Chapter 1 frameworks, using the same fields as above:
+```json
+{
+  "frameworks": [
+    { "slug": "five-dysfunctions-team", "title": "团队协作的五大障碍", "englishTitle": "The Five Dysfunctions of a Team" },
+    { "slug": "raci-chart", "title": "RACI 责任分配矩阵", "englishTitle": "RACI Chart" },
+    { "slug": "gantt-chart", "title": "甘特图", "englishTitle": "Gantt Chart" },
+    { "slug": "pestle-analysis", "title": "PESTLE 分析", "englishTitle": "PESTLE Analysis" },
+    { "slug": "porters-five-forces", "title": "波特五力模型", "englishTitle": "Porter's Five Forces" },
+    { "slug": "swot-analysis", "title": "SWOT 分析", "englishTitle": "SWOT Analysis" },
+    { "slug": "sswot-analysis", "title": "sSWOT 分析", "englishTitle": "sSWOT Analysis" },
+    { "slug": "business-opportunity-statement", "title": "商业机会声明", "englishTitle": "Business Opportunity Statement" },
+    { "slug": "north-star-framework", "title": "谷歌\"北极星\"框架", "englishTitle": "The North Star Framework" }
+  ]
+}
+```
+Optional: add an `interactive` configuration if the framework benefits from interactivity; otherwise omit.
+
+### 2) Interactive Chart Data (Interactive Config)
+Generate an `interactive` configuration for the specified framework (see “Interactive Configuration Data Model”), returning JSON only.
+
+Input example
+```json
+{ "slug": "porters-five-forces", "type": "radar" }
+```
+
+Expected output
+```json
+{
+  "slug": "porters-five-forces",
+  "interactive": {
+    "type": "radar",
+    "title": { "zh": "五力评分", "en": "Five Forces" },
+    "schema": [ { "key": "rivalry", "labelZh": "现有竞争", "labelEn": "Rivalry" } ],
+    "data": [ { "factor": "rivalry", "value": 3.5, "weight": 0.25, "evidenceCount": 6 } ],
+    "export": { "png": true, "csv": true }
+  }
+}
+```
+
+Type recommendations and fields:
+- `radar`: `schema[key,labelZh,labelEn]`, `data[factor,value,weight,evidenceCount]`
+- `matrix`: `rows/cols` definition + `cells`
+- `gantt`: `tasks[task,start,end,owner,dependency,progress]`
+- `table`: `columns/rows` (RACI columns represent roles; cells contain `R/A/C/I`)
+- `tree`: `nodes[id,parentId,name,type,unit]`
+
+### 3) Translation & Terminology Alignment
+Provide faithful English translations for the Chinese content below and output a terminology glossary:
+```json
+{ "zh": "……中文 HTML……" }
+```
+Expected output
+```json
+{ "en": "……英文 HTML……", "glossary": [ { "zh": "北极星指标", "en": "North Star Metric (NSM)" } ] }
+```
+
+### 4) QA Validation (Definition of Done)
+Assess framework content against the “Framework Authoring Guidelines” in this README and list missing elements in JSON:
+```json
+{ "slug": "porters-five-forces", "htmlContent": "<h2>…</h2>…", "summary": "…" }
+```
+
+### 5) CSV Export Mapping Generator
+Return CSV column definitions and an example row for the specified interactive type:
+```json
+{ "type": "radar" }
+```
+Expected output
+```json
+{ "columns": ["factor","value","weight","evidenceCount","notes"], "example": ["rivalry",3.5,0.25,6,""] }
+```
+
+---
+
+### Development
+```bash
+npm i
+npm run dev
+# http://localhost:5173
+```
+
+### Build
+```bash
+npm run build
+npm run preview
+```
+
+### Contribution & Versioning
+- Commit convention: `feat|fix|chore|docs: ...`
+- Version tagging: `vX.Y.Z`
+
+---
+
+## 简体中文
+语言： [English](#dmgt-toolkit-innovation-framework-knowledgebase) · **简体中文**
+
+### 概览
 本项目是一个基于 React + Vite + HeroUI + Tailwind 的双语（中/英）创新方法论知识库。项目按章节与小章节组织框架，支持搜索、面包屑、侧栏导航、模板下载、图示预览等能力。
 
 ---
@@ -66,7 +353,6 @@
 ---
 
 ### 交互图表与可视化规范（新增）
-
 目标：为每一个框架提供“互动数据体验”。若该框架不适合做图表，则提供可视化展示（信息结构化、一图讲清）。所有实现需要符合统一的设计标准与导出规范。
 
 #### 设计标准
@@ -101,21 +387,20 @@
 
 #### 交互配置数据模型（文档层，非代码）
 每个框架可在数据中增加一个 `interactive` 描述，用于驱动组件（示意字段，仅作约定说明）。
-
 ```json
 {
   "slug": "porters-five-forces",
   "interactive": {
-    "type": "radar",                 
+    "type": "radar",
     "title": { "zh": "五力评分", "en": "Five Forces" },
-    "schema": [                       
+    "schema": [
       { "key": "rivalry", "labelZh": "现有竞争", "labelEn": "Rivalry" },
       { "key": "newEntrants", "labelZh": "新进入者", "labelEn": "New Entrants" },
       { "key": "substitutes", "labelZh": "替代品", "labelEn": "Substitutes" },
       { "key": "suppliers", "labelZh": "供应商议价", "labelEn": "Suppliers" },
       { "key": "buyers", "labelZh": "购买者议价", "labelEn": "Buyers" }
     ],
-    "data": [                         
+    "data": [
       { "factor": "rivalry", "value": 3.5, "weight": 0.25, "evidenceCount": 6 }
     ],
     "export": { "png": true, "csv": true }
@@ -139,8 +424,8 @@
 文件命名：`{slug}-{lang}-{yyyyMMdd-HHmm}.png|csv`
 
 #### 为某个框架添加交互/可视化（流程）
-1. 在 `src/data/frameworks.ts` 的该框架对象中补充 `interactive` 描述（见上）
-2. 页面组件按类型懒加载并读取 `interactive` 渲染（后续实现）
+1. 在 `src/data/frameworks.ts` 的该框架对象中补充 `interactive` 描述（见上）。
+2. 页面组件按类型懒加载并读取 `interactive` 渲染（后续实现）。
 3. 导出：
    - ECharts → `getDataURL()` 导出 PNG
    - 其他 → 使用 `html-to-image` 对容器节点快照
